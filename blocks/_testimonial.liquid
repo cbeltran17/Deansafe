@@ -1,0 +1,120 @@
+<article
+  class="testimonial-card shopify-block"
+  id="shopify-block-{{ block.id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="testimonial-card__rating">
+    {% render 'rating-stars', rating: block.settings.rating %}
+  </div>
+
+  {% if block.settings.title != blank %}
+    <h3 class="testimonial-card__title">{{ block.settings.title }}</h3>
+  {% endif %}
+
+  {% if block.settings.content != blank %}
+    <div class="testimonial-card__content prose">{{ block.settings.content }}</div>
+  {% endif %}
+
+  {% if block.settings.image != blank %}
+    <media-lightbox open-target="[data-media-id]" class="testimonial-card__media">
+      <div
+        data-media-type="image"
+        data-media-id="{{ block.id }}"
+        data-media-width="{{ block.settings.image.width }}"
+        data-media-height="{{ block.settings.image.height }}"
+      >
+        {% render 'image' with block.settings.image,
+          sizes: '144px',
+          widths: '144,288',
+          loading: 'lazy'
+        %}
+      </div>
+    </media-lightbox>
+  {% endif %}
+
+  <div class="testimonial-card__footer">
+    {% if block.settings.author_image != blank %}
+      {% render 'image' with block.settings.author_image,
+        class: 'testimonial-card__avatar-image',
+        sizes: '40px',
+        widths: '40,80',
+        loading: 'lazy',
+        lqip: false
+      %}
+    {% else %}
+      {% liquid
+        assign initials = block.settings.author_name | default: 'A' | slice: 0, 1
+      %}
+      <div class="testimonial-card__avatar" aria-hidden="true">{{ initials }}</div>
+    {% endif %}
+    <div class="testimonial-card__meta">
+      {% if block.settings.author_name != blank %}
+        <div class="testimonial-card__name">{{ block.settings.author_name }}</div>
+      {% endif %}
+      {% if block.settings.verified %}
+        <div class="testimonial-card__verified">
+          {{ 'icon-verified.svg' | inline_asset_content }}
+          <span>{{ 'sections.testimonials.verified_buyer' | t }}</span>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</article>
+
+{% schema %}
+{
+  "name": "t:blocks._testimonial.name",
+  "class": "testimonial-card",
+  "tag": null,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:blocks._testimonial.settings.image.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "author_image",
+      "label": "t:blocks._testimonial.settings.author_image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "verified",
+      "label": "t:blocks._testimonial.settings.verified.label",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "rating",
+      "label": "t:blocks._testimonial.settings.rating.label",
+      "min": 3,
+      "max": 5,
+      "step": 0.5,
+      "default": 5
+    },
+    {
+      "type": "text",
+      "id": "author_name",
+      "label": "t:blocks._testimonial.settings.author_name.label",
+      "default": "t:blocks._testimonial.settings.author_name.default"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:blocks._testimonial.settings.title.label",
+      "default": "t:blocks._testimonial.settings.title.default"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "t:blocks._testimonial.settings.content.label",
+      "default": "t:blocks._testimonial.settings.content.default"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks._testimonial.name"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,185 @@
+{% liquid
+  assign product = product-card
+  assign media = product.selected_variant.featured_media | default: product.featured_media
+  assign product_url = product.url
+  assign variant_id = product.selected_or_first_available_variant.id
+
+  assign show_vendor = settings.product_card_show_vendor
+  assign show_quick_add = settings.product_card_show_quick_add
+  assign show_rating = settings.product_card_show_rating
+  assign show_stock = settings.product_card_show_stock
+  assign show_sold_out_badge = settings.product_card_show_sold_out_badge
+  assign show_discount_badge = settings.product_card_show_discount_badge
+  assign show_custom_badges = settings.product_card_show_custom_badges
+  assign discount_display = settings.product_card_discount_display
+  assign text_alignment = settings.product_card_text_alignment | default: 'left'
+  assign image_size_setting = settings.product_card_image_size
+  assign show_color_swatches = settings.product_card_color_swatches_enable
+  assign color_swatches_count = settings.product_card_color_swatches_count | default: 4
+
+  if product.selected_variant
+    assign product_url = product.selected_variant.url
+  endif
+
+  if collection and from_api == true or section.settings.include_collection_url
+    assign product_url = product_url | within: collection
+  endif
+
+  assign product_card_bg = settings.color_product_card_background
+  if section.settings.product_card_background_color contains '#'
+    assign product_card_bg = section.settings.product_card_background_color
+  endif
+
+  if product == blank
+    assign vendor = 'Vendor'
+    assign title = 'Product'
+    assign show_quick_add = false
+  else
+    assign title = product.title
+    assign vendor = product.vendor
+  endif
+
+  assign card_classes = 'collection-grid-item product-card'
+  if text_alignment == 'center'
+    assign card_classes = card_classes | append: ' product-card--align-center'
+  endif
+
+  assign has_badge_setting = false
+  if show_sold_out_badge or show_discount_badge or show_custom_badges
+    assign has_badge_setting = true
+  endif
+
+  assign rating_value = null
+  assign rating_max = null
+  # assign rating_count = null
+  if product != blank and show_rating and product.metafields.reviews.rating.value != blank
+    assign rating_value = product.metafields.reviews.rating.value.rating | round: 2
+    assign rating_max = product.metafields.reviews.rating.value.scale_max
+    # assign rating_count = product.metafields.reviews.rating_count
+  endif
+
+  assign swatch_limit = null
+  if show_color_swatches
+    assign swatch_limit = color_swatches_count
+  endif
+
+  if product.object_type == 'article' or product.object_type == 'page'
+    # Special case: Product card snippet can also be used to render articles and pages
+    # in search results
+    assign show_quick_add = false
+    assign show_stock = false
+    assign media = product.metafields.custom.featured_image | default: product.image
+    assign variant_id = product.id
+    assign card_classes = card_classes | append: ' product-card--article'
+    if product.object_type == 'article'
+      assign blog_handle = product.handle | split: '/' | first
+      assign vendor = blogs[blog_handle].title
+    else
+      assign vendor = 'general.search.page_result_caption' | t
+    endif
+  endif
+%}
+
+<product-card
+  {% render 'has-bg', color: product_card_bg %}
+  class="{{ card_classes }}"
+  id="ProductCard-{{ section.id }}-{{ variant_id }}"
+>
+  <div class="product-card__overlay" data-hoverable-gallery-area>
+    <a tabindex="-1" href="{{ product_url }}" aria-label="{{ title }}">
+      {% render 'product-card-media',
+        product: product,
+        media: media,
+        sizes: sizes,
+        loading: loading,
+        index: index,
+        image_size_setting: image_size_setting
+      %}
+    </a>
+    {% if rating_value %}
+      <div class="product-card__rating-badge">
+        <svg
+          class="product-card__rating-badge-icon"
+          aria-hidden="true"
+          focusable="false"
+          viewBox="0 0 16 16"
+        >
+          <path d="M8 0.601074L9.79611 6.12894H15.6085L10.9062 9.54535L12.7023 15.0732L8 11.6568L3.29772 15.0732L5.09383 9.54535L0.391548 6.12894H6.20389L8 0.601074Z" />
+        </svg>
+        <span class="product-card__rating-badge-value">{{ rating_value }}</span>
+        <span class="sr-only">
+          {{-
+            'accessibility.rating_stars_label'
+            | t: rating_value: rating_value, rating_max: rating_max
+          -}}
+        </span>
+      </div>
+    {% endif %}
+    {% if show_quick_add %}
+      <div class="product-card__add-to-cart-overlay">
+        {% render 'product-card-add-to-cart',
+          product: product,
+          from_api: from_api,
+          size: 'sm',
+          class: 'touch:hidden'
+        %}
+        {% render 'product-card-add-to-cart',
+          product: product,
+          from_api: from_api,
+          class: 'button--solid button--icon-md mouse:hidden',
+          icon: true
+        %}
+      </div>
+    {% endif %}
+    {% if has_badge_setting %}
+      <div class="product-card__badge-container">
+        {% render 'product-badges',
+          product: product,
+          sale: show_discount_badge,
+          sold_out: show_sold_out_badge,
+          custom: show_custom_badges,
+          discount_as: discount_display
+        %}
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="product-card__info">
+    {% if show_vendor %}
+      <p class="product-card__vendor">
+        <span class="sr-only">{{ 'accessibility.by' | t }}</span>
+        <span>{{ vendor }}</span>
+      </p>
+    {% endif %}
+
+    <h2 class="product-card__title">
+      <a href="{{ product_url }}">{{ title }}</a>
+    </h2>
+
+    {% render 'price', product: product, class: 'product-card__price' %}
+
+    {% if show_stock %}
+      {% render 'product-card-stock', product: product %}
+    {% endif %}
+
+    {% if show_color_swatches %}
+      {% render 'product-card-swatches', product: product, limit: swatch_limit %}
+    {% endif %}
+  </div>
+
+  <div class="product-card__list-btns">
+    {% if product.object_type == 'article' or product.object_type == 'page' %}
+      {% render 'button', translation: 'products.product_card.view_details', href: product_url %}
+    {% else %}
+      {% if show_quick_add %}
+        {% render 'product-card-add-to-cart', product: product, from_api: from_api %}
+      {% endif %}
+      {% render 'button',
+        translation: 'products.product_card.view_details',
+        variant: 'outline',
+        class: 'button--secondary',
+        href: product_url
+      %}
+    {% endif %}
+  </div>
+</product-card>

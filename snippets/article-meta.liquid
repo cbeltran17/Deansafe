@@ -1,0 +1,23 @@
+<div class="article-meta">
+  {% unless show_tags == false %}
+    {% if article.tags.size > 0 %}
+      <span class="article-tag {{ tag_class }}">{{ article.tags.first }}</span>
+    {% endif %}
+  {% endunless %}
+
+  {% unless show_comments == false %}
+    {% if article.comments_count > 0 %}
+      <div class="article-meta__comments">
+        {{ 'icon-comments.svg' | inline_asset_content }}
+        <span>{{ article.comments_count }}</span>
+      </div>
+      <span class="article-meta__separator"></span>
+    {% endif %}
+  {% endunless %}
+
+  {% unless show_date == false %}
+    <time class="article-meta__date" datetime="{{ article.published_at | date: '%Y-%m-%d' }}">
+      {{ article.published_at | date: '%B %d, %Y' }}
+    </time>
+  {% endunless %}
+</div>

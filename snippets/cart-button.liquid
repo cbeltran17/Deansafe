@@ -1,0 +1,27 @@
+{% liquid
+  if request.page_type != 'cart'
+    assign cart_drawer = true
+  endif
+%}
+
+<cart-button>
+  <a
+    class="header-action-btn"
+    href="{{ routes.cart_url }}"
+    aria-label="{{ 'sections.header.cart' | t }}"
+    {% if cart_drawer %}
+      data-modal="Modal-CartDrawer"
+    {% endif %}
+  >
+    <div class="header-action-btn__icon">
+      {{ 'icon-cart.svg' | inline_asset_content }}
+      <span class="count-bubble cart-bubble {% if cart.empty? %} invisible {% endif %}">
+        {{ cart.item_count }}
+      </span>
+    </div>
+    <div class="header-action-btn__text">
+      <span class="header-action-btn__title">{{ 'sections.header.cart' | t }}</span>
+      <span>{{ cart.total_price | money }}</span>
+    </div>
+  </a>
+</cart-button>

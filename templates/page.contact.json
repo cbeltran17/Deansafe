@@ -1,0 +1,18 @@
+{
+  "sections": {
+    "main_contact": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "heading_size": "h1",
+        "heading": "Contact",
+        "content": "<p>Feel free to contact us for any inquiries, feedback, or help you may require. Our committed team is available to offer quick and tailored assistance, ensuring your shopping experience is smooth and enjoyable.</p>"
+      }
+    }
+  },
+  "order": ["main_contact", "form"]
+}

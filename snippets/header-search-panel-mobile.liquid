@@ -1,0 +1,18 @@
+<search-panel-mobile>
+  {% render 'search-input', slot: 'input', id: 'header-search-mobile-panel' %}
+  <button slot="close" class="search-panel-mobile__close">
+    {{ 'icon-times.svg' | inline_asset_content }}
+  </button>
+  <div slot="skeleton">
+    {% render 'predictive-search-skeleton' %}
+  </div>
+  <div class="contents" slot="empty-state">
+    {% render 'popular-searches' %}
+    {% if section.settings.show_recently_viewed_products %}
+      <recently-viewed-products
+        loading="eager"
+        section-id="search-viewed-products"
+      ></recently-viewed-products>
+    {% endif %}
+  </div>
+</search-panel-mobile>

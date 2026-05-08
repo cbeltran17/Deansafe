@@ -1,0 +1,120 @@
+{% liquid
+  assign counter_font_class = 'counter--font-' | append: block.settings.font
+  assign counter_size_class = 'counter--size-' | append: block.settings.text_size
+%}
+
+<style>
+  #shopify-block-{{ block.id }} {
+    {% render 'color-var' with block.settings.counter_color, name: 'counter-color' %}
+  }
+
+  #shopify-block-{{ block.id }} .counter__heading {
+    {% render 'color-var' with block.settings.heading_color, name: 'text-color' %}
+  }
+</style>
+
+<div class="counter-block {{ counter_size_class }}">
+  <counter-element
+    class="{{ counter_font_class }}"
+    duration="{{ block.settings.duration | times: 1000 }}"
+  >
+    {{- block.settings.number -}}
+  </counter-element>
+
+  {% if block.settings.heading != blank %}
+    <p class="counter__heading link">{{- block.settings.heading -}}</p>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "t:blocks.counter.name",
+  "class": "block-counter",
+  "settings": [
+    {
+      "type": "range",
+      "id": "duration",
+      "label": "t:blocks.counter.settings.duration.label",
+      "min": 0,
+      "max": 5,
+      "step": 0.5,
+      "unit": "s",
+      "default": 1.5
+    },
+    {
+      "type": "text",
+      "id": "number",
+      "label": "t:blocks.counter.settings.number.label",
+      "default": "t:blocks.counter.settings.number.default"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "t:blocks.counter.settings.heading.label"
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.counter.headers.typography.content"
+    },
+    {
+      "type": "select",
+      "id": "font",
+      "label": "t:blocks.counter.settings.font.label",
+      "options": [
+        {
+          "value": "heading",
+          "label": "t:blocks.counter.settings.font.options.heading.label"
+        },
+        {
+          "value": "body",
+          "label": "t:blocks.counter.settings.font.options.body.label"
+        }
+      ],
+      "default": "heading"
+    },
+    {
+      "type": "select",
+      "id": "text_size",
+      "label": "t:blocks.counter.settings.text_size.label",
+      "options": [
+        {
+          "value": "x-large",
+          "label": "t:blocks.counter.settings.text_size.options.x_large.label"
+        },
+        {
+          "value": "large",
+          "label": "t:blocks.counter.settings.text_size.options.large.label"
+        },
+        {
+          "value": "medium",
+          "label": "t:blocks.counter.settings.text_size.options.medium.label"
+        },
+        {
+          "value": "small",
+          "label": "t:blocks.counter.settings.text_size.options.small.label"
+        }
+      ],
+      "default": "large"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.colors"
+    },
+    {
+      "type": "color",
+      "id": "counter_color",
+      "label": "t:blocks.counter.settings.counter_color.label"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "t:sections.all.heading_color.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.counter.name"
+    }
+  ]
+}
+{% endschema %}

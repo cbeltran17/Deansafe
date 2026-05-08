@@ -1,0 +1,85 @@
+{%- liquid
+  assign tag = tag | default: block.settings.heading_seo_tag | default: section.settings.heading_seo_tag | default: 'p'
+  assign size = size | default: block.settings.heading_size | default: section.settings.heading_size | default: 'h3'
+
+  if translation != blank
+    assign heading = translation | t
+  endif
+
+  if heading == blank and section.settings.heading == blank and block.settings.heading == blank
+    break
+  endif
+
+  capture highlight_start
+    echo '<em class="text-highlight" is="text-highlight" data-effect="'
+    echo block.settings.highlight_type | default: 'underline'
+    echo '"'
+    if block.settings.highlight_layer and block.settings.highlight_layer != 'default'
+      echo ' data-highlight-layer="'
+      echo block.settings.highlight_layer
+      echo '"'
+    endif
+    echo '><span>'
+  endcapture
+
+  capture highlight_end
+    echo '</span></em>'
+  endcapture
+-%}
+
+{% comment %}
+  It's important to output the content like this, otherwise live text editing doesn't work in the Theme Editor
+{% endcomment %}
+{% capture output %}
+  {% if heading != blank %}
+    <{{ tag }}>
+      {{ heading }}
+    </{{ tag }}>
+  {% elsif block == null and section.settings.heading != blank %}
+    <{{ tag }}>
+      {{ section.settings.heading }}
+    </{{ tag }}>
+  {% elsif block.settings.heading != blank %}
+    <{{ tag }}>
+      {{ block.settings.heading }}
+    </{{ tag }}>
+  {% endif %}
+{% endcapture %}
+
+{% comment %} Add text highlight effect {% endcomment %}
+{% if output contains '<em>' %}
+  {% assign output = output | replace: '<em>', highlight_start | replace: '</em>', highlight_end %}
+  {% assign animation = false %}
+  {% assign split_text = false %}
+{% endif %}
+
+{% comment %} Add text splitting if animation is enabled {% endcomment %}
+{% if animation or split_text %}
+  {% capture output %}
+    <split-text wrap>
+      {{ output }}
+    </split-text>
+  {% endcapture %}
+{% endif %}
+
+{% comment %} Add wrapper {% endcomment %}
+{% capture output %}
+  <div
+    {% if id != blank %} id="{{ id }}" {% endif %}
+    class="{{ size }} {{ class }}"
+    {% if attrs != blank %} {{ attrs }} {% endif %}
+  >
+    {{ output }}
+  </div>
+{% endcapture %}
+
+{% comment %} Add animation-element for animation {% endcomment %}
+{% if animation %}
+  {% capture output %}
+    <animation-element animation="fade-up-large" autoplay selector="split-text">
+      {{ output }}
+    </animation-element>
+  {% endcapture %}
+{% endif %}
+
+{{ output }}

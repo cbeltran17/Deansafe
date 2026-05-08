@@ -1,0 +1,15 @@
+{%- liquid
+  if color-var contains '#'
+    assign target = color-var
+  else
+    assign target = default
+  endif
+-%}
+
+{%- if target != blank -%}
+  {%- if rgb != false -%}
+    --{{ name }}: {{ target | color_extract: 'red' }} {{ target | color_extract: 'green' }} {{ target | color_extract: 'blue' }};
+  {%- else -%}
+    --{{ name }}: {{ target }};
+  {%- endif -%}
+{%- endif -%}

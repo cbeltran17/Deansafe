@@ -1,0 +1,96 @@
+{% liquid
+  assign form_id = section.id | append: '-recipient'
+%}
+
+<div class="gift-card-recipient">
+  {% if form.errors %}
+    <div class="gift-card-recipient__errors">
+      {% render 'form-errors', errors: form.errors, form_id: form_id %}
+    </div>
+  {% endif %}
+
+  <recipient-form class="recipient-form">
+    {% render 'checkbox',
+      id: 'recipient-checkbox',
+      id_suffix: section.id,
+      name: 'properties[__shopify_send_gift_card_to_recipient]',
+      class: 'recipient-form__checkbox',
+      attrs: '',
+      label_t: 'recipient.form.checkbox'
+    %}
+
+    <div class="recipient-form__fields" data-part="fields" hidden>
+      {% render 'input',
+        name: 'properties[Recipient email]',
+        type: 'email',
+        id: 'recipient-email',
+        id_suffix: section.id,
+        label_t: 'recipient.form.email_label',
+        placeholder_t: 'recipient.form.email',
+        floating: true,
+        required: true,
+        value: form.email,
+        form: form,
+        form_key: 'email'
+      %}
+
+      {% render 'input',
+        name: 'properties[Recipient name]',
+        type: 'text',
+        id: 'recipient-name',
+        id_suffix: section.id,
+        autocomplete: 'name',
+        label_t: 'recipient.form.name_label',
+        placeholder_t: 'recipient.form.name',
+        floating: true,
+        value: form.name
+      %}
+
+      <div class="recipient-form__message">
+        {% render 'input',
+          tag: 'textarea',
+          rows: 6,
+          name: 'properties[Message]',
+          id: 'recipient-message',
+          id_suffix: section.id,
+          label_t: 'recipient.form.message_label',
+          placeholder_t: 'recipient.form.message',
+          floating: true,
+          value: form.message,
+          attrs: 'maxlength="200"'
+        %}
+        <label class="recipient-form__note">
+          {{- 'recipient.form.max_characters' | t: max_chars: 200 -}}
+        </label>
+      </div>
+
+      {% render 'input',
+        name: 'properties[Send on]',
+        type: 'date',
+        id: 'recipient-send-on',
+        id_suffix: section.id,
+        autocomplete: 'send_on',
+        label_t: 'recipient.form.send_on_label',
+        placeholder_t: 'recipient.form.send_on',
+        floating: true,
+        value: form.send_on,
+        attrs: 'pattern="\\d{4}-\\d{2}-\\d{2}"'
+      %}
+    </div>
+
+    <input
+      type="hidden"
+      name="properties[__shopify_send_gift_card_to_recipient]"
+      value="if_present"
+      class="recipient-form__control"
+      disabled
+    >
+    <input
+      type="hidden"
+      name="properties[__shopify_offset]"
+      value=""
+      class="recipient-form__offset"
+      disabled
+    >
+  </recipient-form>
+</div>

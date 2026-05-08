@@ -1,0 +1,51 @@
+{% liquid
+  assign threshold = settings.free_shipping_threshold
+
+  # Handle threshold per currency
+  if settings.free_shipping_threshold_per_currency != blank
+    assign currency_thresholds = settings.free_shipping_threshold_per_currency | newline_to_br | strip_newlines | split: '<br />'
+
+    for currency_threshold in currency_thresholds
+      assign ct = currency_threshold | split: ':'
+      if ct.size == 2 and cart.currency.iso_code == ct[0]
+        assign threshold = ct[1] | plus: 0
+        break
+      endif
+    endfor
+  endif
+
+  assign threshold = threshold | times: 100.0
+  assign cart_total = cart.total_price
+  assign remaining = threshold | minus: cart_total
+  assign remaining_money = remaining | money
+  assign progress = 0
+
+  if cart_total > 0
+    assign progress = cart_total | divided_by: threshold | at_most: 1
+  endif
+
+  assign display_percentage = progress | times: 100 | round
+%}
+
+<div
+  class="free-shipping-bar{% if remaining <= 0 %} free-shipping-bar--qualified{% endif %} {{ class }}"
+  style="--free-shipping-bar-progress: {{ progress }};"
+>
+  <div class="free-shipping-bar__clip">
+    <div class="free-shipping-bar__message">
+      {% if remaining > 0 %}
+        {{ 'sections.cart.free_shipping_bar.spend_more_html' | t: remaining: remaining_money }}
+      {% else %}
+        {{ 'sections.cart.free_shipping_bar.qualified_html' | t }}
+      {% endif %}
+    </div>
+    <div class="free-shipping-bar__progress-container">
+      <div class="free-shipping-bar__badge-container">
+        <div class="free-shipping-bar__badge">{{ display_percentage }}%</div>
+      </div>
+      <div class="free-shipping-bar__progress-bar">
+        <div class="free-shipping-bar__progress"></div>
+      </div>
+    </div>
+  </div>
+</div>

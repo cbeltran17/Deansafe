@@ -1,0 +1,38 @@
+{% liquid
+  if item.image == null
+    assign featured_image = item.product.featured_image
+  else
+    assign featured_image = item.image
+  endif
+%}
+
+<div class="order-line-item">
+  <a class="block w-16 shrink-0 md:w-20" href="{{ item.url | default: item.product.url }}">
+    {% render 'image',
+      image: featured_image,
+      placeholder: 'image',
+      width: 192,
+      sizes: '(min-width: 768px) 96px, 64px',
+      class: 'line-item-image'
+    %}
+  </a>
+
+  <div class="grow self-center">
+    <div class="flex justify-between gap-4">
+      <a href="{{ item.url | default: item.product.url }}" class="text-product-card">
+        {{ item.product.title }}
+      </a>
+      <span class="text-sm text-alpha-800 md:hidden">{{ item.quantity | append: 'x' }}</span>
+    </div>
+
+    {% unless item.product.has_only_default_variant or item.variant.title == blank %}
+      <p class="text-sm text-alpha-800">
+        {{ item.variant.title }}
+      </p>
+    {% endunless %}
+
+    {% render 'line-item-properties', item: item %}
+    {% render 'line-item-price', item: item %}
+    {% render 'line-item-discounts', item: item %}
+  </div>
+</div>

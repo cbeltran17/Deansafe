@@ -1,0 +1,93 @@
+{% liquid
+  assign results = search | default: collection
+  assign results_url = routes.all_products_collection_url
+
+  if search
+    assign sort_by = search.sort_by | default: search.default_sort_by
+    assign terms = search.terms | escape
+    assign types = search.types | join: ','
+    assign results_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by | append: '&type=' | append: types
+  elsif collection
+    assign results_url = collection.url
+    if collection.sort_by != blank
+      if results_url contains '?'
+        assign results_url = results_url | append: '&sort_by=' | append: collection.sort_by
+      else
+        assign results_url = results_url | append: '?sort_by=' | append: collection.sort_by
+      endif
+    endif
+  endif
+%}
+<active-filters-container
+  class="{{ class }}"
+  data-active-filters
+>
+  <ul class="active-filters">
+    {%- if active_filter_count > 0 -%}
+      {% for filter in results.filters %}
+        {% for value in filter.active_values %}
+          <li data-flip-id="{{ filter.param_name | escape }}-{{ value.value | escape }}">
+            <a data-filter-link href="{{ value.url_to_remove }}" class="active-filters__item">
+              {% if value.swatch %}
+                <div
+                  class="color-swatch"
+                  style="
+                    {%- if value.swatch.image -%}
+                      --swatch-fill: url({{ value.swatch.image | image_url: width: 128 }});
+                    {%- elsif value.swatch.color -%}
+                      --swatch-fill: {{ value.swatch.color }};
+                    {%- endif -%}
+                  "
+                >
+                  <div class="color-swatch__label"></div>
+                </div>
+              {% endif %}
+              {%- if section.settings.show_selected_filter_type -%}
+                {{ filter.label }}:&nbsp;
+              {%- endif -%}
+              {{- value.label | escape -}}
+              {{ 'icon-times.svg' | inline_asset_content }}
+              <span class="sr-only">{{ 'products.filters.clear_filter' | t }}</span>
+            </a>
+          </li>
+        {% endfor %}
+        {% if filter.type == 'price_range' %}
+          {% if filter.min_value.value != null or filter.max_value.value != null %}
+            <li data-flip-id="{{ filter.param_name | escape }}">
+              <a data-filter-link href="{{ filter.url_to_remove }}" class="active-filters__item">
+                {%- if section.settings.show_selected_filter_type -%}
+                  {{ filter.label }}:&nbsp;
+                {%- endif -%}
+                {%- if filter.min_value.value -%}
+                  {{- filter.min_value.value | money_without_trailing_zeros -}}
+                {%- else -%}
+                  {{- 0 | money_without_trailing_zeros -}}
+                {%- endif %}
+                -
+                {% if filter.max_value.value -%}
+                  {{- filter.max_value.value | money_without_trailing_zeros -}}
+                {%- else -%}
+                  {{-
+                    filter.range_max
+                    | divided_by: 100.0
+                    | ceil
+                    | times: 100
+                    | money_without_trailing_zeros
+                  -}}
+                {%- endif -%}
+                {{ 'icon-times.svg' | inline_asset_content }}
+                <span class="sr-only">{{ 'products.filters.clear_filter' | t }}</span>
+              </a>
+            </li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      <li data-flip-id="clear-all">
+        <a data-filter-link href="{{ results_url }}" class="active-filters__clear-all">
+          <span>{{ 'products.filters.clear_all' | t }}</span>
+        </a>
+      </li>
+    {%- endif -%}
+  </ul>
+</active-filters-container>

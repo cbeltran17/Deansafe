@@ -1,0 +1,12 @@
+<div class="header__search header__search--desktop">
+  <div class="header-search-input">
+    {% render 'search-input', id: 'header-search', class: 'header-search-input__input' %}
+    <button
+      id="header-search-close"
+      class="header-search-input__close"
+      aria-label="{{ 'accessibility.close_search_panel' | t }}"
+    >
+      {{ 'icon-times.svg' | inline_asset_content }}
+    </button>
+  </div>
+</div>

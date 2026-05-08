@@ -1,0 +1,39 @@
+{%- if block.settings.caption != blank -%}
+  <div
+    class="shopify-block block-caption"
+    id="shopify-block-{{ block.id }}"
+    style="{% render 'color-var' with block.settings.text_color, name: 'caption-color' %}"
+    {{ block.shopify_attributes }}
+  >
+    {% render 'caption' with block.settings.caption %}
+  </div>
+{%- endif -%}
+
+{%- schema -%}
+{
+  "name": "t:blocks.caption.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "caption",
+      "label": "t:blocks.caption.settings.caption.label",
+      "default": "t:blocks.caption.settings.caption.default"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.colors"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:sections.all.text_color.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.caption.name"
+    }
+  ]
+}
+{%- endschema -%}

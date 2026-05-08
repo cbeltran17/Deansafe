@@ -1,0 +1,28 @@
+<div class="button-group">
+  {% content_for 'blocks' %}
+</div>
+
+{% schema %}
+{
+  "name": "t:blocks.button_group.name",
+  "class": "block-button-group",
+  "blocks": [
+    {
+      "type": "button"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.button_group.name",
+      "blocks": [
+        {
+          "type": "button"
+        },
+        {
+          "type": "button"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,38 @@
+{%- liquid
+  assign f1_title = block.settings.feature_1_title
+  assign f1_content = block.settings.feature_1_content
+  assign f2_title = block.settings.feature_2_title
+  assign f2_content = block.settings.feature_2_content
+  assign f3_title = block.settings.feature_3_title
+  assign f3_content = block.settings.feature_3_content
+
+  assign has_features = false
+  if f1_title != blank and f1_content != blank or f2_title != blank and f2_content != blank or f3_title != blank and f3_content != blank
+    assign has_features = true
+  endif
+-%}
+
+{%- if has_features -%}
+  <ul class="product-key-features" {{ block.shopify_attributes }}>
+    {%- if f1_title != blank and f1_content != blank -%}
+      <li class="product-key-features__item">
+        <span class="product-key-features__title">{{ f1_title }}</span>
+        <span class="product-key-features__content">{{ f1_content }}</span>
+      </li>
+    {%- endif -%}
+
+    {%- if f2_title != blank and f2_content != blank -%}
+      <li class="product-key-features__item">
+        <span class="product-key-features__title">{{ f2_title }}</span>
+        <span class="product-key-features__content">{{ f2_content }}</span>
+      </li>
+    {%- endif -%}
+
+    {%- if f3_title != blank and f3_content != blank -%}
+      <li class="product-key-features__item">
+        <span class="product-key-features__title">{{ f3_title }}</span>
+        <span class="product-key-features__content">{{ f3_content }}</span>
+      </li>
+    {%- endif -%}
+  </ul>
+{%- endif -%}

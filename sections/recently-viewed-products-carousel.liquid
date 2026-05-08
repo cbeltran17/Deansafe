@@ -1,0 +1,29 @@
+<recently-viewed-products>
+  {% if search.performed and search.results_count > 0 %}
+    {% capture carousel_content %}
+      {% capture sizes %}
+        {% render 'sizes-carousel', min: 1.5, max: 5, item_width: 240 %}
+      {% endcapture %}
+
+      {% for product in search.results %}
+        <div data-id="{{ product.id }}">
+          {% render 'product-card' with product, sizes: sizes, index: forloop.index0 %}
+        </div>
+      {% endfor %}
+
+      <div slot="controls" class="carousel-controls-container">
+        {% render 'carousel-controls' %}
+      </div>
+    {% endcapture %}
+
+    {% render 'carousel',
+      css_class: 'carousel--products',
+      animation: 'product-cards-in',
+      animation_target: '.product-card',
+      columns_min: 1.5,
+      columns_max: 5,
+      enable_carousel: true,
+      content: carousel_content
+    %}
+  {% endif %}
+</recently-viewed-products>

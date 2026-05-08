@@ -1,0 +1,17 @@
+<script type="importmap">
+  {
+    "imports": {
+      "{{ 'autosizes.js' | asset_url | split: "?" | first }}": "{{ 'autosizes.js' | asset_url }}",
+      "{{ 'main.js' | asset_url | split: "?" | first }}": "{{ 'main.js' | asset_url }}",
+      "{{ 'polyfills.js' | asset_url | split: "?" | first }}": "{{ 'polyfills.js' | asset_url }}",
+      "{{ 'vendor.js' | asset_url | split: "?" | first }}": "{{ 'vendor.js' | asset_url }}",
+      "{{ 'photoswipe.esm.js' | asset_url | split: "?" | first }}": "{{ 'photoswipe.esm.js' | asset_url }}",
+      "{{ 'photoswipe.js' | asset_url | split: "?" | first }}": "{{ 'photoswipe.js' | asset_url }}"
+    }
+  }
+</script>
+
+<script src="{{ 'polyfills.js' | asset_url }}" type="module"></script>
+<script src="{{ 'main.js' | asset_url }}" type="module"></script>
+<link rel="modulepreload" href="{{ 'vendor.js' | asset_url }}">
+{{ 'theme.css' | asset_url | stylesheet_tag: preload: true | replace_first: '<link ', '<link data-theme-css ' }}

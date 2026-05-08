@@ -1,0 +1,7 @@
+<div class="article-share {% render 'text-alignment' with block.settings.alignment %}">
+  {% render 'share-button',
+    share_title: article.title,
+    share_permalink: article.url,
+    share_image: article.image
+  %}
+</div>

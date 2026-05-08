@@ -1,0 +1,119 @@
+{%- liquid
+  case block.settings.paragraph_size
+    when 'lg'
+      assign paragraph_size_class = 'md:prose-lg'
+    when 'sm'
+      assign paragraph_size_class = 'prose-sm'
+    else
+      assign paragraph_size_class = 'prose-base'
+  endcase
+
+  case block.settings.text_color
+    when 'secondary'
+      assign text_color_class = 'text-alpha-800'
+    else
+      assign text_color_class = 'text-text'
+  endcase
+
+  case block.settings.paragraph_width
+    when 'narrow'
+      assign paragraph_max_width = '55ch'
+    when 'wide'
+      assign paragraph_max_width = '75ch'
+    when 'full'
+      assign paragraph_max_width = 'none'
+    else
+      assign paragraph_max_width = '65ch'
+  endcase
+-%}
+
+{%- if block.settings.content != blank -%}
+  <div
+    class="shopify-block block-paragraph paragraph prose {{ paragraph_size_class }} {{ text_color_class }}"
+    id="shopify-block-{{ block.id }}"
+    style="--paragraph-max-width: {{ paragraph_max_width }}"
+    {{ block.shopify_attributes }}
+  >
+    {{ block.settings.content }}
+  </div>
+{%- endif -%}
+
+{%- schema -%}
+{
+  "name": "t:blocks.paragraph.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "select",
+      "id": "paragraph_size",
+      "label": "t:blocks.paragraph.settings.paragraph_size.label",
+      "options": [
+        {
+          "value": "lg",
+          "label": "t:blocks.paragraph.settings.paragraph_size.options.md_prose_lg.label"
+        },
+        {
+          "value": "md",
+          "label": "t:blocks.paragraph.settings.paragraph_size.options.prose_base.label"
+        },
+        {
+          "value": "sm",
+          "label": "t:blocks.paragraph.settings.paragraph_size.options.prose_sm.label"
+        }
+      ],
+      "default": "md"
+    },
+    {
+      "type": "select",
+      "id": "paragraph_width",
+      "label": "t:blocks.paragraph.settings.paragraph_width.label",
+      "options": [
+        {
+          "value": "full",
+          "label": "t:blocks.paragraph.settings.paragraph_width.options.full.label"
+        },
+        {
+          "value": "wide",
+          "label": "t:blocks.paragraph.settings.paragraph_width.options.wide.label"
+        },
+        {
+          "value": "medium",
+          "label": "t:blocks.paragraph.settings.paragraph_width.options.medium.label"
+        },
+        {
+          "value": "narrow",
+          "label": "t:blocks.paragraph.settings.paragraph_width.options.narrow.label"
+        }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "select",
+      "id": "text_color",
+      "label": "t:blocks.paragraph.settings.text_color.label",
+      "options": [
+        {
+          "value": "primary",
+          "label": "t:blocks.paragraph.settings.text_color.options.text_text.label"
+        },
+        {
+          "value": "secondary",
+          "label": "t:blocks.paragraph.settings.text_color.options.text_alpha_800.label"
+        }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "t:blocks.paragraph.settings.content.label",
+      "default": "t:blocks.paragraph.settings.content.default"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.paragraph.name"
+    }
+  ]
+}
+{%- endschema -%}

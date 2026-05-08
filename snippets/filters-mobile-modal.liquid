@@ -1,0 +1,35 @@
+{% liquid
+  assign results = search | default: collection
+%}
+
+<modal-element id="FiltersMobileModal" hidden class="filters-mobile-modal">
+  <form is="filter-form" class="filters-mobile-modal__content">
+    <p class="filters-mobile-modal__title">{{ 'templates.collection.filter_modal_heading' | t }}</p>
+
+    {% if section.settings.show_sort_by %}
+      <div class="filters-mobile-modal__sort">
+        <span>{{ 'templates.collection.sort_by' | t }}</span>
+        {% render 'sort-by', scope: 'Mobile', size: 'small', variant: 'default' %}
+      </div>
+    {% endif %}
+
+    {% render 'filter-active', active_filter_count: active_filter_count %}
+
+    {%- for filter in results.filters -%}
+      {% render 'filter' with filter, index: forloop.index, scope: 'mobile-filters' %}
+    {%- endfor -%}
+
+    <div class="filters-mobile-modal__btn">
+      {% render 'button' with 'Done', size: 'sm', attrs: 'data-close' %}
+    </div>
+
+    {% unless search.terms == null %}
+      <input type="hidden" name="q" value="{{ search.terms }}">
+      <input name="options[prefix]" type="hidden" value="last">
+    {% endunless %}
+
+    {% if results.current_vendor or results.current_type %}
+      <input type="hidden" name="q" value="{{ results.current_vendor }}{{ results.current_type }}">
+    {% endif %}
+  </form>
+</modal-element>

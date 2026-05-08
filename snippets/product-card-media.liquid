@@ -1,0 +1,72 @@
+{% liquid
+  assign featured_media = media | default: product.selected_variant.featured_media | default: product.featured_media
+  assign hover_gallery_enabled = settings.product_card_hoverable_gallery_enable
+  assign hover_gallery_count = settings.product_card_hoverable_gallery_count
+  assign image_count = 0
+  assign sizes = sizes | default: 'auto'
+  assign loading = loading | default: 'lazy'
+
+  if product
+    assign image_count = product.media | where: 'media_type', 'image' | size
+  endif
+
+  if product == blank
+    assign placeholder = index | modulo: 6 | plus: 1 | prepend: 'product-'
+  else
+    assign placeholder = 'image'
+  endif
+%}
+
+{% if hover_gallery_enabled and image_count > 1 %}
+  <hoverable-gallery class="hoverable-gallery">
+    {% comment %}
+      Render up to N images: featured first, then subsequent images from product.media excluding duplicates
+    {% endcomment %}
+    {% assign rendered = 1 %}
+
+    {% render 'image' with featured_media,
+      width: 3200,
+      widths: '400, 600, 800, 1000, 1200, 1400, 1600, 2000, 2400, 3200',
+      loading: loading,
+      placeholder: placeholder,
+      sizes: sizes
+    %}
+
+    <template>
+      {% for media in product.media %}
+        {% liquid
+          if rendered >= hover_gallery_count
+            break
+          endif
+          if media.id == featured_media.id
+            continue
+          endif
+          if media.media_type != 'image'
+            continue
+          endif
+        %}
+        {% render 'image' with media,
+          width: 3200,
+          widths: '400, 600, 800, 1000, 1200, 1400, 1600, 2000, 2400, 3200',
+          loading: 'lazy',
+          fetchpriority: 'low',
+          sizes: sizes,
+          lqip: false
+        %}
+        {% liquid
+          assign rendered = rendered | plus: 1
+        %}
+      {% endfor %}
+    </template>
+
+    <div aria-hidden="true" class="hoverable-gallery__indicator"></div>
+  </hoverable-gallery>
+{% else %}
+  {% render 'image' with featured_media,
+    width: 3200,
+    widths: '400, 600, 800, 1000, 1200, 1400, 1600, 2000, 2400, 3200',
+    loading: loading,
+    placeholder: placeholder,
+    sizes: sizes
+  %}
+{% endif %}

@@ -1,0 +1,18 @@
+{% liquid
+  assign rating = product.metafields.reviews.rating.value.rating | round: 2
+%}
+
+{% if product.metafields.reviews.rating.value != blank %}
+  <p class="product-rating block-rating" {{ block.shopify_attributes }}>
+    {% render 'rating-stars',
+      rating: rating,
+      max: product.metafields.reviews.rating.value.scale_max
+    %}
+    <span class="product-rating__value">{{ rating }}</span>
+    <span class="product-rating__separator"></span>
+    <span class="product-rating__count">
+      {{- product.metafields.reviews.rating_count }}
+      {{ 'products.product.total_reviews' | t -}}
+    </span>
+  </p>
+{% endif %}

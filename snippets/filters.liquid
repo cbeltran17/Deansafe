@@ -1,0 +1,47 @@
+{% comment %} Renders all filters for a collection or search, including active filter badges {% endcomment %}
+
+{% liquid
+  assign results = search | default: collection
+%}
+
+{% comment %} Mobile Filter & Sort Button (visible below lg) {% endcomment %}
+{%- capture content -%}
+  {{ 'icon-filter.svg' | inline_asset_content }}
+  <span>
+    {%- if section.settings.show_sort_by -%}
+      {{ 'templates.collection.filter_and_sort_button' | t }}
+    {%- else -%}
+      {{ 'templates.collection.filter_button' | t }}
+    {%- endif -%}
+  </span>
+
+  {% if active_filter_count > 0 %}
+    <span class="count-bubble">{{ active_filter_count }}</span>
+  {% endif %}
+{%- endcapture -%}
+{% render 'button' with content,
+  class: 'filters__mobile-button button--light',
+  size: 'xs',
+  attrs: 'data-modal="FiltersMobileModal"'
+%}
+
+{% comment %} Desktop Filter Form (hidden below lg) {% endcomment %}
+<div class="filters__desktop-form">
+  <form is="filter-form">
+    {% unless search.terms == null %}
+      <input type="hidden" name="q" value="{{ search.terms }}">
+      <input type="hidden" name="type" value="{{ results.types | join: ',' }}">
+      <input name="options[prefix]" type="hidden" value="last">
+    {% endunless %}
+
+    {% if results.current_vendor or results.current_type %}
+      <input type="hidden" name="q" value="{{ results.current_vendor }}{{ results.current_type }}">
+    {% endif %}
+
+    {%- for filter in results.filters -%}
+      {% render 'filter' with filter, index: forloop.index %}
+    {%- endfor -%}
+  </form>
+</div>
+
+{%- comment -%} Mobile filters modal moved to separate snippet and rendered outside sticky containers {%- endcomment -%}

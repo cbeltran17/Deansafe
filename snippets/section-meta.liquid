@@ -1,0 +1,47 @@
+{% liquid
+  assign selector = '#shopify-section-' | append: section.id
+
+  if request.visual_preview_mode
+    # ID selector doesn't work in visual preview mode
+    assign selector = '.shopify-section'
+  endif
+%}
+
+<style>
+  {{ selector }} {
+    {% if colors != false %}
+      {% render 'base-color-vars', default_background: default_background, default_text: default_text %}
+    {% endif %}
+
+    {% if section.settings.enable_custom_spacing %}
+      --section-custom-top-spacing: {% render 'rfs' with section.settings.top_spacing, base: 32 %};
+      --section-custom-bottom-spacing: {% render 'rfs' with section.settings.bottom_spacing, base: 32 %};
+    {% endif %}
+  }
+
+  {% if blend == true %}
+    {% liquid
+      if bg_number == blank
+        assign blend_bg = blend_bg | default: settings.color_background
+
+        if blend_bg == blank or blend_bg.rgba == '0 0 0 / 0.0'
+          assign bg_number = 16646655
+        else
+          assign red = blend_bg.red | times: 65025
+          assign green = blend_bg.green | times: 255
+          assign blue = blend_bg.blue
+
+          assign bg_number = red | plus: green | plus: blue
+        endif
+      endif
+    %}
+
+    {{ selector }} {
+      --section-bg-number: {{ bg_number }};
+    }
+
+    {{ selector }} + * {
+      --previous-section-bg-number: {{ bg_number }};
+    }
+  {% endif %}
+</style>

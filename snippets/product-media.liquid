@@ -1,0 +1,114 @@
+{% liquid
+  assign media = product-media
+  assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media
+
+  if media.id == featured_media.id
+    assign loading = 'eager'
+    assign preload = true
+    assign fetchpriority = 'high'
+  else
+    assign loading = 'lazy'
+  endif
+
+  if sizes == blank
+    capture sizes
+      render 'sizes', base: 1, lg: 2
+    endcapture
+  endif
+%}
+
+{% capture video_attrs %}
+  {% if section.settings.video_muted %}
+    muted
+  {% endif %}
+  {% if section.settings.video_controls %}
+    controls
+  {% endif %}
+  {% if section.settings.video_loop %}
+    loop
+  {% endif %}
+  {% if section.settings.video_autoplay and section.settings.product_gallery_type == 'grid' %}
+    autoplay
+  {% endif %}
+{% endcapture %}
+
+{% if media.media_type == 'video' %}
+  <video-media
+    {{ video_attrs }}
+    {{ attrs }}
+    media-id="{{ media.id }}"
+    data-media-id="{{ media.id }}"
+    data-media-type="{{ media.media_type }}"
+    data-media-width="{{ media.width }}"
+    data-media-height="{{ media.height }}"
+    style="--media-aspect-ratio-original: {{ media.aspect_ratio }};"
+  >
+    {% render 'image' with media,
+      width: 1440,
+      widths: '360, 450, 540, 630, 720, 900, 1050, 1200, 1320, 1440, 1800, 2200, 3840',
+      loading: loading,
+      slot: 'poster',
+      sizes: sizes,
+      decoding: decoding
+    %}
+    <template>
+      {{ media | video_tag }}
+    </template>
+  </video-media>
+{% elsif media.media_type == 'external_video' %}
+  <video-media
+    {{ video_attrs }}
+    {{ attrs }}
+    media-id="{{ media.id }}"
+    data-media-id="{{ media.id }}"
+    data-media-type="{{ media.media_type }}"
+    data-media-width="{{ media.width }}"
+    data-media-height="{{ media.height }}"
+    host="{{ media.host }}"
+    video-id="{{ media.external_id }}"
+    style="--media-aspect-ratio-original: {{ media.aspect_ratio }};"
+  >
+    {% render 'image' with media,
+      width: 1440,
+      widths: '360, 450, 540, 630, 720, 900, 1050, 1200, 1320, 1440, 1800, 2200, 3840',
+      slot: 'poster',
+      loading: loading,
+      sizes: sizes,
+      decoding: decoding
+    %}
+  </video-media>
+{% elsif media.media_type == 'model' %}
+  <model-media media-id="{{ media.id }}" data-media-id="{{ media.id }}" {{ attrs }}>
+    {% render 'image' with media,
+      width: 1440,
+      widths: '360, 450, 540, 630, 720, 900, 1050, 1200, 1320, 1440, 1800, 2200, 3840',
+      loading: loading,
+      slot: 'poster',
+      sizes: sizes,
+      decoding: decoding
+    %}
+    <template>
+      {{ media | model_viewer_tag: image_size: '1024x', touch-action: 'none' }}
+    </template>
+  </model-media>
+
+{% else %}
+  {% capture image_attrs %}
+    data-media-id="{{ media.id }}"
+    data-media-type="{{ media.media_type }}"
+    data-media-width="{{ media.width }}"
+    data-media-height="{{ media.height }}"
+    {{ attrs }}
+  {% endcapture %}
+
+  {% render 'image' with media,
+    width: 1440,
+    widths: '360, 450, 540, 630, 720, 900, 1050, 1200, 1320, 1440, 1800, 2200, 3840',
+    attrs: image_attrs,
+    loading: loading,
+    sizes: sizes,
+    preload: preload,
+    fetchpriority: fetchpriority,
+    decoding: decoding
+  %}
+{% endif %}

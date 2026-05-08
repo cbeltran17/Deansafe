@@ -1,0 +1,23 @@
+{%- capture label -%}
+  <span>{{ filter_value.label }}</span>
+  {% if section.settings.show_filter_match_count %}
+    <span class="filter__active-count" aria-hidden="true">({{ filter_value.count }})</span>
+  {% endif %}
+{%- endcapture -%}
+
+{%- capture value_id -%}
+  {{- id }}-{{ filter_value.value | camelize | escape -}}
+{%- endcapture -%}
+
+{%- capture attrs -%}
+  name="{{ filter_value.param_name }}"
+  value="{{ filter_value.value }}"
+  {% if filter_value.active %}
+    checked
+  {% endif %}
+  {% if filter_value.count == 0 and filter_value.active == false %}
+    disabled
+  {% endif %}
+{%- endcapture -%}
+
+{% render 'checkbox', id: value_id, attrs: attrs, label: label, class: 'checkbox--filter' %}

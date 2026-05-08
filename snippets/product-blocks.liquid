@@ -1,0 +1,87 @@
+{% assign product_form_id = 'ProductForm-' | append: section.id %}
+
+{% for block in section.blocks %}
+  {% if location == 'details' and block.settings.show_under_gallery != true %}
+    {% continue %}
+  {% elsif location == 'info' and block.settings.show_under_gallery == true %}
+    {% continue %}
+  {% endif %}
+
+  {% case block.type %}
+    {% when '@app' %}
+      {% render block %}
+    {% when 'text' %}
+      {% render 'product-text', product: block, block: block %}
+    {% when 'vendor' %}
+      {% render 'product-vendor', product: product, block: block %}
+    {% when 'title' %}
+      {% render 'product-title',
+        product: product,
+        block: block,
+        quick_view_modal: quick_view_modal
+      %}
+    {% when 'price' %}
+      {% render 'product-price', product: product, block: block %}
+    {% when 'stock' %}
+      {% render 'product-stock', product: product, block: block %}
+    {% when 'variant_picker' %}
+      {% render 'product-variant-picker',
+        product: product,
+        product_form_id: product_form_id,
+        block: block,
+        section_ref: 'variant_picker'
+      %}
+    {% when 'buy_buttons' %}
+      {% render 'product-buy-buttons',
+        product: product,
+        product_form_id: product_form_id,
+        block: block
+      %}
+    {% when 'description' %}
+      {% render 'product-description', product: product, block: block %}
+    {% when 'rating' %}
+      {% render 'product-rating', product: product, block: block %}
+    {% when 'pickup_availability' %}
+      {% render 'product-pickup-availability', product: product, block: block %}
+    {% when 'specifications' %}
+      {% render 'product-specifications', product: product, block: block %}
+    {% when 'key_features' %}
+      {% render 'product-key-features', product: product, block: block %}
+    {% when 'product_highlights' %}
+      {% render 'product-highlights', product: product, block: block %}
+    {% when 'complementary_products' %}
+      {% render 'product-complementary-products', product: product, block: block %}
+    {% when 'custom_liquid' %}
+      <div class="block-custom-liquid" {{ block.shopify_attributes }}>
+        {{ block.settings.custom_liquid }}
+      </div>
+    {% when 'custom_spacing' %}
+      {% render 'custom-spacing', block: block %}
+    {% when 'view_full_details' %}
+      <a
+        class="button button--md button--outline-light"
+        href="{{ product.selected_variant.url | default: product.url }}"
+        data-section-ref="view-full-details"
+        {{ block.shopify_attributes }}
+      >
+        <span class="button__label w-full justify-between">
+          <span>{{ 'sections.quick_view_modal.view_full_details' | t }}</span>
+          {{ 'icon-arrow-right.svg' | inline_asset_content }}
+        </span>
+      </a>
+    {% when 'collapsible_content' %}
+      {% render 'product-collapsible-content', product: product, block: block %}
+    {% when 'input_field' %}
+      {% render 'product-custom-field',
+        block: block,
+        product_form_id: product_form_id,
+        type: 'input'
+      %}
+    {% when 'dropdown_field' %}
+      {% render 'product-custom-field',
+        block: block,
+        product_form_id: product_form_id,
+        type: 'dropdown'
+      %}
+  {% endcase %}
+{% endfor %}

@@ -1,0 +1,96 @@
+{% liquid
+  assign placeholder = false
+  if block.settings.products == blank and block.settings.collection == blank
+    assign placeholder = true
+  endif
+
+  assign tab_index = 0
+  for b in section.blocks
+    unless b.id == 'section-header'
+      assign tab_index = tab_index | plus: 1
+      if b.id == block.id
+        break
+      endif
+    endunless
+  endfor
+%}
+
+<!-- tab_start -->
+<div class="radio-button" {{ block.shopify_attributes }}>
+  <input
+    type="radio"
+    name="{{ section.id }}-collection-selector"
+    id="{{ section.id }}-collection-{{ tab_index }}"
+    value="{{ tab_index }}"
+    {% if tab_index == 1 %}
+      checked
+    {% endif %}
+  >
+  <label for="{{ section.id }}-collection-{{ tab_index }}">
+    {{- block.settings.label | default: block.settings.collection.title | default: 'Collection' -}}
+  </label>
+  <template>
+    {% render 'product-carousel-content', target: block, placeholder: placeholder %}
+  </template>
+</div>
+<!-- tab_end -->
+
+<!-- content_start -->
+<div {{ block.shopify_attributes }}>
+  {% render 'product-carousel', target: block, placeholder: placeholder %}
+</div>
+<!-- content_end -->
+
+{% schema %}
+{
+  "name": "t:blocks._featured_collection_tab.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "t:blocks._featured_collection_tab.settings.collection.label"
+    },
+    {
+      "type": "product_list",
+      "id": "products",
+      "label": "t:blocks._featured_collection_tab.settings.products.label"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "t:blocks._featured_collection_tab.settings.label.label",
+      "info": "t:blocks._featured_collection_tab.settings.label.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.multiple_featured_collections.headers.link.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_link",
+      "label": "t:blocks._featured_collection_tab.settings.show_link.label",
+      "default": true
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "t:blocks._featured_collection_tab.settings.link_url.label",
+      "info": "t:blocks._featured_collection_tab.settings.link_url.info",
+      "visible_if": "{{ block.settings.show_link == true }}"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "t:blocks._featured_collection_tab.settings.link_text.label",
+      "info": "t:blocks._featured_collection_tab.settings.link_text.info",
+      "visible_if": "{{ block.settings.show_link == true }}"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks._featured_collection_tab.name"
+    }
+  ]
+}
+{% endschema %}

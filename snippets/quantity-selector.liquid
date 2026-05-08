@@ -1,0 +1,81 @@
+{% doc %}
+  Quantity selector snippet
+
+  @param {object} variant - The variant object to get quantity rules from
+  @param {number} quantity - Current quantity value
+  @param {string} name - Name attribute for the input
+  @param {string} id - ID for the quantity selector
+  @param {string} [class] - Optional additional CSS classes
+  @param {string} [size] - Optional size parameter
+  @param {string} [data_key] - Optional data-key attribute
+  @param {string} [aria_label] - Optional aria label for the input
+
+  @example
+  {% render 'quantity-selector',
+    variant: product.selected_or_first_available_variant,
+    quantity: 1,
+    name: 'quantity'
+  %}
+{% enddoc %}
+
+{%- assign min_quantity = variant.quantity_rule.min | default: 1 -%}
+{%- assign max_quantity = variant.quantity_rule.max | default: 1000000 -%}
+{%- assign step_quantity = variant.quantity_rule.increment | default: 1 -%}
+
+<quantity-selector
+  {%- if id %}
+    id="{{ id }}"
+  {% endif %}
+  class="quantity-selector {{ class }}"
+  min="{{ min_quantity }}"
+  max="{{ max_quantity }}"
+  step="{{ step_quantity }}"
+  {%- if size %}
+    data-size="{{ size }}"
+  {% endif %}
+  {%- if data_key %}
+    data-cart-item="{{ data_key }}"
+  {% endif %}
+>
+  <label class="sr-only" for="{{ id }}-Input">
+    {%- if aria_label -%}
+      {{ aria_label }}
+    {%- else -%}
+      {{ 'accessibility.quantity' | t }}
+    {%- endif -%}
+  </label>
+  <input
+    {% if id %}
+      id="{{ id }}-Input"
+    {% endif %}
+    {% if data_key %}
+      data-key="{{ data_key }}"
+    {% endif %}
+    type="number"
+    inputmode="numeric"
+    class="quantity-selector__input"
+    name="{{ name }}"
+    value="{{ quantity }}"
+    min="{{ min_quantity }}"
+    max="{{ max_quantity }}"
+    step="{{ step_quantity }}"
+  >
+
+  <button
+    data-part="decrement"
+    type="button"
+    aria-label="{{ 'accessibility.decrease_quantity' | t }}"
+    class="quantity-selector__button quantity-selector__button--minus"
+  >
+    {{ 'icon-chevron-left.svg' | inline_asset_content }}
+  </button>
+
+  <button
+    data-part="increment"
+    type="button"
+    aria-label="{{ 'accessibility.increase_quantity' | t }}"
+    class="quantity-selector__button quantity-selector__button--plus"
+  >
+    {{ 'icon-chevron-right.svg' | inline_asset_content }}
+  </button>
+</quantity-selector>

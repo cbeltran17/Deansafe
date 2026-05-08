@@ -1,0 +1,8 @@
+{%- liquid
+  assign brightness = get-foreground | color_to_oklch | replace: 'oklch(', '' | split: '%' | first | plus: 0
+  if brightness < 75
+    echo '255 255 255'
+  else
+    echo '0 0 0'
+  endif
+-%}

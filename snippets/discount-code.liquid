@@ -1,0 +1,40 @@
+<form
+  is="cart-form"
+  action="{{ routes.cart_update_url }}"
+  class="discount-code flex flex-col gap-4 {{ class }}"
+  data-section-ref="discount-code-form"
+>
+  <div class="discount-code-pill-container">
+    {%- for discount_application in cart.cart_level_discount_applications -%}
+      {%- if discount_application.type == 'discount_code' -%}
+        <cart-discount-code
+          code="{{ discount_application.title | escape }}"
+          class="discount-code-pill"
+          aria-label="{{ 'accessibility.remove_discount_code' | t: code: discount_application.title }}"
+        >
+          <span class="discount-code-pill__text">{{ discount_application.title }}</span>
+          {{ 'icon-times.svg' | inline_asset_content }}
+        </cart-discount-code>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  {% render 'input',
+    tag: 'input',
+    type: 'text',
+    id: 'DiscountCode',
+    name: 'discount',
+    floating: false,
+    placeholder_t: 'sections.cart.discount_code_input_placeholder',
+    label_t: 'sections.cart.discount_code_input_placeholder',
+    label_class: 'sr-only'
+  %}
+
+  <cart-error class="cart-error"></cart-error>
+
+  {% render 'button',
+    translation: 'sections.cart.discount_code_apply',
+    type: 'submit',
+    name: 'cart-update'
+  %}
+</form>

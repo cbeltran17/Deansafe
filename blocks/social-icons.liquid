@@ -1,0 +1,43 @@
+{% render 'social-icons', size: block.settings.size %}
+
+{% schema %}
+{
+  "name": "t:blocks.social_icons.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "select",
+      "id": "size",
+      "label": "t:blocks.social_icons.settings.size.label",
+      "default": "medium",
+      "options": [
+        {
+          "value": "large",
+          "label": "t:blocks.social_icons.settings.size.options.large.label"
+        },
+        {
+          "value": "medium",
+          "label": "t:blocks.social_icons.settings.size.options.medium.label"
+        },
+        {
+          "value": "small",
+          "label": "t:blocks.social_icons.settings.size.options.small.label"
+        },
+        {
+          "value": "xs",
+          "label": "t:blocks.social_icons.settings.size.options.xs.label"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": "t:blocks.social_icons.paragraph__0.content"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.social_icons.name"
+    }
+  ]
+}
+{% endschema %}

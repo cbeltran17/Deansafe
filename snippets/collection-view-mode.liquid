@@ -1,0 +1,70 @@
+<collection-view-mode
+  class="collection-view-mode"
+  data-morph-ignore
+  data-default="{{ default_view_mode | default: 'grid' }}"
+>
+  <label class="collection-view-mode__option">
+    <input
+      type="radio"
+      name="view-mode"
+      class="sr-only"
+      value="grid"
+      {% if default_view_mode == 'grid' or default_view_mode == blank %}
+        checked
+      {% endif %}
+    >
+    {{ 'icon-grid.svg' | inline_asset_content }}
+    <span class="sr-only">{{ 'accessibility.collection_view_mode_grid' | t }}</span>
+  </label>
+  <label class="collection-view-mode__option">
+    <input
+      type="radio"
+      name="view-mode"
+      class="sr-only"
+      value="list"
+      {% if default_view_mode == 'list' %}
+        checked
+      {% endif %}
+    >
+    {{ 'icon-list.svg' | inline_asset_content }}
+    <span class="sr-only">{{ 'accessibility.collection_view_mode_list' | t }}</span>
+  </label>
+</collection-view-mode>
+
+<script>
+  class CollectionViewMode extends HTMLElement {
+    constructor() {
+      super();
+      this.addEventListener('change', this.handleChange.bind(this));
+    }
+
+    connectedCallback() {
+      this.sectionEl = this.closest('[data-collection-view-mode]');
+      const radios = this.querySelectorAll('input[name="view-mode"]');
+      const defaultViewMode = this.getAttribute('data-default') || 'grid';
+      const savedViewMode = localStorage.getItem('alloy:collection-view-mode') || defaultViewMode;
+      if (this.sectionEl) {
+        this.sectionEl.setAttribute('data-collection-view-mode', savedViewMode);
+      }
+
+      radios.forEach((radio) => {
+        radio.checked = radio.value === savedViewMode;
+      });
+    }
+
+    handleChange(event) {
+      const radio = event.target;
+      if (radio.name === 'view-mode' && radio.checked) {
+        localStorage.setItem('alloy:collection-view-mode', radio.value);
+        this.dispatchEvent(
+          new CustomEvent('collection:view-mode', {
+            bubbles: true,
+            detail: { viewMode: radio.value },
+          }),
+        );
+      }
+    }
+  }
+
+  customElements.define('collection-view-mode', CollectionViewMode);
+</script>

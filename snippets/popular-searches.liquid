@@ -1,0 +1,26 @@
+{%- assign popular_searches = section.settings.popular_searches
+  | newline_to_br
+  | strip_newlines
+  | split: '<br />'
+-%}
+
+{%- if popular_searches.size > 0 -%}
+  <div class="popular-searches" data-search-panel-item>
+    <p class="popular-searches__title">
+      {{ 'icon-trending.svg' | inline_asset_content }}
+      <span>{{ section.settings.popular_searches_heading }}</span>
+    </p>
+    <ul class="popular-searches__list">
+      {% for query in popular_searches %}
+        {% if query != blank %}
+          <li class="popular-searches__item">
+            {{ 'icon-ui-search.svg' | inline_asset_content }}
+            <a class="link-text" href="{{ routes.search_url }}?q={{ query | strip | url_encode }}">
+              <span>{{ query | strip }}</span>
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+{%- endif -%}

@@ -1,0 +1,54 @@
+{% comment %} Renders a single filter instance {% endcomment %}
+
+{% liquid
+  if filter.type == 'price_range' and filter.range_max == 0
+    break
+  endif
+  if filter.type != 'price_range' and section.settings.show_filter_values_with_no_matches == false
+    assign has_matching_values = false
+    for filter_value in filter.values
+      if filter_value.count == 0 and filter_value.active == false
+        continue
+      endif
+      assign has_matching_values = true
+      break
+    endfor
+    if has_matching_values == false
+      break
+    endif
+  endif
+
+  if index <= section.settings.default_open_filters
+    assign open = true
+  endif
+%}
+
+{%- capture filter_id -%}
+  {{- filter.param_name | camelize | escape }}-{{ scope -}}
+{%- endcapture -%}
+
+<smooth-collapse
+  id="{{ filter_id }}"
+  class="accordion"
+  {% if open %}
+    open
+  {% endif %}
+>
+  <button type="button" class="accordion__summary icon-flip-y" slot="summary">
+    <span>{{ filter.label }}</span>
+    {%- if filter.active_values != blank -%}
+      <span class="sr-only">
+        {{- 'accessibility.filter_active_values' | t: count: filter.active_values.size -}}
+      </span>
+    {%- endif -%}
+    <div class="accordion__icon">{{ 'icon-chevron-down.svg' | inline_asset_content }}</div>
+  </button>
+  <div class="accordion__content">
+    {% case filter.type %}
+      {% when 'price_range' %}
+        {% render 'filter-price-range', id: filter_id, filter: filter %}
+      {% else %}
+        {% render 'filter-list', id: filter_id, filter: filter %}
+    {% endcase %}
+  </div>
+</smooth-collapse>

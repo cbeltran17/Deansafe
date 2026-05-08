@@ -1,0 +1,21 @@
+{% assign results = search | default: collection %}
+{% assign sort_by = results.sort_by | default: results.default_sort_by %}
+
+<listbox-element
+  id="SortBy{{ scope }}"
+  size="{{ size | default: 'medium' }}"
+  variant="{{ variant | default: 'inline' }}"
+  placement="bottom-end"
+  label="{{ 'products.filters.sort_by_label' | t | escape }}"
+  value="{{ sort_by | escape }}"
+  name="sort_by"
+  auto-width
+>
+  <template>
+    {% for option in results.sort_options %}
+      <div data-value="{{ option.value | escape }}">
+        {{ option.name }}
+      </div>
+    {% endfor %}
+  </template>
+</listbox-element>

@@ -1,0 +1,26 @@
+<recently-viewed-products>
+  {% if search.performed and search.results_count > 0 %}
+    <div class="search-recently-viewed">
+      <div class="search-recently-viewed__title">
+        <p>{{ 'general.search.recently_viewed' | t }}</p>
+        <button type="button" data-action="clear" class="search-recently-viewed__clear-btn">
+          {{ 'general.search.clear_recently_viewed' | t }}
+        </button>
+      </div>
+      <ul class="search-recently-viewed__list" data-scroll-lock-ignore>
+        {% for product in search.results %}
+          <li data-id="{{ product.id }}">
+            <a href="{{ product.url }}" aria-label="{{ product.title }}">
+              {% render 'image' with product.featured_media,
+                sizes: '80px',
+                widths: '80,160',
+                lqip: false,
+                placeholder: true
+              %}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+</recently-viewed-products>

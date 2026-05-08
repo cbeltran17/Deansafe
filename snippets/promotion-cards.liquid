@@ -1,0 +1,29 @@
+{% comment %}
+  Renders promotion cards at specific positions within product listings
+
+  Parameters:
+  - has_active_filters: Boolean indicating if filters are active
+  - current_page: The current pagination page number
+  - product_index: The current product index in the loop
+{% endcomment %}
+
+{% unless section.settings.hide_promo_cards_when_filtering and has_active_filters %}
+  {% liquid
+    if current_page == 1
+      for item in section.blocks
+        capture card
+          render item
+        endcapture
+        capture position_attr
+          echo 'data-promo-card-position="'
+          echo product_index
+          echo '"'
+        endcapture
+        if card contains position_attr
+          echo card
+          break
+        endif
+      endfor
+    endif
+  %}
+{% endunless %}

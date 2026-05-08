@@ -1,0 +1,62 @@
+{% comment %}
+  Renders product/variant badges
+  Accepts:
+  - product: {Object} Product object
+  - use_variant: {Boolean} When true, compute availability/discount based on selected_or_first_available_variant
+  - sale: {Boolean} Show sale badge
+  - sold_out: {Boolean} Show sold out badge
+  - custom: {Boolean} Show custom metafield badges
+{% endcomment %}
+
+{%- liquid
+  assign subject = product
+
+  if use_variant
+    assign subject = product.selected_or_first_available_variant | default: product
+  endif
+
+  assign discount_as = discount_as | default: settings.product_card_discount_display | default: 'percentage'
+
+  if subject.compare_at_price > subject.price
+    assign discount_amount = subject.compare_at_price | minus: subject.price
+    assign percent_discount = discount_amount | times: 100 | divided_by: subject.compare_at_price
+
+    if discount_as == 'amount'
+      assign discount_badge_value = discount_amount | money_without_trailing_zeros | strip_html
+    elsif discount_as == 'percentage'
+      assign discount_badge_value = percent_discount | append: '%'
+    endif
+  endif
+-%}
+
+{% if sale and discount_badge_value != blank %}
+  <span class="product-badge product-badge--sale">
+    {{ 'products.product.save_badge' | t: value: discount_badge_value }}
+  </span>
+{% endif %}
+
+{% if sold_out and subject.available == false %}
+  <span class="product-badge product-badge--sold-out">
+    {{ 'products.product.sold_out' | t }}
+  </span>
+{% endif %}
+
+{% if custom and product.metafields.custom.badges.value != blank %}
+  {% for badge in product.metafields.custom.badges.value %}
+    {% if badge.label.value %}
+      <span
+        class="product-badge product-badge--custom"
+        {% if badge.color.value %}
+          style="
+            --product-custom-badge-background: {{ badge.color.value.rgb }};
+            --product-custom-badge-color: {% render 'generate-text-color' with badge.color.value %};
+          "
+        {% endif %}
+      >
+        {{ badge.label.value }}
+      </span>
+    {% else %}
+      <span class="product-badge product-badge--custom">{{ badge }}</span>
+    {% endif %}
+  {% endfor %}
+{% endif %}

@@ -1,0 +1,41 @@
+{% liquid
+  assign href = href | default: collection.url | default: '#'
+  assign style = style | default: 'overlay'
+  assign image = image | default: collection.featured_image
+  assign title = title | default: collection.title | default: 'Collection'
+%}
+
+<a
+  {% if id != blank %}
+    id="{{ id }}"
+  {% endif %}
+  href="{{ href }}"
+  class="collection-list-item collection-list-item--{{ style }} media-hover-zoom"
+  {% if attributes %}
+    {{- attributes -}}
+  {% endif %}
+>
+  <div
+    class="collection-list-item__media"
+    {% if image_aspect_ratio != blank %}
+      style="--media-aspect-ratio: {{ image_aspect_ratio }}"
+    {% endif %}
+  >
+    {% render 'image' with image,
+      width: 3200,
+      widths: '400, 600, 800, 1000, 1200, 1400, 1600, 2000, 2400, 3200',
+      animation: 'zoom-out',
+      sizes: sizes,
+      placeholder: placeholder
+    %}
+  </div>
+  <div class="collection-list-item__info">
+    <div class="collection-list-item__content">
+      <p class="collection-list-item__title">{{ title }}</p>
+      {% if description != blank %}
+        <p class="collection-list-item__description">{{ description }}</p>
+      {% endif %}
+    </div>
+    {{ 'icon-arrow-right.svg' | inline_asset_content }}
+  </div>
+</a>

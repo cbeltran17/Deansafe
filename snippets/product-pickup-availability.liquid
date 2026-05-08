@@ -1,0 +1,109 @@
+{% liquid
+  assign variant = product.selected_or_first_available_variant
+  assign stores = variant.store_availabilities | where: 'pick_up_enabled', true
+  assign available_stores = stores | where: 'available', true
+%}
+
+{% if available_stores.size == 0 %}
+  <!-- section_ref: pickup_availability -->
+{% else %}
+  <div
+    class="pickup-availability {{ class }}"
+    data-section-ref="pickup_availability"
+    {{ block.shopify_attributes }}
+  >
+    {%- if stores.size > 0 -%}
+      {%- assign closest_store = stores.first -%}
+
+      <div>
+        {%- if closest_store.available -%}
+          <p class="pickup-availability__summary pickup-availability__summary--available">
+            {{ 'icon-ui-check-circle.svg' | inline_asset_content }}
+            <span>
+              {{
+                'products.pickup_availability.available_at_html'
+                | t: location_name: closest_store.location.name
+              }}
+            </span>
+          </p>
+          <p class="pickup-availability__pickup-time">
+            {{ closest_store.pick_up_time }}
+          </p>
+        {%- else -%}
+          <p class="pickup-availability__summary pickup-availability__summary--unavailable">
+            {{ 'icon-ui-cancel.svg' | inline_asset_content }}
+            <span>
+              {{
+                'products.pickup_availability.unavailable_at_html'
+                | t: location_name: closest_store.location.name
+              }}
+            </span>
+          </p>
+        {%- endif -%}
+        <button
+          class="pickup-availability__view-info"
+          data-modal="pickup-availability-{{ variant.id }}"
+        >
+          {{ 'products.pickup_availability.view_info' | t: count: stores.size }}
+        </button>
+      </div>
+
+      <modal-element
+        append-to-body
+        strategy="drawer"
+        id="pickup-availability-{{ variant.id }}"
+      >
+        <div class="pickup-availability-modal">
+          <div class="modal-header pickup-availability-modal__header">
+            <div class="pickup-availability-modal__product">
+              {% assign variant_image = variant.image | default: variant.product.featured_image %}
+              {% render 'image' with variant_image,
+                width: 192,
+                class: 'pickup-availability-modal__image'
+              %}
+
+              <div class="pickup-availability-modal__title-group">
+                <h2 class="h5">{{ variant.product.title | escape }}</h2>
+                {% unless variant.product.has_only_default_variant %}
+                  <p class="pickup-availability-modal__variant">{{ variant.title }}</p>
+                {% endunless %}
+              </div>
+            </div>
+
+            {% render 'modal-close' %}
+          </div>
+          <ul class="pickup-availability-modal__list">
+            {% for availability in stores %}
+              <li class="pickup-availability-store">
+                <h3 class="pickup-availability-store__name">{{ availability.location.name }}</h3>
+
+                {% if availability.available %}
+                  <div class="pickup-availability-store__status pickup-availability-store__status--available">
+                    {{ 'icon-ui-check-circle.svg' | inline_asset_content }}
+                    <span>{{ 'products.pickup_availability.available' | t }}</span>
+                  </div>
+                  <p class="pickup-availability-store__pickup-time">
+                    {{ availability.pick_up_time }}
+                  </p>
+                {% else %}
+                  <div class="pickup-availability-store__status pickup-availability-store__status--unavailable">
+                    {{ 'icon-ui-cancel.svg' | inline_asset_content }}
+                    <span>{{ 'products.pickup_availability.unavailable' | t }}</span>
+                  </div>
+                {% endif %}
+
+                {% assign address = availability.location.address %}
+                <address class="pickup-availability-store__address">
+                  {{ address | format_address }}
+                </address>
+                {% if address.phone.size > 0 %}
+                  <p>{{ address.phone }}</p>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </modal-element>
+    {%- endif -%}
+  </div>
+{% endif %}

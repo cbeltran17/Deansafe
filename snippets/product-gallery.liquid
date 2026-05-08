@@ -1,0 +1,36 @@
+{% liquid
+  assign first_3d_model = product.media | find: 'media_type', 'model'
+%}
+
+{% liquid
+  assign gallery_type = section.settings.product_gallery_type | default: 'carousel'
+%}
+
+<div class="product-gallery product-gallery--{{ gallery_type }}">
+  {% if product == blank or product.media.size == 0 %}
+    {% render 'image', placeholder: true %}
+  {% else %}
+    <div class="product-gallery__carousel">
+      {% render 'product-media-carousel', product: product %}
+    </div>
+    {% if gallery_type == 'grid' %}
+      <div class="product-gallery__grid">
+        {% render 'product-media-grid', product: product %}
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+{% if first_3d_model %}
+  <script type="application/json" id="Product-JSON-{{ product.id }}">
+    {{ product.media | where: 'media_type', 'model' | json }}
+  </script>
+
+  <link
+    id="ModelViewerStyle"
+    rel="stylesheet"
+    href="https://cdn.shopify.com/shopifycloud/model-viewer-ui/assets/v1.0/model-viewer-ui.css"
+    media="print"
+    onload="this.media='all'"
+  >
+{% endif %}

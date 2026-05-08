@@ -1,0 +1,45 @@
+<nav
+  id="main-navigation"
+  class="header__navigation"
+  role="navigation"
+  aria-label="{{ 'accessibility.navigation_label' | t }}"
+>
+  <div class="header__navigation-inner">
+    <ul class="header-primary-menu">
+      {% for link in section.settings.menu.links %}
+        <li>
+          {% render 'header-navigation-item',
+            link: link,
+            link_position: forloop.index,
+            mega_menu_settings: mega_menu_settings
+          %}
+        </li>
+      {% endfor %}
+    </ul>
+    {% if section.settings.secondary_menu != blank or section.settings.show_action_button %}
+      <ul class="header-secondary-menu">
+        {% if section.settings.secondary_menu != blank %}
+          {% for link in section.settings.secondary_menu.links %}
+            <li>
+              {% render 'header-navigation-item', link: link, link_position: forloop.index %}
+            </li>
+          {% endfor %}
+        {% endif %}
+        {% if section.settings.show_action_button %}
+          <li>
+            {% capture content %}
+              {% render 'icon' with section.settings.action_button_icon %}
+              <span>{{ section.settings.action_button_text }}</span>
+            {% endcapture %}
+            {% render 'button' with content,
+              class: 'header__action-button',
+              href: section.settings.action_button_link,
+              background_color: section.settings.action_button_background_color,
+              text_color: section.settings.action_button_text_color
+            %}
+          </li>
+        {% endif %}
+      </ul>
+    {% endif %}
+  </div>
+</nav>

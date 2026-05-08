@@ -1,0 +1,40 @@
+{% comment %}
+  Outputs CSS custom properties for button styling with automatic hover/active state generation.
+
+  Parameters:
+   - type: Optional button type suffix (e.g., 'primary', 'secondary') to create namespaced variables
+   - prefix: CSS variable prefix, defaults to 'button'
+   - background: Background color for the button
+   - color: Text color for the button
+{% endcomment %}
+{%- liquid
+  assign prefix = prefix | default: 'button'
+  if type != blank
+    assign prefix = prefix | append: '-' | append: type
+  endif
+  assign prefix_background = prefix | append: '-background'
+
+  assign bg_brightness = background | color_brightness
+  if bg_brightness < 220
+    assign hover = background | color_lighten: 6
+    assign active = background | color_darken: 6
+  else
+    assign hover = background | color_darken: 5
+    assign active = background | color_darken: 10
+  endif
+
+  assign background_var = prefix_background
+  assign background_hover_var = prefix_background | append: '-hover'
+  assign background_active_var = prefix_background | append: '-active'
+  assign color_var = prefix | append: '-color'
+
+  if background contains '#'
+    render 'color-var' with background, name: background_var
+    render 'color-var' with hover, name: background_hover_var
+    render 'color-var' with active, name: background_active_var
+  endif
+
+  if color contains '#'
+    render 'color-var' with color, name: color_var
+  endif
+-%}

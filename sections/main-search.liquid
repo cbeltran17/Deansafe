@@ -1,0 +1,209 @@
+{% render 'section-meta', blend: true, blend_bg: section.settings.background_color %}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    {% render 'color-var' with section.settings.product_card_background_color, name: 'product-card-background' %}
+    {% render 'color-var' with section.settings.product_card_text_color, name: 'product-card-color' %}
+  }
+</style>
+
+<div class="section-full-width">
+  <div class="mb-12 flex flex-col items-center gap-6">
+    <h1 class="h1">{{ 'general.search.search' | t }}</h1>
+    {% render 'search-input', value: search.terms, class: 'w-full max-w-xl', id: 'main-search' %}
+  </div>
+
+  {% if search.results == empty and search.filters == empty %}
+    {% if search.performed %}
+      <p class="text-center text-lg text-alpha-800">{{ 'general.search.no_results' | t }}</p>
+    {% else %}
+      <p class="text-center text-lg text-alpha-800">{{ 'general.search.no_terms' | t }}</p>
+    {% endif %}
+  {% else %}
+    {%- liquid
+      # Prepare search-specific parameters
+      assign sort_by = search.sort_by | default: search.default_sort_by
+      assign terms = search.terms | escape
+      assign types = search.types | join: ','
+      assign search_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by
+
+      if types != blank
+        assign search_url = search_url | append: '&type=' | append: types
+      endif
+    -%}
+
+    {% render 'collection-grid',
+      results: search,
+      results_count: search.results_count,
+      results_url: search_url
+    %}
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main_search.name",
+  "class": "section-main-search",
+  "settings": [
+    {
+      "type": "range",
+      "id": "products_per_row",
+      "label": "t:sections.main_search.settings.products_per_row.label",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "select",
+      "id": "products_per_row_mobile",
+      "label": "t:sections.main_search.settings.products_per_row_mobile.label",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main_search.headers.pagination.content"
+    },
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "label": "t:sections.main_search.settings.products_per_page.label",
+      "min": 6,
+      "max": 50,
+      "step": 1,
+      "default": 24
+    },
+    {
+      "type": "select",
+      "id": "pagination_type",
+      "label": "t:sections.main_search.settings.pagination_type.label",
+      "options": [
+        {
+          "value": "load-more",
+          "label": "t:sections.main_search.settings.pagination_type.options.load_more.label"
+        },
+        {
+          "value": "classic",
+          "label": "t:sections.main_search.settings.pagination_type.options.classic.label"
+        }
+      ],
+      "default": "load-more"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main_search.headers.view_mode.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_mode_selector",
+      "label": "t:sections.main_search.settings.show_view_mode_selector.label",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "default_view_mode",
+      "label": "t:sections.main_search.settings.default_view_mode.label",
+      "options": [
+        {
+          "value": "grid",
+          "label": "t:sections.main_search.settings.default_view_mode.options.grid.label"
+        },
+        {
+          "value": "list",
+          "label": "t:sections.main_search.settings.default_view_mode.options.list.label"
+        }
+      ],
+      "default": "grid"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main_search.headers.filters.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_filters",
+      "label": "t:sections.main_search.settings.show_filters.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_filter_match_count",
+      "label": "t:sections.main_search.settings.show_filter_match_count.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_filter_values_with_no_matches",
+      "label": "t:sections.main_search.settings.show_filter_values_with_no_matches.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_color_swatches",
+      "label": "t:sections.main_search.settings.enable_color_swatches.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_selected_filter_type",
+      "label": "t:sections.main_search.settings.show_selected_filter_type.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sort_by",
+      "label": "t:sections.main_search.settings.show_sort_by.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_results_count",
+      "label": "t:sections.main_search.settings.show_results_count.label",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "default_open_filters",
+      "label": "t:sections.main_search.settings.default_open_filters.label",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:sections.all.text_color.label"
+    },
+    {
+      "type": "color",
+      "id": "product_card_background_color",
+      "label": "t:sections.main_search.settings.product_card_background_color.label"
+    },
+    {
+      "type": "color",
+      "id": "product_card_text_color",
+      "label": "t:sections.main_search.settings.product_card_text_color.label"
+    }
+  ]
+}
+{% endschema %}

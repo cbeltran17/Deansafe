@@ -1,0 +1,866 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_width": "medium",
+        "content_text_size": "medium",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "heading_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
+    "image_with_text_overlay_c3Lfn9": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_ew8Vp9": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "hero",
+            "heading": "About us",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_X8aNLr": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "lg",
+            "paragraph_width": "medium",
+            "text_color": "primary",
+            "content": "<p>We curate personal technology that blends performance, design, and everyday usefulness.</p>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": ["heading_ew8Vp9", "paragraph_X8aNLr"],
+      "name": "t:sections.image_with_text_overlay.name",
+      "settings": {
+        "full_width": true,
+        "image_size": "",
+        "image_height": 640,
+        "content_position": "bottom-left",
+        "image_size_mobile": "same",
+        "image_height_mobile": 480,
+        "content_position_mobile": "",
+        "background_color": "",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 10,
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
+    "rich_text_nm7kyL": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_DmEXha": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h1",
+            "heading": "A Marketplace for <em>Modern</em> Tech",
+            "highlight_type": "scribble",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "#ec3f15",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_xJk9g3": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "lg",
+            "paragraph_width": "medium",
+            "text_color": "primary",
+            "content": "<p>We are a design-forward marketplace for personal technology. We bring together thoughtfully engineered devices that simplify daily routines, elevate workspaces, and move seamlessly between home, work, and travel.</p>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": ["heading_DmEXha", "paragraph_xJk9g3"],
+      "name": "t:sections.rich_text.name",
+      "settings": {
+        "full_width": true,
+        "text_alignment": "center",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
+    "logo_list_FJz9hJ": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_UdMPtP": {
+          "type": "_logo",
+          "name": "t:blocks._logo.name",
+          "settings": {
+            "logo_height": 60,
+            "url": ""
+          },
+          "blocks": {}
+        },
+        "logo_RngLDA": {
+          "type": "_logo",
+          "name": "t:blocks._logo.name",
+          "settings": {
+            "logo_height": 60,
+            "url": ""
+          },
+          "blocks": {}
+        },
+        "logo_xJE6Jg": {
+          "type": "_logo",
+          "name": "t:blocks._logo.name",
+          "settings": {
+            "logo_height": 60,
+            "url": ""
+          },
+          "blocks": {}
+        },
+        "logo_PajhcT": {
+          "type": "_logo",
+          "name": "t:blocks._logo.name",
+          "settings": {
+            "logo_height": 60,
+            "url": ""
+          },
+          "blocks": {}
+        },
+        "logo_jPMAnM": {
+          "type": "_logo",
+          "name": "t:blocks._logo.name",
+          "settings": {
+            "logo_height": 60,
+            "url": ""
+          },
+          "blocks": {}
+        },
+        "section-header": {
+          "type": "_section-header",
+          "disabled": true,
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
+          },
+          "blocks": {
+            "heading_BwFyry": {
+              "type": "heading",
+              "settings": {
+                "full_width": true,
+                "max_width": 500,
+                "heading_size": "h3",
+                "heading": "Our partners",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "",
+                "highlight_color": "",
+                "heading_seo_tag": "p"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": ["heading_BwFyry"]
+        }
+      },
+      "block_order": ["logo_UdMPtP", "logo_RngLDA", "logo_xJE6Jg", "logo_PajhcT", "logo_jPMAnM"],
+      "name": "t:sections.logo_list.name",
+      "settings": {
+        "opacity": 25,
+        "logo_spacing": 64,
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
+    "multicolumn_P8wTiJ": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_jaPEQj": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Purposeful Design",
+            "content": "<p>Function and form work together.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_mqWLEf": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Clarity Over Clutter",
+            "content": "<p>Fewer, better choices.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_QhBp8z": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Innovation That Matters",
+            "content": "<p>Tech that solves real problems.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_egFcTG": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Quality First",
+            "content": "<p>Materials, engineering, and reliability.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 56
+          },
+          "blocks": {
+            "caption_xzW7k8": {
+              "type": "caption",
+              "name": "t:blocks.caption.name",
+              "settings": {
+                "caption": "Our principles",
+                "text_color": "rgba(0,0,0,0)"
+              },
+              "blocks": {}
+            },
+            "heading_VejBjx": {
+              "type": "heading",
+              "name": "t:blocks.heading.name",
+              "settings": {
+                "full_width": true,
+                "max_width": 500,
+                "heading_size": "h2",
+                "heading": "A Thoughtful Approach to Tech",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "",
+                "highlight_color": "",
+                "heading_seo_tag": "p"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": ["caption_xzW7k8", "heading_VejBjx"]
+        }
+      },
+      "block_order": ["column_jaPEQj", "column_mqWLEf", "column_QhBp8z", "column_egFcTG"],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "enable_carousel": true,
+        "columns": 4,
+        "columns_mobile": 1,
+        "column_gap": 24,
+        "column_alignment": "center",
+        "text_alignment": "center",
+        "background_color": "#fafafa",
+        "text_color": "rgba(0,0,0,0)",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
+    "rich_text_bTag8L": {
+      "type": "rich-text",
+      "blocks": {
+        "icon_9CRNhU": {
+          "type": "icon",
+          "name": "t:blocks.icon.name",
+          "settings": {
+            "icon": "search",
+            "size": 48,
+            "text_color": "#a7a7a7"
+          },
+          "blocks": {}
+        },
+        "heading_EcPGYK": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h2",
+            "heading": "How We Choose Our Products",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_GVcNEE": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "lg",
+            "paragraph_width": "medium",
+            "text_color": "primary",
+            "content": "<p>Every product in our store goes through a thoughtful, multi-step selection process to ensure it delivers real value a reliable performance.</p>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": ["icon_9CRNhU", "heading_EcPGYK", "paragraph_GVcNEE"],
+      "name": "t:sections.rich_text.name",
+      "settings": {
+        "full_width": true,
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
+    "image_with_text_slider_cTU3W3": {
+      "type": "image-with-text-slider",
+      "blocks": {
+        "image_with_text_slide_PE6pFF": {
+          "type": "_image_with_text_slide",
+          "settings": {
+            "background_color": "#def7fe",
+            "text_color": ""
+          },
+          "blocks": {
+            "heading_3q4B3P": {
+              "type": "heading",
+              "settings": {
+                "full_width": true,
+                "max_width": 500,
+                "heading_size": "hero",
+                "heading": "1.",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "#bfe5f1",
+                "highlight_color": "",
+                "heading_seo_tag": "p"
+              },
+              "blocks": {}
+            },
+            "heading_Cp3DpD": {
+              "type": "heading",
+              "settings": {
+                "full_width": true,
+                "max_width": 500,
+                "heading_size": "h3",
+                "heading": "We Research the Global Tech Market",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "",
+                "highlight_color": "",
+                "heading_seo_tag": "p"
+              },
+              "blocks": {}
+            },
+            "paragraph_wwaEY4": {
+              "type": "paragraph",
+              "settings": {
+                "paragraph_size": "md",
+                "paragraph_width": "medium",
+                "text_color": "secondary",
+                "content": "<p>Our team tracks emerging brands, established innovators, and the latest developments across personal tech. We stay up to date with new technologies, design trends, and evolving user needs, searching everywhere for products that truly stand out.<br/></p>"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": ["heading_3q4B3P", "heading_Cp3DpD", "paragraph_wwaEY4"]
+        },
+        "image_with_text_slide_KkhBBy": {
+          "type": "_image_with_text_slide",
+          "settings": {
+            "background_color": "#ffe7e1",
+            "text_color": ""
+          },
+          "blocks": {
+            "heading_8VK9UY": {
+              "type": "heading",
+              "settings": {
+                "full_width": true,
+                "max_width": 500,
+                "heading_size": "hero",
+                "heading": "2.",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "#ffc1b1",
+                "highlight_color": "",
+                "heading_seo_tag": "p"
+              },
+              "blocks": {}
+            },
+            "heading_TEXKNi": {
+              "type": "heading",
+              "settings": {
+                "full_width": true,
+                "max_width": 500,
+                "heading_size": "h3",
+                "heading": "We Test Products in Real-World Conditions",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "",
+                "highlight_color": "",
+                "heading_seo_tag": "p"
+              },
+              "blocks": {}
+            },
+            "paragraph_JmMYtU": {
+              "type": "paragraph",
+              "settings": {
+                "paragraph_size": "md",
+                "paragraph_width": "medium",
+                "text_color": "secondary",
+                "content": "<p>Promising products don’t make the cut on specs alone. We put devices through in-depth testing to evaluate build quality, performance, usability, and long-term reliability.</p>"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": ["heading_8VK9UY", "heading_TEXKNi", "paragraph_JmMYtU"]
+        },
+        "image_with_text_slide_YnfTwT": {
+          "type": "_image_with_text_slide",
+          "settings": {
+            "background_color": "#eaf6e4",
+            "text_color": ""
+          },
+          "blocks": {
+            "heading_qTCe4t": {
+              "type": "heading",
+              "settings": {
+                "full_width": true,
+                "max_width": 500,
+                "heading_size": "hero",
+                "heading": "3.",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "#c6e9b4",
+                "highlight_color": "",
+                "heading_seo_tag": "p"
+              },
+              "blocks": {}
+            },
+            "heading_cGYQqT": {
+              "type": "heading",
+              "settings": {
+                "full_width": true,
+                "max_width": 500,
+                "heading_size": "h3",
+                "heading": "We Select Only What Truly Earns a Place",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "",
+                "highlight_color": "",
+                "heading_seo_tag": "p"
+              },
+              "blocks": {}
+            },
+            "paragraph_7ThW38": {
+              "type": "paragraph",
+              "settings": {
+                "paragraph_size": "md",
+                "paragraph_width": "medium",
+                "text_color": "secondary",
+                "content": "<p>Only devices that meet our standards for quality, value, and long-term satisfaction make it into our store - so you can shop with confidence, knowing every product has been chosen with purpose.</p>"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": ["heading_qTCe4t", "heading_cGYQqT", "paragraph_7ThW38"]
+        }
+      },
+      "block_order": [
+        "image_with_text_slide_PE6pFF",
+        "image_with_text_slide_KkhBBy",
+        "image_with_text_slide_YnfTwT"
+      ],
+      "name": "t:sections.image_with_text_slider.name",
+      "settings": {
+        "full_width": false,
+        "image_position": "right",
+        "image_size": "",
+        "autoplay": false,
+        "autoplay_interval": 5,
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
+    "image_with_text_multiple_gtR3Ub": {
+      "type": "image-with-text-multiple",
+      "blocks": {
+        "heading_74Mnwa": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h2",
+            "heading": "A Better Way to Discover Technology",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_rRk6rg": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "lg",
+            "paragraph_width": "medium",
+            "text_color": "primary",
+            "content": "<p>It began with a simple idea: technology shopping should be as refined as the products themselves. We saw a gap between cutting-edge innovation and cluttered, confusing storefronts — and set out to create a more curated experience.</p>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": ["heading_74Mnwa", "paragraph_rRk6rg"],
+      "name": "t:sections.image_with_text_multiple.name",
+      "settings": {
+        "image_size": "",
+        "image_position": "left",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
+    "quotes_Kgw3kG": {
+      "type": "quotes",
+      "blocks": {
+        "quote_LraJCP": {
+          "type": "quote",
+          "settings": {
+            "show_rating": false,
+            "rating": 5,
+            "quote": "A more refined way to shop for modern technology, where design, performance, and usability come together.",
+            "cite": ""
+          }
+        }
+      },
+      "block_order": ["quote_LraJCP"],
+      "name": "t:sections.quotes.name",
+      "settings": {
+        "quote_size": "h1",
+        "autoplay": false,
+        "autoplay_interval": 5,
+        "background_color": "",
+        "text_color": "",
+        "heading_color": "",
+        "rating_star_color": "",
+        "enable_custom_spacing": true,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
+    "image_with_text_farmUd": {
+      "type": "image-with-text",
+      "blocks": {
+        "icon_JLNntH": {
+          "type": "icon",
+          "name": "t:blocks.icon.name",
+          "settings": {
+            "icon": "support",
+            "size": 40,
+            "text_color": ""
+          },
+          "blocks": {}
+        },
+        "heading_YePRmT": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h2",
+            "heading": "Support That Matches the Product",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_b4d6x3": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "lg",
+            "paragraph_width": "medium",
+            "text_color": "primary",
+            "content": "<p>Our support is handled by product experts who know the details inside and out. From pre-purchase guidance to setup and ongoing support, we provide clear answers and thoughtful help.</p>"
+          },
+          "blocks": {}
+        },
+        "button_group_B4djYB": {
+          "type": "button-group",
+          "name": "t:blocks.button_group.name",
+          "settings": {},
+          "blocks": {
+            "button_nwXeMC": {
+              "type": "button",
+              "settings": {
+                "size": "md",
+                "variant": "solid",
+                "label": "Contact our team",
+                "url": "",
+                "style": "primary",
+                "background_color": "",
+                "text_color": ""
+              },
+              "blocks": {}
+            },
+            "button_AjRWwD": {
+              "type": "button",
+              "settings": {
+                "size": "md",
+                "variant": "outline",
+                "label": "Read FAQs",
+                "url": "",
+                "style": "black",
+                "background_color": "",
+                "text_color": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": ["button_nwXeMC", "button_AjRWwD"]
+        }
+      },
+      "block_order": ["icon_JLNntH", "heading_YePRmT", "paragraph_b4d6x3", "button_group_B4djYB"],
+      "name": "t:sections.image_with_text.name",
+      "settings": {
+        "full_width": false,
+        "gap": true,
+        "image_width": 130,
+        "image_position": "right",
+        "image_size": "",
+        "image_height": 480,
+        "image_size_mobile": "same",
+        "image_height_mobile": 480,
+        "background_color": "#def7fe",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
+    "featured_blog_XMFPmy": {
+      "type": "featured-blog",
+      "blocks": {
+        "article_card_D4UNqB": {
+          "type": "_article-card",
+          "settings": {
+            "article": ""
+          },
+          "blocks": {}
+        },
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
+          },
+          "blocks": {
+            "heading_aW6ndQ": {
+              "type": "heading",
+              "settings": {
+                "full_width": true,
+                "max_width": 500,
+                "heading_size": "h2",
+                "heading": "Latest articles",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "",
+                "highlight_color": "",
+                "heading_seo_tag": "p"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": ["heading_aW6ndQ"]
+        }
+      },
+      "block_order": ["article_card_D4UNqB"],
+      "name": "t:sections.featured_blog.name",
+      "settings": {
+        "blog": "",
+        "enable_carousel": true,
+        "articles_count": 3,
+        "columns": 3,
+        "show_category": true,
+        "show_date": true,
+        "show_comments": true,
+        "show_excerpt": false,
+        "show_link": true,
+        "link_url": "",
+        "link_text": "",
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
+    "collection_list_atRUrz": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_list_item_e966zw": {
+          "type": "_collection_list_item",
+          "settings": {
+            "collection": "",
+            "style": "overlay",
+            "title": "",
+            "description": ""
+          },
+          "blocks": {}
+        },
+        "collection_list_item_yXTAXH": {
+          "type": "_collection_list_item",
+          "settings": {
+            "collection": "",
+            "style": "card",
+            "title": "",
+            "description": ""
+          },
+          "blocks": {}
+        },
+        "collection_list_item_4ekiqm": {
+          "type": "_collection_list_item",
+          "settings": {
+            "collection": "",
+            "style": "card",
+            "title": "",
+            "description": ""
+          },
+          "blocks": {}
+        },
+        "collection_list_item_y68QGU": {
+          "type": "_collection_list_item",
+          "settings": {
+            "collection": "",
+            "style": "card",
+            "title": "",
+            "description": ""
+          },
+          "blocks": {}
+        },
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
+          },
+          "blocks": {
+            "caption_nAXKmc": {
+              "type": "caption",
+              "name": "t:blocks.caption.name",
+              "settings": {
+                "caption": "Explore the range",
+                "text_color": ""
+              },
+              "blocks": {}
+            },
+            "heading_Ah3dL3": {
+              "type": "heading",
+              "settings": {
+                "full_width": true,
+                "max_width": 500,
+                "heading_size": "h2",
+                "heading": "Shop by category",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "",
+                "highlight_color": "",
+                "heading_seo_tag": "p"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": ["caption_nAXKmc", "heading_Ah3dL3"]
+        }
+      },
+      "block_order": [
+        "collection_list_item_e966zw",
+        "collection_list_item_yXTAXH",
+        "collection_list_item_4ekiqm",
+        "collection_list_item_y68QGU"
+      ],
+      "name": "t:sections.collection_list.name",
+      "settings": {
+        "enable_carousel": true,
+        "collections_per_row": 4,
+        "collections_per_row_mobile": "1.5",
+        "image_size": "1/1",
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "card_background_color": "#f7f7f7",
+        "card_text_color": "#1e1e1e",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_with_text_overlay_c3Lfn9",
+    "rich_text_nm7kyL",
+    "logo_list_FJz9hJ",
+    "multicolumn_P8wTiJ",
+    "rich_text_bTag8L",
+    "image_with_text_slider_cTU3W3",
+    "image_with_text_multiple_gtR3Ub",
+    "quotes_Kgw3kG",
+    "image_with_text_farmUd",
+    "featured_blog_XMFPmy",
+    "collection_list_atRUrz"
+  ]
+}

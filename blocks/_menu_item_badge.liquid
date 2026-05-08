@@ -1,0 +1,44 @@
+<template>
+  {% if block.settings.badge_text %}
+    <menu-item-badge>
+      <span
+        data-target="{{ block.settings.menu_item }}"
+        class="mega-menu-badge"
+        style="--badge-color: {{ block.settings.color.rgb }};"
+        {{ block.shopify_attributes }}
+      >
+        {{ block.settings.badge_text | append: '' }}
+      </span>
+    </menu-item-badge>
+  {% endif %}
+</template>
+
+{% schema %}
+{
+  "name": "t:blocks._menu_item_badge.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "menu_item",
+      "label": "t:blocks._menu_item_badge.settings.menu_item.label",
+      "info": "t:blocks._menu_item_badge.settings.menu_item.info"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "t:blocks._menu_item_badge.settings.badge_text.label"
+    },
+    {
+      "type": "color",
+      "id": "color",
+      "label": "t:blocks._menu_item_badge.settings.color.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks._menu_item_badge.name"
+    }
+  ]
+}
+{% endschema %}

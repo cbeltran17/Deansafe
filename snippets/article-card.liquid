@@ -1,0 +1,51 @@
+{% liquid
+  if article == blank
+    assign is_placeholder = true
+  endif
+  assign article_image = article.image
+  assign article_url = article.url | default: '#'
+  assign article_title = article.title | default: 'Article'
+
+  assign show_tags = show_tags | default: true, allow_false: true
+  assign show_comments = show_comments | default: true, allow_false: true
+  assign show_date = show_date | default: true, allow_false: true
+  assign show_excerpt = show_excerpt | default: true, allow_false: true
+%}
+
+<div
+  class="article-card media-hover-zoom"
+  {% if role %}
+    role="{{ role }}"
+  {% endif %}
+  id="ArticleCard-{{ section.id }}-{{ article.id }}"
+>
+  <a href="{{ article_url }}" tabindex="-1" aria-label="{{ article_title }}">
+    {% render 'image' with article_image,
+      sizes: sizes,
+      loading: loading,
+      width: 3200,
+      widths: '400, 600, 800, 1000, 1200, 1400, 1600, 2000, 2400, 3200',
+      placeholder: true
+    %}
+  </a>
+
+  <div class="article-card__content">
+    <a class="article-card__title" href="{{ article_url }}">
+      {{ article_title }}
+    </a>
+    {% if show_excerpt and article.excerpt_or_content != blank %}
+      <div class="article-card__excerpt">
+        {{ article.excerpt_or_content | strip_html | truncatewords: 30 }}
+      </div>
+    {% endif %}
+
+    {% if is_placeholder != true %}
+      {% render 'article-meta',
+        article: article,
+        show_tags: show_tags,
+        show_comments: show_comments,
+        show_date: show_date
+      %}
+    {% endif %}
+  </div>
+</div>

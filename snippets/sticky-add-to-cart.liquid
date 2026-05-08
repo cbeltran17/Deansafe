@@ -1,0 +1,100 @@
+{% liquid
+  assign product_image = product.selected_or_first_available_variant.featured_media | default: product.featured_media
+%}
+
+<sticky-add-to-cart
+  target="{{ section.id }}-add-to-cart"
+  class="sticky-add-to-cart-container"
+  data-section-ref="sticky-add-to-cart"
+  style="visibility: hidden;"
+>
+  {% comment %} Desktop content {% endcomment %}
+  <div class="sticky-add-to-cart max-md:hidden">
+    <div class="sticky-add-to-cart__inner">
+      {% render 'image' with product_image, class: 'sticky-add-to-cart__image', placeholder: true %}
+      <div class="sticky-add-to-cart__product-info">
+        {% if section.settings.sticky_add_to_cart_show_vendor %}
+          {{ product.vendor | link_to_vendor: class: 'sticky-add-to-cart__vendor link-hover' }}
+        {% endif %}
+        {% render 'heading' with product.title, size: 'h6' %}
+      </div>
+      {% unless product.has_only_default_variant %}
+        {% render 'sticky-add-to-cart-variant-picker', product_form_id: product_form_id %}
+      {% endunless %}
+      {% capture product_form_id %}product-form-{{ section.id }}-sticky-atc{% endcapture %}
+      {% form 'product',
+        product,
+        novalidate: 'novalidate',
+        id: product_form_id,
+        is: 'product-form'
+      %}
+        <input
+          type="hidden"
+          name="id"
+          value="{{ product.selected_or_first_available_variant.id }}"
+        >
+        {% assign sticky_atc_price = product.selected_or_first_available_variant.price | money %}
+        {% capture add_to_cart_text %}
+          {{ 'products.product.sticky_add_to_cart_with_price' | t: price: sticky_atc_price }}
+        {% endcapture %}
+        {% render 'product-add-to-cart-button',
+          add_to_cart_text: add_to_cart_text,
+          id: 'btn-sticky-add-to-cart'
+        %}
+      {% endform %}
+    </div>
+  </div>
+
+  {% comment %} Mobile content {% endcomment %}
+  <sticky-add-to-cart-mobile
+    {% if product.has_only_default_variant %}
+      no-variants
+    {% endif %}
+    class="sticky-add-to-cart-mobile"
+  >
+    {% render 'image' with product_image,
+      class: 'sticky-add-to-cart__image',
+      widths: '80,160',
+      sizes: '80px',
+      lqip: false,
+      placeholder: true
+    %}
+
+    {% capture product_form_id %}product-form-{{ section.id }}-sticky-atc-mobile{% endcapture %}
+    {% form 'product',
+      product,
+      novalidate: 'novalidate',
+      id: product_form_id,
+      slot: 'add-to-cart',
+      is: 'product-form'
+    %}
+      <input
+        type="hidden"
+        name="id"
+        value="{{ product.selected_or_first_available_variant.id }}"
+      >
+      {% assign sticky_atc_price = product.selected_or_first_available_variant.price | money %}
+      {% capture add_to_cart_text %}
+        {{ 'products.product.sticky_add_to_cart_with_price' | t: price: sticky_atc_price }}
+      {% endcapture %}
+      {% render 'product-add-to-cart-button',
+        add_to_cart_text: add_to_cart_text,
+        id: 'btn-sticky-add-to-cart-mobile'
+      %}
+    {% endform %}
+
+    {% render 'button', translation: 'products.product.choose_options', slot: 'select-options' %}
+
+    <div slot="variant-picker">
+      {% render 'heading',
+        translation: 'products.product.choose_options',
+        size: 'h5',
+        class: 'sticky-add-to-cart-mobile__heading'
+      %}
+      {% render 'product-variant-picker',
+        scope: 'sticky-atc-mobile',
+        product_form_id: product_form_id
+      %}
+    </div>
+  </sticky-add-to-cart-mobile>
+</sticky-add-to-cart>

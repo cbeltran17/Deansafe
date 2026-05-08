@@ -1,0 +1,22 @@
+{%- liquid
+  assign page_width = settings.page_width
+  assign sidebar_width = 260
+  assign sidebarless_width = page_width | minus: sidebar_width
+  assign item_width = 224
+  assign cap = item_width | times: 1.5 | round
+  assign min = 2
+  assign max = 5
+  assign per_max_container = sidebarless_width | divided_by: max | round
+  assign top_px = per_max_container
+  if top_px < cap
+    assign top_px = cap
+  endif
+  assign max_switch = cap | times: max | plus: sidebar_width
+  assign min_switch = cap | times: min
+-%}
+(min-width: {{ page_width }}px) {{ top_px }}px
+{%- if max_switch <= page_width -%}
+  , (min-width: {{ max_switch }}px) {{ 100.0 | divided_by: max | round: 2 }}vw
+{%- endif -%}
+, (min-width: 1024px) {{ cap }}px, (min-width: {{ min_switch }}px) {{ cap }}px,
+{{ 100.0 | divided_by: min | round: 2 }}vw

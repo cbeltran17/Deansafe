@@ -1,0 +1,16 @@
+{% comment %}
+  Renders a product media thumbnail button
+
+  Parameters:
+  - media: The media object to render
+{% endcomment %}
+
+<div
+  class="product-carousel-thumbnails__item"
+  data-media-id="{{ media.id }}"
+  {% if hidden %}
+    hidden
+  {% endif %}
+>
+  {% render 'image' with media, loading: 'lazy', widths: '72,144', sizes: '72px' %}
+</div>

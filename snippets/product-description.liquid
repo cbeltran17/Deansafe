@@ -1,0 +1,23 @@
+{% if product.description != blank %}
+  {% if block.settings.show_as_collapsible %}
+    <smooth-collapse
+      class="accordion block-accordion block-product-description"
+      {{ block.shopify_attributes }}
+      {% if block.settings.open_by_default %}
+        open
+      {% endif %}
+    >
+      <button slot="summary" class="accordion__summary icon-flip-y">
+        {% render 'heading', translation: 'products.product.description', size: 'h6' %}
+        <div class="accordion__icon">{{ 'icon-chevron-down.svg' | inline_asset_content }}</div>
+      </button>
+      <div class="accordion__content prose">
+        {{ product.description }}
+      </div>
+    </smooth-collapse>
+  {% else %}
+    <div class="block-product-description prose" {{ block.shopify_attributes }}>
+      {{ product.description }}
+    </div>
+  {% endif %}
+{% endif %}

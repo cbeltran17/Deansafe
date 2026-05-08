@@ -1,0 +1,25 @@
+{% comment %}
+  Renders a cart remove link with spinner and accessibility support
+
+  Accepts:
+  - item: {Object} Cart line item object (required)
+  - class: {String} Additional CSS classes (optional)
+  - size: {String} Size variant - "small" for smaller text (optional)
+{% endcomment %}
+
+{%- assign size_class = '' -%}
+{%- if size == 'small' -%}
+  {%- assign size_class = 'cart-remove-link--small' -%}
+{%- endif -%}
+
+<a
+  is="cart-remove-link"
+  href="{{ item.url_to_remove }}"
+  key="{{ item.key }}"
+  class="cart-remove-link {{ size_class }} {{ class }}"
+  aria-label="{{ 'accessibility.remove_product_from_cart' | t: product: item.title }}"
+  draggable="false"
+>
+  <span>{{ 'sections.cart.remove_item' | t }}</span>
+  {% render 'spinner' %}
+</a>

@@ -1,0 +1,34 @@
+{%- comment -%}
+  Extract a specific part from a block using HTML comment markers
+
+  Parameters:
+  - block: The block to extract content from (required)
+  - part: The part to extract (required) - will look for <!-- [part]_start --> and <!-- [part]_end -->
+
+  Usage:
+  {% render 'extract-part-from-block', block: block, part: 'media' %}
+  {% render 'extract-part-from-block', block: block, part: 'text' %}
+{%- endcomment -%}
+
+{%- liquid
+  capture block_content
+    render block
+  endcapture
+
+  assign start_marker = '<!-- ' | append: part | append: '_start -->'
+  assign end_marker = '<!-- ' | append: part | append: '_end -->'
+
+  unless block_content contains start_marker and block_content contains end_marker
+    echo "<!-- Warning: Part '"
+    echo part
+    echo "' not found in block '"
+    echo block.id
+    echo "' -->"
+    break
+  endunless
+
+  assign split_start = block_content | split: start_marker | last
+  assign extracted_content = split_start | split: end_marker | first
+
+  echo extracted_content
+-%}

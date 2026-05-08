@@ -1,0 +1,181 @@
+{% render 'section-meta', blend: true, blend_bg: section.settings.background_color %}
+
+<style>
+  #shopify-section-{{ section.id }} .link-pill {
+    {% render 'color-var' with section.settings.button_background_color, name: 'background-color' %}
+    {% render 'color-var' with section.settings.button_text_color, name: 'text-color' %}
+  }
+</style>
+
+<div class="section-full-width">
+  <div class="carousel-floating-controls-wrapper">
+    <scroll-carousel
+      id="{{ section.id }}-Carousel"
+      animation="fade-up"
+      animation-selector=".link-wrapper"
+      autoplay
+      fade
+      class="link-pill-container"
+    >
+      {% for block in section.blocks %}
+        {% liquid
+          assign link_url = block.settings.link_url | default: block.settings.collection.url | default: '#'
+          assign link_text = block.settings.link_text | default: block.settings.collection.title
+
+          if block.settings.collection == blank and link_text == blank and block.type == 'collection'
+            assign link_text = 'Collection'
+          endif
+        %}
+        <div class="link-wrapper" {{ block.shopify_attributes }}>
+          <a
+            href="{{ link_url }}"
+            class="link-pill"
+            {% render 'has-bg', color: section.settings.button_background_color %}
+          >
+            {% if block.settings.image != blank %}
+              <div class="media">{{ block.settings.image | image_url: width: 64 | image_tag }}</div>
+            {% endif %}
+            <span>{{ link_text }}</span>
+          </a>
+        </div>
+      {% endfor %}
+    </scroll-carousel>
+    <div class="carousel-floating-controls" aria-hidden="true">
+      {% render 'carousel-button', direction: 'prev', variant: 'floating', size: 'small' %}
+      {% render 'carousel-button', direction: 'next', variant: 'floating', size: 'small' %}
+    </div>
+    {% if request.visual_preview_mode %}
+      <div class="sr-only">Filler</div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.button_group.name",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "t:sections.all.heading_color.label"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "t:sections.button_group.settings.button_background_color.label"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "t:sections.button_group.settings.button_text_color.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_custom_spacing",
+      "label": "t:sections.all.enable_custom_spacing",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "top_spacing",
+      "label": "t:sections.all.top_spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing }}"
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "label": "t:sections.all.bottom_spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing }}"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link",
+      "name": "t:sections.button_group.blocks.link.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.all.image.label"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "t:sections.button_group.blocks.link.settings.link_url.label"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "t:sections.button_group.blocks.link.settings.link_text.label",
+          "default": "t:sections.button_group.blocks.link.settings.link_text.default"
+        }
+      ]
+    },
+    {
+      "type": "collection",
+      "name": "t:sections.button_group.blocks.collection.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.all.image.label"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "t:sections.button_group.blocks.collection.settings.collection.label"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "label": "t:sections.button_group.blocks.collection.settings.link_text.label"
+        }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "presets": [
+    {
+      "name": "t:sections.button_group.name",
+      "blocks": [
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        }
+      ],
+      "category": "t:sections.categories.content"
+    }
+  ]
+}
+{% endschema %}

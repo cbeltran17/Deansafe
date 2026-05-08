@@ -1,0 +1,53 @@
+{% comment %}
+  - min - minimum columns
+  - max - maximum columns
+  - item_size - target item size for the grid auto-fill
+  - container_width - max grid width (optional)
+
+  Example:
+  - min: 2
+  - max: 4
+  - item_size: 240
+  - container_width: 1500
+  Output:
+  (min-width: 1500px) 375px, (min-width: 960px) 25vw, (min-width: 720px) 33.33vw, 50vw
+{% endcomment %}
+{% liquid
+  assign min = min | plus: 0.0
+  assign max = max | plus: 0.0
+  assign item_size = item_size | plus: 0.0
+  assign container_width = container_width | default: settings.page_width
+
+  if min == blank or max == blank or item_size == blank
+    break
+  endif
+
+  assign min_int = min | ceil
+  assign max_int = max | floor
+
+  assign first = true
+
+  if container_width != blank
+    assign clamp_px = container_width | divided_by: max | round
+    echo '(min-width: ' | append: container_width | append: 'px) ' | append: clamp_px | append: 'px'
+    assign first = false
+  endif
+
+  for cols in (min_int..max_int) reversed
+    if cols > min
+      if first == false
+        echo ', '
+      endif
+      assign breakpoint = cols | times: item_size | plus: 96 | plus: 32
+      assign vw = 100.0 | divided_by: cols | round: 2
+      echo '(min-width: ' | append: breakpoint | append: 'px) ' | append: vw | append: 'vw'
+      assign first = false
+    endif
+  endfor
+
+  assign fallback_vw = 100.0 | divided_by: min | round: 2
+  if first == false
+    echo ', '
+  endif
+  echo fallback_vw | append: 'vw'
+%}

@@ -1,0 +1,10 @@
+{% if section.settings.heading != blank or section.settings.content != blank %}
+  <div class="section-header block-spacing {% render 'text-alignment' with section.settings.heading_alignment %}">
+    {% if section.settings.heading != blank %}
+      {% render 'heading', animation: true, class: 'block-heading' %}
+    {% endif %}
+    {% if section.settings.content != blank %}
+      <div class="block-paragraph prose">{{ section.settings.content }}</div>
+    {% endif %}
+  </div>
+{% endif %}

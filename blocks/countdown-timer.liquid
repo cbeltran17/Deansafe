@@ -1,0 +1,719 @@
+{% liquid
+  assign timezone_offset = 'now' | date: '%:z'
+  capture expires_iso
+    echo block.settings.year
+    echo '-'
+    echo block.settings.month
+    echo '-'
+    echo block.settings.day
+    echo 'T'
+    echo block.settings.hour
+    echo ':'
+    echo block.settings.minute
+    echo ':00'
+    echo timezone_offset
+  endcapture
+  assign countdown_font_class = 'countdown--font-' | append: block.settings.font
+  assign countdown_size_class = 'countdown--size-' | append: block.settings.text_size
+%}
+
+<style>
+  #shopify-block-{{ block.id }} .countdown {
+    {% render 'color-var' with block.settings.text_color, name: 'countdown-value-color' %}
+    {% render 'color-var' with block.settings.separator_color, name: 'countdown-separator-color' %}
+  }
+</style>
+
+<countdown-timer
+  class="countdown {{ countdown_font_class }} {{ countdown_size_class }}"
+  expires="{{ expires_iso }}"
+  {% if block.settings.finish_message != blank %}
+    finish-message="{{ block.settings.finish_message | escape }}"
+  {% endif %}
+  days-label="{{ 'sections.countdown.days' | t | escape }}"
+  hours-label="{{ 'sections.countdown.hours' | t | escape }}"
+  minutes-label="{{ 'sections.countdown.minutes' | t | escape }}"
+  seconds-label="{{ 'sections.countdown.seconds' | t | escape }}"
+></countdown-timer>
+
+{% schema %}
+{
+  "name": "t:blocks.countdown_timer.name",
+  "class": "block-countdown",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:blocks.countdown_timer.paragraph__0.content"
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.countdown_timer.headers.expiry_date.content"
+    },
+    {
+      "type": "select",
+      "id": "year",
+      "label": "t:blocks.countdown_timer.settings.year.label",
+      "options": [
+        {
+          "value": "2025",
+          "label": "2025"
+        },
+        {
+          "value": "2026",
+          "label": "2026"
+        },
+        {
+          "value": "2027",
+          "label": "2027"
+        },
+        {
+          "value": "2028",
+          "label": "2028"
+        },
+        {
+          "value": "2029",
+          "label": "2029"
+        },
+        {
+          "value": "2030",
+          "label": "2030"
+        },
+        {
+          "value": "2031",
+          "label": "2031"
+        },
+        {
+          "value": "2032",
+          "label": "2032"
+        },
+        {
+          "value": "2033",
+          "label": "2033"
+        },
+        {
+          "value": "2034",
+          "label": "2034"
+        },
+        {
+          "value": "2035",
+          "label": "2035"
+        }
+      ],
+      "default": "2026"
+    },
+    {
+      "type": "select",
+      "id": "month",
+      "label": "t:blocks.countdown_timer.settings.month.label",
+      "options": [
+        {
+          "value": "01",
+          "label": "t:blocks.countdown_timer.settings.month.options.01.label"
+        },
+        {
+          "value": "02",
+          "label": "t:blocks.countdown_timer.settings.month.options.02.label"
+        },
+        {
+          "value": "03",
+          "label": "t:blocks.countdown_timer.settings.month.options.03.label"
+        },
+        {
+          "value": "04",
+          "label": "t:blocks.countdown_timer.settings.month.options.04.label"
+        },
+        {
+          "value": "05",
+          "label": "t:blocks.countdown_timer.settings.month.options.05.label"
+        },
+        {
+          "value": "06",
+          "label": "t:blocks.countdown_timer.settings.month.options.06.label"
+        },
+        {
+          "value": "07",
+          "label": "t:blocks.countdown_timer.settings.month.options.07.label"
+        },
+        {
+          "value": "08",
+          "label": "t:blocks.countdown_timer.settings.month.options.08.label"
+        },
+        {
+          "value": "09",
+          "label": "t:blocks.countdown_timer.settings.month.options.09.label"
+        },
+        {
+          "value": "10",
+          "label": "t:blocks.countdown_timer.settings.month.options.10.label"
+        },
+        {
+          "value": "11",
+          "label": "t:blocks.countdown_timer.settings.month.options.11.label"
+        },
+        {
+          "value": "12",
+          "label": "t:blocks.countdown_timer.settings.month.options.12.label"
+        }
+      ],
+      "default": "01"
+    },
+    {
+      "type": "select",
+      "id": "day",
+      "label": "t:blocks.countdown_timer.settings.day.label",
+      "options": [
+        {
+          "value": "01",
+          "label": "01"
+        },
+        {
+          "value": "02",
+          "label": "02"
+        },
+        {
+          "value": "03",
+          "label": "03"
+        },
+        {
+          "value": "04",
+          "label": "04"
+        },
+        {
+          "value": "05",
+          "label": "05"
+        },
+        {
+          "value": "06",
+          "label": "06"
+        },
+        {
+          "value": "07",
+          "label": "07"
+        },
+        {
+          "value": "08",
+          "label": "08"
+        },
+        {
+          "value": "09",
+          "label": "09"
+        },
+        {
+          "value": "10",
+          "label": "10"
+        },
+        {
+          "value": "11",
+          "label": "11"
+        },
+        {
+          "value": "12",
+          "label": "12"
+        },
+        {
+          "value": "13",
+          "label": "13"
+        },
+        {
+          "value": "14",
+          "label": "14"
+        },
+        {
+          "value": "15",
+          "label": "15"
+        },
+        {
+          "value": "16",
+          "label": "16"
+        },
+        {
+          "value": "17",
+          "label": "17"
+        },
+        {
+          "value": "18",
+          "label": "18"
+        },
+        {
+          "value": "19",
+          "label": "19"
+        },
+        {
+          "value": "20",
+          "label": "20"
+        },
+        {
+          "value": "21",
+          "label": "21"
+        },
+        {
+          "value": "22",
+          "label": "22"
+        },
+        {
+          "value": "23",
+          "label": "23"
+        },
+        {
+          "value": "24",
+          "label": "24"
+        },
+        {
+          "value": "25",
+          "label": "25"
+        },
+        {
+          "value": "26",
+          "label": "26"
+        },
+        {
+          "value": "27",
+          "label": "27"
+        },
+        {
+          "value": "28",
+          "label": "28"
+        },
+        {
+          "value": "29",
+          "label": "29"
+        },
+        {
+          "value": "30",
+          "label": "30"
+        },
+        {
+          "value": "31",
+          "label": "31"
+        }
+      ],
+      "default": "01"
+    },
+    {
+      "type": "select",
+      "id": "hour",
+      "label": "t:blocks.countdown_timer.settings.hour.label",
+      "options": [
+        {
+          "value": "00",
+          "label": "t:blocks.countdown_timer.settings.hour.options.00.label"
+        },
+        {
+          "value": "01",
+          "label": "t:blocks.countdown_timer.settings.hour.options.01.label"
+        },
+        {
+          "value": "02",
+          "label": "t:blocks.countdown_timer.settings.hour.options.02.label"
+        },
+        {
+          "value": "03",
+          "label": "t:blocks.countdown_timer.settings.hour.options.03.label"
+        },
+        {
+          "value": "04",
+          "label": "t:blocks.countdown_timer.settings.hour.options.04.label"
+        },
+        {
+          "value": "05",
+          "label": "t:blocks.countdown_timer.settings.hour.options.05.label"
+        },
+        {
+          "value": "06",
+          "label": "t:blocks.countdown_timer.settings.hour.options.06.label"
+        },
+        {
+          "value": "07",
+          "label": "t:blocks.countdown_timer.settings.hour.options.07.label"
+        },
+        {
+          "value": "08",
+          "label": "t:blocks.countdown_timer.settings.hour.options.08.label"
+        },
+        {
+          "value": "09",
+          "label": "t:blocks.countdown_timer.settings.hour.options.09.label"
+        },
+        {
+          "value": "10",
+          "label": "t:blocks.countdown_timer.settings.hour.options.10.label"
+        },
+        {
+          "value": "11",
+          "label": "t:blocks.countdown_timer.settings.hour.options.11.label"
+        },
+        {
+          "value": "12",
+          "label": "t:blocks.countdown_timer.settings.hour.options.12.label"
+        },
+        {
+          "value": "13",
+          "label": "t:blocks.countdown_timer.settings.hour.options.13.label"
+        },
+        {
+          "value": "14",
+          "label": "t:blocks.countdown_timer.settings.hour.options.14.label"
+        },
+        {
+          "value": "15",
+          "label": "t:blocks.countdown_timer.settings.hour.options.15.label"
+        },
+        {
+          "value": "16",
+          "label": "t:blocks.countdown_timer.settings.hour.options.16.label"
+        },
+        {
+          "value": "17",
+          "label": "t:blocks.countdown_timer.settings.hour.options.17.label"
+        },
+        {
+          "value": "18",
+          "label": "t:blocks.countdown_timer.settings.hour.options.18.label"
+        },
+        {
+          "value": "19",
+          "label": "t:blocks.countdown_timer.settings.hour.options.19.label"
+        },
+        {
+          "value": "20",
+          "label": "t:blocks.countdown_timer.settings.hour.options.20.label"
+        },
+        {
+          "value": "21",
+          "label": "t:blocks.countdown_timer.settings.hour.options.21.label"
+        },
+        {
+          "value": "22",
+          "label": "t:blocks.countdown_timer.settings.hour.options.22.label"
+        },
+        {
+          "value": "23",
+          "label": "t:blocks.countdown_timer.settings.hour.options.23.label"
+        }
+      ],
+      "default": "11"
+    },
+    {
+      "type": "select",
+      "id": "minute",
+      "label": "t:blocks.countdown_timer.settings.minute.label",
+      "options": [
+        {
+          "value": "00",
+          "label": "00"
+        },
+        {
+          "value": "01",
+          "label": "01"
+        },
+        {
+          "value": "02",
+          "label": "02"
+        },
+        {
+          "value": "03",
+          "label": "03"
+        },
+        {
+          "value": "04",
+          "label": "04"
+        },
+        {
+          "value": "05",
+          "label": "05"
+        },
+        {
+          "value": "06",
+          "label": "06"
+        },
+        {
+          "value": "07",
+          "label": "07"
+        },
+        {
+          "value": "08",
+          "label": "08"
+        },
+        {
+          "value": "09",
+          "label": "09"
+        },
+        {
+          "value": "10",
+          "label": "10"
+        },
+        {
+          "value": "11",
+          "label": "11"
+        },
+        {
+          "value": "12",
+          "label": "12"
+        },
+        {
+          "value": "13",
+          "label": "13"
+        },
+        {
+          "value": "14",
+          "label": "14"
+        },
+        {
+          "value": "15",
+          "label": "15"
+        },
+        {
+          "value": "16",
+          "label": "16"
+        },
+        {
+          "value": "17",
+          "label": "17"
+        },
+        {
+          "value": "18",
+          "label": "18"
+        },
+        {
+          "value": "19",
+          "label": "19"
+        },
+        {
+          "value": "20",
+          "label": "20"
+        },
+        {
+          "value": "21",
+          "label": "21"
+        },
+        {
+          "value": "22",
+          "label": "22"
+        },
+        {
+          "value": "23",
+          "label": "23"
+        },
+        {
+          "value": "24",
+          "label": "24"
+        },
+        {
+          "value": "25",
+          "label": "25"
+        },
+        {
+          "value": "26",
+          "label": "26"
+        },
+        {
+          "value": "27",
+          "label": "27"
+        },
+        {
+          "value": "28",
+          "label": "28"
+        },
+        {
+          "value": "29",
+          "label": "29"
+        },
+        {
+          "value": "30",
+          "label": "30"
+        },
+        {
+          "value": "31",
+          "label": "31"
+        },
+        {
+          "value": "32",
+          "label": "32"
+        },
+        {
+          "value": "33",
+          "label": "33"
+        },
+        {
+          "value": "34",
+          "label": "34"
+        },
+        {
+          "value": "35",
+          "label": "35"
+        },
+        {
+          "value": "36",
+          "label": "36"
+        },
+        {
+          "value": "37",
+          "label": "37"
+        },
+        {
+          "value": "38",
+          "label": "38"
+        },
+        {
+          "value": "39",
+          "label": "39"
+        },
+        {
+          "value": "40",
+          "label": "40"
+        },
+        {
+          "value": "41",
+          "label": "41"
+        },
+        {
+          "value": "42",
+          "label": "42"
+        },
+        {
+          "value": "43",
+          "label": "43"
+        },
+        {
+          "value": "44",
+          "label": "44"
+        },
+        {
+          "value": "45",
+          "label": "45"
+        },
+        {
+          "value": "46",
+          "label": "46"
+        },
+        {
+          "value": "47",
+          "label": "47"
+        },
+        {
+          "value": "48",
+          "label": "48"
+        },
+        {
+          "value": "49",
+          "label": "49"
+        },
+        {
+          "value": "50",
+          "label": "50"
+        },
+        {
+          "value": "51",
+          "label": "51"
+        },
+        {
+          "value": "52",
+          "label": "52"
+        },
+        {
+          "value": "53",
+          "label": "53"
+        },
+        {
+          "value": "54",
+          "label": "54"
+        },
+        {
+          "value": "55",
+          "label": "55"
+        },
+        {
+          "value": "56",
+          "label": "56"
+        },
+        {
+          "value": "57",
+          "label": "57"
+        },
+        {
+          "value": "58",
+          "label": "58"
+        },
+        {
+          "value": "59",
+          "label": "59"
+        }
+      ],
+      "default": "00"
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.countdown_timer.headers.typography.content"
+    },
+    {
+      "type": "select",
+      "id": "font",
+      "label": "t:blocks.countdown_timer.settings.font.label",
+      "options": [
+        {
+          "value": "heading",
+          "label": "t:blocks.countdown_timer.settings.font.options.heading.label"
+        },
+        {
+          "value": "body",
+          "label": "t:blocks.countdown_timer.settings.font.options.body.label"
+        }
+      ],
+      "default": "heading"
+    },
+    {
+      "type": "select",
+      "id": "text_size",
+      "label": "t:blocks.countdown_timer.settings.text_size.label",
+      "options": [
+        {
+          "value": "sm",
+          "label": "t:blocks.countdown_timer.settings.text_size.options.sm.label"
+        },
+        {
+          "value": "md",
+          "label": "t:blocks.countdown_timer.settings.text_size.options.md.label"
+        },
+        {
+          "value": "lg",
+          "label": "t:blocks.countdown_timer.settings.text_size.options.lg.label"
+        },
+        {
+          "value": "xl",
+          "label": "t:blocks.countdown_timer.settings.text_size.options.xl.label"
+        }
+      ],
+      "default": "xl"
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.countdown_timer.headers.when_finished.content"
+    },
+    {
+      "type": "text",
+      "id": "finish_message",
+      "label": "t:blocks.countdown_timer.settings.finish_message.label",
+      "info": "t:blocks.countdown_timer.settings.finish_message.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.colors"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:sections.all.text_color.label"
+    },
+    {
+      "type": "color",
+      "id": "separator_color",
+      "label": "t:blocks.countdown_timer.settings.separator_color.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.countdown_timer.name"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,8 @@
+<img
+  width="24"
+  height="24"
+  src="{{ 'flag-' | append: country.iso_code | append: '.svg' | downcase | asset_url }}"
+  class="country-flag {{ class }}"
+  data-iso-code="{{ country.iso_code }}"
+  loading="lazy"
+>

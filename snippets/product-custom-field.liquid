@@ -1,0 +1,63 @@
+{% liquid
+  if block.settings.label == blank
+    break
+  endif
+
+  assign field_name = 'properties[' | append: block.settings.label | append: ']'
+  assign field_id = 'ProductCustomField-' | append: block.id
+%}
+
+{% if type == 'input' %}
+  <div class="form-field" {{ block.shopify_attributes }}>
+    <div class="input input--floating">
+      <input
+        type="text"
+        id="{{ field_id }}"
+        name="{{ field_name }}"
+        form="{{ product_form_id }}"
+        placeholder="{{ block.settings.label }}"
+        {% if block.settings.required %}required{% endif %}
+      >
+      <label for="{{ field_id }}">
+        {{ block.settings.label }}
+        {% if block.settings.required %}*{% endif %}
+      </label>
+    </div>
+    {% if block.settings.help_text != blank %}
+      <p class="input-help">{{ block.settings.help_text }}</p>
+    {% endif %}
+  </div>
+{% elsif type == 'dropdown' %}
+  <div class="form-field" {{ block.shopify_attributes }}>
+    <div class="input input--floating">
+      <select
+        id="{{ field_id }}"
+        name="{{ field_name }}"
+        form="{{ product_form_id }}"
+        {% if block.settings.required %}required{% endif %}
+      >
+        <option value="" selected disabled></option>
+        {% assign options = block.settings.options
+          | newline_to_br
+          | strip_newlines
+          | split: '<br />'
+        %}
+        {% for option in options %}
+          {% assign option_value = option | strip %}
+          {% if option_value != blank %}
+            <option value="{{ option_value | escape }}">
+              {{ option_value }}
+            </option>
+          {% endif %}
+        {% endfor %}
+      </select>
+      <label for="{{ field_id }}">
+        {{ block.settings.label }}
+        {% if block.settings.required %}*{% endif %}
+      </label>
+    </div>
+    {% if block.settings.help_text != blank %}
+      <p class="input-help">{{ block.settings.help_text }}</p>
+    {% endif %}
+  </div>
+{% endif %}

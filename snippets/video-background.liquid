@@ -1,0 +1,32 @@
+{% liquid
+  if poster == blank and video != blank
+    assign poster = video.preview_image
+  endif
+%}
+
+<video-media
+  class="video-background {{ class }}"
+  {% if host and video == blank %}
+    host="{{ host }}"
+  {% endif %}
+  {% if video_id and video == blank %}
+    video-id="{{ video_id }}"
+  {% endif %}
+  background
+  autoplay
+  autopause
+  loop
+  muted
+  {% if video.aspect_ratio != blank %}
+    style="--media-aspect-ratio-original: {{ video.aspect_ratio }};"
+  {% endif %}
+>
+  {% if video %}
+    <template>
+      {{ video | video_tag: poster: null }}
+    </template>
+  {% endif %}
+  {% if poster %}
+    {{ poster | image_url: width: 1200 | image_tag: slot: 'poster' }}
+  {% endif %}
+</video-media>

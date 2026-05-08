@@ -1,0 +1,92 @@
+<style>
+  #shopify-block-{{ block.id }} {
+    width: 100%;
+  }
+
+  #shopify-block-{{ block.id }} .multicolumn-content {
+    display: grid;
+    grid-template-columns: repeat({{ block.settings.columns_mobile }}, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    #shopify-block-{{ block.id }} .multicolumn-content {
+      grid-template-columns: repeat({{ block.settings.columns }}, minmax(0, 1fr));
+    }
+  }
+</style>
+
+<div class="multicolumn-content">
+  {% content_for 'blocks' %}
+</div>
+
+{% schema %}
+{
+  "name": "t:blocks.multicolumn.name",
+  "class": "block-multicolumn",
+  "settings": [
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:blocks.multicolumn.settings.columns.label",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "columns_mobile",
+      "label": "t:blocks.multicolumn.settings.columns_mobile.label",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 1
+    }
+  ],
+  "blocks": [
+    {
+      "type": "_custom_column"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.multicolumn.name",
+      "blocks": [
+        {
+          "type": "_custom_column",
+          "settings": {},
+          "blocks": [
+            {
+              "type": "image"
+            },
+            {
+              "type": "heading",
+              "settings": {
+                "heading": "t:blocks.multicolumn.presets.multicolumn.blocks._custom_column.blocks.heading.settings.heading",
+                "heading_size": "h5"
+              }
+            }
+          ]
+        },
+        {
+          "type": "_custom_column",
+          "settings": {},
+          "blocks": [
+            {
+              "type": "image"
+            },
+            {
+              "type": "heading",
+              "settings": {
+                "heading": "t:blocks.multicolumn.presets.multicolumn.blocks._custom_column_2.blocks.heading.settings.heading",
+                "heading_size": "h5"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

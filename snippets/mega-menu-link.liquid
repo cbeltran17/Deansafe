@@ -1,0 +1,18 @@
+{% liquid
+  for badge in badges
+    assign target_attr = 'data-target="' | append: link.title | append: '"'
+    if badge contains target_attr
+      assign badge_html = badge | split: '</menu-item-badge>' | first
+      break
+    endif
+  endfor
+%}
+
+<li class="mega-menu-link {{ class }}">
+  <a href="{{ link.url }}">
+    <span class="link-inner me-1"> {{ link.title }}</span>
+    {%- if badge_html -%}
+      {{- badge_html -}}
+    {%- endif -%}
+  </a>
+</li>

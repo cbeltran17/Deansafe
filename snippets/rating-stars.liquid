@@ -1,0 +1,19 @@
+{% liquid
+  assign rating_value = rating | default: 0.0
+  assign rating_max_value = max | default: 5.0
+  assign rating_integer = rating_value | floor
+  assign rating_decimal_times10 = rating_value | times: 10.0 | modulo: 10
+  assign rating_decimal = rating_decimal_times10 | divided_by: 10.0
+
+  assign aria_text = label | default: null
+  if aria_text == blank
+    assign aria_text = 'accessibility.rating_stars_label' | t: rating_value: rating_value, rating_max: rating_max_value
+  endif
+%}
+
+<span
+  role="img"
+  class="rating-star"
+  aria-label="{{ aria_text }}"
+  style="--rating: {{ rating_integer }}; --rating-max: {{ rating_max_value }}; --rating-decimal: {{ rating_decimal }};"
+></span>

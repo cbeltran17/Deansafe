@@ -1,0 +1,106 @@
+{% comment %}
+  Reusable collection grid snippet
+
+  Parameters:
+  - results: search or collection object
+  - results_count: total number of results
+  - results_url: base URL for filters/sorting
+  - section: section object for settings (optional)
+  - products_per_page: number of products per page
+{% endcomment %}
+
+{% liquid
+  assign products_per_page = products_per_page | default: section.settings.products_per_page | default: 24
+  assign current_filters = results.filters | default: empty
+
+  # Detect context type
+  if results.results
+    assign is_search = true
+  elsif results.products
+    assign is_collection = true
+  endif
+
+  # Calculate active filters
+  assign active_filter_count = 0
+  assign has_active_filters = false
+
+  for filter in current_filters
+    if filter.type == 'price_range' and filter.min_value.value != null or filter.max_value.value != null
+      assign has_active_filters = true
+      assign active_filter_count = active_filter_count | plus: 1
+    elsif filter.active_values.size > 0
+      assign has_active_filters = true
+      assign active_filter_count = active_filter_count | plus: filter.active_values.size
+    endif
+  endfor
+%}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    --product-grid-min-columns: {{ section.settings.products_per_row_mobile | default: 2 }};
+    --product-grid-max-columns: {{ section.settings.products_per_row | default: 5 }};
+  }
+</style>
+
+<collection-section data-collection-view-mode="{{ section.settings.default_view_mode }}">
+  <div
+    class="collection-grid {% if section.settings.show_filters  %} collection-grid--filters {% endif %}"
+    data-collection-grid
+  >
+    {% if section.settings.show_filters %}
+      <sticky-sidebar class="collection-grid__filters" padding="16">
+        <sticky-sidebar-body>
+          {% render 'filters', active_filter_count: active_filter_count %}
+        </sticky-sidebar-body>
+      </sticky-sidebar>
+      {% render 'filters-mobile-modal', active_filter_count: active_filter_count %}
+    {% endif %}
+
+    {% if section.settings.show_results_count %}
+      <div class="collection-grid__results-count">
+        {{ 'products.facets.results_count' | t: count: results_count }}
+      </div>
+    {% endif %}
+
+    <form is="filter-form" class="collection-grid__active-filters">
+      {% render 'filter-active', active_filter_count: active_filter_count %}
+    </form>
+
+    {% if section.settings.show_view_mode_selector %}
+      <div class="collection-grid__view-mode">
+        {% render 'collection-view-mode', default_view_mode: section.settings.default_view_mode %}
+      </div>
+    {% endif %}
+
+    {% if section.settings.show_sort_by %}
+      <div class="collection-grid__sort">
+        <form is="filter-form" class="contents">
+          {% render 'sort-by' %}
+        </form>
+      </div>
+    {% endif %}
+
+    {% if is_search %}
+      {% paginate results.results by products_per_page %}
+        {% render 'collection-grid-products',
+          paginate: paginate,
+          products: results.results,
+          current_filters: current_filters,
+          has_active_filters: has_active_filters,
+          results_url: results_url
+        %}
+      {% endpaginate %}
+    {% elsif is_collection %}
+      {% paginate results.products by products_per_page %}
+        {% render 'collection-grid-products',
+          paginate: paginate,
+          products: results.products,
+          current_filters: current_filters,
+          is_collection: true,
+          has_active_filters: has_active_filters,
+          results_url: results_url
+        %}
+      {% endpaginate %}
+    {% endif %}
+  </div>
+</collection-section>

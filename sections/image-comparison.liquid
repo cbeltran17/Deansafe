@@ -1,0 +1,211 @@
+{% liquid
+  assign before_image = section.settings.before_image
+  assign after_image = section.settings.after_image
+
+  if before_image and after_image
+    assign aspect_ratio = before_image.aspect_ratio | at_most: after_image.aspect_ratio
+  elsif before_image
+    assign aspect_ratio = before_image.aspect_ratio
+  elsif after_image
+    assign aspect_ratio = after_image.aspect_ratio
+  endif
+
+  if section.settings.image_size != blank
+    assign aspect_ratio = section.settings.image_size
+  endif
+
+  if aspect_ratio == blank
+    assign aspect_ratio = '1'
+  endif
+
+  assign image_comparison_class = 'image-comparison'
+
+  if section.settings.limit_height
+    assign image_comparison_class = image_comparison_class | append: ' image-comparison--max-height'
+  endif
+%}
+
+{%- capture sizes -%}
+min(100vw, 80vh * {{ aspect_ratio }})
+{%- endcapture -%}
+
+{% render 'section-meta', blend: true, blend_bg: section.settings.background_color %}
+
+<section class="section-full-width">
+  {% content_for 'block', type: '_section-header', id: 'section-header' %}
+
+  <image-comparison
+    class="{{ image_comparison_class }}"
+    style="--image-comparison-aspect-ratio: {{ aspect_ratio }};"
+  >
+    <div class="image-comparison__before">
+      {% render 'image',
+        image: before_image,
+        sizes: sizes,
+        width: 3840,
+        widths: '360, 780, 896, 1024, 1280, 1536, 2048, 2560, 3840',
+        ratio: 'auto',
+        placeholder: 'lifestyle-1',
+        placeholder_class: 'placeholder--dark'
+      %}
+      {% if section.settings.before_image_label != blank %}
+        <p class="image-comparison__overlay image-comparison__overlay--before">
+          {{ section.settings.before_image_label }}
+        </p>
+      {% endif %}
+    </div>
+
+    <div class="image-comparison__after">
+      {% render 'image',
+        image: after_image,
+        sizes: sizes,
+        width: 3840,
+        widths: '360, 780, 896, 1024, 1280, 1536, 2048, 2560, 3840',
+        ratio: 'auto',
+        placeholder: 'lifestyle-1'
+      %}
+      {% if section.settings.after_image_label != blank %}
+        <p class="image-comparison__overlay image-comparison__overlay--after">
+          {{ section.settings.after_image_label }}
+        </p>
+      {% endif %}
+    </div>
+
+    <div class="image-comparison__divider" data-part="divider"></div>
+
+    <div
+      class="image-comparison__handle"
+      data-part="handle"
+      aria-label="{{ 'accessibility.compare_handle_label' | t }}"
+    >
+      {{ 'icon-drag-handle-h.svg' | inline_asset_content }}
+    </div>
+  </image-comparison>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.image_comparison.name",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "before_image",
+      "label": "t:sections.image_comparison.settings.before_image.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "after_image",
+      "label": "t:sections.image_comparison.settings.after_image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "limit_height",
+      "label": "t:sections.image_comparison.settings.limit_height.label",
+      "info": "t:sections.image_comparison.settings.limit_height.info",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "image_size",
+      "label": "t:sections.all.image_size.label",
+      "options": [
+        {
+          "value": "",
+          "label": "t:sections.all.image_size.options.original_size"
+        },
+        {
+          "value": "2/3",
+          "label": "t:sections.all.image_size.options.portrait_tall_2_3"
+        },
+        {
+          "value": "3/4",
+          "label": "t:sections.all.image_size.options.portrait_3_4"
+        },
+        {
+          "value": "1/1",
+          "label": "t:sections.all.image_size.options.square"
+        },
+        {
+          "value": "4/3",
+          "label": "t:sections.all.image_size.options.landscape_4_3"
+        },
+        {
+          "value": "3/2",
+          "label": "t:sections.all.image_size.options.landscape_wide_3_2"
+        },
+        {
+          "value": "16/9",
+          "label": "t:sections.all.image_size.options.landscape_wider_16_9"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "text",
+      "id": "before_image_label",
+      "label": "t:sections.image_comparison.settings.before_image_label.label",
+      "default": "t:sections.image_comparison.settings.before_image_label.default"
+    },
+    {
+      "type": "text",
+      "id": "after_image_label",
+      "label": "t:sections.image_comparison.settings.after_image_label.label",
+      "default": "t:sections.image_comparison.settings.after_image_label.default"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.header"
+    },
+    {
+      "type": "text_alignment",
+      "id": "text_alignment",
+      "label": "t:sections.all.text_alignment.label",
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:sections.all.text_color.label"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "presets": [
+    {
+      "name": "t:sections.image_comparison.name",
+      "blocks": [
+        {
+          "id": "section-header",
+          "static": true,
+          "type": "_section-header",
+          "blocks": [
+            {
+              "type": "heading",
+              "settings": {
+                "heading": "t:sections.image_comparison.presets.image_comparison.blocks._section-header.blocks.heading.settings.heading"
+              }
+            },
+            {
+              "type": "paragraph",
+              "settings": {
+                "content": "t:sections.image_comparison.presets.image_comparison.blocks._section-header.blocks.paragraph.settings.content"
+              }
+            }
+          ]
+        }
+      ],
+      "category": "t:sections.categories.media"
+    }
+  ]
+}
+{% endschema %}

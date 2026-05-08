@@ -1,0 +1,37 @@
+{% liquid
+  assign target = target | default: section
+  assign products = products | default: target.settings.products | default: target.settings.collection.products
+  assign link_url = target.settings.link_url | default: target.settings.collection.url
+%}
+
+{% capture sizes %}
+  {% render 'sizes-carousel',
+    min: section.settings.products_per_row_mobile,
+    max: section.settings.products_per_row,
+    item_width: 240
+  %}
+{% endcapture %}
+
+{% liquid
+  if placeholder == true
+    for n in (1..10)
+      render 'product-card', index: forloop.index0
+    endfor
+  else
+    for product in products limit: section.settings.max_products
+      render 'product-card' with product, sizes: sizes, index: forloop.index0
+    endfor
+  endif
+%}
+
+{% if link_url and target.settings.show_link %}
+  <div slot="after" class="view-all-container">
+    {% render 'view-all-button', link_url: link_url, link_text: target.settings.link_text %}
+  </div>
+{% endif %}
+
+{% if section.settings.enable_carousel %}
+  <div slot="controls" class="carousel-controls-container">
+    {% render 'carousel-controls' %}
+  </div>
+{% endif %}

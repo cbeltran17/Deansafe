@@ -1,0 +1,14 @@
+{%- liquid
+  assign total_discount = cart.total_discount
+
+  for item in cart.items
+    # Also account for variant compare-at price when counting total discount
+    if item.original_price == item.final_price and item.variant.compare_at_price > item.final_price
+      assign line_discount = item.variant.compare_at_price | minus: item.final_price
+      assign line_discount = line_discount | times: item.quantity
+      assign total_discount = total_discount | plus: line_discount
+    endif
+  endfor
+
+  echo total_discount
+-%}

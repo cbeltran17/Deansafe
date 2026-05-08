@@ -1,0 +1,74 @@
+{% comment %}
+  Accepts:
+  - product: {Object} Product Liquid object (optional)
+  - use_variant: {Boolean} Renders selected or first available variant price instead of overall product pricing (optional)
+  - show_badges: {Boolean} (deprecated) No effect.
+  - class: {String} Adds a price class to the price element (optional)
+{% endcomment %}
+
+{% liquid
+  assign target = product
+
+  if use_variant
+    assign target = target.selected_or_first_available_variant | default: product
+  endif
+
+  assign compare_at_price = target.compare_at_price
+  assign current_price = target.price
+
+  if request.design_mode and target == blank
+    assign current_price = 5000
+  endif
+
+  if compare_at_price > current_price
+    assign on_sale = true
+  endif
+
+  if target == product and product.price_varies
+    assign price_varies = true
+  endif
+%}
+
+<div class="price {{ class }}">
+  {% if product.quantity_price_breaks_configured? %}
+    {% comment %} Volume pricing {% endcomment %}
+    <div class="price__item price__regular">
+      {% render 'volume-price', product: product, target: target %}
+    </div>
+  {% elsif on_sale %}
+    {% comment %} Sale price with compare-at {% endcomment %}
+    <div class="price__item price__sale">
+      <span class="sr-only">
+        {{ 'products.product.price.sale_price' | t }}
+      </span>
+      <span>
+        {% render 'money', price: current_price, price_varies: price_varies %}
+      </span>
+    </div>
+    <div class="price__item price__compare-at">
+      <span class="sr-only">
+        {{ 'products.product.price.regular_price' | t }}
+      </span>
+      <span>
+        {% render 'money', price: compare_at_price %}
+      </span>
+    </div>
+  {% else %}
+    {% comment %} Regular price {% endcomment %}
+    <div class="price__item price__regular">
+      <span class="sr-only">
+        {{ 'products.product.price.regular_price' | t }}
+      </span>
+      <span>
+        {% render 'money', price: current_price, price_varies: price_varies %}
+      </span>
+    </div>
+  {% endif %}
+
+  {% comment %} Unit price {% endcomment %}
+  {% if product.selected_or_first_available_variant.unit_price_measurement != null %}
+    {% render 'unit-price', target: product.selected_or_first_available_variant %}
+  {% endif %}
+
+  {%- comment -%} Badges are rendered via 'product-badges' snippet by callers {%- endcomment -%}
+</div>

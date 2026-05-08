@@ -1,0 +1,62 @@
+<div
+  id="shopify-block-{{ block.id }}"
+  class="block-footer-content"
+  {{ block.shopify_attributes }}
+>
+  <div class="block-footer-content__inner block-spacing {% render 'text-alignment' %}">
+    {%- content_for 'blocks' -%}
+    {% if block.settings.enable_follow_on_shop %}
+      {{ shop | login_button: action: 'follow' }}
+    {% endif %}
+  </div>
+
+  <style>
+    @media not all and (min-width: 768px) {
+      #shopify-block-{{ block.id }} {
+        {% render 'text-alignment' with block.settings.text_alignment_mobile, raw: true %}
+      }
+    }
+  </style>
+</div>
+
+{% schema %}
+{
+  "name": "t:blocks._footer_content.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text_alignment",
+      "id": "text_alignment",
+      "label": "t:sections.all.text_alignment.label",
+      "default": "left"
+    },
+    {
+      "type": "text_alignment",
+      "id": "text_alignment_mobile",
+      "label": "t:sections.all.text_alignment_mobile.label",
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "t:blocks._footer_content.headers.follow_on_shop.content",
+      "info": "t:blocks._footer_content.headers.follow_on_shop.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_follow_on_shop",
+      "default": true,
+      "label": "t:blocks._footer_content.settings.enable_follow_on_shop.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@theme"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks._footer_content.name"
+    }
+  ]
+}
+{% endschema %}

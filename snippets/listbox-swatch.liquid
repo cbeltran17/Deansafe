@@ -1,0 +1,22 @@
+{% liquid
+  capture legacy_swatch
+    render 'get-legacy-color-swatch', option_name: option.name, option_value_name: option_value.name
+  endcapture
+%}
+
+{% if option_value.swatch or legacy_swatch != blank %}
+  <div class="align-first-line">
+    <div
+      class="listbox-swatch"
+      style="
+        {%- if option_value.swatch.image -%}
+          --swatch-fill: url({{ option_value.swatch.image | image_url: width: 128 }});
+        {%- elsif option_value.swatch.color -%}
+          --swatch-fill: {{ option_value.swatch.color }};
+        {%- elsif legacy_swatch != blank -%}
+          --swatch-fill: {{ legacy_swatch }};
+        {%- endif -%}
+      "
+    ></div>
+  </div>
+{% endif %}

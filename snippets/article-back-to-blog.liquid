@@ -1,0 +1,15 @@
+<div class="article-back-to-blog {% render 'text-alignment' with block.settings.alignment %}">
+  {% if block.settings.button_style == 'link' %}
+    <a href="{{ blog.url }}" class="article-back-to-blog__button" data-variant="link">
+      {{ 'icon-chevron-left.svg' | inline_asset_content }}
+      {{ 'blogs.article.back_to_blog' | t }}
+    </a>
+  {% else %}
+    {% render 'button',
+      href: blog.url,
+      translation: 'blogs.article.back_to_blog',
+      variant: block.settings.button_style,
+      class: 'article-back-to-blog__button'
+    %}
+  {% endif %}
+</div>

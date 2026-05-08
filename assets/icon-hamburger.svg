@@ -1,0 +1,11 @@
+<svg
+  class="icon-hamburger"
+  width="20"
+  height="20"
+  viewBox="0 0 20 20"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <line class="icon-hamburger__line icon-hamburger__line--top" x1="2" y1="6" x2="18" y2="6" stroke="currentColor" stroke-width="1.5"/>
+  <line class="icon-hamburger__line icon-hamburger__line--bottom" x1="2" y1="14" x2="18" y2="14" stroke="currentColor" stroke-width="1.5"/>
+</svg>

@@ -1,0 +1,47 @@
+<div
+  class="block-spacing block-column"
+  id="shopify-block-{{ block.id }}"
+  {{ block.shopify_attributes }}
+>
+  {% content_for 'blocks' %}
+</div>
+
+{% schema %}
+{
+  "name": "t:blocks._custom_column.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:blocks._custom_column.paragraph__0.content"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@theme"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks._custom_column.name",
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "heading",
+          "settings": {
+            "heading_size": "h4"
+          }
+        },
+        {
+          "type": "paragraph"
+        },
+        {
+          "type": "button"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

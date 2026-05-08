@@ -1,0 +1,45 @@
+{%- if blog.previous_article or blog.next_article -%}
+  <nav class="article-navigation">
+    {%- if blog.previous_article -%}
+      <a
+        href="{{ blog.previous_article }}"
+        class="article-navigation__item article-navigation__item--prev"
+      >
+        {{ 'icon-chevron-left.svg' | inline_asset_content }}
+        {% render 'image' with blog.previous_article.image,
+          widths: '100, 200',
+          sizes: '100px',
+          class: 'article-navigation__image'
+        %}
+        <div class="article-navigation__content">
+          <span class="article-navigation__label">
+            {{- 'general.pagination.previous' | t -}}
+          </span>
+          <span class="article-navigation__title">
+            {{- blog.previous_article.title -}}
+          </span>
+        </div>
+      </a>
+    {%- endif -%}
+
+    {%- if blog.next_article -%}
+      <a
+        href="{{ blog.next_article }}"
+        class="article-navigation__item article-navigation__item--next"
+      >
+        <div class="article-navigation__content">
+          <span class="article-navigation__label">
+            {{- 'general.pagination.next' | t -}}
+          </span>
+          <span class="article-navigation__title">{{ blog.next_article.title }}</span>
+        </div>
+        {% render 'image' with blog.next_article.image,
+          widths: '100, 200',
+          sizes: '100px',
+          class: 'article-navigation__image'
+        %}
+        {{ 'icon-chevron-right.svg' | inline_asset_content }}
+      </a>
+    {%- endif -%}
+  </nav>
+{%- endif -%}

@@ -1,0 +1,40 @@
+{
+  "sections": {
+    "main-cart": {
+      "type": "main-cart",
+      "blocks": {
+        "free_shipping_bar_9Kxzxn": {
+          "type": "free_shipping_bar",
+          "settings": {}
+        },
+        "subtotal_wKayVk": {
+          "type": "subtotal",
+          "settings": {}
+        },
+        "cart_note_GzgxMP": {
+          "type": "cart_note",
+          "settings": {}
+        },
+        "checkout_button_hbBbQD": {
+          "type": "checkout_button",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "free_shipping_bar_9Kxzxn",
+        "subtotal_wKayVk",
+        "cart_note_GzgxMP",
+        "checkout_button_hbBbQD"
+      ],
+      "settings": {
+        "show_vendor": true,
+        "show_payment_icons": true,
+        "show_item_count": true,
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_seo_tag": "h1"
+      }
+    }
+  },
+  "order": ["main-cart"]
+}

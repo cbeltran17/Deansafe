@@ -1,0 +1,114 @@
+{% liquid
+  assign poster = block.settings.poster_image | default: block.settings.video.preview_image
+  assign max_width = block.settings.max_width | at_most: settings.page_width
+%}
+
+<style>
+  #shopify-block-{{ block.id }} video-media {
+    --media-aspect-ratio-original: {{ block.settings.video.aspect_ratio | default: '16 / 9' }};
+    max-width: {{ block.settings.max_width }}px;
+  }
+</style>
+
+<video-media
+  class="mx-auto overflow-hidden rounded-block"
+  {% if block.settings.video == blank %}
+    host="{{ block.settings.external_video_url.type | default: 'youtube' }}"
+    video-id="{{ block.settings.external_video_url.id | default: '_9VUPq3SxOc' }}"
+  {% endif %}
+  {% if block.settings.autoplay %}
+    autoplay
+  {% endif %}
+  {% if block.settings.muted %}
+    muted
+  {% endif %}
+  {% if block.settings.loop %}
+    loop
+  {% endif %}
+  {% if block.settings.controls %}
+    controls
+  {% endif %}
+>
+  {% if block.settings.video != blank %}
+    <template>
+      {{ block.settings.video | video_tag }}
+    </template>
+  {% endif %}
+  <div slot="poster">
+    {%- capture sizes -%}(min-width: {{ max_width }}px) {{ max_width }}px, 100vw{%- endcapture -%}
+    {% render 'image' with poster,
+      placeholder: 'lifestyle-1',
+      sizes: sizes,
+      width: 3840,
+      widths: '360, 780, 896, 1024, 1280, 1536, 2048, 2560, 3840',
+      static: true
+    %}
+  </div>
+</video-media>
+
+{% schema %}
+{
+  "name": "t:blocks.video.name",
+  "class": "block-video w-full",
+  "settings": [
+    {
+      "type": "video",
+      "id": "video",
+      "label": "t:blocks.video.settings.video.label"
+    },
+    {
+      "type": "video_url",
+      "id": "external_video_url",
+      "label": "t:blocks.video.settings.external_video_url.label",
+      "accept": ["youtube", "vimeo"],
+      "info": "t:blocks.video.settings.external_video_url.info",
+      "default": "https://www.youtube.com/watch?v=_9VUPq3SxOc"
+    },
+    {
+      "type": "image_picker",
+      "id": "poster_image",
+      "label": "t:blocks.video.settings.poster_image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "controls",
+      "label": "t:blocks.video.settings.controls.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "t:blocks.video.settings.autoplay.label",
+      "default": false,
+      "info": "t:blocks.video.settings.autoplay.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "muted",
+      "label": "t:blocks.video.settings.muted.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "loop",
+      "label": "t:blocks.video.settings.loop.label",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 320,
+      "max": 1920,
+      "step": 20,
+      "unit": "px",
+      "label": "t:blocks.video.settings.max_width.label",
+      "default": 1920
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.video.name"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,48 @@
+{% doc %}
+  Formats a price with the decimal portion as superscript (if enabled in settings).
+
+  @param {number} price
+  @param {boolean} [price_varies]
+{% enddoc %}
+
+{% liquid
+  # Full formatted price (with or without currency code)
+  if settings.currency_code_enabled
+    assign formatted = price | money_with_currency
+  else
+    assign formatted = price | money
+  endif
+
+  assign output = formatted
+
+  if settings.price_style == 'small_decimals'
+    # Numeric portion only (localized separators, no currency)
+    assign numeric = price | money_without_currency
+
+    # Detect decimal separator safely from a probe that never has thousands separators
+    assign probe = 100 | money_without_currency
+    if probe contains '.'
+      assign dec = '.'
+    elsif probe contains ','
+      assign dec = ','
+    else
+      # zero-decimal currency (e.g., JPY) or $(amount_without_currency) in format settings
+      assign dec = ''
+    endif
+
+    if dec != '' and numeric contains dec
+      assign int_part = numeric | split: dec | first
+      assign dec_part = numeric | split: dec | last
+      assign supers = int_part | append: '<sup>' | append: dec_part | append: '</sup>'
+      assign price_with_sup = formatted | replace_first: numeric, supers
+      assign html = '<span aria-hidden="true">{price_with_sup}</span><span class="sr-only">{formatted}</span>'
+      assign output = html | replace: '{price_with_sup}', price_with_sup | replace: '{formatted}', formatted
+    endif
+  endif
+
+  if price_varies == true
+    echo 'products.price.from_price_html' | t: price: output
+  else
+    echo output
+  endif
+%}

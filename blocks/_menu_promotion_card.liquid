@@ -1,0 +1,177 @@
+{% liquid
+  if block.settings.link != blank
+    assign tag = 'a'
+    assign tag_attributes = 'href="' | append: block.settings.link | append: '"'
+  else
+    assign tag = 'div'
+  endif
+
+  assign badge_color = block.settings.badge_color
+
+  unless badge_color contains '#'
+    assign badge_color = settings.color_button_primary_background
+  endunless
+
+  assign scope_selector = '.' | append: block.id
+%}
+
+{% render 'image-size-vars', target: block, scope: scope_selector %}
+
+<style>
+  {% comment %} Using class selector so that we can reuse it in the mobile menu {% endcomment %}
+  {{ scope_selector }} {
+    {%  render 'color-var' with block.settings.text_color, name: 'heading-color' %}
+    {%  render 'color-var' with block.settings.text_color, name: 'text-color' %}
+    {%  render 'color-var' with badge_color, name: 'badge-background' %}
+    --badge-color: {% render 'get-foreground' with badge_color %};
+    --media-overlay-color: {{ block.settings.overlay_color }};
+    --media-overlay-opacity: {{ block.settings.overlay_opacity }}%;
+  }
+</style>
+
+<{{ tag }}
+  {{ tag_attributes }}
+  class="block-promotion-card promotion-card {{ block.settings.content_alignment }} {{ block.id }}"
+  {{ block.shopify_attributes }}
+  data-promotion-card
+>
+  {% render 'image' with block.settings.image,
+    width: 768,
+    class: 'promotion-card__image',
+    loading: 'lazy',
+    sizes: 'auto',
+    placeholder: true
+  %}
+  <div class="promotion-card__content">
+    {% if block.settings.heading != blank %}
+      <p class="promotion-card__heading h6">{{ block.settings.heading }}</p>
+    {% endif %}
+    {% if block.settings.text != blank %}
+      <p class="promotion-card__text">{{ block.settings.text }}</p>
+    {% endif %}
+    {% if block.settings.badge_text != blank %}
+      <span class="promotion-card__badge">{{ block.settings.badge_text }}</span>
+    {% endif %}
+  </div>
+</{{ tag }}>
+
+{% schema %}
+{
+  "name": "t:blocks._menu_promotion_card.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:blocks._menu_promotion_card.settings.image.label"
+    },
+    {
+      "type": "select",
+      "id": "image_size",
+      "label": "t:sections.all.image_size.label",
+      "options": [
+        {
+          "value": "",
+          "label": "t:sections.all.image_size.options.original_size"
+        },
+        {
+          "value": "2/3",
+          "label": "t:sections.all.image_size.options.portrait_tall_2_3"
+        },
+        {
+          "value": "3/4",
+          "label": "t:sections.all.image_size.options.portrait_3_4"
+        },
+        {
+          "value": "1/1",
+          "label": "t:sections.all.image_size.options.square"
+        },
+        {
+          "value": "4/3",
+          "label": "t:sections.all.image_size.options.landscape_4_3"
+        },
+        {
+          "value": "3/2",
+          "label": "t:sections.all.image_size.options.landscape_wide_3_2"
+        },
+        {
+          "value": "16/9",
+          "label": "t:sections.all.image_size.options.landscape_wider_16_9"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "label": "t:blocks._menu_promotion_card.settings.content_alignment.label",
+      "options": [
+        {
+          "value": "promotion-card--content-top",
+          "label": "t:blocks._menu_promotion_card.settings.content_alignment.options.promotion_card_content_top.label"
+        },
+        {
+          "value": "promotion-card--content-bottom",
+          "label": "t:blocks._menu_promotion_card.settings.content_alignment.options.promotion_card_content_bottom.label"
+        }
+      ],
+      "default": "promotion-card--content-top"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "t:blocks._menu_promotion_card.settings.link.label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "t:blocks._menu_promotion_card.settings.heading.label"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "text",
+      "label": "t:blocks._menu_promotion_card.settings.text.label"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "t:blocks._menu_promotion_card.settings.badge_text.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.colors"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:sections.all.text_color.label",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "badge_color",
+      "label": "t:blocks._menu_promotion_card.settings.badge_color.label"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "t:blocks._menu_promotion_card.settings.overlay_color.label",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "t:blocks._menu_promotion_card.settings.overlay_opacity.label",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "default": 10,
+      "unit": "%"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks._menu_promotion_card.name"
+    }
+  ]
+}
+{% endschema %}

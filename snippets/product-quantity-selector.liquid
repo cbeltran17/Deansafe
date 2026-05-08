@@ -1,0 +1,15 @@
+{% liquid
+  assign quantity = product.selected_or_first_available_variant.quantity_rule.min | default: 1
+%}
+
+{%- if id == blank -%}
+  {%- capture id -%}Quantity-{{ section.id }}{%- endcapture -%}
+{%- endif -%}
+
+{% render 'quantity-selector',
+  variant: product.selected_or_first_available_variant,
+  quantity: quantity,
+  name: 'quantity',
+  id: id,
+  class: class
+%}

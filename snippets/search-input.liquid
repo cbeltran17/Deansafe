@@ -1,0 +1,38 @@
+{% doc %}
+  Renders a search input form.
+
+  @param {string} id - The unique ID for the input and label
+  @param {string} [class] - Additional classes for the form element
+  @param {string} [slot] - Slot assignment for web components
+  @param {string} [value] - Initial value for the search input
+
+  @example
+  {% render 'search-input', id: 'header-search', class: 'header__search' %}
+{% enddoc %}
+
+<form
+  action="{{ routes.search_url }}"
+  method="get"
+  role="search"
+  class="input input--rounded input--icon-left search-input {{ class }}"
+  {% if slot %}
+    slot="{{ slot }}"
+  {% endif %}
+  id="{{ id }}"
+>
+  {{ 'icon-ui-search.svg' | inline_asset_content }}
+  <input
+    id="{{ id }}-input"
+    type="text"
+    name="q"
+    placeholder="{{ 'general.search.placeholder' | t }}"
+    autocorrect="off"
+    autocomplete="off"
+    autocapitalize="off"
+    spellcheck="false"
+    {% if value %}
+      value="{{ value | escape }}"
+    {% endif %}
+  >
+  <label for="{{ id }}-input" class="sr-only">{{ 'accessibility.search_input_label' | t }}</label>
+</form>

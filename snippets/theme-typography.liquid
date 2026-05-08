@@ -1,0 +1,95 @@
+{% liquid
+  assign normal_weight = settings.typography_body_font.weight
+  assign medium_weight = '500' | at_least: normal_weight | append: ''
+  assign bold_weight = settings.typography_bold_weight
+
+  assign body_medium_font = settings.typography_body_font | font_modify: 'weight', medium_weight
+  assign body_bold_font = settings.typography_body_font | font_modify: 'weight', bold_weight
+
+  if body_bold_font == blank
+    assign body_bold_font = settings.typography_body_font | font_modify: 'weight', '700'
+  endif
+%}
+
+<style>
+  {{ settings.typography_headings_font | font_face }}
+  {{ settings.typography_body_font | font_face }}
+  {{ body_medium_font | font_face }}
+  {{ body_bold_font | font_face }}
+
+  :root {
+    {% comment %} Fonts {% endcomment %}
+    --font-family-body: {{ settings.typography_body_font.family }}, {{ settings.typography_body_font.fallback_families }};
+    --font-family-display: {{ settings.typography_headings_font.family }}, {{ settings.typography_headings_font.fallback_families }};
+
+    {% comment %} Font weights {% endcomment %}
+    --font-weight-normal: {{ settings.typography_body_font.weight | default: '400'}};
+    --font-weight-medium: {{ body_medium_font.weight | default: '500' }};
+    --font-weight-bold: {{ body_bold_font.weight | default: '700' }};
+    --font-weight-display: {{ settings.typography_headings_font.weight }};
+
+    {% comment %} Font styles {% endcomment %}
+    --font-style-display: {{ settings.typography_headings_font.style }};
+    --font-style-body: {{ settings.typography_body_font.style }};
+
+    {% comment %} Text transforms {% endcomment %}
+    {% if settings.typography_headings_capitalize %}
+      --text-transform-display: uppercase;
+    {% else %}
+      --text-transform-display: none;
+    {% endif %}
+
+    --font-size-body-scale: {{ settings.typography_body_base_size | divided_by: 16.0 }};
+    --font-size-display-scale: {{ settings.typography_headings_base_size | divided_by: 16.0 }};
+
+    --line-height-body-scale: {{ settings.typography_body_line_height | divided_by: 100.0 }};
+    --line-height-display-scale: {{ settings.typography_headings_line_height | divided_by: 100.0 }};
+
+    --letter-spacing-body-offset: {{ settings.typography_body_letter_spacing | divided_by: 1000.0 }}em;
+    --letter-spacing-display-offset: {{ settings.typography_headings_letter_spacing | divided_by: 1000.0  }}em;
+  }
+</style>
+
+{% render 'theme-typography-font-settings',
+  type: 'button',
+  font_setting: settings.typography_buttons_font,
+  base_size: settings.typography_buttons_base_size,
+  capitalize: settings.typography_buttons_capitalize
+%}
+
+{% render 'theme-typography-font-settings',
+  type: 'navigation',
+  font_setting: settings.typography_navigation_font,
+  base_size: settings.typography_navigation_base_size,
+  capitalize: settings.typography_navigation_capitalize
+%}
+
+{% render 'theme-typography-font-settings',
+  type: 'product-card',
+  font_setting: settings.typography_product_card_font,
+  base_size: settings.typography_product_card_base_size,
+  capitalize: settings.typography_product_card_capitalize
+%}
+
+{% render 'theme-typography-font-settings',
+  type: 'caption',
+  font_setting: settings.typography_labels_font,
+  capitalize: settings.typography_labels_capitalize
+%}
+
+{% render 'theme-typography-font-settings',
+  type: 'accordion',
+  font_setting: settings.typography_accordion_font,
+  capitalize: settings.typography_accordion_capitalize
+%}
+
+{% render 'theme-typography-font-settings',
+  type: 'product-price',
+  font_setting: settings.typography_product_price_font,
+  base_size: settings.typography_product_price_base_size
+%}
+<style>
+  :root {
+    --product-price-line-height: 1.25;
+  }
+</style>

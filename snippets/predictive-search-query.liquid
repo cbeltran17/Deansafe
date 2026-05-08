@@ -1,0 +1,8 @@
+<a
+  href="{{ query.url }}"
+  class="predictive-search__query link-text"
+  aria-label="{{ query.text | escape }}"
+>
+  {{ 'icon-ui-search.svg' | inline_asset_content }}
+  <span>{{ query.styled_text }}</span>
+</a>

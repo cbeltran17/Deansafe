@@ -1,0 +1,61 @@
+{% if paginate.pages > 1 %}
+  <nav class="pagination">
+    <pagination-element>
+      <ol class="pagination__list">
+        <li>
+          <a
+            data-part="prev"
+            class="pagination__previous"
+            href="{{ paginate.previous.url | default: '#' }}{{ anchor }}"
+            aria-label="{{ 'general.pagination.previous' | t }}"
+            {%- unless paginate.previous %}
+              aria-disabled="true"
+              tabindex="-1"
+            {%- endunless %}
+          >
+            {{ 'icon-chevron-left.svg' | inline_asset_content }}
+          </a>
+        </li>
+        {%- for part in paginate.parts -%}
+          <li>
+            {%- if part.is_link -%}
+              <a
+                data-part="links"
+                class="pagination__page"
+                href="{{ part.url }}{{ anchor }}"
+                aria-label="{{ 'general.pagination.page' | t: number: part.title }}"
+              >
+                {{- part.title -}}
+              </a>
+            {%- else -%}
+              <span
+                data-part="links"
+                class="pagination__page"
+                aria-label="{{ 'general.pagination.page' | t: number: part.title }}"
+                {% if part.title == paginate.current_page %}
+                  data-active="true"
+                {% endif %}
+              >
+                {{- part.title -}}
+              </span>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+        <li>
+          <a
+            data-part="next"
+            class="pagination__next"
+            href="{{ paginate.next.url | default: '#' }}{{ anchor }}"
+            aria-label="{{ 'general.pagination.next' | t }}"
+            {%- unless paginate.next %}
+              aria-disabled="true"
+              tabindex="-1"
+            {%- endunless %}
+          >
+            {{ 'icon-chevron-right.svg' | inline_asset_content }}
+          </a>
+        </li>
+      </ol>
+    </pagination-element>
+  </nav>
+{% endif %}

@@ -1,0 +1,85 @@
+{% doc %}
+  Renders the cart summary sidebar with section blocks including free shipping bar,
+  subtotal, cart note, and checkout button.
+
+  @param {boolean} [has_discounts_enabled] - Whether the cart page has the ability to add discount codes enabled
+
+  @example
+  {% render 'cart-summary', has_discounts_enabled: section.settings.show_discount_code_form %}
+{% enddoc %}
+
+<div class="cart-summary-column">
+  <div class="cart-summary">
+    <div data-section-ref="summary" class="block-spacing">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'free_shipping_bar' %}
+            {% if settings.enable_free_shipping_bar %}
+              <div class="block-cart-free-shipping" {{ block.shopify_attributes }}>
+                {% render 'free-shipping-bar' %}
+              </div>
+            {% endif %}
+
+          {% when 'subtotal' %}
+            <div class="block-cart-subtotal" {{ block.shopify_attributes }}>
+              {% render 'cart-summary-total-list',
+                show_total_discount: block.settings.show_total_discount,
+                show_tax_and_shipping: block.settings.show_tax_and_shipping,
+                has_discounts_enabled: has_discounts_enabled
+              %}
+            </div>
+
+          {% when 'cart_note' %}
+            <div class="block-cart-note" {{ block.shopify_attributes }}>
+              <p class="cart-note-heading">{{ block.settings.heading }}</p>
+              {% render 'input',
+                class: 'input--outline cart-note-input',
+                label_t: 'sections.cart.note',
+                tag: 'textarea',
+                id: 'CartNote',
+                name: 'note',
+                value: cart.note,
+                rows: 4,
+                autosize: true
+              %}
+            </div>
+
+          {% when 'checkout_button' %}
+            <form
+              class="block-cart-checkout-btn"
+              method="POST"
+              action="{{ routes.cart_url }}"
+              novalidate
+              {{ block.shopify_attributes }}
+            >
+              {% capture checkout_content %}
+                {{ 'icon-padlock.svg' | inline_asset_content }}
+                {{ 'sections.cart.checkout' | t }}
+              {% endcapture %}
+              {% render 'button' with checkout_content,
+                class: 'cart-checkout-button',
+                name: 'checkout',
+                type: 'submit',
+                variant: 'flip',
+                background_color: block.settings.background_color,
+                text_color: block.settings.text_color
+              %}
+
+              {% if additional_checkout_buttons %}
+                <div class="additional-checkout-buttons--vertical">
+                  {{ content_for_additional_checkout_buttons }}
+                </div>
+              {% endif %}
+            </form>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {% if section.settings.show_payment_icons and shop.enabled_payment_types != empty %}
+    <div class="cart-payment-methods">
+      <p class="cart-payment-methods__label">{{ 'sections.cart.payment_methods_label' | t }}</p>
+      {% render 'payment-icons' %}
+    </div>
+  {% endif %}
+</div>

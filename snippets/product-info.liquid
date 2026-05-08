@@ -1,0 +1,11 @@
+{% liquid
+  if location == null
+    assign location = 'info'
+  endif
+%}
+
+<div id="{{ section.id }}-ProductInfo" class="product-info" tabindex="-1">
+  <div class="block-spacing block-spacing--product">
+    {% render 'product-blocks', product: product, location: location %}
+  </div>
+</div>

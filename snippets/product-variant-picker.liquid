@@ -1,0 +1,75 @@
+{% unless product.has_only_default_variant %}
+  <variant-picker
+    class="grid gap-4"
+    {{ block.shopify_attributes }}
+    {% if section_ref %}
+      data-section-ref="{{ section_ref }}"
+    {% endif %}
+  >
+    {%- for option in product.options_with_values -%}
+      {% capture id %}Option-{{ section.id }}-{{ forloop.index }}{% if scope %}-{{ scope }}{% endif %}{% endcapture %}
+      {% liquid
+        assign type = block.settings.style
+        assign is_swatch = false
+
+        for option_value in option.values
+          if option_value.swatch != blank
+            assign is_swatch = true
+            continue
+          endif
+        endfor
+
+        # Legacy color swatches configuration check
+        if settings.color_swatches_legacy != blank
+          assign legacy_color_options = 'configuration.product.color_options' | t | split: ','
+          assign option_name_downcase = option.name | downcase
+
+          for name in legacy_color_options
+            assign trimmed_name = name | downcase | strip
+
+            if option_name_downcase == trimmed_name
+              assign is_swatch = true
+              break
+            endif
+          endfor
+        endif
+
+        if is_swatch and block.settings.swatch_selector_style != 'none'
+          assign type = block.settings.swatch_selector_style
+        endif
+
+        # Check if this option should use variant images
+        if block.settings.show_variant_image_for_options != blank
+          assign variant_image_options = block.settings.show_variant_image_for_options | split: ','
+          for image_option in variant_image_options
+            assign trimmed_image_option = image_option | strip | downcase
+            assign trimmed_option_name = option.name | strip | downcase
+            if trimmed_image_option == trimmed_option_name
+              assign type = 'image'
+              break
+            endif
+          endfor
+        endif
+      %}
+
+      {% if type == 'radio' or type == 'swatch' or type == 'image' %}
+        {% render 'product-option-radio',
+          id: id,
+          type: type,
+          option: option,
+          product_form_id: product_form_id,
+          block: block,
+          hide_sold_out_variants: block.settings.hide_sold_out_variants
+        %}
+      {% else %}
+        {% render 'product-option-listbox',
+          id: id,
+          option: option,
+          product_form_id: product_form_id,
+          block: block,
+          hide_sold_out_variants: block.settings.hide_sold_out_variants
+        %}
+      {% endif %}
+    {%- endfor -%}
+  </variant-picker>
+{% endunless %}

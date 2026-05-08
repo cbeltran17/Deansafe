@@ -1,0 +1,12 @@
+<cart-drawer-child
+  slot="container"
+  id="CartDrawer-DiscountCodeModal"
+  strategy="drawer"
+  position="bottom"
+  class="cart-drawer-child"
+>
+  <div class="modal-section">
+    <p data-title class="h6 mb-4">{{ 'sections.cart.discount_code' | t }}</p>
+    {% render 'discount-code' %}
+  </div>
+</cart-drawer-child>

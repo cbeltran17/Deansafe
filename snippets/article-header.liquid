@@ -1,0 +1,46 @@
+<div class="article__header {% render 'text-alignment' with block.settings.alignment %}">
+  {%- if block.settings.show_tag and article.tags.size > 0 -%}
+    <a
+      href="{{ blog.url }}/tagged/{{ article.tags.first | handle }}"
+      class="article-tag"
+    >
+      {{ article.tags.first }}
+    </a>
+  {%- endif -%}
+
+  {% assign heading_size = block.settings.heading_size | default: 'h1' %}
+  {% render 'heading' with article.title, tag: 'h1', class: 'article__title', size: heading_size %}
+
+  <div class="article-meta">
+    {%- if block.settings.show_date -%}
+      <time
+        datetime="{{ article.published_at | date: '%Y-%m-%d' }}"
+        class="article-meta__date"
+      >
+        {{ article.published_at | date: format: 'date' }}
+      </time>
+    {%- endif -%}
+
+    {%- if block.settings.show_author and article.author != blank -%}
+      {%- if block.settings.show_date -%}
+        <span class="article-meta__separator"></span>
+      {%- endif -%}
+      <span class="article-meta__author">
+        {{- 'blogs.article.author' | t: author: article.author -}}
+      </span>
+    {%- endif -%}
+
+    {%- if block.settings.show_comment_count
+      and article.comments_enabled?
+      and article.comments_count > 0
+    -%}
+      {%- if block.settings.show_date or block.settings.show_author and article.author != blank -%}
+        <span class="article-meta__separator"></span>
+      {%- endif -%}
+      <a href="#comments" class="article-meta__comments">
+        {{ 'icon-comments.svg' | inline_asset_content }}
+        <span>{{ article.comments_count }}</span>
+      </a>
+    {%- endif -%}
+  </div>
+</div>

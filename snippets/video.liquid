@@ -1,0 +1,41 @@
+{% liquid
+  if poster == blank and video != blank
+    assign poster = video.preview_image
+  endif
+%}
+
+<video-media
+  {% if host and video == blank %}
+    host="{{ host }}"
+  {% endif %}
+  {% if video_id and video == blank %}
+    video-id="{{ video_id }}"
+  {% endif %}
+  {% if controls %}
+    controls
+  {% endif %}
+  {% if autoplay %}
+    autoplay
+  {% endif %}
+  {% if muted %}
+    muted
+  {% endif %}
+  {% if loop %}
+    loop
+  {% endif %}
+  autopause
+  class="video-player"
+  style="
+    {% if video.aspect_ratio != blank %}--media-aspect-ratio-original: {{ video.aspect_ratio }};{% endif %}
+    {% if aspect_ratio != blank %} --media-aspect-ratio: {{ aspect_ratio }};{% endif %}
+  "
+>
+  {% if video %}
+    <template>
+      {{ video | video_tag: poster: null }}
+    </template>
+  {% endif %}
+  {% if poster %}
+    {% render 'image' with poster, width: 1920, slot: 'poster', static: true %}
+  {% endif %}
+</video-media>

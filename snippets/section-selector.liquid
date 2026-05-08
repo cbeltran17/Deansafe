@@ -1,0 +1,4 @@
+{%- liquid
+  assign selector = '#shopify-section-' | append: section.id | replace: '=', '\='
+  echo selector
+-%}

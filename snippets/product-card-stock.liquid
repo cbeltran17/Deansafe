@@ -1,0 +1,38 @@
+{% if product %}
+  {% liquid
+    assign total_stock = product.variants | map: 'inventory_quantity' | sum
+
+    assign stock_status = ''
+    assign stock_message = ''
+
+    if total_stock <= 0
+      if product.available
+        assign stock_status = 'in-stock'
+        assign stock_message = 'products.product_card.in_stock' | t
+      else
+        assign stock_status = 'out-of-stock'
+        assign stock_message = 'products.product_card.out_of_stock' | t
+      endif
+    elsif settings.low_stock_threshold > 0 and total_stock <= settings.low_stock_threshold
+      assign stock_status = 'low-stock'
+      case settings.show_stock_count
+        when 'never'
+          assign stock_message = 'products.product_card.low_stock' | t
+        else
+          assign stock_message = 'products.product_card.low_stock_with_count' | t: count: total_stock
+      endcase
+    else
+      assign stock_status = 'in-stock'
+      case settings.show_stock_count
+        when 'always'
+          assign stock_message = 'products.product_card.in_stock_with_count' | t: count: total_stock
+        else
+          assign stock_message = 'products.product_card.in_stock' | t
+      endcase
+    endif
+  %}
+
+  <div class="product-card__stock product-stock--{{ stock_status }}">
+    {{- stock_message -}}
+  </div>
+{% endif %}

@@ -1,0 +1,48 @@
+{%- liquid
+  assign value = rfs
+  assign base = base | default: 20
+  assign rem = 16.0
+  assign breakpoint = breakpoint | default: 1400
+  assign factor = factor | default: 10.0
+  assign precision = 5
+  assign unit = 'rem'
+
+  if value <= base
+    if unit == 'rem'
+      echo value | divided_by: 16.0
+    else
+      echo value
+    endif
+    echo unit
+    break
+  endif
+
+  assign value_minus_base = value | minus: base
+  assign divided = value_minus_base | divided_by: factor
+  assign base = base | plus: divided
+  assign diff = value | minus: base
+
+  assign multiplied = diff | times: 100
+  assign viewport_unit_value = multiplied | divided_by: breakpoint
+
+  if unit == 'rem'
+    assign base = base | divided_by: rem
+    assign min_value = value | divided_by: rem | append: 'rem'
+  else
+    assign min_value = value | append: 'px'
+  endif
+
+  assign base = base | round: precision
+  assign viewport_unit_value = viewport_unit_value | round: precision
+-%}
+
+{% comment %} Output start {% endcomment %}
+min({{ min_value }},
+{%- if value > 0 -%}
+  calc({{ base -}}
+  {{- unit }} + {{ viewport_unit_value }}vw)
+{%- else -%}
+  calc(-{{ base -}}
+  {{- unit }} - {{ viewport_unit_value }}vw)
+{%- endif -%}
+)

@@ -1,0 +1,30 @@
+<menu-item-effect
+  data-menu-item="{{ block.settings.menu_item | escape }}"
+  data-type="color"
+  data-color="{{ block.settings.color }}"
+></menu-item-effect>
+
+{% schema %}
+{
+  "name": "t:blocks._menu_item_effect.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "menu_item",
+      "label": "t:blocks._menu_item_effect.settings.menu_item.label"
+    },
+    {
+      "type": "color",
+      "id": "color",
+      "label": "t:blocks._menu_item_effect.settings.color.label",
+      "default": "#DC2626"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks._menu_item_effect.name"
+    }
+  ]
+}
+{% endschema %}

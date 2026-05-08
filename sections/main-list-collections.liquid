@@ -1,0 +1,181 @@
+{% render 'section-meta', blend: true, blend_bg: section.settings.background_color %}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    {% render 'color-var' with section.settings.card_background_color, name: 'collection-list-card-background' %}
+    {% render 'color-var' with section.settings.card_text_color, name: 'collection-list-card-color' %}
+  }
+</style>
+
+<dynamic-section class="section-full-width">
+  {% content_for 'block', type: '_section-header', id: 'section-header' %}
+
+  <div class="main-list-collections">
+    {% paginate collections by section.settings.collections_per_page %}
+      <div class="main-list-collections__grid grid-minmax" data-append-target>
+        {% for item in collections %}
+          {% render 'collection-card',
+            collection: item,
+            style: section.settings.style,
+            placeholder: false,
+            image_aspect_ratio: section.settings.image_size
+          %}
+        {% endfor %}
+      </div>
+      {% render 'pagination', paginate: paginate %}
+    {% endpaginate %}
+  </div>
+</dynamic-section>
+
+{% schema %}
+{
+  "name": "t:sections.main_list_collections.name",
+  "settings": [
+    {
+      "type": "range",
+      "id": "collections_per_page",
+      "label": "t:sections.main_list_collections.settings.collections_per_page.label",
+      "min": 4,
+      "max": 50,
+      "step": 1,
+      "default": 50
+    },
+    {
+      "type": "select",
+      "id": "pagination_type",
+      "label": "t:sections.main_search.settings.pagination_type.label",
+      "default": "load_more",
+      "options": [
+        {
+          "value": "load_more",
+          "label": "t:sections.main_search.settings.pagination_type.options.load_more.label"
+        },
+        {
+          "value": "classic",
+          "label": "t:sections.main_search.settings.pagination_type.options.classic.label"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "style",
+      "label": "t:blocks._collection_list_item.settings.style.label",
+      "options": [
+        {
+          "value": "overlay",
+          "label": "t:blocks._collection_list_item.settings.style.options.overlay.label"
+        },
+        {
+          "value": "card",
+          "label": "t:blocks._collection_list_item.settings.style.options.card.label"
+        }
+      ],
+      "default": "overlay"
+    },
+    {
+      "type": "select",
+      "id": "image_size",
+      "label": "t:sections.all.image_size.label",
+      "options": [
+        {
+          "value": "",
+          "label": "t:sections.all.image_size.options.original_size"
+        },
+        {
+          "value": "2/3",
+          "label": "t:sections.all.image_size.options.portrait_tall_2_3"
+        },
+        {
+          "value": "3/4",
+          "label": "t:sections.all.image_size.options.portrait_3_4"
+        },
+        {
+          "value": "1/1",
+          "label": "t:sections.all.image_size.options.square"
+        },
+        {
+          "value": "4/3",
+          "label": "t:sections.all.image_size.options.landscape_4_3"
+        },
+        {
+          "value": "3/2",
+          "label": "t:sections.all.image_size.options.landscape_wide_3_2"
+        },
+        {
+          "value": "16/9",
+          "label": "t:sections.all.image_size.options.landscape_wider_16_9"
+        }
+      ],
+      "default": "1/1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.header"
+    },
+    {
+      "type": "text_alignment",
+      "id": "text_alignment",
+      "label": "t:sections.all.text_alignment.label",
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:sections.all.text_color.label"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "t:sections.collection_list.settings.card_background_color.label",
+      "default": "#F7F7F7"
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "t:sections.collection_list.settings.card_text_color.label",
+      "default": "#1E1E1E"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_custom_spacing",
+      "label": "t:sections.all.enable_custom_spacing",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "top_spacing",
+      "label": "t:sections.all.top_spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing == true }}"
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "label": "t:sections.all.bottom_spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing == true }}"
+    }
+  ]
+}
+{% endschema %}

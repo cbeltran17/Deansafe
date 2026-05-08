@@ -1,0 +1,26 @@
+{% liquid
+  assign media_id = media_id | default: media.id
+%}
+
+<div
+  id="{{ section.id }}-ProductMedia-{{ media_id }}"
+  class="media-carousel-slide"
+  style="--media-carousel-aspect-ratio: {{ media.aspect_ratio | default: "1" }};"
+  data-media-id="{{ media_id }}"
+  data-media-featured="{{ featured }}"
+  {% if media.media_type == 'image' %}
+    tabindex="0"
+    data-media-lightbox="true"
+  {% endif %}
+  {% if hidden %}
+    hidden
+  {% endif %}
+>
+  <div class="media-carousel-slide-outer">
+    <div class="media-carousel-slide-inner">
+      <div class="media-carousel-slide-content">
+        {% render 'product-media' with media %}
+      </div>
+    </div>
+  </div>
+</div>

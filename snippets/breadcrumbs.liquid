@@ -1,0 +1,42 @@
+{% unless template == 'index' or template == 'cart' or template == 'list-collections' %}
+  <nav
+    class="breadcrumbs"
+    role="navigation"
+    aria-label="{{ 'accessibility.breadcrumbs' | t }}"
+  >
+    <a href="{{ routes.root_url }}" aria-label="{{ 'accessibility.home' | t }}">
+      {{ 'icon-home.svg' | inline_asset_content }}
+    </a>
+    {% if template contains 'page' %}
+      {% render 'breadcrumbs-separator' %}
+      <span class="breadcrumbs__item--active" aria-current="page">{{ page.title }}</span>
+    {% elsif template contains 'product' %}
+      {% if collection.url %}
+        {% render 'breadcrumbs-collection' %}
+      {% endif %}
+      {% render 'breadcrumbs-separator' %}
+      <span class="breadcrumbs__item--active" aria-current="page">{{ product.title }}</span>
+    {% elsif template contains 'collection' and collection.handle %}
+      {% render 'breadcrumbs-collection' %}
+    {% elsif template == 'blog' %}
+      {% render 'breadcrumbs-separator' %}
+      {% if current_tags %}
+        <a href="{{ blog.url }}">{{ blog.title }}</a>
+        {% render 'breadcrumbs-separator' %}
+        <span class="breadcrumbs__item--active" aria-current="page">
+          {{- current_tags | join: ' + ' -}}
+        </span>
+      {% else %}
+        <span class="breadcrumbs__item--active" aria-current="page">{{ blog.title }}</span>
+      {% endif %}
+    {% elsif template == 'article' %}
+      {% render 'breadcrumbs-separator' %}
+      <a href="{{ blog.url }}">{{ blog.title }}</a>
+      {% render 'breadcrumbs-separator' %}
+      <span class="breadcrumbs__item--active" aria-current="page">{{ article.title }}</span>
+    {% else %}
+      {% render 'breadcrumbs-separator' %}
+      <span class="breadcrumbs__item--active" aria-current="page">{{ page_title }}</span>
+    {% endif %}
+  </nav>
+{% endunless %}

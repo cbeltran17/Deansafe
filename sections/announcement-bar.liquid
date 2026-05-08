@@ -1,0 +1,128 @@
+{% render 'section-meta' %}
+
+{% liquid
+  assign show_country = false
+  if section.settings.show_country_selector and localization.available_countries.size > 1
+    assign show_country = true
+  endif
+
+  assign show_language = false
+  if section.settings.show_language_selector and localization.available_languages.size > 1
+    assign show_language = true
+  endif
+%}
+
+<announcement-bar
+  class="announcement-bar"
+  id="{{ section.id }}-announcement-bar"
+  speed="{{ section.settings.autoplay_interval | times: 1000 }}"
+>
+  <div class="announcement-bar__inner">
+    {% content_for 'blocks' %}
+    {% if show_country or show_language or section.settings.show_social_icons %}
+      <div class="announcement-bar__actions">
+        {% if show_country or show_language %}
+          <div class="announcement-bar__localization">
+            {% if show_country %}
+              <div class="announcement-bar__dropdown-reference" data-navigation-dropdown-reference>
+                {% render 'localization-selector', type: 'country' %}
+              </div>
+            {% endif %}
+
+            {% if show_language %}
+              {% if show_country %}
+                <span class="announcement-bar__divider"></span>
+              {% endif %}
+              <div class="announcement-bar__dropdown-reference" data-navigation-dropdown-reference>
+                {% render 'localization-selector', type: 'language' %}
+              </div>
+            {% endif %}
+
+            {% if section.settings.show_social_icons %}
+              <span class="announcement-bar__divider"></span>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if section.settings.show_social_icons %}
+          {% render 'social-icons', size: 'xs' %}
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</announcement-bar>
+
+{% schema %}
+{
+  "name": "t:sections.announcement_bar.name",
+  "class": "section-announcement-bar",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_country_selector",
+      "label": "t:sections.announcement_bar.settings.show_country_selector.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_language_selector",
+      "label": "t:sections.announcement_bar.settings.show_language_selector.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social_icons",
+      "label": "t:sections.announcement_bar.settings.show_social_icons.label",
+      "default": true
+    },
+    {
+      "type": "paragraph",
+      "content": "t:blocks.social_icons.paragraph__0.content"
+    },
+    {
+      "type": "range",
+      "id": "autoplay_interval",
+      "min": 3,
+      "max": 15,
+      "step": 1,
+      "unit": "s",
+      "label": "t:sections.announcement_bar.settings.autoplay_interval.label",
+      "default": 5
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label",
+      "default": "#1E1E1E"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:sections.all.text_color.label",
+      "default": "#FFFFFF"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "_announcement"
+    }
+  ],
+  "enabled_on": {
+    "groups": ["header"]
+  },
+  "presets": [
+    {
+      "name": "t:sections.announcement_bar.name",
+      "blocks": [
+        {
+          "type": "_announcement"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

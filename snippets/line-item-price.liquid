@@ -1,0 +1,29 @@
+{% liquid
+  assign original_price = item.original_price
+
+  if original_price == item.final_price and item.fulfillment == blank and item.variant.compare_at_price > item.final_price
+    assign original_price = item.variant.compare_at_price
+  endif
+%}
+
+<div class="price line-item-price">
+  {% if original_price != item.final_price %}
+    <div class="price__sale">
+      <span class="sr-only">{{ 'products.product.price.sale_price' | t }}</span>
+      <span>{% render 'money', price: item.final_price %}</span>
+    </div>
+    <div class="price__compare-at">
+      <span class="sr-only">{{ 'products.product.price.regular_price' | t }}</span>
+      {% render 'money', price: original_price %}
+    </div>
+  {% else %}
+    <div class="price__regular">
+      <span class="sr-only">{{ 'products.product.price.regular_price' | t }}</span>
+      {% render 'money', price: original_price %}
+    </div>
+  {% endif %}
+
+  {% if item.unit_price_measurement %}
+    {% render 'unit-price', target: item %}
+  {% endif %}
+</div>

@@ -1,0 +1,70 @@
+{% liquid
+  assign id = id | prepend: '-' | prepend: section.id
+
+  if label_t != blank
+    assign label = label_t | t
+  endif
+
+  if placeholder_t != blank
+    assign placeholder = placeholder_t | t
+  endif
+
+  if floating != false
+    assign floating = true
+    assign placeholder = placeholder | default: label
+  endif
+
+  if form and form_key != blank
+    capture error
+      render 'form-error-text', form: form, key: form_key
+    endcapture
+  endif
+%}
+
+{%- capture input_attrs -%}
+  type="{{ type | default: 'text' }}"
+  id="{{ id }}{{ id_suffix }}"
+  name="{{ name }}"
+  placeholder="{{ placeholder }}"
+  {% if error != blank %}
+    aria-invalid="true"
+    aria-describedby="{{ id }}-Error"
+  {% endif %}
+  {% if rows %} rows="{{ rows }}" {% endif %}
+  {% if required %} required {% endif %}
+  {% if autofocus %} autofocus {% endif %}
+  {% if min %} min="{{ min }}" {% endif %}
+  {% if labelled_by %} aria-labelledby="{{ labelled_by }}" {% endif %}
+{%- endcapture -%}
+
+{%- capture label_element -%}
+  {% if label != blank %}
+    <label for="{{ id }}{{ id_suffix }}" {% if label_class %}class="{{ label_class }}"{% endif %}>{{ label }}</label>
+  {% endif %}
+{%- endcapture -%}
+
+<div class="form-field {{ field_class }}" {{ attrs }}>
+  {% unless floating %}
+    {{ label_element }}
+  {% endunless %}
+
+  <div class="input {% if floating %}input--floating{% endif %} {{ class }}">
+    {% if tag == 'textarea' %}
+      <textarea
+        {{ input_attrs }}
+        {% if autosize %}
+          oninput="this.style.height=''; this.style.height = `${Math.min(this.scrollHeight,window.innerHeight/2)}px`;"
+        {% endif %}
+      >{{ value }}</textarea>
+    {% else %}
+      <input {{ input_attrs }} value="{{ value }}">
+    {% endif %}
+
+    {% if floating %}
+      {{ label_element }}
+    {% endif %}
+  </div>
+  {% if error != blank %}
+    <div class="input-error" id="{{ id }}-Error">{{ error }}</div>
+  {% endif %}
+</div>

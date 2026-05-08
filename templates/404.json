@@ -1,0 +1,72 @@
+{
+  "sections": {
+    "main": {
+      "type": "rich-text",
+      "name": "404 page",
+      "blocks": {
+        "heading_yQxrca": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "heading_size": "h0",
+            "heading": "404",
+            "heading_color": "#eaeaea"
+          },
+          "blocks": {}
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading_size": "h1",
+            "heading": "Page not found",
+            "heading_seo_tag": "h1"
+          },
+          "blocks": {}
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "md:prose-lg",
+            "content": "<p>The page you're looking for doesn't exist or has been moved. But don't worry, there's plenty more to explore!</p>"
+          },
+          "blocks": {}
+        },
+        "buttons": {
+          "type": "button-group",
+          "settings": {},
+          "blocks": {
+            "button_shop": {
+              "type": "button",
+              "settings": {
+                "size": "md",
+                "variant": "solid",
+                "label": "Continue shopping",
+                "url": "/collections/all",
+                "style": "primary"
+              },
+              "blocks": {}
+            },
+            "button_home": {
+              "type": "button",
+              "settings": {
+                "size": "md",
+                "variant": "outline",
+                "label": "Go to homepage",
+                "url": "/",
+                "style": "primary"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": ["button_shop", "button_home"]
+        }
+      },
+      "block_order": ["heading_yQxrca", "heading", "paragraph", "buttons"],
+      "settings": {
+        "full_width": true,
+        "text_alignment": "center"
+      }
+    }
+  },
+  "order": ["main"]
+}

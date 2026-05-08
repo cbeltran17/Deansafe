@@ -1,0 +1,33 @@
+{
+  "sections": {
+    "main-blog-header": {
+      "type": "main-blog-header",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading_size": "h0",
+            "heading": "{{ closest.blog.title }}"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": ["heading"],
+      "settings": {
+        "text_alignment": "center"
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "show_tags": true,
+        "feature_first_post": true,
+        "posts_per_page": 12,
+        "show_newsletter_card": true,
+        "newsletter_heading": "Subscribe to our newsletter",
+        "newsletter_content": "<p>Stay updated with our latest news and offers.</p>"
+      }
+    }
+  },
+  "order": ["main-blog-header", "main"]
+}

@@ -1,0 +1,90 @@
+{% liquid
+  assign form_id = section.id | append: '-ContactForm'
+
+  case button_style
+    when 'secondary'
+      assign button_class = 'button--secondary'
+    when 'white'
+      assign background_color = '#FFFFFF'
+      assign text_color = '#1E1E1E'
+    when 'black'
+      assign background_color = '#1E1E1E'
+      assign text_color = '#FFFFFF'
+    when 'custom'
+      assign background_color = button_background_color
+      assign text_color = button_text_color
+    else
+      assign button_class = 'button--primary'
+  endcase
+
+  if button_class != blank
+    assign submit_inside_class = button_class | append: ' email-signup__submit-inside'
+    assign submit_outside_class = button_class | append: ' email-signup__submit-outside'
+  else
+    assign submit_inside_class = 'email-signup__submit-inside'
+    assign submit_outside_class = 'email-signup__submit-outside'
+  endif
+%}
+
+{% if button_label == blank %}
+  {%- capture button_label -%}{{ 'general.newsletter.subscribe' | t }}{%- endcapture -%}
+{% endif %}
+
+{% form 'customer', class: 'email-signup', id: form_id %}
+  {% if form.posted_successfully? %}
+    <p class="alert alert--success">
+      {{ 'general.newsletter.success' | t }}
+    </p>
+  {% else %}
+    {% if form.errors %}
+      {% for field in form.errors %}
+        {% if field == 'email' %}
+          <p id="{{ section.id }}-Email-Error" class="alert alert--danger mb-4">
+            {% render 'form-error-text', form: form, key: 'email' %}
+          </p>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    <div class="input input--outline input--floating input--button">
+      <input
+        type="email"
+        name="contact[email]"
+        id="{{ section.id }}-Email"
+        placeholder="{{ 'general.newsletter.email' | t }}"
+        value="{% if customer %}{{ customer.email }}{% endif %}"
+        required
+        {% if form.errors contains 'email' %}
+          aria-invalid="true"
+          aria-describedby="{{ section.id }}-Email-Error"
+        {% endif %}
+        pattern="^(?!\.)(?!.*\.\.)([a-zA-Z0-9_'+\-\.]*)[a-zA-Z0-9_'+\-]@([a-zA-Z0-9][a-zA-Z0-9\-]*\.)+[a-zA-Z]{2,}$"
+        oninvalid="this.setCustomValidity('{{ 'accessibility.invalid_email' | t }}')"
+        oninput="this.setCustomValidity('')"
+      >
+      <label for="{{ section.id }}-Email">{{ 'general.newsletter.email' | t }}</label>
+
+      {% if request.page_type == 'password' %}
+        <input type="hidden" name="contact[tags]" value="prospect, password page">
+      {% else %}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+      {% endif %}
+      {% render 'button' with button_label,
+        class: submit_inside_class,
+        size: 'sm',
+        type: 'submit',
+        auto_loading: true,
+        background_color: background_color,
+        text_color: text_color
+      %}
+    </div>
+
+    {% render 'button' with button_label,
+      class: submit_outside_class,
+      type: 'submit',
+      auto_loading: true,
+      background_color: background_color,
+      text_color: text_color
+    %}
+  {% endif %}
+{% endform %}

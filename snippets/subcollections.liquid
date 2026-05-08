@@ -1,0 +1,64 @@
+{% if collections != blank %}
+  {% liquid
+    assign alignment = alignment | default: 'auto'
+  %}
+  <animation-element
+    selector=".subcollections__item-wrapper"
+    autoplay
+    animation="fade-up"
+    delay="150"
+    stagger="50"
+    clear-props
+  >
+    <div class="subcollections">
+      <scroll-carousel
+        id="{{ section.id }}-carousel"
+        fade
+        {% if center or alignment == 'center' %}
+          center
+        {% endif %}
+      >
+        {% for subcollection in collections %}
+          {% assign subcollection_image = subcollection.metafields.custom.thumbnail.value
+            | default: subcollection.featured_image
+          %}
+          <div class="subcollections__item-wrapper">
+            <a href="{{ subcollection.url }}" class="subcollections__item">
+              {% render 'image' with subcollection_image, width: 192, widths: '96,192' %}
+              <span>{{ subcollection.title }}</span>
+            </a>
+          </div>
+        {% endfor %}
+        <div slot="controls">
+          {% render 'carousel-controls', size: 'small' %}
+        </div>
+      </scroll-carousel>
+    </div>
+  </animation-element>
+
+  {% if alignment == 'auto' %}
+    <script>
+      (function () {
+        var el = document.getElementById('{{ section.id }}-carousel');
+        function computeShouldCenter() {
+          return !!document.querySelector(
+            '.section-collection-banner [data-subcollections-center]',
+          );
+        }
+        function updateCenter() {
+          if (!el) el = document.getElementById('{{ section.id }}-carousel');
+          if (!el) return;
+          if (computeShouldCenter()) {
+            el.setAttribute('center', '');
+          } else {
+            el.removeAttribute('center');
+          }
+        }
+        updateCenter();
+        if (window.Shopify && Shopify.designMode) {
+          document.addEventListener('shopify:section:load', updateCenter);
+        }
+      })();
+    </script>
+  {% endif %}
+{% endif %}

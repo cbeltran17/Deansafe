@@ -1,0 +1,71 @@
+<table class="cart-table" data-section-ref="table">
+  <thead class="sr-only">
+    <tr>
+      <th>{{ 'sections.cart.headings.product' | t }}</th>
+      <th>{{ 'sections.cart.headings.quantity' | t }}</th>
+      <th>{{ 'sections.cart.headings.total' | t }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in cart.items %}
+      {% liquid
+        assign line_id = item.index | plus: 1 | append: '-' | append: item.variant_id
+      %}
+      <tr class="cart-table__row">
+        <td class="cart-table-product">
+          <div class="cart-table-product__inner">
+            <div class="cart-table-product__image">
+              <a href="{{ item.url }}" aria-label="{{ item.product.title }}" tabindex="-1">
+                {% render 'image' with item.image,
+                  width: 192,
+                  class: 'line-item-image',
+                  placeholder: true
+                %}
+              </a>
+            </div>
+            <div class="cart-table-product__details">
+              {% if show_vendor and item.product.vendor != blank %}
+                <p class="cart-table-product__vendor">{{ item.product.vendor }}</p>
+              {% endif %}
+              <a href="{{ item.url }}" class="cart-table-product__title">
+                {{- item.product.title -}}
+              </a>
+              {% unless item.product.has_only_default_variant %}
+                <p class="cart-table-product__variant">{{ item.variant.title }}</p>
+              {% endunless %}
+              <div class="cart-table-product__price">
+                {% render 'line-item-price', item: item %}
+              </div>
+              {% render 'line-item-discounts', item: item %}
+            </div>
+          </div>
+        </td>
+        <td class="cart-table-controls">
+          <div class="cart-table-controls__inner">
+            {%- assign quantity_id = 'Quantity-' | append: line_id -%}
+            {% render 'line-item-quantity-selector',
+              item: item,
+              class: 'quantity-selector--responsive',
+              id: quantity_id
+            %}
+            {% render 'cart-remove-link', item: item %}
+          </div>
+        </td>
+        <td class="cart-table-total">
+          <div class="cart-table-total__price">
+            {{ item.final_line_price | money }}
+          </div>
+        </td>
+      </tr>
+      <tr class="cart-table__row-details">
+        <td colspan="3">
+          <span class="sr-only">
+            {{- 'accessibility.cart.details_for_product' | t: product: item.title -}}
+          </span>
+          {% render 'line-item-properties', item: item %}
+          <cart-error class="cart-error" key="{{ item.key }}"></cart-error>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

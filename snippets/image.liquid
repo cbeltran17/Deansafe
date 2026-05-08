@@ -1,0 +1,116 @@
+{% if placeholder == blank and image == blank %}
+  {% break %}
+{% endif %}
+
+{% if placeholder and image == blank %}
+  {% assign placeholder_class = placeholder_class | default: 'placeholder' %}
+  <div
+    class="media {% if placeholder_absolute != true %} media--static {% endif %} {{ class }}"
+    {% if ratio != blank or placeholder_aspect_ratio != blank %}
+      style="--media-aspect-ratio: {{ placeholder_aspect_ratio | default: ratio }};"
+    {% endif %}
+  >
+    {% liquid
+      assign placeholder_source = placeholder
+
+      if placeholder == true
+        assign placeholder_source = 'image'
+      endif
+
+      assign placeholder_svg = placeholder_source | placeholder_svg_tag: placeholder_class | replace_first: '<svg ', '<svg preserveAspectRatio="xMidYMid slice" '
+
+      if placeholder_source == 'collection-4'
+        assign placeholder_svg = placeholder_svg | replace: '7272929126779848', '7.272929126779848'
+      endif
+    %}
+    {{ placeholder_svg }}
+  </div>
+  {% break %}
+{% endif %}
+
+<image-loader
+  class="media {% if image.aspect_ratio == blank or static == true %} media--static {% endif %} {{ class }}"
+  {%- if ratio != blank -%}
+    style="--media-aspect-ratio: {{ ratio }};"
+  {%- elsif image.aspect_ratio != blank and static != true -%}
+    style="--media-aspect-ratio-original: {{ image.aspect_ratio }};"
+  {%- endif -%}
+  {% if slot %}
+    slot="{{ slot }}"
+  {% endif %}
+  {% if animation %}
+    animation="{{ animation }}"
+  {% endif %}
+  {{ attrs }}
+>
+  <div data-part="animation-root">
+    <picture>
+      {% if image_mobile %}
+        {{
+          image_mobile
+          | image_url: width: width
+          | image_tag:
+            widths: widths,
+            sizes: sizes,
+            class: image_class,
+            media: 'not all and (min-width: 768px)'
+          | replace: '<img', '<source'
+        }}
+      {% endif %}
+      {{
+        image
+        | image_url: width: width
+        | image_tag:
+          loading: loading,
+          widths: widths,
+          sizes: sizes,
+          class: image_class,
+          preload: preload,
+          decoding: decoding,
+          fetchpriority: fetchpriority
+      }}
+    </picture>
+
+    <div class="loading-overlay" data-part="overlay">
+      <div class="lqip-container" data-part="lqip">
+        {% if lqip != false %}
+          <picture>
+            {% if image_mobile %}
+              {{
+                image_mobile
+                | image_url: width: 48
+                | image_tag: media: 'not all and (min-width: 768px)'
+                | replace: '<img', '<source'
+              }}
+            {% endif %}
+            {{
+              image
+              | image_url: width: 48
+              | image_tag:
+                loading: 'eager',
+                fetchpriority: 'low',
+                data-part: 'lqip-edge-fill',
+                decoding: 'async'
+            }}
+          </picture>
+          <picture>
+            {% if image_mobile %}
+              {{
+                image_mobile
+                | image_url: width: 48
+                | image_tag: media: 'not all and (min-width: 768px)'
+                | replace: '<img', '<source'
+              }}
+            {% endif %}
+            {{
+              image
+              | image_url: width: 48
+              | image_tag: loading: 'eager', fetchpriority: 'low', decoding: 'async'
+            }}
+          </picture>
+        {% endif %}
+      </div>
+      <div class="media-loading-bar"></div>
+    </div>
+  </div>
+</image-loader>

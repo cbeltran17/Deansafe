@@ -1,0 +1,17 @@
+{% liquid
+  assign grid_modifier = section.settings.grid_type | default: 'one-column'
+%}
+
+<media-lightbox open-target="[data-media-type=image]">
+  <div
+    class="product-media-grid product-media-grid--{{ grid_modifier }}"
+    data-section-ref="media-grid"
+  >
+    {% render 'product-media-loop',
+      product: product,
+      only_selected_variant_images: section.settings.only_selected_variant_images,
+      snippet: 'product-media-grid-item',
+      featured_first: true
+    %}
+  </div>
+</media-lightbox>

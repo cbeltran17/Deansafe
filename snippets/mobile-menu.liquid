@@ -1,0 +1,11 @@
+{% liquid
+  assign menu_to_use = section.settings.mobile_menu | default: section.settings.menu
+%}
+
+<mobile-menu position="left" id="MobileMenu" class="mobile-menu">
+  <scroll-lock>
+    <page-navigation class="mobile-menu__wrapper">
+      {% render 'mobile-menu-page', link: menu_to_use, mega_menu_settings: mega_menu_settings %}
+    </page-navigation>
+  </scroll-lock>
+</mobile-menu>

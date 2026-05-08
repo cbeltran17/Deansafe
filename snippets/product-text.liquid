@@ -1,0 +1,39 @@
+{% liquid
+  assign content = block.settings.content | default: block.settings.text
+%}
+
+{% if content != blank or block.settings.heading != blank %}
+  <div
+    id="shopify-block-{{ block.id }}"
+    class="product-text"
+    {{ block.shopify_attributes }}
+    {% render 'has-bg', color: block.settings.background_color %}
+    style="{% render 'base-color-vars' with block %}"
+  >
+    <style>
+      #shopify-block-{{ block.id }} {
+        --product-text-icon-size: {% render 'rfs' with block.settings.icon_size, base: 24 %};
+      }
+    </style>
+
+    {% if block.settings.icon != blank or block.settings.custom_icon != blank %}
+      <div class="product-text__icon">
+        {% if block.settings.custom_icon != blank %}
+          {% assign icon_size_2x = block.settings.icon_size | times: 2 %}
+          {{ block.settings.custom_icon | image_url: width: icon_size_2x | image_tag }}
+        {% elsif block.settings.icon != blank %}
+          {% render 'icon' with block.settings.icon %}
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="product-text__content">
+      {% if block.settings.heading != blank %}
+        <p class="subheading-md md:subheading-lg">{{ block.settings.heading }}</p>
+      {% endif %}
+      {% if content != blank %}
+        <div class="prose-tight prose max-md:prose-sm">{{ content }}</div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}

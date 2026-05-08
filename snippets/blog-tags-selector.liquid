@@ -1,0 +1,44 @@
+{% liquid
+  assign id = section.id | append: '-Tags'
+%}
+
+<animation-element
+  class="blog-tags blog-tags--{{ alignment | default: 'center' }}"
+  selector=".blog-tags__scroll"
+  autoplay
+  delay="100"
+>
+  <scroll-carousel class="blog-tags__scroll" selector="a" id="{{ id }}">
+    <ul class="blog-tags__container">
+      <li>
+        <a
+          class="blog-tags__link"
+          href="{{ blog.url }}"
+          {% if current_tags == null %}
+            data-active="true"
+          {% endif %}
+        >
+          {{ 'blogs.tags.all_posts' | t }}
+        </a>
+      </li>
+      {% for tag in blog.all_tags %}
+        <li class="blog-tags__separator"></li>
+        {% assign tag_handle = tag | handleize %}
+        <li>
+          <a
+            class="blog-tags__link"
+            href="{{ blog.url | append: "/tagged/" | append: tag_handle }}"
+            {% if current_tags contains tag %}
+              data-active="true"
+            {% endif %}
+          >
+            {{ tag }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </scroll-carousel>
+
+  {% render 'carousel-button', size: 'xs', direction: 'prev', controls: id %}
+  {% render 'carousel-button', size: 'xs', direction: 'next', controls: id %}
+</animation-element>

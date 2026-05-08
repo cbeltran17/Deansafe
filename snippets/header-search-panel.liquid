@@ -1,0 +1,59 @@
+{% liquid
+  assign carousel_id = section.id | append: '-recommended-products'
+%}
+
+<search-panel
+  input-id="header-search-input"
+  close-id="header-search-close"
+>
+  <div class="search-panel-content" slot="empty-state">
+    <div class="search-panel-content__main">
+      {% if section.settings.recommended_products != empty %}
+        <div class="search-popular-products" data-search-panel-item>
+          <div class="search-popular-products__header">
+            <p class="search-popular-products__title">
+              {{ section.settings.recommended_products_heading }}
+            </p>
+            {% render 'carousel-button', direction: 'prev', controls: carousel_id, size: 'small' %}
+            {% render 'carousel-button', direction: 'next', controls: carousel_id, size: 'small' %}
+          </div>
+          <div class="container-inline-size relative">
+            <grid-carousel
+              id="{{ carousel_id }}"
+              class="search-popular-products__carousel carousel--search-popular-products"
+            >
+              {% for product in section.settings.recommended_products %}
+                {% render 'product-card' with product %}
+              {% endfor %}
+            </grid-carousel>
+          </div>
+        </div>
+      {% else %}
+        <div data-search-panel-item>
+          {% if section.settings.search_placeholder_heading != blank %}
+            <p class="search-panel-content__heading">
+              {{ 'icon-ui-search.svg' | inline_asset_content }}
+              <span>{{ section.settings.search_placeholder_heading }}</span>
+            </p>
+          {% endif %}
+          {% if section.settings.search_placeholder_subtext != blank %}
+            <p class="search-panel-content__subtext">
+              {{ section.settings.search_placeholder_subtext }}
+            </p>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+    <div class="search-panel-content__side">
+      {%- if section.settings.show_recently_viewed_products -%}
+        <recently-viewed-products
+          loading="eager"
+          section-id="search-viewed-products"
+          class="block"
+          data-search-panel-item
+        ></recently-viewed-products>
+      {%- endif -%}
+      {%- render 'popular-searches' -%}
+    </div>
+  </div>
+</search-panel>

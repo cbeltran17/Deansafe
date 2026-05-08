@@ -1,0 +1,97 @@
+{% liquid
+  assign featured_media = product.selected_or_first_available_variant.featured_media
+  assign carousel_indicator_mobile = carousel_indicator_mobile | default: section.settings.carousel_indicator_mobile
+
+  if section.settings.carousel_thumbnails_position == 'bottom'
+    assign carousel_class = 'product-carousel--bottom'
+    assign direction = 'horizontal'
+  else
+    assign carousel_class = 'product-carousel--left'
+    assign direction = 'vertical'
+  endif
+%}
+<div class="product-carousel {{ carousel_class }} product-carousel--mobile-{{ carousel_indicator_mobile }}">
+  {% if product.media.size > 1 and desktop_thumbnails != false %}
+    {% render 'product-media-carousel-thumbnails',
+      product: product,
+      direction: direction,
+      class: 'product-carousel__desktop-nav'
+    %}
+  {% endif %}
+
+  <media-lightbox>
+    <media-carousel
+      {% if section.settings.video_autoplay %}
+        autoplay
+      {% endif %}
+      id="{{ section.id }}-media"
+      {% if featured_media %}
+        media-id="{{ featured_media.id }}"
+      {% endif %}
+      data-section-ref="media-carousel"
+    >
+      <div class="relative">
+        <div
+          data-part="media-carousel-height-wrapper"
+          style="transition: max-height 0.5s; overflow-y: clip; overflow-x:visible; border-radius: var(--media-border-radius)"
+        >
+          <div data-part="media-carousel-carousel" class="media-carousel" tabindex="-1">
+            {% render 'product-media-loop',
+              product: product,
+              only_selected_variant_images: section.settings.only_selected_variant_images,
+              snippet: 'product-media-carousel-slide'
+            %}
+          </div>
+
+          <div
+            data-part="media-carousel-nav-overlay"
+            class="media-carousel__nav-overlay media-carousel__nav-overlay--prev"
+            hidden
+          ></div>
+          <div
+            data-part="media-carousel-nav-overlay"
+            class="media-carousel__nav-overlay media-carousel__nav-overlay--next"
+            hidden
+          ></div>
+        </div>
+
+        <div data-part="media-carousel-overlay" class="media-carousel__overlay">
+          <div class="media-carousel__badges">
+            {% render 'product-badges', product: product, custom: true %}
+          </div>
+
+          {% if carousel_indicator_mobile == 'counter' and product.media.size > 1 %}
+            <carousel-counter
+              aria-controls="{{ section.id }}-media"
+              class="carousel-counter"
+            >
+              <span slot="icon-prev">{{ 'icon-chevron-left.svg' | inline_asset_content }}</span>
+              <span slot="icon-next">{{ 'icon-chevron-right.svg' | inline_asset_content }}</span>
+            </carousel-counter>
+          {% endif %}
+
+          <div
+            class="media-carousel__lightbox-btn-container"
+            data-part="media-carousel-lightbox-button"
+          >
+            {% render 'zoom-indicator' %}
+          </div>
+        </div>
+      </div>
+    </media-carousel>
+  </media-lightbox>
+
+  {% if carousel_indicator_mobile == 'thumbnails' and product.media.size > 1 %}
+    {% render 'product-media-carousel-thumbnails',
+      product: product,
+      direction: 'horizontal',
+      class: 'product-carousel__mobile-nav',
+      scope: '-mobile'
+    %}
+  {% elsif carousel_indicator_mobile == 'bar' and product.media.size > 1 %}
+    <carousel-index-bar
+      class="carousel-index-bar"
+      aria-controls="{{ section.id }}-media"
+    ></carousel-index-bar>
+  {% endif %}
+</div>

@@ -1,0 +1,54 @@
+<div class="collection-grid__products">
+  {% if products == empty and current_filters.size > 0 %}
+    <p>
+      {{ 'products.filters.use_fewer_filters_html' | t: link: results_url }}
+    </p>
+  {% else %}
+    <animation-element
+      class="contents"
+      animation="product-cards-in"
+      selector=".collection-grid-item"
+      autoplay
+      clear-props
+    >
+      <ul
+        id="{{ section.id }}-ProductList"
+        class="product-grid grid-minmax"
+        data-product-list
+        tabindex="-1"
+      >
+        {% for product in products %}
+          {% if is_collection %}
+            {% if section
+              and section.settings.hide_promo_cards_when_filtering != true
+              or has_active_filters != true
+            %}
+              {% render 'promotion-cards',
+                has_active_filters: has_active_filters,
+                current_page: paginate.current_page,
+                product_index: forloop.index
+              %}
+            {% endif %}
+          {% endif %}
+          <li>
+            {% liquid
+              assign card_loading = null
+              assign card_sizes = null
+              if forloop.index <= 2
+                assign card_loading = 'eager'
+                assign card_sizes = 'min(100vw, 500px)'
+              endif
+            %}
+            {% render 'product-card' with product,
+              loading: card_loading,
+              sizes: card_sizes,
+              index: forloop.index
+            %}
+          </li>
+        {% endfor %}
+      </ul>
+    </animation-element>
+
+    {% render 'pagination', paginate: paginate %}
+  {% endif %}
+</div>

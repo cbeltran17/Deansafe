@@ -1,0 +1,67 @@
+<style>
+  #shopify-section-{{ section.id }} {
+    {% if section.settings.image_size == 'custom_height' %}
+      --media-with-overlay-min-height: {{ section.settings.image_height }}px;
+      --media-with-overlay-position: absolute;
+    {% elsif section.settings.image_size == 'full_height' %}
+      --media-with-overlay-min-height: 100svh;
+      --media-with-overlay-position: absolute;
+    {% elsif section.settings.image_size == 'max_height' %}
+      --media-with-overlay-position: absolute;
+      --media-with-overlay-aspect-ratio: {{ aspect_ratio }};
+      --media-with-overlay-max-height: {{ section.settings.image_height }}px;
+    {% endif %}
+    {% if section.settings.full_width %}
+      --section-top-spacing: 0px;
+      --section-bottom-spacing: 0px;
+    {% endif %}
+  }
+  {% if section.settings.image_size_mobile != 'same' %}
+    @media not all and (min-width: 768px) {
+      #shopify-section-{{ section.id }} {
+        {% if section.settings.image_size_mobile == 'custom_height' %}
+          --media-with-overlay-min-height: {{ section.settings.image_height_mobile }}px;
+          --media-with-overlay-position: absolute;
+          --media-with-overlay-aspect-ratio: var(--__unset);
+        {% elsif section.settings.image_size_mobile == 'full_height' %}
+          --media-with-overlay-min-height: 100svh;
+          --media-with-overlay-position: absolute;
+          --media-with-overlay-aspect-ratio: var(--__unset);
+        {% elsif section.settings.image_size_mobile == 'max_height' %}
+          --media-with-overlay-position: absolute;
+          --media-with-overlay-aspect-ratio: {{ aspect_ratio }};
+          --media-with-overlay-max-height: {{ section.settings.image_height_mobile }}px;
+        {% else %}
+          --media-with-overlay-min-height: 0;
+          --media-with-overlay-position: static;
+          --media-with-overlay-aspect-ratio: var(--__unset);
+        {% endif %}
+      }
+    }
+  {% endif %}
+</style>
+
+<div
+  class="
+    media-with-overlay
+    media-with-overlay--{{ section.settings.content_position }}
+    {% if section.settings.content_position_mobile %}
+      media-with-overlay--mobile-{{ section.settings.content_position_mobile }}
+    {% endif %}
+    {% if section.settings.full_width %} media-with-overlay--full-width {% else %} mx-co {% endif %}
+  "
+>
+  <div class="media-with-overlay__media">
+    {{ media }}
+  </div>
+  <div class="media-with-overlay__overlay">
+    <animation-element
+      autoplay
+      selector=".shopify-block"
+      stagger="100"
+      class="media-with-overlay__content block-spacing"
+    >
+      {{ content }}
+    </animation-element>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<button
+  is="discount-code-button"
+  class="discount-code-button"
+  code="{{ block.settings.discount_code | escape }}"
+>
+  <span class="discount-code-button__code">
+    {{ 'icon-tag.svg' | inline_asset_content }}
+    <span>{{- block.settings.discount_code -}}</span>
+  </span>
+  <span class="discount-code-button__copied">
+    {{ 'icon-ui-check.svg' | inline_asset_content }}
+    <span>{{ 'general.discount_code_button.copied' | t }}</span>
+  </span>
+</button>
+
+{% schema %}
+{
+  "name": "t:blocks.discount_code_button.name",
+  "settings": [
+    {
+      "type": "text",
+      "id": "discount_code",
+      "label": "t:blocks.discount_code_button.settings.discount_code.label",
+      "default": "t:blocks.discount_code_button.settings.discount_code.default"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.discount_code_button.name"
+    }
+  ]
+}
+{% endschema %}

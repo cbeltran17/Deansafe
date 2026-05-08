@@ -1,0 +1,183 @@
+{% liquid
+  if section.settings.hide_for_logged_in and customer and request.design_mode == false
+    break
+  endif
+  if section.settings.home_only and request.page_type != 'index' and request.design_mode == false
+    break
+  endif
+%}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    --newsletter-modal-image-size: {{ section.settings.image_width }}px;
+    {% render 'color-var' with section.settings.background_color, name: 'modal-background-color' %}
+    {% render 'color-var' with section.settings.text_color, name: 'modal-text-color' %}
+  }
+</style>
+
+<newsletter-modal
+  id="NewsletterModal"
+  class="
+    newsletter-modal
+    newsletter-modal--{{ section.settings.position }}
+    {% if section.settings.blur_background %}newsletter-modal--blur-bg{% endif %}
+    {% unless section.settings.show_image_on_mobile %} newsletter-modal--hide-image-mobile {% endunless %}
+  "
+  delay="{{ section.settings.delay_s | times: 1000 }}"
+  frequency="{{ section.settings.frequency_days }}"
+  {% if request.visual_preview_mode %}
+    open
+  {% endif %}
+>
+  <div class="newsletter-modal__layout">
+    {% if section.settings.image %}
+      {% render 'image' with section.settings.image,
+        image_mobile: section.settings.image_mobile,
+        class: 'newsletter-modal__media',
+        loading: 'lazy'
+      %}
+    {% endif %}
+    <div class="newsletter-modal__panel">
+      <animation-element
+        delay="300"
+        animation="zoom-in-subtle"
+        class="newsletter-modal__content block-spacing {% render 'text-alignment' %}"
+      >
+        {% content_for 'blocks' %}
+      </animation-element>
+
+      <button
+        class="button button--icon-md button--outline-light newsletter-modal__close"
+        data-close
+        aria-label="{{ 'accessibility.close_modal' | t }}"
+      >
+        <icon-element icon="close"></icon-element>
+      </button>
+    </div>
+  </div>
+</newsletter-modal>
+
+{% if request.visual_preview_mode %}
+  <div style="aspect-ratio:16/9"><span class="sr-only">Visual preview</span></div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "t:sections.newsletter_popup.name",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.all.image.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "t:sections.all.image_mobile.label",
+      "visible_if": "{{ section.settings.show_image_on_mobile == true }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_image_on_mobile",
+      "label": "t:sections.newsletter_popup.settings.show_image_on_mobile.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "home_only",
+      "label": "t:sections.newsletter_popup.settings.home_only.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_for_logged_in",
+      "label": "t:sections.newsletter_popup.settings.hide_for_logged_in.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "blur_background",
+      "label": "t:sections.newsletter_popup.settings.blur_background.label",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "delay_s",
+      "label": "t:sections.newsletter_popup.settings.delay_s.label",
+      "min": 3,
+      "max": 60,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "frequency_days",
+      "label": "t:sections.newsletter_popup.settings.frequency_days.label",
+      "min": 1,
+      "max": 60,
+      "step": 1,
+      "default": 30,
+      "info": "t:sections.newsletter_popup.settings.frequency_days.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.newsletter_popup.headers.layout.content"
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "label": "t:sections.newsletter_popup.settings.image_width.label",
+      "min": 180,
+      "max": 320,
+      "step": 10,
+      "default": 260,
+      "unit": "px",
+      "visible_if": "{{ section.settings.image != blank }}"
+    },
+    {
+      "type": "select",
+      "id": "position",
+      "label": "t:sections.newsletter_popup.settings.position.label",
+      "options": [
+        {
+          "value": "start",
+          "label": "t:sections.newsletter_popup.settings.position.options.start.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.newsletter_popup.settings.position.options.center.label"
+        },
+        {
+          "value": "end",
+          "label": "t:sections.newsletter_popup.settings.position.options.end.label"
+        }
+      ],
+      "default": "end"
+    },
+    {
+      "type": "text_alignment",
+      "id": "text_alignment",
+      "label": "t:sections.all.text_alignment.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:sections.all.text_color.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@theme"
+    }
+  ]
+}
+{% endschema %}

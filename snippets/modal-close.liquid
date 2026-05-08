@@ -1,0 +1,11 @@
+<button
+  type="button"
+  data-close
+  class="modal-close-btn {% if floating %} modal-close-btn--floating {% endif %}"
+  aria-label="{{ 'accessibility.close' | t }}"
+  {% if slot != blank %}
+    slot="{{ slot }}"
+  {% endif %}
+>
+  {{ 'icon-times.svg' | inline_asset_content }}
+</button>

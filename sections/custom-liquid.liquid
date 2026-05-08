@@ -1,0 +1,88 @@
+{% render 'section-meta', blend: true, blend_bg: section.settings.background_color %}
+
+<div
+  class="
+    bg-background
+    pb-section-bottom
+    pt-section-top
+    text-text
+    {% unless section.settings.remove_horizontal_space %} px-co {% endunless %}
+  "
+>
+  {{ section.settings.custom_liquid }}
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.custom_liquid.name",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "remove_horizontal_space",
+      "label": "t:sections.custom_liquid.settings.remove_horizontal_space.label",
+      "default": false
+    },
+    {
+      "type": "liquid",
+      "id": "custom_liquid",
+      "label": "t:sections.custom_liquid.settings.custom_liquid.label",
+      "info": "t:sections.custom_liquid.settings.custom_liquid.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:sections.all.text_color.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_custom_spacing",
+      "label": "t:sections.all.enable_custom_spacing",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "top_spacing",
+      "label": "t:sections.all.top_spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing == true }}"
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "label": "t:sections.all.bottom_spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing == true }}"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["custom.overlay"]
+  },
+  "presets": [
+    {
+      "name": "t:sections.custom_liquid.name",
+      "category": "t:sections.categories.utilities"
+    }
+  ]
+}
+{% endschema %}

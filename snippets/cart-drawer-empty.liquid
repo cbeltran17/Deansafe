@@ -1,0 +1,29 @@
+<div class="cart-drawer-empty">
+  {% render 'heading' with section.settings.empty_cart_heading,
+    class: 'cart-drawer-empty__heading'
+  %}
+
+  {% if section.settings.empty_cart_message != blank %}
+    <div class="cart-drawer-empty__message prose">
+      {{ section.settings.empty_cart_message }}
+    </div>
+  {% endif %}
+
+  {% if section.settings.empty_cart_collections != blank %}
+    <ul class="cart-drawer-empty__collection-list">
+      {% for item in section.settings.empty_cart_collections %}
+        <li class="cart-drawer-empty__collection-item">
+          <a href="{{ item.url }}" class="cart-drawer-empty__collection-link">
+            <span>{{ item.title }}</span>
+            {{ 'icon-arrow-right.svg' | inline_asset_content }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    {% render 'button',
+      translation: 'general.continue_shopping',
+      href: routes.all_products_collection_url
+    %}
+  {% endif %}
+</div>

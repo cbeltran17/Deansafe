@@ -1,0 +1,185 @@
+{% liquid
+  assign address_id = address.id | default: 'new'
+
+  if customer.default_address == address
+    assign is_default = true
+  endif
+%}
+
+{% form 'customer_address', address %}
+  <div class="form">
+    {%- if form.errors -%}
+      <div>
+        {% render 'form-errors', errors: form.errors, form_id: 'AddressForm' %}
+      </div>
+    {%- endif -%}
+
+    {% render 'checkbox',
+      label_t: 'customer.addresses.set_default',
+      value: '1',
+      id: 'AddressDefault',
+      id_suffix: address_id,
+      name: 'address[default]',
+      checked: is_default
+    %}
+
+    {% render 'input',
+      id: 'AddressFirstName',
+      id_suffix: address_id,
+      name: 'address[first_name]',
+      type: 'text',
+      label_t: 'customer.addresses.first_name',
+      floating: true,
+      value: form.first_name,
+      autocomplete: 'given-name',
+      form: form,
+      form_key: 'first_name',
+      field_class: 'form-field--half'
+    %}
+
+    {% render 'input',
+      id: 'AddressLastName',
+      id_suffix: address_id,
+      name: 'address[last_name]',
+      type: 'text',
+      label_t: 'customer.addresses.last_name',
+      floating: true,
+      value: form.last_name,
+      autocomplete: 'family-name',
+      form: form,
+      form_key: 'last_name',
+      field_class: 'form-field--half'
+    %}
+
+    {% render 'input',
+      id: 'AddressCompany',
+      id_suffix: address_id,
+      name: 'address[company]',
+      type: 'text',
+      label_t: 'customer.addresses.company',
+      floating: true,
+      value: form.company,
+      autocomplete: 'organization',
+      form: form,
+      form_key: 'company'
+    %}
+
+    {% render 'input',
+      id: 'AddressAddress1',
+      id_suffix: address_id,
+      name: 'address[address1]',
+      type: 'text',
+      label_t: 'customer.addresses.address1',
+      floating: true,
+      value: form.address1,
+      autocomplete: 'address-line1',
+      form: form,
+      form_key: 'address1'
+    %}
+
+    {% render 'input',
+      id: 'AddressAddress2',
+      id_suffix: address_id,
+      name: 'address[address2]',
+      type: 'text',
+      label_t: 'customer.addresses.address2',
+      floating: true,
+      value: form.address2,
+      autocomplete: 'address-line2',
+      form: form,
+      form_key: 'address2'
+    %}
+
+    {% render 'input',
+      id: 'AddressCity',
+      id_suffix: address_id,
+      name: 'address[city]',
+      type: 'text',
+      label_t: 'customer.addresses.city',
+      floating: true,
+      value: form.city,
+      autocomplete: 'address-level2',
+      form: form,
+      form_key: 'city',
+      field_class: 'form-field--half'
+    %}
+
+    {% render 'input',
+      id: 'AddressZip',
+      id_suffix: address_id,
+      name: 'address[zip]',
+      type: 'text',
+      label_t: 'customer.addresses.zip',
+      floating: true,
+      value: form.zip,
+      autocomplete: 'postal-code',
+      form: form,
+      form_key: 'zip',
+      field_class: 'form-field--half'
+    %}
+
+    <province-selector
+      class="contents"
+      default-country="{{ form.country }}"
+      default-province="{{ form.province }}"
+    >
+      <div class="input input--floating">
+        <select
+          id="AddressCountry"
+          name="address[country]"
+          autocomplete="country"
+          placeholder="{{ 'customer.addresses.country' | t }}"
+          data-part="country-select"
+          required
+        >
+          {{ all_country_option_tags | replace: 'value="---"', 'value=""' -}}
+        </select>
+        <label for="AddressCountry">{{ 'customer.addresses.country' | t }}</label>
+      </div>
+
+      <div class="input input--floating" hidden data-part="province-wrapper">
+        <select
+          id="AddressProvince"
+          name="address[province]"
+          autocomplete="address-level1"
+          placeholder="{{ 'customer.addresses.province' | t }}"
+          data-part="province-select"
+        ></select>
+        <label for="AddressProvince">{{ 'customer.addresses.province' | t }}</label>
+      </div>
+    </province-selector>
+
+    {% render 'input',
+      id: 'AddressPhone',
+      id_suffix: address_id,
+      name: 'address[phone]',
+      type: 'tel',
+      label_t: 'customer.addresses.phone',
+      floating: true,
+      value: form.phone,
+      autocomplete: 'tel',
+      form: form,
+      form_key: 'phone'
+    %}
+
+    <div class="address-form__actions">
+      {% if edit %}
+        {% render 'button',
+          translation: 'customer.addresses.update',
+          type: 'submit',
+          auto_loading: true
+        %}
+      {% else %}
+        {% render 'button',
+          translation: 'customer.addresses.add',
+          type: 'submit',
+          auto_loading: true
+        %}
+      {% endif %}
+
+      <button type="button" data-close>
+        {{ 'customer.addresses.cancel' | t }}
+      </button>
+    </div>
+  </div>
+{% endform %}

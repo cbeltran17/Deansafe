@@ -1,0 +1,30 @@
+<cart-drawer-child
+  slot="container"
+  id="CartDrawer-OrderNoteModal"
+  strategy="drawer"
+  position="bottom"
+  class="cart-drawer-child"
+>
+  <form
+    is="cart-form"
+    action="{{ routes.cart_update_url }}"
+    class="modal-section flex flex-col gap-4"
+    data-section-ref="order-note-drawer-form"
+    aria-labelledby="{{ section.id }}-CartDrawer-OrderNote"
+  >
+    <label for="{{ section.id }}-CartDrawer-OrderNote" class="h6">
+      {{- 'sections.cart.note' | t -}}
+    </label>
+    {% render 'input',
+      tag: 'textarea',
+      id: 'CartDrawer-OrderNote',
+      placeholder_t: 'sections.cart.order_note_placeholder',
+      name: 'note',
+      value: cart.note,
+      rows: 6,
+      floating: false
+    %}
+    <cart-error class="cart-error"></cart-error>
+    {% render 'button' with 'Save', type: 'submit', name: 'cart-update' %}
+  </form>
+</cart-drawer-child>

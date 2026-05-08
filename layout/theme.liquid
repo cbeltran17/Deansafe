@@ -1,0 +1,54 @@
+<!doctype html>
+<html
+  class="no-js"
+  lang="{{ request.locale.iso_code }}"
+  dir="{% render 'get-locale-dir' %}"
+>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+
+    {%- liquid
+      render 'meta-tags'
+      render 'assets'
+      render 'theme-colors'
+      render 'theme-typography'
+      render 'theme-appearance'
+      render 'theme-layout'
+    -%}
+
+    {{ 'style.css' | asset_url | stylesheet_tag }}
+
+    {{ content_for_header }}
+  </head>
+
+  <body>
+    {% render 'pre-scripts' %}
+
+    <a href="#MainContent" class="skip-to-content">
+      {{ 'accessibility.skip_to_content' | t }}
+    </a>
+
+    <header class="contents">
+      {% sections 'header-group' %}
+    </header>
+
+    {% sections 'overlay-group' %}
+
+    {% capture page_content %}{{ content_for_layout }}{% endcapture %}
+
+    <main id="MainContent" tabindex="-1" class="grow">
+      {{ page_content }}
+    </main>
+
+    {% sections 'footer-group' %}
+
+    <div class="body-scroll-margin"></div>
+
+    {% render 'post-scripts' %}
+    {% render 'faq-structured-data', page_content: page_content %}
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{% liquid
+  assign body_html = block.settings.content
+  if block.settings.content_from_page != blank and block.settings.content_from_page.content != blank
+    assign body_html = block.settings.content_from_page.content
+  endif
+%}
+{% if body_html != blank %}
+  <smooth-collapse
+    class="accordion block-accordion"
+    {{ block.shopify_attributes }}
+    {% if block.settings.open_by_default %}
+      open
+    {% endif %}
+  >
+    <button slot="summary" class="accordion__summary icon-flip-y">
+      {% render 'heading', block: block, size: 'h6' %}
+      <div class="accordion__icon">{{ 'icon-chevron-down.svg' | inline_asset_content }}</div>
+    </button>
+    <div class="accordion__content prose">
+      {{ body_html }}
+    </div>
+  </smooth-collapse>
+{% endif %}

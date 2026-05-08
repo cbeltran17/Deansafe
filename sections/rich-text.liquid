@@ -1,0 +1,129 @@
+{% liquid
+  if section.settings.full_width
+    assign blend_bg = section.settings.background_color
+  endif
+%}
+
+{% render 'section-meta', blend: true, blend_bg: blend_bg %}
+
+<animation-element
+  autoplay
+  selector=".shopify-block"
+  stagger="100"
+  class="
+    block-spacing
+    {% if section.settings.full_width %}
+      section-full-width
+    {% else %}
+      section-block
+    {% endif %}
+    {% render 'text-alignment' %}
+  "
+>
+  {% content_for 'blocks' %}
+</animation-element>
+
+{% schema %}
+{
+  "name": "t:sections.rich_text.name",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "t:sections.all.full_width.label",
+      "default": true
+    },
+    {
+      "type": "text_alignment",
+      "id": "text_alignment",
+      "label": "t:sections.all.text_alignment.label",
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:sections.all.text_color.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_custom_spacing",
+      "label": "t:sections.all.enable_custom_spacing",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "top_spacing",
+      "label": "t:sections.all.top_spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing == true }}"
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "label": "t:sections.all.bottom_spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing == true }}"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@theme"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "presets": [
+    {
+      "name": "t:sections.rich_text.name",
+      "blocks": [
+        {
+          "type": "icon",
+          "settings": {
+            "icon": "megaphone"
+          }
+        },
+        {
+          "type": "heading",
+          "settings": {
+            "heading": "t:sections.rich_text.presets.rich_text.blocks.heading.settings.heading",
+            "heading_size": "h1"
+          }
+        },
+        {
+          "type": "paragraph",
+          "settings": {
+            "content": "t:sections.rich_text.presets.rich_text.blocks.paragraph.settings.content"
+          }
+        },
+        {
+          "type": "button"
+        }
+      ],
+      "category": "t:sections.categories.content"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,88 @@
+<price-range class="filter-price-range">
+  <div class="range-group mb-4">
+    <label class="sr-only" for="{{ id }}-RangeMin">
+      {{- 'accessibility.filter_minimum_price' | t -}}
+    </label>
+    <input
+      id="{{ id }}-RangeMin"
+      type="range"
+      class="range"
+      min="0"
+      max="{{ filter.range_max | divided_by: 100.0 | ceil }}"
+      data-range-min
+
+      {% if filter.min_value.value %}
+        value="{{ filter.min_value.value | divided_by: 100.0 | floor }}"
+      {% else %}
+        value="0"
+      {% endif %}
+    >
+    <label class="sr-only" for="{{ id }}-RangeMax">
+      {{- 'accessibility.filter_maximum_price' | t -}}
+    </label>
+    <input
+      id="{{ id }}-RangeMax"
+      type="range"
+      class="range"
+      min="0"
+      max="{{ filter.range_max | divided_by: 100.0 | ceil }}"
+      data-range-max
+
+      {% if filter.max_value.value %}
+        value="{{ filter.max_value.value | divided_by: 100.0 | floor }}"
+      {% else %}
+        value="{{ filter.range_max | divided_by: 100.0 | ceil }}"
+      {% endif %}
+    >
+  </div>
+
+  <div class="filter-price-range__inputs">
+    <div class="filter-price-range__input-label">
+      <span class="filter-price-range__currency-symbol">
+        {{ cart.currency.symbol }}
+      </span>
+      <input
+        id="{{ id }}-RangeMinInput"
+        name="{{ filter.min_value.param_name }}"
+        type="text"
+        inputmode="decimal"
+        class="filter-price-range__input"
+        min="0"
+        max="{{ filter.range_max | divided_by: 100.0 | ceil }}"
+        placeholder="0"
+        data-input-min
+        {% if filter.min_value.value %}
+          value="{{ filter.min_value.value | divided_by: 100.0 | floor }}"
+        {% endif %}
+      >
+      <label class="sr-only" for="{{ id }}-RangeMinInput">
+        {{- 'accessibility.filter_minimum_price' | t -}}
+      </label>
+    </div>
+
+    <span class="filter-price-range__separator">{{ 'products.filters.to' | t }}</span>
+
+    <div class="filter-price-range__input-label">
+      <span class="filter-price-range__currency-symbol">
+        {{ cart.currency.symbol }}
+      </span>
+      <input
+        id="{{ id }}-RangeMaxInput"
+        name="{{ filter.max_value.param_name }}"
+        type="text"
+        inputmode="decimal"
+        class="filter-price-range__input"
+        min="0"
+        max="{{ filter.range_max | divided_by: 100.0 | ceil }}"
+        placeholder="{{ filter.range_max | divided_by: 100.0 | ceil }}"
+        data-input-max
+        {% if filter.max_value.value %}
+          value="{{ filter.max_value.value | divided_by: 100.0 | ceil }}"
+        {% endif %}
+      >
+      <label class="sr-only" for="{{ id }}-RangeMaxInput">
+        {{- 'accessibility.filter_maximum_price' | t -}}
+      </label>
+    </div>
+  </div>
+</price-range>

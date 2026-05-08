@@ -1,0 +1,12 @@
+{% capture carousel_content %}
+  {% render 'product-carousel-content', target: target, products: products, placeholder: placeholder %}
+{% endcapture %}
+
+{% render 'carousel',
+  css_class: 'carousel--products',
+  animation: 'product-cards-in',
+  animation_target: '.product-card',
+  columns_min: section.settings.products_per_row_mobile,
+  columns_max: section.settings.products_per_row,
+  content: carousel_content
+%}

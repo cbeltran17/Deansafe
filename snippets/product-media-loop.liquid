@@ -1,0 +1,94 @@
+{% comment %}
+   Loops through product media with optional variant filtering and renders each using a specified snippet
+
+  Images with alt tag containing "all-groups" are shown at the end even when filtered by variant
+
+   Parameters:
+   - product: The product object
+   - snippet: The name of the snippet to render for each media
+   - only_selected_variant_images: Whether to filter media by selected variant
+   - featured_first: Should the featured media be displayed as first item? (boolean)
+{% endcomment %}
+
+{% liquid
+  assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media
+
+  # Initialize variables for filtering logic
+  if only_selected_variant_images and featured_media
+    assign show_from_featured = false
+    assign featured_media_found = false
+    assign stop_showing = false
+  endif
+
+  assign before = ''
+  assign after = ''
+  assign all_groups = ''
+
+  for media in product.media
+    # Check if we should hide this media based on variant filtering
+    assign hidden = false
+
+    if only_selected_variant_images and featured_media
+      # Check if this is the featured media
+      if media.id == featured_media.id
+        assign show_from_featured = true
+        assign featured_media_found = true
+      endif
+
+      # If we've already hit an image attached to another variant, stop showing all images
+      if stop_showing
+        assign hidden = true
+      elsif show_from_featured == false
+        # If we haven't found the featured media yet, don't show
+        assign hidden = true
+      elsif featured_media_found and media.id != featured_media.id
+        # Check if this media is attached to another variant
+        # Only check for images since only images can be attached to variants
+        if media.media_type == 'image'
+          assign media_image = product.images | find: 'src', media.src
+          if media_image.attached_to_variant?
+            assign hidden = true
+            assign stop_showing = true
+          endif
+        endif
+      endif
+    endif
+
+    # Check if this is media that should be shown even when filtered
+    assign is_all_groups_media = false
+
+    if hidden and media.alt contains 'all-groups'
+      assign is_all_groups_media = true
+      assign hidden = false
+    endif
+
+    if media.id == featured_media.id
+      assign featured = true
+    else
+      assign featured = false
+    endif
+
+    capture item
+      case snippet
+        when 'product-media-carousel-slide'
+          render 'product-media-carousel-slide', product: product, media: media, hidden: hidden, featured: featured
+        when 'product-media-thumbnail'
+          render 'product-media-thumbnail', product: product, media: media, hidden: hidden, featured: featured
+        when 'product-media-grid-item'
+          render 'product-media-grid-item', product: product, media: media, hidden: hidden, featured: featured
+      endcase
+    endcapture
+
+    if featured_first and media.id == featured_media.id
+      assign before = before | append: item
+    elsif is_all_groups_media
+      assign all_groups = all_groups | append: item
+    else
+      assign after = after | append: item
+    endif
+  endfor
+
+  echo before
+  echo after
+  echo all_groups
+%}

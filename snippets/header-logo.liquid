@@ -1,0 +1,43 @@
+{% liquid
+  assign logo_wrapper_tag = 'div'
+
+  if request.page_type == 'index'
+    assign logo_wrapper_tag = 'h1'
+  endif
+
+  assign logo_height_2x = settings.logo_height | times: 2
+  assign logo_height_mobile_2x = settings.logo_height_mobile | times: 2
+%}
+
+<div class="header__logo-wrapper">
+  <button
+    is="sticky-header-expand-button"
+    class="header__btn-show-nav"
+    aria-label="{{ 'accessibility.toggle_navigation' | t }}"
+    aria-controls="main-navigation"
+  >
+    {{ 'icon-hamburger.svg' | inline_asset_content }}
+  </button>
+
+  <{{ logo_wrapper_tag }} class="header__logo">
+    <a href="{{ routes.root_url }}" aria-label="{{ shop.name }}">
+      {% if settings.logo != blank %}
+        {% if settings.logo_mobile != blank %}
+          {{
+            settings.logo_mobile
+            | image_url: height: logo_height_mobile_2x
+            | image_tag: class: 'header__logo-image-mobile'
+          }}
+        {% endif %}
+
+        {{
+          settings.logo
+          | image_url: height: logo_height_2x
+          | image_tag: class: 'header__logo-image'
+        }}
+      {% else %}
+        <span class="h5">{{ shop.name }}</span>
+      {% endif %}
+    </a>
+  </{{ logo_wrapper_tag }}>
+</div>

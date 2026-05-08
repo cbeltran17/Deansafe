@@ -1,0 +1,15 @@
+{%- liquid
+  assign max = max | plus: 0
+  assign min = min | plus: 0
+  assign container_width = container_width | default: settings.page_width
+  assign item_width = item_width | default: 240
+  assign cap = item_width | times: 1.4 | round
+  assign min_switch = cap | times: min
+  assign max_switch = cap | times: max
+  assign per_max_container = container_width | divided_by: max | round
+-%}
+(min-width: {{ container_width }}px) {{ per_max_container }}px
+{%- if max_switch <= container_width and max > min -%}
+  , (min-width: {{ max_switch }}px) {{ 100.0 | divided_by: max | round: 2 }}vw
+{%- endif -%}
+, (min-width: {{ min_switch }}px) {{ cap }}px , {{ 100.0 | divided_by: min | round: 2 }}vw

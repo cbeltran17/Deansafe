@@ -1,0 +1,19 @@
+{% comment %}
+  Renders a set of links for paginated results. Must be used within paginate tags.
+
+  Usage:
+  {% paginate results by 2 %}
+    {% render 'pagination', paginate: paginate, anchor: '#yourID' %}
+  {% endpaginate %}
+
+  Accepts:
+  - paginate: {Object}
+  - anchor: {String} (optional) This can be added so that on page reload it takes you to wherever you've placed your anchor tag.
+{% endcomment %}
+{% if paginate.parts.size > 0 %}
+  {% if section.settings.pagination_type == 'classic' %}
+    {% render 'pagination-classic', paginate: paginate %}
+  {% else %}
+    {% render 'pagination-load-more', paginate: paginate %}
+  {% endif %}
+{% endif %}

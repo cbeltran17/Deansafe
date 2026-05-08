@@ -1,0 +1,18 @@
+{% liquid
+  assign product_title = block.settings.content | default: product.title | default: 'Product'
+%}
+
+{% if quick_view_modal %}
+  <a
+    href="{{ product.selected_variant.url | default: product.url }}"
+    {{ block.shopify_attributes }}
+    class="product-title block-heading"
+    data-section-ref="product-title"
+  >
+    {% render 'heading' with product_title, block: block %}
+  </a>
+{% else %}
+  <div {{ block.shopify_attributes }} class="product-title block-heading">
+    {% render 'heading' with product_title, block: block %}
+  </div>
+{% endif %}

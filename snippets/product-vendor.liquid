@@ -1,0 +1,33 @@
+{% if block.settings.show_vendor == false
+  or block.settings.show_vendor == true
+  and product.vendor == blank
+%}
+  {% if block.settings.show_sku == false
+    or block.settings.show_sku == true
+    and product.selected_or_first_available_variant.sku == blank
+  %}
+    <!-- section_ref: {{ block.id }} -->
+    {% break %}
+  {% endif %}
+{% endif %}
+
+<div
+  class="block-vendor product-vendor"
+  {{ block.shopify_attributes }}
+  data-section-ref="{{ block.id }}"
+>
+  {% if block.settings.show_vendor and product.vendor != blank %}
+    <p class="caption">
+      {% if block.settings.show_vendor_label %}
+        <span>{{ 'products.product.vendor' | t }}</span>
+      {% endif %}
+      {{ product.vendor | link_to_vendor: class: 'link' }}
+    </p>
+  {% endif %}
+  {% if block.settings.show_sku and product.selected_or_first_available_variant.sku != blank %}
+    <p class="caption">
+      <span>{{ 'products.product.sku' | t }}</span>
+      {{ product.selected_or_first_available_variant.sku }}
+    </p>
+  {% endif %}
+</div>

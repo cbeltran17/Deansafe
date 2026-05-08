@@ -1,0 +1,169 @@
+{% render 'section-meta', blend: true, blend_bg: section.settings.background_color %}
+
+<div class="section-full-width">
+  <div class="multiple-collections-header multiple-collections-header--align-{{ section.settings.heading_alignment }}">
+    {% content_for 'block', type: '_section-header', id: 'section-header' %}
+
+    {% if section.blocks.size > 1 %}
+      <scroll-carousel-switcher class="radio-group" target="{{ section.id }}-carousel">
+        {% for block in section.blocks %}
+          {% render 'extract-part-from-block', block: block, part: 'tab' %}
+        {% endfor %}
+      </scroll-carousel-switcher>
+    {% endif %}
+  </div>
+
+  {% if section.blocks.size == 0 %}
+    {% render 'product-carousel', placeholder: true %}
+  {% else %}
+    {% render 'extract-part-from-block', block: section.blocks.first, part: 'content' %}
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.multiple_featured_collections.name",
+  "class": "section-multiple-featured-collections",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_carousel",
+      "label": "t:sections.multiple_featured_collections.settings.enable_carousel.label",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "max_products",
+      "label": "t:sections.multiple_featured_collections.settings.max_products.label",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "products_per_row",
+      "label": "t:sections.multiple_featured_collections.settings.products_per_row.label",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "select",
+      "id": "products_per_row_mobile",
+      "label": "t:sections.multiple_featured_collections.settings.products_per_row_mobile.label",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "1.5",
+          "label": "1.5"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "1.5"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.heading"
+    },
+    {
+      "type": "text_alignment",
+      "id": "heading_alignment",
+      "label": "t:sections.all.alignment.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:sections.all.text_color.label"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "t:sections.all.heading_color.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_custom_spacing",
+      "label": "t:sections.all.enable_custom_spacing",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "top_spacing",
+      "label": "t:sections.all.top_spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing == true }}"
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "label": "t:sections.all.bottom_spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing == true }}"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "_featured_collection_tab"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "presets": [
+    {
+      "name": "t:sections.multiple_featured_collections.name",
+      "blocks": [
+        {
+          "id": "section-header",
+          "static": true,
+          "type": "_section-header",
+          "blocks": [
+            {
+              "type": "heading",
+              "settings": {
+                "heading": "t:sections.multiple_featured_collections.presets.multiple_collections.blocks._section-header.blocks.heading.settings.heading"
+              }
+            }
+          ]
+        },
+        {
+          "type": "_featured_collection_tab"
+        },
+        {
+          "type": "_featured_collection_tab"
+        }
+      ],
+      "category": "t:sections.categories.products"
+    }
+  ]
+}
+{% endschema %}

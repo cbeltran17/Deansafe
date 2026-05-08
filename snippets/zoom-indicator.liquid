@@ -1,0 +1,11 @@
+<button
+  class="zoom-indicator"
+  {% if slot %}
+    slot="{{ slot }}"
+  {% endif %}
+  aria-hidden="true"
+  tabindex="-1"
+  type="button"
+>
+  {{ 'icon-zoom.svg' | inline_asset_content }}
+</button>

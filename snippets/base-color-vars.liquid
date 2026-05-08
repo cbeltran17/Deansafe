@@ -1,0 +1,36 @@
+{% liquid
+  assign target = base-color-vars | default: section
+
+  assign background_color = target.settings.background_color
+  assign text_color = target.settings.text_color
+  assign heading_color = target.settings.heading_color
+
+  if background_color == blank or background_color.rgba == '0 0 0 / 0.0'
+    assign background_color = default_background
+  endif
+
+  if text_color == blank or text_color.rgba == '0 0 0 / 0.0'
+    assign text_color = default_text
+  endif
+%}
+
+{% render 'color-var' with background_color, name: 'background-color' %}
+{% render 'color-var' with text_color, name: 'text-color' %}
+
+{% if text_color != blank
+  and text_color.rgba != '0 0 0 / 0.0'
+  and heading_color == blank
+  or heading_color.rgba == '0 0 0 / 0.0'
+%}
+  --heading-color: var(--text-color);
+{% else %}
+  {% render 'color-var' with heading_color, name: 'heading-color' %}
+{% endif %}
+
+{% if target.settings.overlay_opacity != blank %}
+  --media-overlay-opacity: {{ target.settings.overlay_opacity }}%;
+{% endif %}
+
+{% if target.settings.overlay_color != blank %}
+  --media-overlay-color: {{ target.settings.overlay_color }};
+{% endif %}

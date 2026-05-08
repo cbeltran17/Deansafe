@@ -1,0 +1,18 @@
+<input
+  type="checkbox"
+  name="{{ filter_value.param_name }}"
+  value="{{ filter_value.value }}"
+  id="{{ id }}-{{ filter_value.value | camelize | escape }}"
+  {% if filter_value.active %}
+    checked
+  {% endif %}
+  class="sr-only"
+>
+<label
+  for="{{ id }}-{{ filter_value.value | camelize | escape }}"
+>
+  <div class="grid items-center">
+    {{ filter_value.image | image_url: width: 256 | image_tag }}
+  </div>
+  <span class="text-center text-xs leading-tight">{{ filter_value.label }}</span>
+</label>

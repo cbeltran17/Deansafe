@@ -1,0 +1,75 @@
+{% liquid
+  assign variant = variant | default: product.selected_or_first_available_variant
+
+  # Determine stock status and message
+  assign stock_message = ''
+  assign stock_status = ''
+  assign max_stock = settings.max_stock | default: 20
+
+  if variant.inventory_quantity > 0
+    # Calculate stock percentage for progress bar
+    assign stock_percentage = variant.inventory_quantity | times: 100 | divided_by: max_stock | at_most: 100
+
+    if block.settings.enable_low_stock_message and variant.inventory_quantity <= settings.low_stock_threshold
+      assign stock_status = 'low-stock'
+      # Determine stock message based on show_stock_count setting
+      case settings.show_stock_count
+        when 'never'
+          assign stock_message = 'products.product.low_stock' | t
+        when 'always', 'low_stock_only'
+          assign stock_message = 'products.product.low_stock_with_count' | t: count: variant.inventory_quantity
+      endcase
+    else
+      assign stock_status = 'in-stock'
+      # Determine stock message based on show_stock_count setting
+      case settings.show_stock_count
+        when 'never', 'low_stock_only'
+          assign stock_message = 'products.product.in_stock' | t
+        when 'always'
+          assign stock_message = 'products.product.in_stock_with_count' | t: count: variant.inventory_quantity
+      endcase
+    endif
+  elsif block.settings.enable_backorder_message and variant.inventory_policy == 'continue'
+    assign stock_message = 'products.product.on_backorder' | t
+    assign stock_status = 'backorder'
+  else
+    assign stock_status = 'out-of-stock'
+    assign stock_percentage = 0
+    if block.settings.enable_out_of_stock_message
+      assign stock_message = 'products.product.out_of_stock' | t
+    endif
+  endif
+
+  # Render a placeholder if the stock indicator should not be displayed
+  if variant.inventory_management != 'shopify' or stock_message == ''
+    echo '<!-- section_ref: stock -->'
+    break
+  endif
+%}
+
+<div
+  class="product-stock product-stock--{{ stock_status }}"
+  data-section-ref="stock"
+  {{ block.shopify_attributes }}
+>
+  <div class="product-stock__message">
+    {% case stock_status %}
+      {% when 'in-stock' %}
+        {{ 'icon-product-in-stock.svg' | inline_asset_content }}
+      {% when 'low-stock', 'backorder' %}
+        {{ 'icon-product-stock-warning.svg' | inline_asset_content }}
+      {% when 'out-of-stock' %}
+        {{ 'icon-product-out-of-stock.svg' | inline_asset_content }}
+    {% endcase %}
+    <span>{{ stock_message }}</span>
+  </div>
+
+  {% if block.settings.show_progress_bar and stock_status != 'backorder' %}
+    <div class="product-stock__progress-container">
+      <div
+        class="product-stock__progress-bar"
+        style="width: {{ stock_percentage | default: 0 }}%"
+      ></div>
+    </div>
+  {% endif %}
+</div>

@@ -1,0 +1,36 @@
+{% liquid
+  assign current_page_id = page_path | default: 'menu'
+  assign level = level | default: 1
+%}
+
+{% comment %} Render current menu page {% endcomment %}
+<div
+  class="mobile-menu__page"
+  data-page="{{ current_page_id }}"
+  data-level="{{ level }}"
+  data-drag-close-container
+>
+  {% if level == 1 %}
+    {% render 'mobile-menu-content-level-1', link: link, current_page_id: current_page_id %}
+  {% else %}
+    {% render 'mobile-menu-content-level-2',
+      link: link,
+      current_page_id: current_page_id,
+      level: level,
+      mega_menu_settings: mega_menu_settings
+    %}
+  {% endif %}
+</div>
+
+{% comment %} Render child pages {% endcomment %}
+{% liquid
+  if level == 1
+    assign level = level | plus: 1
+    for subitem in link.links
+      if subitem.links != empty
+        assign subpage_path = current_page_id | append: '-' | append: forloop.index
+        render 'mobile-menu-page', link: subitem, page_path: subpage_path, level: level, item_index: forloop.index, mega_menu_settings: mega_menu_settings
+      endif
+    endfor
+  endif
+%}

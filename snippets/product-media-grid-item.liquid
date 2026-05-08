@@ -1,0 +1,17 @@
+<div
+  id="{{ section.id }}-ProductMedia-{{ media.id }}"
+  class="product-media-grid__item"
+  {% if hidden %}
+    hidden
+  {% endif %}
+>
+  {% render 'product-media' with media %}
+  {% if media.media_type == 'image' %}
+    {% render 'zoom-indicator' %}
+  {% endif %}
+  {% if featured %}
+    <div class="product-media-grid__badges">
+      {% render 'product-badges', product: product, custom: true %}
+    </div>
+  {% endif %}
+</div>

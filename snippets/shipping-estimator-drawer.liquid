@@ -1,0 +1,12 @@
+<cart-drawer-child
+  slot="container"
+  id="CartDrawer-ShippingEstimatorModal"
+  strategy="drawer"
+  position="bottom"
+  class="cart-drawer-child"
+>
+  <div class="modal-section">
+    <p class="h6 mb-4">{{ 'sections.shipping_estimator.title' | t }}</p>
+    {% render 'shipping-estimator' %}
+  </div>
+</cart-drawer-child>

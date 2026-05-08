@@ -1,0 +1,15 @@
+{% liquid
+  assign search_url = routes.search_url | append: '?type=product&q=' | append: predictive_search.terms
+%}
+
+<div class="predictive-search__more-results">
+  {% capture content %}
+    <span>{{ 'general.search.see_all_results_button' | t }}</span>
+    {{ 'icon-arrow-right.svg' | inline_asset_content }}
+  {% endcapture %}
+  {% render 'button' with content,
+    href: search_url,
+    class: 'predictive-search__more-results-btn',
+    size: 'sm'
+  %}
+</div>

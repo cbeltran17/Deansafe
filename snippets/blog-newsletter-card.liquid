@@ -1,0 +1,10 @@
+<div class="blog-newsletter-card" role="{{ role }}">
+  {{ 'icon-newsletter.svg' | inline_asset_content }}
+  {% if section.settings.newsletter_heading != blank %}
+    <p class="subheading-lg">{{ section.settings.newsletter_heading }}</p>
+  {% endif %}
+  {% if section.settings.newsletter_content != blank %}
+    <div class="prose">{{ section.settings.newsletter_content }}</div>
+  {% endif %}
+  {% render 'email-signup-input' %}
+</div>

@@ -1,0 +1,104 @@
+{
+  "type": "custom.overlay",
+  "name": "Overlay",
+  "sections": {
+    "cart-drawer": {
+      "type": "cart-drawer",
+      "settings": {}
+    },
+    "newsletter-popup": {
+      "type": "newsletter-popup",
+      "disabled": true,
+      "blocks": {
+        "heading_44PBfp": {
+          "type": "heading",
+          "name": "Heading",
+          "settings": {
+            "heading_size": "h4",
+            "heading": "Subscribe to our newsletter"
+          },
+          "blocks": {}
+        },
+        "email_signup_WCHLXR": {
+          "type": "email-signup",
+          "name": "Email signup",
+          "settings": {},
+          "blocks": {}
+        },
+        "paragraph_qmfjKJ": {
+          "type": "paragraph",
+          "name": "Paragraph",
+          "settings": {
+            "paragraph_size": "prose-sm",
+            "text_color": "text-alpha-800",
+            "content": "<p>Subscribe to our newsletter and be the first to hear about our new arrivals, special promotions and online exclusives.</p>"
+          },
+          "blocks": {}
+        },
+        "social_icons_qtT4Vw": {
+          "type": "social-icons",
+          "name": "Social icons",
+          "settings": {
+            "size": "small"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_44PBfp",
+        "email_signup_WCHLXR",
+        "paragraph_qmfjKJ",
+        "social_icons_qtT4Vw"
+      ],
+      "settings": {}
+    },
+    "quick-view-modal": {
+      "type": "quick-view-modal",
+      "settings": {},
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h3"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "style": "radio",
+            "swatch_selector_style": "swatch"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {}
+        },
+        "view_full_details": {
+          "type": "view_full_details",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "show_as_collapsible": true,
+            "open_by_default": true
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "variant_picker",
+        "buy_buttons",
+        "view_full_details",
+        "description"
+      ]
+    }
+  },
+  "order": ["cart-drawer", "newsletter-popup", "quick-view-modal"]
+}

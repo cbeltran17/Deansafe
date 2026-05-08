@@ -1,0 +1,25 @@
+<button
+  type="button"
+  is="carousel-button"
+  class="carousel-button"
+  direction="{{ direction }}"
+  data-variant="{{ variant | default: 'outline' }}"
+  data-size="{{ size | default: 'medium' }}"
+  hidden
+  {% if controls != blank %}
+    aria-controls="{{ controls }}"
+  {% else %}
+    aria-controls="{{ section.id }}-Carousel"
+  {% endif %}
+  {% if direction == 'prev' %}
+    aria-label="{{ 'accessibility.previous' | t }}"
+  {% else %}
+    aria-label="{{ 'accessibility.next' | t }}"
+  {% endif %}
+>
+  {% if direction == 'prev' %}
+    {{ 'icon-chevron-left.svg' | inline_asset_content }}
+  {% else %}
+    {{ 'icon-chevron-right.svg' | inline_asset_content }}
+  {% endif %}
+</button>

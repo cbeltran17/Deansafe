@@ -1,0 +1,60 @@
+{% comment %} Level 1 (root) mobile menu content {% endcomment %}
+{% liquid
+  assign show_social_icons = section.settings.mobile_menu_show_social_icons
+  assign show_country_selector = section.settings.mobile_menu_show_country_selector
+  assign show_language_selector = section.settings.mobile_menu_show_language_selector
+%}
+<animation-element
+  class="mobile-menu__link-list"
+  delay="50"
+  stagger="50"
+  selector=".mobile-menu__link"
+>
+  {% for subitem in link.links %}
+    {% liquid
+      assign link_id = current_page_id | append: '-' | append: forloop.index
+    %}
+
+    {% if subitem.links == empty %}
+      <a href="{{ subitem.url }}" class="mobile-menu__link">
+        <menu-item-label>{{ subitem.title }}</menu-item-label>
+      </a>
+    {% else %}
+      <a
+        href="{{ subitem.url }}"
+        class="mobile-menu__link"
+        data-page-link="{{ link_id }}"
+      >
+        <menu-item-label>{{ subitem.title }}</menu-item-label>
+        {{ 'icon-chevron-right.svg' | inline_asset_content }}
+      </a>
+    {% endif %}
+  {% endfor %}
+</animation-element>
+
+<div class="mobile-menu__footer">
+  {%- if show_country_selector or show_language_selector -%}
+    <div class="mobile-menu__localization">
+      {% if show_country_selector %}
+        {% render 'localization-selector',
+          type: 'country',
+          class: 'market-selector--outline',
+          placement: 'top'
+        %}
+      {% endif %}
+      {% if show_language_selector %}
+        {% render 'localization-selector',
+          type: 'language',
+          class: 'market-selector--outline',
+          placement: 'top'
+        %}
+      {% endif %}
+    </div>
+  {%- endif -%}
+
+  {%- if show_social_icons -%}
+    <div class="mobile-menu__social">
+      {% render 'social-icons' %}
+    </div>
+  {%- endif -%}
+</div>

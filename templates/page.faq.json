@@ -1,0 +1,404 @@
+{
+  "sections": {
+    "image_with_text_overlay_UHyFMY": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_e3R4kj": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h0",
+            "heading": "Frequently asked questions",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_DeXkqR": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "medium",
+            "text_color": "primary",
+            "content": "<p>Find answers to common questions about our products, orders, shipping, returns, and more.</p>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": ["heading_e3R4kj", "paragraph_DeXkqR"],
+      "name": "t:sections.image_with_text_overlay.name",
+      "settings": {
+        "full_width": true,
+        "image_size": "",
+        "image_height": 640,
+        "content_position": "bottom-left",
+        "image_size_mobile": "same",
+        "image_height_mobile": 480,
+        "content_position_mobile": "",
+        "background_color": "",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30,
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
+    "collapsible_content_DiBLRt": {
+      "type": "collapsible-content",
+      "blocks": {
+        "content_CdydEb": {
+          "type": "content",
+          "settings": {
+            "open": false,
+            "title": "Collapsible row",
+            "content": "<p>Provide answers to common questions your audience might have. It can help reduce customer support inquiries and improve their overall experience.</p>",
+            "content_from_page": ""
+          }
+        },
+        "content_HfywdW": {
+          "type": "content",
+          "settings": {
+            "open": false,
+            "title": "Collapsible row",
+            "content": "<p>Provide answers to common questions your audience might have. It can help reduce customer support inquiries and improve their overall experience.</p>",
+            "content_from_page": ""
+          }
+        },
+        "content_4K7zG6": {
+          "type": "content",
+          "settings": {
+            "open": false,
+            "title": "Collapsible row",
+            "content": "<p>Provide answers to common questions your audience might have. It can help reduce customer support inquiries and improve their overall experience.</p>",
+            "content_from_page": ""
+          }
+        }
+      },
+      "block_order": ["content_CdydEb", "content_HfywdW", "content_4K7zG6"],
+      "name": "t:sections.collapsible_content.name",
+      "settings": {
+        "icon": "box",
+        "heading_size": "h4",
+        "heading": "Collapsible content",
+        "description": "<p>Provide a short description of the collapsible content.</p>",
+        "background_color": "",
+        "text_color": "",
+        "heading_color": "",
+        "icon_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80,
+        "enable_structured_data": true
+      }
+    },
+    "collapsible_content_yGEQhX": {
+      "type": "collapsible-content",
+      "blocks": {
+        "content_tGeWfk": {
+          "type": "content",
+          "settings": {
+            "open": false,
+            "title": "Collapsible row",
+            "content": "<p>Provide answers to common questions your audience might have. It can help reduce customer support inquiries and improve their overall experience.</p>",
+            "content_from_page": ""
+          }
+        },
+        "content_ftbpAX": {
+          "type": "content",
+          "settings": {
+            "open": false,
+            "title": "Collapsible row",
+            "content": "<p>Provide answers to common questions your audience might have. It can help reduce customer support inquiries and improve their overall experience.</p>",
+            "content_from_page": ""
+          }
+        },
+        "content_mazfwN": {
+          "type": "content",
+          "settings": {
+            "open": false,
+            "title": "Collapsible row",
+            "content": "<p>Provide answers to common questions your audience might have. It can help reduce customer support inquiries and improve their overall experience.</p>",
+            "content_from_page": ""
+          }
+        }
+      },
+      "block_order": ["content_tGeWfk", "content_ftbpAX", "content_mazfwN"],
+      "name": "t:sections.collapsible_content.name",
+      "settings": {
+        "icon": "truck",
+        "heading_size": "h4",
+        "heading": "Collapsible content",
+        "description": "<p>Provide a short description of the collapsible content.</p>",
+        "background_color": "",
+        "text_color": "",
+        "heading_color": "",
+        "icon_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80,
+        "enable_structured_data": true
+      }
+    },
+    "rich_text_gKM6Cq": {
+      "type": "rich-text",
+      "blocks": {
+        "icon_yqkmwn": {
+          "type": "icon",
+          "settings": {
+            "icon": "question",
+            "size": 40,
+            "text_color": "#13131d"
+          },
+          "blocks": {}
+        },
+        "heading_8w49Bm": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h2",
+            "heading": "Couldn’t find your answer?",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_qU6bpw": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "medium",
+            "text_color": "primary",
+            "content": "<p>Contact our team for personalized help. Our product experts are available 24/7 to offer guidance and recommendations.<br/></p>"
+          },
+          "blocks": {}
+        },
+        "button_group_tigwxE": {
+          "type": "button-group",
+          "name": "t:blocks.button_group.name",
+          "settings": {},
+          "blocks": {
+            "button_NcnWVC": {
+              "type": "button",
+              "disabled": true,
+              "settings": {
+                "size": "md",
+                "variant": "solid",
+                "label": "Browse all FAQs",
+                "url": "",
+                "style": "primary",
+                "background_color": "",
+                "text_color": ""
+              },
+              "blocks": {}
+            },
+            "button_KYGM78": {
+              "type": "button",
+              "settings": {
+                "size": "md",
+                "variant": "outline",
+                "label": "Get expert help",
+                "url": "",
+                "style": "black",
+                "background_color": "",
+                "text_color": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": ["button_NcnWVC", "button_KYGM78"]
+        }
+      },
+      "block_order": ["icon_yqkmwn", "heading_8w49Bm", "paragraph_qU6bpw", "button_group_tigwxE"],
+      "name": "t:sections.rich_text.name",
+      "settings": {
+        "full_width": false,
+        "text_alignment": "center",
+        "background_color": "#fafafa",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
+    "collection_list_YJLhC4": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_list_item_qTUaNc": {
+          "type": "_collection_list_item",
+          "name": "t:blocks._collection_list_item.name",
+          "settings": {
+            "collection": "",
+            "style": "overlay",
+            "title": "",
+            "description": ""
+          },
+          "blocks": {}
+        },
+        "collection_list_item_Whqy7m": {
+          "type": "_collection_list_item",
+          "name": "t:blocks._collection_list_item.name",
+          "settings": {
+            "collection": "",
+            "style": "card",
+            "title": "",
+            "description": ""
+          },
+          "blocks": {}
+        },
+        "collection_list_item_rE8yRD": {
+          "type": "_collection_list_item",
+          "name": "t:blocks._collection_list_item.name",
+          "settings": {
+            "collection": "",
+            "style": "card",
+            "title": "",
+            "description": ""
+          },
+          "blocks": {}
+        },
+        "collection_list_item_dD4PPG": {
+          "type": "_collection_list_item",
+          "name": "t:blocks._collection_list_item.name",
+          "settings": {
+            "collection": "",
+            "style": "card",
+            "title": "",
+            "description": ""
+          },
+          "blocks": {}
+        },
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
+          },
+          "blocks": {
+            "caption_7wALax": {
+              "type": "caption",
+              "name": "t:blocks.caption.name",
+              "settings": {
+                "caption": "Explore the range",
+                "text_color": ""
+              },
+              "blocks": {}
+            },
+            "heading_KFypm6": {
+              "type": "heading",
+              "settings": {
+                "full_width": true,
+                "max_width": 500,
+                "heading_size": "h2",
+                "heading": "Shop by category",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "",
+                "highlight_color": "",
+                "heading_seo_tag": "p"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": ["caption_7wALax", "heading_KFypm6"]
+        }
+      },
+      "block_order": [
+        "collection_list_item_qTUaNc",
+        "collection_list_item_Whqy7m",
+        "collection_list_item_rE8yRD",
+        "collection_list_item_dD4PPG"
+      ],
+      "name": "t:sections.collection_list.name",
+      "settings": {
+        "enable_carousel": true,
+        "collections_per_row": 4,
+        "collections_per_row_mobile": "1.5",
+        "image_size": "1/1",
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "card_background_color": "#f7f7f7",
+        "card_text_color": "#1e1e1e",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
+    "text_with_icons_PthEDy": {
+      "type": "text-with-icons",
+      "blocks": {
+        "icon_text_BD3nKr": {
+          "type": "icon_text",
+          "settings": {
+            "icon_name": "percentage",
+            "heading": "Bulk Discounts",
+            "text": "Buy More, Pay Less"
+          }
+        },
+        "icon_text_yw3d8B": {
+          "type": "icon_text",
+          "settings": {
+            "icon_name": "truck",
+            "heading": "Free Delivery",
+            "text": "On Every Order Above $100"
+          }
+        },
+        "icon_text_Xj6nmr": {
+          "type": "icon_text",
+          "settings": {
+            "icon_name": "return",
+            "heading": "Easy Returns",
+            "text": "30 Day Return Period"
+          }
+        },
+        "icon_text_yhctMJ": {
+          "type": "icon_text",
+          "settings": {
+            "icon_name": "badge-discount",
+            "heading": "Sustainable",
+            "text": "CO2 Neutral Delivery"
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_BD3nKr",
+        "icon_text_yw3d8B",
+        "icon_text_Xj6nmr",
+        "icon_text_yhctMJ"
+      ],
+      "name": "t:sections.text_with_icons.name",
+      "settings": {
+        "enable_carousel_on_mobile": false,
+        "columns_per_row": 4,
+        "columns_per_row_mobile": "2",
+        "icon_position": "left",
+        "icon_position_mobile": "top",
+        "background_color": "",
+        "text_color": "",
+        "heading_color": "",
+        "icon_color": "#89af70",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    }
+  },
+  "order": [
+    "image_with_text_overlay_UHyFMY",
+    "collapsible_content_DiBLRt",
+    "collapsible_content_yGEQhX",
+    "rich_text_gKM6Cq",
+    "collection_list_YJLhC4",
+    "text_with_icons_PthEDy"
+  ]
+}

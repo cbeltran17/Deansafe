@@ -1,0 +1,48 @@
+{% liquid
+  assign image = block.settings.image | default: block.settings.collection.featured_image
+  assign title = block.settings.title | default: block.settings.collection.title | default: 'Collection'
+%}
+
+<a
+  id="shopify-block-{{ block.id }}"
+  class="shopify-block collection-list-slider-item"
+  {{ block.shopify_attributes }}
+  href="{{ block.settings.collection.url }}"
+  {% if request.visual_preview_mode %}
+    style="--media-border-radius: 9999px"
+  {% endif %}
+>
+  {% render 'image' with image, placeholder: true, width: 160 %}
+  <span>{{ title }}</span>
+</a>
+
+{% schema %}
+{
+  "name": "t:blocks._collection_list_slider_item.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "t:blocks._collection_list_slider_item.settings.collection.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:blocks._collection_list_slider_item.settings.image.label",
+      "info": "t:blocks._collection_list_slider_item.settings.image.info"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:blocks._collection_list_slider_item.settings.title.label",
+      "info": "t:blocks._collection_list_slider_item.settings.title.info"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks._collection_list_slider_item.name"
+    }
+  ]
+}
+{% endschema %}

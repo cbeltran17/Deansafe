@@ -1,0 +1,28 @@
+<div>
+  <div class="product-option-label">
+    <label for="{{ id }}" class="contents">
+      <span class="product-option-name">{{ option.name }}:</span>
+      <span class="product-option-value">{{ option.selected_value }}</span>
+    </label>
+    {% render 'product-size-chart', option: option, block: block %}
+  </div>
+
+  <listbox-element
+    auto-size
+    data-product-option
+    placement="bottom-start"
+    form="{{ product_form_id }}"
+    name="options[{{ option.name | escape }}]"
+    id="{{ id }}"
+    value="{{ option.selected_value | escape }}"
+    label="{{ option.name | escape }}"
+  >
+    <template>
+      {% render 'product-option-listbox-items',
+        block: block,
+        option: option,
+        hide_sold_out_variants: hide_sold_out_variants
+      %}
+    </template>
+  </listbox-element>
+</div>

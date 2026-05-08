@@ -1,0 +1,194 @@
+{% render 'section-meta', blend: true, blend_bg: section.settings.background_color %}
+
+<div class="section-full-width">
+  {% capture classes %}
+    media-grid media-grid--layout-{{ section.blocks.size }}-{{ section.settings.layout }}
+  {% endcapture %}
+  {% capture blocks %}{% content_for 'blocks' %}{% endcapture %}
+
+  {% if section.index <= 2 %}
+    <div class="{{ classes }}">
+      {{ blocks }}
+    </div>
+  {% else %}
+    <animation-element
+      autoplay
+      animation="zoom-in-subtle"
+      selector=".block-media-card"
+      class="{{ classes }}"
+    >
+      {{ blocks }}
+    </animation-element>
+  {% endif %}
+
+  {% if request.visual_preview_mode %}
+    <div class="sr-only">Filler</div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.media_grid.name",
+  "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "t:sections.media_grid.settings.layout.label",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        },
+        {
+          "value": "3",
+          "label": "3"
+        },
+        {
+          "value": "4",
+          "label": "4"
+        }
+      ],
+      "default": "1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:sections.all.text_color.label",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_custom_spacing",
+      "label": "t:sections.all.enable_custom_spacing",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "top_spacing",
+      "label": "t:sections.all.top_spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing == true }}"
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "label": "t:sections.all.bottom_spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing == true }}"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "_media_card"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "presets": [
+    {
+      "name": "t:sections.media_grid.name",
+      "blocks": [
+        {
+          "type": "_media_card",
+          "blocks": [
+            {
+              "type": "heading",
+              "settings": {
+                "heading": "t:sections.media_grid.presets.media_grid.blocks._media_card.blocks.heading.settings.heading",
+                "heading_size": "h3"
+              }
+            },
+            {
+              "type": "paragraph",
+              "settings": {
+                "content": "t:sections.media_grid.presets.media_grid.blocks._media_card.blocks.paragraph.settings.content"
+              }
+            },
+            {
+              "type": "button",
+              "settings": {
+                "style": "white"
+              }
+            }
+          ]
+        },
+        {
+          "type": "_media_card",
+          "blocks": [
+            {
+              "type": "heading",
+              "settings": {
+                "heading": "t:sections.media_grid.presets.media_grid.blocks._media_card_2.blocks.heading.settings.heading",
+                "heading_size": "h3"
+              }
+            },
+            {
+              "type": "paragraph",
+              "settings": {
+                "content": "t:sections.media_grid.presets.media_grid.blocks._media_card_2.blocks.paragraph.settings.content"
+              }
+            },
+            {
+              "type": "button",
+              "settings": {
+                "style": "white"
+              }
+            }
+          ]
+        },
+        {
+          "type": "_media_card",
+          "blocks": [
+            {
+              "type": "heading",
+              "settings": {
+                "heading": "t:sections.media_grid.presets.media_grid.blocks._media_card_3.blocks.heading.settings.heading",
+                "heading_size": "h3"
+              }
+            },
+            {
+              "type": "paragraph",
+              "settings": {
+                "content": "t:sections.media_grid.presets.media_grid.blocks._media_card_3.blocks.paragraph.settings.content"
+              }
+            },
+            {
+              "type": "button",
+              "settings": {
+                "style": "white"
+              }
+            }
+          ]
+        }
+      ],
+      "category": "t:sections.categories.media"
+    }
+  ]
+}
+{% endschema %}

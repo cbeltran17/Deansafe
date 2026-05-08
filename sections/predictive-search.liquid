@@ -1,0 +1,110 @@
+{% liquid
+  assign results_size = predictive_search.resources.queries.size | plus: predictive_search.resources.products.size | plus: predictive_search.resources.collections.size | plus: predictive_search.resources.pages.size | plus: predictive_search.resources.articles.size
+%}
+
+{% if results_size == 0 %}
+  <div class="search-panel-content">
+    <div class="search-panel-content__main">
+      <div class="predictive-search">
+        <p class="predictive-search__no-results">
+          {{ 'general.search.no_results_with_terms' | t: terms: predictive_search.terms }}
+        </p>
+      </div>
+    </div>
+    <div class="search-panel-content__side"></div>
+  </div>
+  {% break %}
+{% endif %}
+
+{% capture main_content %}
+  <tabs-element>
+    <div class="predictive-search__tabs-wrapper">
+      {% if predictive_search.resources.products.size > 0 %}
+        <button role="tab" class="predictive-search__tab">{{ 'general.search.products' | t }}</button>
+      {% endif %}
+      {% if predictive_search.resources.articles.size > 0 %}
+        <button role="tab" class="predictive-search__tab">{{ 'general.search.blog_posts' | t }}</button>
+      {% endif %}
+      <div class="ms-auto flex gap-2" id="predictive-search-products-controls">
+        {% render 'carousel-button', direction: 'prev', controls: 'predictive-search-products', size: 'small' %}
+        {% render 'carousel-button', direction: 'next', controls: 'predictive-search-products', size: 'small' %}
+      </div>
+    </div>
+    {% if predictive_search.resources.products.size > 0 %}
+      <grid-carousel
+        id="predictive-search-products"
+        role="tabpanel"
+        class="predictive-search__product-list carousel--predictive-search-products"
+      >
+        {% for product in predictive_search.resources.products %}
+          {% render 'product-card' with product %}
+        {% endfor %}
+      </grid-carousel>
+    {% endif %}
+    {% if predictive_search.resources.articles.size > 0 %}
+      <div role="tabpanel" class="predictive-search__article-list">
+        {% for article in predictive_search.resources.articles %}
+          {% render 'article-card', article: article, show_excerpt: false, show_comments: false, show_tags: false, show_date: false %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </tabs-element>
+{% endcapture %}
+
+{% capture side_content -%}
+  {%- if predictive_search.resources.queries.size > 0 -%}
+    <div class="predictive-search__category">
+      <p class="predictive-search__category-title">{{ 'general.search.suggestions' | t }}</p>
+      {% for query in predictive_search.resources.queries %}
+        {% render 'predictive-search-query', query: query %}
+      {% endfor %}
+    </div>
+  {%- endif -%}
+
+  {%- if predictive_search.resources.collections.size > 0 -%}
+    <div class="predictive-search__category">
+      <p class="predictive-search__category-title">{{ 'general.search.collections' | t }}</p>
+      <ul class="predictive-search__collections-list">
+        {% for collection in predictive_search.resources.collections %}
+          <li>
+            {% render 'predictive-search-collection', collection: collection %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {%- endif -%}
+  {%- if predictive_search.resources.pages.size > 0 -%}
+    <div class="predictive-search__category">
+      <p class="predictive-search__category-title">{{ 'general.search.pages' | t }}</p>
+      <ul class="predictive-search__pages-list">
+        {% for page in predictive_search.resources.pages %}
+          <li>
+            {% render 'predictive-search-page', page: page %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {%- endif -%}
+{%- endcapture %}
+
+<div class="search-panel-content">
+  <div class="search-panel-content__main">
+    {% if predictive_search.resources.products.size > 0
+      or predictive_search.resources.articles.size > 0
+    %}
+      {{ main_content }}
+    {% else %}
+      {{ side_content }}
+    {% endif %}
+
+    {% render 'predictive-search-more-results-btn' %}
+  </div>
+  {% if side_content != blank
+    and predictive_search.resources.products.size > 0
+    or predictive_search.resources.articles.size > 0
+  %}
+    <div class="search-panel-content__side">
+      {{ side_content }}
+    </div>
+  {% endif %}
+</div>

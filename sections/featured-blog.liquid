@@ -1,0 +1,255 @@
+{% render 'section-meta', blend: true, blend_bg: section.settings.background_color %}
+
+<div class="section-full-width">
+  {% content_for 'block', type: '_section-header', id: 'section-header' %}
+
+  {% liquid
+    assign blog = section.settings.blog
+    assign link_url = section.settings.link_url | default: blog.url
+
+    capture blocks_content
+      content_for 'blocks'
+    endcapture
+  %}
+
+  {% capture carousel_content %}
+    {% if blocks_content != blank %}
+      {{ blocks_content }}
+    {% elsif blog != blank %}
+      {% liquid
+        capture sizes
+          render 'sizes-carousel', min: 1, max: section.settings.columns, item_width: 340
+        endcapture
+
+        assign articles_count = section.settings.articles_count
+        assign displayed_articles_count = 0
+        assign loop_limit = articles_count | plus: 1
+      %}
+      {% for article_item in blog.articles limit: loop_limit %}
+        {% if article_item.id == article.id %}
+          {% continue %}
+        {% endif %}
+
+        {% if displayed_articles_count < articles_count %}
+          {% render 'article-card',
+            article: article_item,
+            show_tags: section.settings.show_category,
+            show_date: section.settings.show_date,
+            show_comments: section.settings.show_comments,
+            show_excerpt: section.settings.show_excerpt,
+            sizes: sizes
+          %}
+          {% assign displayed_articles_count = displayed_articles_count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+    {% else %}
+      {% for i in (1..3) %}
+        {% render 'article-card',
+          show_tags: section.settings.show_category,
+          show_date: section.settings.show_date,
+          show_comments: section.settings.show_comments,
+          show_excerpt: section.settings.show_excerpt
+        %}
+      {% endfor %}
+    {% endif %}
+
+    {% if link_url and section.settings.show_link %}
+      <div slot="after" class="view-all-container">
+        {% render 'view-all-button', link_url: link_url, link_text: section.settings.link_text %}
+      </div>
+    {% endif %}
+
+    {% if section.settings.enable_carousel %}
+      <div slot="controls" class="carousel-controls-container">
+        {% render 'carousel-controls' %}
+      </div>
+    {% endif %}
+  {% endcapture %}
+
+  {% render 'carousel',
+    css_class: 'carousel--articles',
+    animation: 'cards-in',
+    animation_target: '.article-card',
+    columns_min: 1,
+    columns_max: section.settings.columns,
+    content: carousel_content
+  %}
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.featured_blog.name",
+  "class": "section-featured-blog",
+  "settings": [
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "t:sections.featured_blog.settings.blog.label",
+      "info": "t:sections.featured_blog.settings.blog.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_carousel",
+      "label": "t:sections.featured_blog.settings.enable_carousel.label",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "articles_count",
+      "label": "t:sections.featured_blog.settings.articles_count.label",
+      "min": 3,
+      "max": 12,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:sections.featured_blog.settings.columns.label",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "header",
+      "content": "t:settings_schema.article_card.name"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_category",
+      "label": "t:sections.featured_blog.settings.show_category.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_date",
+      "label": "t:settings_schema.article_card.settings.article_card_show_date.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_comments",
+      "label": "t:settings_schema.article_card.settings.article_card_show_comments.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_excerpt",
+      "label": "t:settings_schema.article_card.settings.article_card_show_excerpt.label",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:sections.featured_blog.headers.link.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_link",
+      "label": "t:sections.featured_blog.settings.show_link.label",
+      "default": true
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "t:sections.featured_blog.settings.link_url.label",
+      "info": "t:sections.featured_blog.settings.link_url.info",
+      "visible_if": "{{ section.settings.show_link == true }}"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "t:sections.featured_blog.settings.link_text.label",
+      "visible_if": "{{ section.settings.show_link == true }}"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.header"
+    },
+    {
+      "type": "text_alignment",
+      "id": "text_alignment",
+      "label": "t:sections.all.text_alignment.label",
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:sections.all.text_color.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_custom_spacing",
+      "label": "t:sections.all.enable_custom_spacing",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "top_spacing",
+      "label": "t:sections.all.top_spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing == true }}"
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "label": "t:sections.all.bottom_spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing == true }}"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "_article-card"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "presets": [
+    {
+      "name": "t:sections.featured_blog.name",
+      "blocks": [
+        {
+          "id": "section-header",
+          "static": true,
+          "type": "_section-header",
+          "blocks": [
+            {
+              "type": "heading",
+              "settings": {
+                "heading": "t:sections.featured_blog.presets.featured_blog.blocks._section-header.blocks.heading.settings.heading"
+              }
+            }
+          ]
+        },
+        {
+          "type": "_article-card"
+        }
+      ],
+      "category": "t:sections.categories.content"
+    }
+  ]
+}
+{% endschema %}

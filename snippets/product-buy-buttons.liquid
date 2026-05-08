@@ -1,0 +1,54 @@
+<style>
+  #shopify-block-{{ block.id }} {
+    {% render 'button-vars', type: 'shopify-checkout', background: block.settings.buy_it_now_background_color, color: block.settings.buy_it_now_text_color %}
+  }
+</style>
+
+<div class="product-buy-buttons" {{ block.shopify_attributes }} id="shopify-block-{{ block.id }}">
+  {% if product == blank %}
+    <div class="flex gap-3">
+      {%- assign quantity_selector_id = 'Quantity-' | append: block.id -%}
+      {% render 'product-quantity-selector', class: 'w-48', id: quantity_selector_id %}
+
+      {%- capture id -%}{{ section.id }}-add-to-cart{%- endcapture -%}
+      {% render 'product-add-to-cart-button', product: product, id: id, block: block %}
+    </div>
+  {% else %}
+    {% liquid
+      assign gift_card_recipient_feature_active = false
+      if block.settings.show_gift_card_recipient and product.gift_card?
+        assign gift_card_recipient_feature_active = true
+      endif
+
+      assign show_dynamic_checkout = false
+      if block.settings.show_dynamic_checkout_buttons and gift_card_recipient_feature_active == false
+        assign show_dynamic_checkout = true
+      endif
+    %}
+    {% form 'product', product, id: product_form_id, is: 'product-form' %}
+      <input
+        data-section-ref="variant_id"
+        type="hidden"
+        name="id"
+        value="{{ product.selected_or_first_available_variant.id }}"
+      >
+      <div class="alert alert--danger mb-4" role="alert"></div>
+
+      <div class="space-y-3">
+        {% if gift_card_recipient_feature_active %}
+          {% render 'gift-card-recipient-form', product: product, form: form, section: section %}
+        {% endif %}
+        <div class="flex gap-3">
+          {%- assign quantity_selector_id = 'Quantity-' | append: block.id -%}
+          {% render 'product-quantity-selector', class: 'w-48', id: quantity_selector_id %}
+
+          {%- capture id -%}{{ section.id }}-add-to-cart{%- endcapture -%}
+          {% render 'product-add-to-cart-button', product: product, id: id, block: block %}
+        </div>
+        {% if show_dynamic_checkout %}
+          {{ form | payment_button }}
+        {% endif %}
+      </div>
+    {% endform %}
+  {% endif %}
+</div>

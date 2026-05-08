@@ -1,0 +1,19 @@
+<a
+  href="{{ link.url }}"
+  class="header__navigation-item header__navigation-item--link {% if link.current %} header__navigation-item--active {% endif %}"
+  {% if link.current %}
+    aria-current="page"
+  {% endif %}
+  {% if mega_menu_id and link.links != empty %}
+    data-mega-menu-link="{{ mega_menu_id }}"
+  {% endif %}
+>
+  <menu-item-label
+    class="item-label {% if link.current %} active {% endif %}"
+  >
+    {{ link.title | escape }}
+  </menu-item-label>
+  <span aria-hidden="true" class="item-label item-label--duplicate">
+    {{ link.title | escape }}
+  </span>
+</a>

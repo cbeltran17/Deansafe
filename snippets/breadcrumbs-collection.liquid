@@ -1,0 +1,32 @@
+{% render 'breadcrumbs-separator' %}
+
+{% if collection.metafields.custom.parent_collection %}
+  <a href="{{ collection.metafields.custom.parent_collection.value.url }}">
+    {{- collection.metafields.custom.parent_collection.value.title -}}
+  </a>
+  {% render 'breadcrumbs-separator' %}
+{% endif %}
+
+{% if current_tags %}
+  {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
+  <a href="{{ url }}">{{ collection.title }}</a>
+
+  {% render 'breadcrumbs-separator' %}
+
+  <span
+    {% if template contains 'collection' %}
+      class="breadcrumbs__item--active" aria-current="page"
+    {% endif %}
+  >
+    {{- current_tags | join: ' + ' -}}
+  </span>
+{% else %}
+  <a
+    href="{{ collection.url }}"
+    {% if template contains 'collection' %}
+      class="breadcrumbs__item--active" aria-current="page"
+    {% endif %}
+  >
+    {{- collection.title -}}
+  </a>
+{% endif %}

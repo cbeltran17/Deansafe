@@ -1,0 +1,202 @@
+{% liquid
+  assign columns_mobile_min = section.settings.columns_mobile
+  unless section.settings.enable_carousel
+    assign columns_mobile_min = columns_mobile_min | floor
+  endunless
+%}
+
+<style>
+  {% render 'section-selector' %} {
+    {% render 'color-var' with section.settings.counter_color, name: 'counter-color' %}
+  }
+
+  {% render 'section-selector' %} .block-counter {
+    {% render 'text-alignment' with section.settings.column_alignment, raw: true %}
+  }
+</style>
+
+{% render 'section-meta', blend: true, blend_bg: section.settings.background_color %}
+
+<div class="section-full-width">
+  {% content_for 'block', type: '_section-header', id: 'section-header' %}
+  <animation-element autoplay selector=".block-counter">
+    <div class="container-inline-size relative">
+      <grid-carousel
+        class="grid-carousel--bleed-max-xl carousel--multicolumn"
+        id="{{ section.id }}-carousel"
+        {% unless section.settings.enable_carousel %}
+          wrap
+        {% endunless %}
+        style="
+          --carousel-gap: {{ section.settings.column_gap }}px;
+          --carousel-row-gap: 3rem;
+          --carousel-columns-min: {{ columns_mobile_min }};
+          --carousel-columns-max: {{ section.settings.columns }};
+        "
+      >
+        {% content_for 'blocks' %}
+        <div slot="controls" class="carousel-controls-container">
+          {% render 'carousel-controls' %}
+        </div>
+      </grid-carousel>
+    </div>
+  </animation-element>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.number_counter.name",
+  "class": "section-number-counter",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_carousel",
+      "label": "t:sections.number_counter.settings.enable_carousel.label",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:sections.number_counter.settings.columns.label",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "columns_mobile",
+      "label": "t:sections.number_counter.settings.columns_mobile.label",
+      "min": 1,
+      "max": 3,
+      "step": 0.5,
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "label": "t:sections.number_counter.settings.column_gap.label",
+      "min": 0,
+      "max": 64,
+      "step": 8,
+      "default": 24,
+      "unit": "px"
+    },
+    {
+      "type": "text_alignment",
+      "id": "column_alignment",
+      "label": "t:sections.number_counter.settings.column_alignment.label",
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.header"
+    },
+    {
+      "type": "text_alignment",
+      "id": "text_alignment",
+      "label": "t:sections.all.text_alignment.label",
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:sections.all.text_color.label"
+    },
+    {
+      "type": "color",
+      "id": "counter_color",
+      "label": "t:sections.number_counter.settings.counter_color.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_custom_spacing",
+      "label": "t:sections.all.enable_custom_spacing",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "top_spacing",
+      "label": "t:sections.all.top_spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing == true }}"
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "label": "t:sections.all.bottom_spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing == true }}"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "counter"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "presets": [
+    {
+      "name": "t:sections.number_counter.name",
+      "settings": {
+        "enable_carousel": false,
+        "columns": 3,
+        "columns_mobile": 1
+      },
+      "blocks": [
+        {
+          "id": "section-header",
+          "static": true,
+          "type": "_section-header",
+          "blocks": []
+        },
+        {
+          "type": "counter",
+          "settings": {
+            "number": "t:sections.number_counter.presets.number_counter.blocks.counter.settings.number",
+            "heading": "t:sections.number_counter.presets.number_counter.blocks.counter.settings.heading"
+          }
+        },
+        {
+          "type": "counter",
+          "settings": {
+            "number": "t:sections.number_counter.presets.number_counter.blocks.counter_2.settings.number",
+            "heading": "t:sections.number_counter.presets.number_counter.blocks.counter_2.settings.heading"
+          }
+        },
+        {
+          "type": "counter",
+          "settings": {
+            "number": "t:sections.number_counter.presets.number_counter.blocks.counter_3.settings.number",
+            "heading": "t:sections.number_counter.presets.number_counter.blocks.counter_3.settings.heading"
+          }
+        }
+      ],
+      "category": "t:sections.categories.content"
+    }
+  ]
+}
+{% endschema %}

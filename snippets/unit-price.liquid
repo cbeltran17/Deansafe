@@ -1,0 +1,6 @@
+<small class="price__unit-price">
+  <span class="sr-only">{{ 'products.product.price.unit_price' | t }}</span>
+  <span>
+    {{- target.unit_price | unit_price_with_measurement: target.unit_price_measurement -}}
+  </span>
+</small>

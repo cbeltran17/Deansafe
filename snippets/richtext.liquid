@@ -1,0 +1,16 @@
+{%- liquid
+  assign content = content | default: section.settings.content
+
+  case size
+    when 'large'
+      assign size_class = 'md:prose-lg'
+    when 'small'
+      assign size_class = 'prose-sm'
+  endcase
+-%}
+
+{%- if content != blank -%}
+  <div class="prose {{ size_class }} {{ class }}">
+    {{ content }}
+  </div>
+{%- endif -%}

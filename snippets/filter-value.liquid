@@ -1,0 +1,12 @@
+{% liquid
+  assign presentation = presentation | default: filter.presentation
+%}
+
+{% case presentation %}
+  {% when 'swatch' %}
+    {% render 'filter-value-swatch', id: id, filter: filter, filter_value: filter_value %}
+  {% when 'image' %}
+    {% render 'filter-value-image', id: id, filter: filter, filter_value: filter_value %}
+  {% else %}
+    {% render 'filter-value-checkbox', id: id, filter: filter, filter_value: filter_value %}
+{% endcase %}

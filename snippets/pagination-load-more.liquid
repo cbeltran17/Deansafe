@@ -1,0 +1,30 @@
+{% if paginate.next %}
+  {% assign showing_items = paginate.current_offset | plus: paginate.page_size %}
+  {% assign progress_percentage = showing_items | times: 100 | divided_by: paginate.items %}
+
+  <div class="pagination-load-more__wrapper">
+    <animation-element
+      autoplay
+      class="pagination-load-more__container"
+    >
+      <div class="progress-bar">
+        <div class="progress-bar-inner" style="width: {{ progress_percentage }}%"></div>
+      </div>
+
+      <p class="pagination-load-more__text">
+        {{ 'general.pagination.load_more_text' | t: count: showing_items, all: paginate.items }}
+      </p>
+
+      {% capture attrs %}
+        data-href="{{ paginate.next.url }}&section_id={{ section.id }}"
+      {% endcapture %}
+      {% render 'button',
+        is: 'pagination-load-more',
+        translation: 'general.pagination.load_more',
+        attrs: attrs,
+        class: 'pagination-load-more__button',
+        size: 'sm'
+      %}
+    </animation-element>
+  </div>
+{% endif %}

@@ -1,0 +1,97 @@
+{% liquid
+  assign logo_image = block.settings.logo | default: settings.logo
+  assign logo_mobile = block.settings.logo_mobile
+
+  if block.settings.logo == blank
+    assign logo_mobile = settings.logo_mobile
+  endif
+
+  if logo_image == blank
+    break
+  endif
+
+  assign width_desktop = block.settings.width | times: 2
+  assign width_mobile = block.settings.width_mobile | times: 2
+%}
+
+<style>
+  #shopify-block-{{ block.id }} {
+    --logo-width: {{ block.settings.width }}px;
+  }
+
+  @media not all and (min-width: 768px) {
+    #shopify-block-{{ block.id }} {
+      --logo-width: {{ block.settings.width_mobile }}px;
+    }
+  }
+</style>
+
+<picture>
+  {% if logo_mobile != blank %}
+    {{
+      logo_mobile
+      | image_url: width: width_mobile
+      | image_tag: loading: 'lazy', media: 'not all and (min-width: 768px)'
+      | replace: '<img', '<source'
+    }}
+  {% endif %}
+  {% if logo_image != blank %}
+    {{
+      logo_image
+      | image_url: width: width_desktop
+      | image_tag:
+        loading: 'lazy',
+        alt: shop.name,
+        style: 'max-width: var(--logo-width); height: auto;'
+    }}
+  {% endif %}
+</picture>
+
+{% schema %}
+{
+  "name": "t:blocks.logo.name",
+  "class": "block-logo",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:blocks.logo.paragraph__0.content"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "t:blocks.logo.settings.logo.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_mobile",
+      "label": "t:blocks.logo.settings.logo_mobile.label",
+      "visible_if": "{{ block.settings.logo != blank }}"
+    },
+    {
+      "type": "range",
+      "id": "width",
+      "label": "t:blocks.logo.settings.width.label",
+      "min": 64,
+      "max": 400,
+      "step": 8,
+      "default": 200,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "width_mobile",
+      "label": "t:blocks.logo.settings.width_mobile.label",
+      "min": 64,
+      "max": 400,
+      "step": 8,
+      "default": 152,
+      "unit": "px"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.logo.name"
+    }
+  ]
+}
+{% endschema %}

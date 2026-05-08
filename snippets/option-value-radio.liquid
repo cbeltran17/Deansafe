@@ -1,0 +1,26 @@
+<div
+  class="option-value-radio"
+  {% if option_value.available == false %}
+    data-unavailable
+  {% endif %}
+>
+  <input
+    type="radio"
+    id="{{ id }}-{{ index }}"
+    name="{{ id }}[{{ option.name | escape }}]"
+    value="{{ option_value | escape }}"
+    data-product-url="{{ option_value.product_url }}"
+    data-variant-id="{{ option_value.variant.id }}"
+    data-option-value-id="{{ option_value.id }}"
+    {% if option_value.selected %}
+      checked
+    {% endif %}
+  >
+  <label for="{{ id }}-{{ index }}">
+    <span> {{ option_value }} </span>
+    {% if option_value.available == false %}
+      <span class="sr-only">{{ 'products.product.sold_out' | t }}</span>
+      {% render 'svg-diagonal-line' %}
+    {% endif %}
+  </label>
+</div>

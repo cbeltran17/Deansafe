@@ -1,0 +1,54 @@
+{% liquid
+  for item in mega_menu_settings
+    assign target = '<mega-menu-target>' | append: link.title | append: '</mega-menu-target>'
+    if item contains target
+      assign mega_menu_content = item | split: '<mega-menu-content>' | last | split: '</mega-menu-content>' | first
+      break
+    endif
+  endfor
+%}
+
+<button class="mobile-menu__go-back" data-page-back>
+  {{ 'icon-chevron-left.svg' | inline_asset_content }}
+  <span>{{ 'sections.header.menu' | t }}</span>
+</button>
+
+{% comment %} Level 2 mobile menu content {% endcomment %}
+<div class="mobile-menu__link-list">
+  <a href="{{ link.url }}" class="mobile-menu__link mobile-menu__link--lg">
+    {{ link.title }}
+  </a>
+
+  {% for subitem in link.links %}
+    {% if subitem.links == empty %}
+      <a href="{{ subitem.url }}" class="mobile-menu__link">
+        {{ subitem.title }}
+      </a>
+    {% else %}
+      <smooth-collapse>
+        <button class="mobile-menu__link mobile-menu__link--collapse icon-rotate" slot="summary">
+          {{ subitem.title }}
+          {{ 'icon-plus.svg' | inline_asset_content }}
+        </button>
+        <div class="mobile-menu__sublink-list">
+          {% if subitem.url != '#' %}
+            <a href="{{ subitem.url }}" class="mobile-menu__sublink">
+              {{ subitem.title }}
+            </a>
+          {% endif %}
+          {% for subitem in subitem.links %}
+            <a href="{{ subitem.url }}" class="mobile-menu__sublink">
+              {{ subitem.title }}
+            </a>
+          {% endfor %}
+        </div>
+      </smooth-collapse>
+    {% endif %}
+  {% endfor %}
+</div>
+
+{% if mega_menu_content %}
+  <div class="mobile-menu__promotions">
+    {{ mega_menu_content }}
+  </div>
+{% endif %}

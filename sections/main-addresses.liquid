@@ -1,0 +1,116 @@
+{% render 'section-meta' %}
+
+<div class="account-content">
+  {% render 'account-header' %}
+
+  {% capture content %}
+    {{ 'icon-plus.svg' | inline_asset_content }}
+    <span>{{ 'customer.addresses.add_new' | t }}</span>
+  {% endcapture %}
+  {% render 'button' with content,
+    variant: 'outline',
+    attrs: 'data-modal="AddNewAddress"',
+    class: 'max-sm:w-full mb-6 md:mb-8'
+  %}
+
+  {%- paginate customer.addresses by 8 -%}
+    <modal-element id="AddNewAddress" strategy="drawer" class="address-modal">
+      <div class="address-form modal-section">
+        <h2 class="address-form__heading">{{ 'customer.addresses.add_new' | t }}</h2>
+        {% render 'address-form', address: customer.new_address %}
+      </div>
+    </modal-element>
+
+    <div class="loading-target">
+      <ul role="list" class="address-list">
+        {%- for address in customer.addresses -%}
+          <li class="address-card">
+            {%- if address == customer.default_address -%}
+              <div class="address-card__default-badge">
+                {{ 'customer.addresses.default' | t }}
+              </div>
+            {%- endif -%}
+
+            <div class="address-card__content">
+              {{ address | format_address }}
+            </div>
+
+            <div class="address-card__actions">
+              <button class="link-text" type="button" data-modal="EditAddress-{{ address.id }}">
+                {{ 'customer.addresses.edit' | t }}
+              </button>
+
+              <button class="link-text" type="button" data-modal="DeleteAddress-{{ address.id }}">
+                {{ 'customer.addresses.delete' | t }}
+              </button>
+            </div>
+
+            <modal-element
+              id="EditAddress-{{ address.id }}"
+              strategy="drawer"
+              class="address-modal"
+            >
+              <div class="address-form modal-section">
+                <h2 class="address-form__heading">
+                  {{ 'customer.addresses.edit_address' | t }}
+                </h2>
+                {% render 'address-form', address: address, edit: true %}
+              </div>
+            </modal-element>
+
+            <modal-element id="DeleteAddress-{{ address.id }}">
+              <div class="modal-content">
+                <p data-title class="address-form__heading">
+                  {{ 'general.dialog.confirm' | t }}
+                </p>
+                <p data-description class="address-form__text">
+                  {{ 'customer.addresses.delete_confirm' | t }}
+                </p>
+                <form
+                  method="post"
+                  action="{{ routes.account_addresses_url }}/{{ address.id }}"
+                  class="address-form"
+                >
+                  <input type="hidden" name="_method" value="delete">
+
+                  <div class="address-form__actions *:flex-1">
+                    {% render 'button',
+                      translation: 'general.dialog.yes',
+                      type: 'submit',
+                      auto_loading: true
+                    %}
+
+                    {% render 'button',
+                      translation: 'general.dialog.no',
+                      type: 'button',
+                      variant: 'outline',
+                      attrs: 'data-close'
+                    %}
+                  </div>
+                </form>
+              </div>
+            </modal-element>
+          </li>
+        {%- endfor -%}
+      </ul>
+
+      {%- if paginate.pages > 1 -%}
+        {% render 'pagination-classic', paginate: paginate, scroll_to_target: '.loading-target' %}
+      {%- endif -%}
+    </div>
+  {%- endpaginate -%}
+</div>
+
+{% comment %} Firefox form persistence fix {% endcomment %}
+<script>
+  document.querySelectorAll('.address-form form').forEach((form) => {
+    form.reset();
+  });
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.main_addresses.name",
+  "class": "section-main-addresses"
+}
+{% endschema %}

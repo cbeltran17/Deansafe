@@ -1,0 +1,86 @@
+{% liquid
+  assign featured_image = product.selected_or_first_available_variant.featured_media | default: product.featured_media
+  assign variant_id = product.selected_or_first_available_variant.id
+%}
+
+<product-section
+  class="product-bundle-item"
+  product-url="{{ product.url }}"
+  section-id="product-bundle-item"
+  portable
+>
+  <div class="product-bundle-item__header">
+    <span class="product-bundle-item__index-number">{{ index }}.</span>
+    <span class="product-bundle-item__rule" aria-hidden="true"></span>
+  </div>
+
+  <div class="product-bundle-item__row" data-section-ref="info">
+    <a
+      href="{{ product.url }}"
+      class="product-bundle-item__media"
+      aria-label="{{ product.title | default: 'Product' }}"
+    >
+      {% render 'image' with featured_image,
+        image_mobile: featured_image,
+        sizes: '96px',
+        class: 'product-bundle-item__image',
+        loading: 'lazy',
+        placeholder: true
+      %}
+    </a>
+
+    <div class="product-bundle-item__content">
+      <div class="product-bundle-item__main">
+        <a class="product-bundle-item__title" href="{{ product.url }}">
+          {{- product.title | default: 'Product' -}}
+        </a>
+
+        {% if product.has_only_default_variant == false %}
+          <variant-picker class="product-bundle-item__options">
+            {% for option in product.options_with_values %}
+              <div class="product-bundle-item__option">
+                <p class="product-bundle-item__option-label caption">{{ option.name }}</p>
+                <listbox-element
+                  class="product-bundle-item__listbox"
+                  data-product-option
+                  variant="inline"
+                  label="{{ option.name | escape }}"
+                  value="{{ option.selected_value | escape }}"
+                >
+                  <template>
+                    {% render 'product-option-listbox-items', option: option %}
+                  </template>
+                </listbox-element>
+              </div>
+            {% endfor %}
+          </variant-picker>
+        {% endif %}
+      </div>
+
+      <div class="product-bundle-item__price">
+        {% render 'price', product: product, use_variant: true %}
+        {% render 'product-badges', product: product, use_variant: true, sold_out: true %}
+      </div>
+    </div>
+  </div>
+
+  {% if product != blank %}
+    <input
+      data-section-ref="id"
+      type="hidden"
+      name="items[{{ variant_id }}][id]"
+      value="{{ variant_id }}"
+    >
+    <div
+      data-section-ref="availability"
+      hidden
+      {% if product.selected_or_first_available_variant
+        and product.selected_or_first_available_variant.available
+      %}
+        data-available="true"
+      {% else %}
+        data-available="false"
+      {% endif %}
+    ></div>
+  {% endif %}
+</product-section>

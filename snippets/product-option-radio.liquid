@@ -1,0 +1,45 @@
+{% liquid
+  assign type = type | default: 'radio'
+%}
+
+<fieldset data-product-option>
+  <div class="product-option-label">
+    <legend class="contents">
+      <span class="product-option-name">{{ option.name }}:</span>
+      <span class="product-option-value">{{ option.selected_value }}</span>
+    </legend>
+    {% render 'product-size-chart', option: option, block: block %}
+  </div>
+  <div class="option-radio-container">
+    {% for option_value in option.values %}
+      {% liquid
+        if hide_sold_out_variants and option_value.available == false and option_value.selected == false
+          continue
+        endif
+      %}
+
+      {% if type == 'image' %}
+        {% render 'option-value-image',
+          option: option,
+          option_value: option_value,
+          id: id,
+          index: forloop.index
+        %}
+      {% elsif type == 'swatch' %}
+        {% render 'option-value-swatch',
+          option: option,
+          option_value: option_value,
+          id: id,
+          index: forloop.index
+        %}
+      {% else %}
+        {% render 'option-value-radio',
+          option: option,
+          option_value: option_value,
+          id: id,
+          index: forloop.index
+        %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</fieldset>

@@ -1,0 +1,108 @@
+{% liquid
+  assign index = section.blocks | find_index: 'id', block.id
+  assign placeholder = index | modulo: 6 | plus: 1 | prepend: 'product-'
+
+  capture color_styles
+    render 'base-color-vars' with block, default_background: settings.color_background, default_text: settings.color_text
+  endcapture
+
+  capture sizes
+    render 'sizes', full_width: section.settings.full_width, base: 1, lg: 2
+  endcapture
+%}
+
+<!-- media_start -->
+<div class="slideshow__slide">
+  {% render 'image' with block.settings.image,
+    image_mobile: block.settings.image_mobile,
+    width: 3840,
+    widths: '360, 780, 896, 1024, 1280, 1536, 2048, 2560, 3840',
+    sizes: sizes,
+    placeholder: placeholder,
+    animation: 'zoom-out'
+  %}
+</div>
+<!-- media_end -->
+
+<!-- text_start -->
+<div
+  class="slideshow__slide"
+  style="{{ color_styles }}"
+  data-style="{{ color_styles }}"
+  id="shopify-block-{{ block.id }}"
+  {% render 'has-bg', color: block.settings.background_color %}
+  {{ block.shopify_attributes }}
+>
+  <animation-element
+    {% if index == 0 %}
+      autoplay
+    {% endif %}
+    stagger="100"
+    delay="200"
+    animation="fade-up"
+    selector=".shopify-block"
+    class="media-with-text__text-inner block-spacing"
+  >
+    {% content_for 'blocks' %}
+  </animation-element>
+</div>
+<!-- text_end -->
+
+<!-- styles_start -->
+{{ color_styles }}
+<!-- styles_end -->
+
+<!-- attrs_start -->
+{% render 'has-bg', color: block.settings.background_color %}
+<!-- attrs_end -->
+
+{% schema %}
+{
+  "name": "t:blocks._image_with_text_slide.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:blocks._image_with_text_slide.settings.image.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "t:blocks._image_with_text_slide.settings.image_mobile.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:sections.all.text_color.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@theme"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks._image_with_text_slide.name",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "paragraph"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

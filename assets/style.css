@@ -1,0 +1,22 @@
+.collection-banner-description {
+    max-width: 100%;
+    text-align: left;
+}
+
+#snize_results {
+    max-width: 1500px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+.collection-banner-description blockquote {
+    text-align: left;
+    padding: 0;
+}
+
+@media (min-width: 48rem) {
+    .text-with-icons--desktop-horizontal .text-with-icons__item {
+        justify-content: center;
+    }
+}
+

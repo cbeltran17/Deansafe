@@ -1,0 +1,39 @@
+{%- liquid
+  if block.settings.article == blank
+    break
+  endif
+
+  capture sizes
+    render 'sizes-carousel', min: 1, max: section.settings.columns, item_width: 340
+  endcapture
+-%}
+
+<div id="shopify-block-{{ block.id }}" class="shopify-block" {{ block.shopify_attributes }}>
+  {% render 'article-card',
+    article: block.settings.article,
+    show_tags: section.settings.show_category,
+    show_date: section.settings.show_date,
+    show_comments: section.settings.show_comments,
+    show_excerpt: section.settings.show_excerpt,
+    sizes: sizes
+  %}
+</div>
+
+{% schema %}
+{
+  "name": "t:blocks._article_card.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "article",
+      "id": "article",
+      "label": "t:blocks._article_card.settings.article.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks._article_card.name"
+    }
+  ]
+}
+{% endschema %}

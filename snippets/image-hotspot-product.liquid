@@ -1,0 +1,36 @@
+<div class="image-hotspot-product product-horizontal">
+  {% if product.featured_media %}
+    <a href="{{ product.url }}" class="product-horizontal__media" tabindex="-1">
+      {% render 'image' with product.featured_media,
+        class: 'line-item-image',
+        sizes: '80px',
+        widths: '80,160',
+        lqip: false
+      %}
+    </a>
+  {% endif %}
+  <div class="product-horizontal__info">
+    <a href="{{ product.url }}" class="inline-block">
+      <p class="product-horizontal__title">{{ product.title }}</p>
+    </a>
+    {% render 'price', product: product %}
+  </div>
+
+  <div class="product-horizontal__controls">
+    {% capture icon %}
+        {{ 'icon-cart.svg' | inline_asset_content }}
+      {% endcapture %}
+    {% capture attrs %}
+        {% if product.has_only_default_variant %}
+          variant-id="{{ product.selected_or_first_available_variant.id }}"
+        {% else %}
+          url="{{ product.url }}"
+        {% endif %}
+      {% endcapture %}
+    {% render 'button' with icon,
+      is: 'add-to-cart-button',
+      class: 'complementary-product__add-to-cart button--solid button--icon-md',
+      attrs: attrs
+    %}
+  </div>
+</div>

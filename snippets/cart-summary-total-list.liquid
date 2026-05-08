@@ -1,0 +1,61 @@
+{% doc %}
+  Renders the cart totals list with applied discounts, subtotal, and tax/shipping note.
+
+  @param {string} [attrs] - HTML attributes to add to the wrapper element
+  @param {boolean} [show_total_discount] - Whether to show the total discount line (default: true)
+  @param {boolean} [show_tax_and_shipping] - Whether to show the tax and shipping note (default: true)
+  @param {boolean} [has_discounts_enabled] - Whether the cart page has the ability to add discount codes enabled
+
+  @example
+  {% render 'cart-summary-total-list',
+    show_total_discount: true,
+    show_tax_and_shipping: true,
+    has_discounts_enabled: section.settings.show_discount_code_button
+  %}
+{% enddoc %}
+
+{% liquid
+  if show_total_discount == null
+    assign show_total_discount = true
+  endif
+
+  if show_tax_and_shipping == null
+    assign show_tax_and_shipping = true
+  endif
+
+  capture total_discount
+    render 'cart-total-discount'
+  endcapture
+%}
+
+<div {{ attrs }}>
+  <ul class="cart-summary__total-list">
+    {% for item in cart.cart_level_discount_applications %}
+      <li class="cart-summary__line">
+        <span class="cart-summary__discount-code">
+          {{ 'icon-discount.svg' | inline_asset_content }}
+          <span>{{ item.title -}}</span>
+        </span>
+        <span class="text-sm font-medium">
+          {{ item.total_allocated_amount | money | prepend: '-' -}}
+        </span>
+      </li>
+    {% endfor %}
+    {% if show_total_discount and total_discount != '0' %}
+      <li class="cart-summary__line">
+        <span>{{ 'sections.cart.total_discount' | t }}</span>
+        <span class="cart-summary__discount">
+          {{- total_discount | money | prepend: '-' -}}
+        </span>
+      </li>
+    {% endif %}
+    <li class="cart-summary__line">
+      <span class="cart-summary__total">{{ 'sections.cart.subtotal' | t }}</span>
+      <span class="cart-summary__total">{{ cart.total_price | money }}</span>
+    </li>
+  </ul>
+  {% if show_tax_and_shipping %}
+    <div class="cart-summary__tax-note-separator"></div>
+    {% render 'tax-note', has_discounts_enabled: has_discounts_enabled %}
+  {% endif %}
+</div>

@@ -1,0 +1,24 @@
+{% doc %}
+  Renders a quantity selector for a line item.
+
+  @param {object} item - The line item object
+  @param {string} id - The unique identifier for the quantity selector
+  @param {string} [class] - Optional additional classes
+  @param {string} [size] - Optional size for the quantity selector
+
+  @example
+  {% render 'line-item-quantity-selector', item: line_item, id: 'quantity-input' %}
+{% enddoc %}
+{% assign input_name = 'updates[' | append: item.key | append: ']' %}
+{% assign input_aria_label = 'products.quantity.input_label' | t: product: item.product.title %}
+
+{% render 'quantity-selector',
+  id: id,
+  variant: item.variant,
+  quantity: item.quantity,
+  name: input_name,
+  data_key: item.key,
+  aria_label: input_aria_label,
+  class: class,
+  size: size
+%}

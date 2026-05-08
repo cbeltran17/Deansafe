@@ -1,0 +1,79 @@
+<script>
+  {{ 'autosizes.js' | inline_asset_content }}
+
+  window.addEventListener('DOMContentLoaded', () => {
+    window.contentLoaded = true;
+  });
+
+  window.addEventListener('load', () => {
+    window.loadFired = true;
+  });
+
+  function setScrollbarWidth() {
+    const outer = document.createElement('div');
+    outer.style.cssText = `
+      position: absolute;
+      top: -9999px;
+      width: 100px;
+      height: 100px;
+      overflow: scroll;
+      visibility: hidden;
+    `;
+
+    document.body.appendChild(outer);
+
+    const inner = document.createElement('div');
+    inner.style.width = '100%';
+    inner.style.height = '200px';
+    outer.appendChild(inner);
+
+    const scrollbarWidth = outer.offsetWidth - inner.offsetWidth;
+
+    document.body.removeChild(outer);
+
+    document.documentElement.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
+  }
+
+  setScrollbarWidth();
+
+  document.documentElement.classList.remove('no-js');
+  document.documentElement.classList.add('js');
+
+  window.routes = {
+    cart_add_url: '{{ routes.cart_add_url }}.js',
+    cart_url: '{{ routes.cart_url }}',
+    cart_change_url: '{{ routes.cart_change_url }}.js',
+    cart_clear_url: '{{ routes.cart_clear_url }}.js',
+    cart_update_url: '{{ routes.cart_update_url }}.js',
+    predictive_search_url: '{{ routes.predictive_search_url }}',
+    product_recommendations_url: '{{ routes.product_recommendations_url }}',
+    search_url: '{{ routes.search_url }}',
+  };
+
+  window._t = {
+    {% liquid
+      render 'client-translation' with 'general.error_message'
+      render 'client-translation' with 'sections.shipping_estimator.no_rates'
+      render 'client-translation' with 'sections.shipping_estimator.error'
+      render 'client-translation' with 'general.listbox.search_placeholder'
+      render 'client-translation' with 'general.localization.country.heading'
+      render 'client-translation' with 'general.localization.language.heading'
+      render 'client-translation' with 'accessibility.previous'
+      render 'client-translation' with 'accessibility.next'
+      render 'client-translation' with 'accessibility.previous_page'
+      render 'client-translation' with 'accessibility.next_page'
+      render 'client-translation' with 'accessibility.go_to_page'
+      render 'client-translation' with 'accessibility.previous_image'
+      render 'client-translation' with 'accessibility.next_image'
+      render 'client-translation' with 'accessibility.close'
+    %}
+  };
+
+  window.maxContainerSize = {{ settings.page_width }};
+
+  if (!CSS.supports('container-type', 'inline-size')) {
+    window.addEventListener('DOMContentLoaded', () => {
+      import({{ 'container-query-polyfill.min.js' | asset_url | json }});
+    });
+  }
+</script>

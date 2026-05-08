@@ -1,0 +1,45 @@
+{% liquid
+  if request.page_type == 'customers/account' or request.page_type == 'customers/order'
+    assign is_account_page = true
+  elsif request.page_type == 'customers/addresses'
+    assign is_addresses_page = true
+  endif
+%}
+
+<div class="account-header">
+  <a href="{{ routes.account_url }}">
+    <h1 class="h3" tabindex="-1">{{ 'customer.account.title' | t }}</h1>
+  </a>
+
+  <div class="account-header__navigation">
+    <a
+      href="{{ routes.account_url }}"
+      class="account-header__button"
+      {% if is_account_page %}
+        data-active="true"
+      {% endif %}
+    >
+      {{ 'customer.account.orders' | t }}
+    </a>
+
+    <a
+      href="{{ routes.account_addresses_url }}"
+      class="account-header__button"
+      {% if is_addresses_page %}
+        data-active="true"
+      {% endif %}
+    >
+      {{ 'customer.account.addresses' | t }}
+    </a>
+
+    <a
+      href="{{ routes.account_logout_url }}"
+      class="account-header__logout"
+    >
+      <div class="account-header__logout-icon">
+        {{ 'icon-padlock.svg' | inline_asset_content }}
+      </div>
+      {{ 'customer.log_out' | t }}
+    </a>
+  </div>
+</div>

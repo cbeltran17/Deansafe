@@ -1,0 +1,33 @@
+<style>
+  #shopify-section-{{ section.id }} {
+    --media-with-text-ratio: {{ section.settings.image_width | default: 100.0 | divided_by: 100.0 }};
+  }
+</style>
+
+<div
+  class="
+    media-with-text
+    media-with-text--media-{{ section.settings.image_position }}
+    {% if section.settings.full_width %}
+      media-with-text--full-width
+    {% else %}
+      media-with-text--contained
+    {% endif %}
+    {% if section.settings.full_width == false and section.settings.gap %}
+      media-with-text--has-gap
+    {% endif %}
+    {% if section_spacing %}
+      mb-section-bottom mt-section-top
+    {% endif %}
+    {% if request.visual_preview_mode %} !bg-white !p-12 !m-0 {% endif %}
+  "
+  {% render 'has-bg' %}
+>
+  <div class="media-with-text__media">
+    {{ media }}
+  </div>
+
+  <div class="media-with-text__text">
+    {{ content }}
+  </div>
+</div>

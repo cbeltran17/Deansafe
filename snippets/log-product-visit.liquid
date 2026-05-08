@@ -1,0 +1,8 @@
+{% if request.page_type == 'product' %}
+  <script>
+    const viewedProducts = JSON.parse(localStorage.getItem('alloy:viewed-products') ?? '[]');
+    const productId = {{ product.id | json }};
+    const filteredProducts = viewedProducts.filter(id => id !== productId);
+    localStorage.setItem('alloy:viewed-products', JSON.stringify([productId, ...filteredProducts]));
+  </script>
+{% endif %}

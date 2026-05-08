@@ -1,0 +1,131 @@
+{% liquid
+  case block.settings.style
+    when 'primary'
+      assign button_class = 'button--primary'
+    when 'secondary'
+      assign button_class = 'button--secondary'
+    when 'white'
+      assign background_color = '#FFFFFF'
+      assign text_color = '#1E1E1E'
+    when 'black'
+      assign background_color = '#1E1E1E'
+      assign text_color = '#FFFFFF'
+    else
+      assign background_color = block.settings.background_color
+      assign text_color = block.settings.text_color
+  endcase
+%}
+
+{% render 'button' with block.settings.label,
+  size: block.settings.size,
+  variant: block.settings.variant,
+  href: block.settings.url,
+  class: button_class,
+  background_color: background_color,
+  text_color: text_color
+%}
+
+{% schema %}
+{
+  "name": "t:blocks.button.name",
+  "class": "block-button",
+  "settings": [
+    {
+      "type": "select",
+      "id": "size",
+      "label": "t:blocks.button.settings.size.label",
+      "options": [
+        {
+          "value": "lg",
+          "label": "t:blocks.button.settings.size.options.lg.label"
+        },
+        {
+          "value": "md",
+          "label": "t:blocks.button.settings.size.options.md.label"
+        },
+        {
+          "value": "sm",
+          "label": "t:blocks.button.settings.size.options.sm.label"
+        }
+      ],
+      "default": "md"
+    },
+    {
+      "type": "select",
+      "id": "variant",
+      "label": "t:blocks.button.settings.variant.label",
+      "options": [
+        {
+          "value": "solid",
+          "label": "t:blocks.button.settings.variant.options.solid.label"
+        },
+        {
+          "value": "outline",
+          "label": "t:blocks.button.settings.variant.options.outline.label"
+        }
+      ],
+      "default": "solid"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "t:blocks.button.settings.label.label",
+      "default": "t:blocks.button.settings.label.default"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "t:blocks.button.settings.url.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.colors"
+    },
+    {
+      "type": "select",
+      "id": "style",
+      "label": "t:blocks.button.settings.style.label",
+      "options": [
+        {
+          "value": "primary",
+          "label": "t:blocks.button.settings.style.options.primary.label"
+        },
+        {
+          "value": "secondary",
+          "label": "t:blocks.button.settings.style.options.secondary.label"
+        },
+        {
+          "value": "white",
+          "label": "t:blocks.button.settings.style.options.white.label"
+        },
+        {
+          "value": "black",
+          "label": "t:blocks.button.settings.style.options.black.label"
+        },
+        {
+          "value": "custom",
+          "label": "t:blocks.button.settings.style.options.custom.label"
+        }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:blocks.button.settings.background_color.label",
+      "visible_if": "{{ block.settings.style == 'custom' }}"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:blocks.button.settings.text_color.label",
+      "visible_if": "{{ block.settings.style == 'custom' }}"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.button.name"
+    }
+  ]
+}
+{% endschema %}

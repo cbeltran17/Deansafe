@@ -1,0 +1,24 @@
+{% liquid
+  assign alignment = text-alignment | default: block.settings.text_alignment | default: section.settings.text_alignment
+
+  case alignment
+    when 'left'
+      if raw
+        echo 'text-align: start; align-items: start;'
+      else
+        echo 'text-start items-start'
+      endif
+    when 'center'
+      if raw
+        echo 'text-align: center; align-items: center;'
+      else
+        echo 'text-center items-center'
+      endif
+    when 'right'
+      if raw
+        echo 'text-align: end; align-items: end;'
+      else
+        echo 'text-end items-end'
+      endif
+  endcase
+%}

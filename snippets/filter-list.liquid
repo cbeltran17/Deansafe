@@ -1,0 +1,44 @@
+{% liquid
+  assign presentation = filter.presentation
+
+  # Legacy color swatches configuration check
+  if settings.color_swatches_legacy != blank
+    assign legacy_color_options = 'configuration.product.color_options' | t | split: ','
+    assign filter_label_downcase = filter.label | downcase
+
+    for name in legacy_color_options
+      assign trimmed_name = name | downcase | strip
+
+      if filter_label_downcase == trimmed_name
+        assign presentation = 'swatch'
+        break
+      endif
+    endfor
+  endif
+
+  if presentation == 'swatch' and section.settings.enable_color_swatches == false
+    assign presentation = 'text'
+  endif
+%}
+
+<fieldset>
+  <legend class="sr-only">{{ filter.label }}</legend>
+  <ul class="filter-list-{{ presentation }}">
+    {% for filter_value in filter.values %}
+      {% if section.settings.show_filter_values_with_no_matches == false
+        and filter_value.count == 0
+        and filter_value.active == false
+      %}
+        {% continue %}
+      {% endif %}
+      <li>
+        {% render 'filter-value',
+          id: id,
+          filter: filter,
+          filter_value: filter_value,
+          presentation: presentation
+        %}
+      </li>
+    {% endfor %}
+  </ul>
+</fieldset>

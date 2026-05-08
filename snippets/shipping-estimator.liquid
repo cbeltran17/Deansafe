@@ -1,0 +1,59 @@
+{% assign form_tag = form_tag | default: 'form' %}
+
+<shipping-estimator class="shipping-estimator {{ class }}">
+  <ul
+    data-part="shipping-rates"
+    class="shipping-estimator__rates-list"
+  ></ul>
+
+  <form class="shipping-estimator__form">
+    <province-selector class="contents">
+      <div class="input input--floating">
+        <select
+          required
+          data-part="country-select"
+          name="shipping_address[country]"
+          id="{{ section.id }}-shipping-estimator-country-select"
+        >
+          {{ country_option_tags | replace: 'value="---"', 'value=""' }}
+        </select>
+        <label for="{{ section.id }}-shipping-estimator-country-select">
+          {{ 'sections.shipping_estimator.country' | t }}
+        </label>
+      </div>
+
+      <div
+        class="input input--floating"
+        data-part="province-wrapper"
+        hidden
+      >
+        <select
+          data-part="province-select"
+          name="shipping_address[province]"
+          id="{{ section.id }}-shipping-estimator-province-select"
+        ></select>
+        <label for="{{ section.id }}-shipping-estimator-province-select">
+          {{ 'sections.shipping_estimator.province' | t }}
+        </label>
+      </div>
+    </province-selector>
+
+    {% render 'input',
+      name: 'shipping_address[zip]',
+      type: 'text',
+      id: 'ShippingEstimator-Zipcode',
+      floating: true,
+      placeholder_t: 'sections.shipping_estimator.zipcode',
+      label_t: 'sections.shipping_estimator.zipcode',
+      required: true
+    %}
+
+    <div role="alert" data-part="error" class="cart-error"></div>
+
+    {% render 'button',
+      translation: 'sections.shipping_estimator.get_estimate',
+      type: 'submit',
+      class: 'shipping-estimator__button'
+    %}
+  </form>
+</shipping-estimator>

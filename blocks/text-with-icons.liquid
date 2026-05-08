@@ -1,0 +1,111 @@
+{% comment %}
+  Generic block: Text with icons
+  - Input: richtext where merchants use UL/LI
+  - Behavior: prepend a check icon inside each <li>
+  - Wrapper: div with block attributes and color vars
+{% endcomment %}
+
+{% if block.settings.content != blank %}
+  {% render 'list-with-icons',
+    content: block.settings.content,
+    text_color: block.settings.text_color,
+    icon_color: block.settings.icon_color,
+    background_color: block.settings.background_color,
+    direction: block.settings.direction,
+    style: block.settings.style,
+    text_size: block.settings.text_size,
+    shopify_attributes: block.shopify_attributes
+  %}
+{% endif %}
+
+{% schema %}
+{
+  "name": "t:blocks.text_with_icons.name",
+  "settings": [
+    {
+      "type": "select",
+      "id": "direction",
+      "label": "t:blocks.text_with_icons.settings.direction.label",
+      "options": [
+        {
+          "value": "horizontal",
+          "label": "t:blocks.text_with_icons.settings.direction.options.horizontal.label"
+        },
+        {
+          "value": "vertical",
+          "label": "t:blocks.text_with_icons.settings.direction.options.vertical.label"
+        }
+      ],
+      "default": "horizontal"
+    },
+    {
+      "type": "select",
+      "id": "style",
+      "label": "t:blocks.text_with_icons.settings.style.label",
+      "options": [
+        {
+          "value": "text",
+          "label": "t:blocks.text_with_icons.settings.style.options.text.label"
+        },
+        {
+          "value": "pill",
+          "label": "t:blocks.text_with_icons.settings.style.options.pill.label"
+        }
+      ],
+      "default": "text"
+    },
+    {
+      "type": "select",
+      "id": "text_size",
+      "label": "t:blocks.text_with_icons.settings.text_size.label",
+      "options": [
+        {
+          "value": "small",
+          "label": "t:blocks.text_with_icons.settings.text_size.options.small.label"
+        },
+        {
+          "value": "medium",
+          "label": "t:blocks.text_with_icons.settings.text_size.options.medium.label"
+        },
+        {
+          "value": "large",
+          "label": "t:blocks.text_with_icons.settings.text_size.options.large.label"
+        }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "t:blocks.text_with_icons.settings.content.label",
+      "info": "t:blocks.text_with_icons.settings.content.info",
+      "default": "t:blocks.text_with_icons.settings.content.default"
+    },
+    {
+      "type": "header",
+      "content": "t:blocks.text_with_icons.headers.colors.content"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:blocks.text_with_icons.settings.background_color.label",
+      "visible_if": "{{ block.settings.style == 'pill' }}"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:blocks.text_with_icons.settings.text_color.label"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "t:blocks.text_with_icons.settings.icon_color.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.text_with_icons.name"
+    }
+  ]
+}
+{% endschema %}

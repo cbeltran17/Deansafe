@@ -1,0 +1,67 @@
+{% liquid
+  assign product_recommendations = section.settings.product_recommendations
+  assign product_ids = cart.items | map: 'product_id'
+  assign carousel_id = 'cart-drawer-recommendations-carousel'
+%}
+
+{% capture items %}
+  {% for product in product_recommendations %}
+    {% if product.available == false or product_ids contains product.id %}
+      {% continue %}
+    {% endif %}
+    <div class="cart-drawer-item">
+      {% if product.featured_media %}
+        <a href="{{ product.url }}" tabindex="-1">
+          {% render 'image' with product.featured_media,
+            class: 'line-item-image',
+            sizes: '80px',
+            widths: '80,160',
+            lqip: false
+          %}
+        </a>
+      {% endif %}
+      <div class="cart-drawer-item__content">
+        <div class="cart-drawer-item__info">
+          <a href="{{ product.url }}" class="inline-block">
+            <p class="cart-drawer-item__title">{{ product.title }}</p>
+          </a>
+          {% render 'price', product: product %}
+        </div>
+        <div class="cart-drawer-item__controls">
+          {% render 'product-card-add-to-cart',
+            product: product,
+            icon: true,
+            class: 'complementary-product__add-to-cart button--solid button--icon-md'
+          %}
+        </div>
+      </div>
+    </div>
+
+    {% assign has_recommendations = has_recommendations | plus: 1 %}
+  {% endfor %}
+{% endcapture %}
+
+{% if has_recommendations > 0 %}
+  <div class="cart-drawer-recommendations__heading">
+    {% if section.settings.product_recommendations_heading != blank %}
+      <p>{{ section.settings.product_recommendations_heading }}</p>
+    {% endif %}
+    <div class="cart-drawer-recommendations__sepearator"></div>
+    {% render 'carousel-button', direction: 'prev', controls: carousel_id, size: 'xs' %}
+    {% render 'carousel-button', direction: 'next', controls: carousel_id, size: 'xs' %}
+  </div>
+
+  <grid-carousel
+    id="{{ carousel_id }}"
+    style="
+      --carousel-gap: 4rem;
+      --carousel-columns: 1;
+      --carousel-bleed-x: 2rem;
+      --carousel-scroll-snap-type: x mandatory;
+    "
+  >
+    {{ items }}
+  </grid-carousel>
+
+  <carousel-dots class="carousel-dots--simple" aria-controls="{{ carousel_id }}"></carousel-dots>
+{% endif %}

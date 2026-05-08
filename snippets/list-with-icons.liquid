@@ -1,0 +1,50 @@
+{% comment %}
+  Reusable snippet: List with icons
+  Params:
+    - content: richtext HTML (expected UL/LI)
+    - text_color: color setting
+    - icon_color: color setting
+    - background_color: color setting (for pill style)
+    - direction: 'horizontal' or 'vertical' (default: 'horizontal')
+    - style: 'text' or 'pill' (default: 'text')
+    - text_size: 'sm', 'medium', or 'large' (default: 'medium')
+    - class: additional class for wrapper (optional)
+    - shopify_attributes: block/section attributes passthrough (optional)
+{% endcomment %}
+
+{% if content != blank %}
+  {% capture check_icon %}
+    {% case icon %}
+      {% when 'check-circle' %}
+        {{ 'icon-ui-check-circle.svg' | inline_asset_content }}
+      {% else %}
+        {{ 'icon-ui-check.svg' | inline_asset_content }}
+    {% endcase %}
+  {% endcapture %}
+  {% assign li_open = '<li>' | append: check_icon %}
+  {% assign rendered_content = content | strip | replace: '<li>', li_open %}
+
+  {% liquid
+    assign direction_class = direction | default: 'horizontal'
+    assign style_class = style | default: 'text'
+    assign size_class = text_size | default: 'medium'
+    assign class_names = 'list-with-icons--' | append: direction_class | append: ' list-with-icons--' | append: style_class | append: ' list-with-icons--' | append: size_class
+    if class
+      assign class_names = class_names | append: ' ' | append: class
+    endif
+  %}
+
+  <div
+    class="list-with-icons {{ class_names }}"
+    {% if shopify_attributes %}
+      {{- shopify_attributes -}}
+    {% endif %}
+    style="
+      {% render 'color-var' with text_color, name: 'text-color' %}
+      {% render 'color-var' with icon_color, name: 'icon-color' %}
+      {% render 'color-var' with background_color, name: 'list-bg-color' %}
+    "
+  >
+    {{ rendered_content }}
+  </div>
+{% endif %}

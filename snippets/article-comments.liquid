@@ -1,0 +1,105 @@
+{%- if article.comments_enabled? -%}
+  <div class="article-comments" id="comments">
+    {%- if article.comments_count > 0 -%}
+      {%- paginate article.comments by section.settings.comments_per_page -%}
+        <dynamic-section>
+          <h2 class="article-comments__title">
+            {{ 'blogs.article.comments_heading' | t: count: article.comments_count }}
+          </h2>
+
+          <ul class="article-comments__list" role="list" data-append-target>
+            {%- for comment in article.comments -%}
+              <li class="article-comment">
+                <div class="article-comment__header">
+                  <strong class="article-comment__author">{{ comment.author }}</strong>
+                  <time
+                    datetime="{{ comment.created_at | date: '%Y-%m-%d' }}"
+                    class="article-comment__date"
+                  >
+                    {{ comment.created_at | date: format: 'date' }}
+                  </time>
+                </div>
+                <div class="article-comment__content prose">
+                  {{ comment.content }}
+                </div>
+              </li>
+            {%- endfor -%}
+          </ul>
+          {% render 'pagination-classic', paginate: paginate %}
+        </dynamic-section>
+      {%- endpaginate -%}
+    {%- endif -%}
+
+    {% form 'new_comment', article %}
+      <div class="article-comment-form">
+        {%- if form.posted_successfully? -%}
+          {% liquid
+            assign post_message = 'blogs.comment_form.success_message' | t
+            if blog.moderated? and comment.status == 'unapproved'
+              assign post_message = 'blogs.comment_form.success_message_moderated' | t
+            endif
+          %}
+          <div class="article-comment-form__success">
+            {{ post_message }}
+          </div>
+        {%- endif -%}
+        {%- if form.errors -%}
+          <div class="article-comment-form__error">
+            {{ form.errors | default_errors }}
+          </div>
+        {%- endif -%}
+        <p class="article-comment-form__title">{{ 'blogs.comment_form.title' | t }}</p>
+        {%- if blog.moderated? -%}
+          <p class="article-comment-form__moderated-notice">
+            {{ 'blogs.comment_form.moderation_notice' | t }}
+          </p>
+        {%- endif -%}
+        <div class="article-comment-form__fields form">
+          {% render 'input',
+            id: 'comment-author',
+            name: 'comment[author]',
+            type: 'text',
+            label_t: 'blogs.comment_form.author',
+            floating: true,
+            value: form.author,
+            autocomplete: 'name',
+            required: true,
+            form: form,
+            form_key: 'author',
+            field_class: 'form-field--half'
+          %}
+          {% render 'input',
+            id: 'comment-email',
+            name: 'comment[email]',
+            type: 'email',
+            label_t: 'blogs.comment_form.email',
+            floating: true,
+            value: form.email,
+            autocomplete: 'email',
+            required: true,
+            form: form,
+            form_key: 'email',
+            field_class: 'form-field--half'
+          %}
+          {% render 'input',
+            id: 'comment-body',
+            name: 'comment[body]',
+            tag: 'textarea',
+            label_t: 'blogs.comment_form.body',
+            floating: true,
+            value: form.body,
+            rows: 5,
+            required: true,
+            form: form,
+            form_key: 'body'
+          %}
+        </div>
+        {% render 'button',
+          translation: 'blogs.comment_form.submit',
+          type: 'submit',
+          auto_loading: true
+        %}
+      </div>
+    {% endform %}
+  </div>
+{%- endif -%}

@@ -1,0 +1,54 @@
+{% comment %}
+  Generic carousel component
+
+  Parameters:
+  - css_class: CSS class for carousel type (optional)
+  - animation: animation name (optional)
+  - animation_target: CSS selector for animation target (optional)
+  - columns_min: minimum columns (required)
+  - columns_max: maximum columns (required)
+  - enable_carousel: whether carousel is enabled (optional, defaults to section.settings.enable_carousel)
+  - enable_carousel_on_mobile: carousel on mobile only, wraps on desktop (optional)
+  - carousel_id: unique ID for carousel (optional, defaults to section.id-carousel)
+  - content: the actual content to display (required)
+{% endcomment %}
+
+{% liquid
+  assign enable_carousel = enable_carousel | default: section.settings.enable_carousel
+  assign enable_carousel_on_mobile = enable_carousel_on_mobile | default: section.settings.enable_carousel_on_mobile
+  assign carousel_id = carousel_id | default: section.id | append: '-carousel'
+
+  if enable_carousel == false and enable_carousel_on_mobile == false
+    assign columns_min = columns_min | floor
+    assign columns_max = columns_max | floor
+  endif
+%}
+
+<div class="container-inline-size relative">
+  <grid-carousel
+    class="grid-carousel--bleed-max-xl {{ css_class }}"
+    {% if animation %}
+      animation="{{ animation }}"
+    {% endif %}
+    {% if animation_target %}
+      animation-selector="{{ animation_target }}"
+    {% endif %}
+    id="{{ carousel_id }}"
+    {% if enable_carousel_on_mobile or wrap_on_desktop %}
+      wrap-on-desktop
+    {% endif %}
+    {% if enable_carousel == false or wrap %}
+      wrap
+    {% endif %}
+    style="
+      --carousel-gap: 1rem;
+      --carousel-columns-min: {{ columns_min }};
+      --carousel-columns-max: {{ columns_max }};
+    "
+    {% if role %}
+      role="{{ role }}"
+    {% endif %}
+  >
+    {{ content }}
+  </grid-carousel>
+</div>

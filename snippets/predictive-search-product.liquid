@@ -1,0 +1,11 @@
+<a
+  href="{{ product.url }}"
+  aria-label="{{ product.title | escape }}"
+  class="predictive-search__product"
+>
+  {% render 'image' with product.featured_media, width: 192, placeholder: true, ratio: '1' %}
+  <div class="predictive-search__product-info">
+    <p class="product-card__title">{{ product.title }}</p>
+    <p>{% render 'price', product: product %}</p>
+  </div>
+</a>

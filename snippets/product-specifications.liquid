@@ -1,0 +1,91 @@
+{% if block.settings.custom_content != blank %}
+  {%- capture specifications -%}
+    {%- liquid
+      assign html = block.settings.custom_content
+      assign items = html | split: '<li>'
+    -%}
+    {%- for raw in items -%}
+      {%- liquid
+        assign content = raw | split: '</li>' | first | strip
+      -%}
+      {%- if content != blank -%}
+        {%- assign parts = content | split: ':' -%}
+        {%- if parts.size > 1 -%}
+          {%- assign title = parts[0] | strip -%}
+          {%- assign value = '' -%}
+          {%- for p in parts offset: 1 -%}
+            {%- if forloop.first -%}
+              {%- assign value = p -%}
+            {%- else -%}
+              {%- assign value = value | append: ':' | append: p -%}
+            {%- endif -%}
+          {%- endfor -%}
+          <tr>
+            <td>{{ title }}</td>
+            <td>{{ value }}</td>
+          </tr>
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+{% endif %}
+{% if specifications == blank %}
+  {% liquid
+    assign metafield_keys = settings.specifications_metafields | newline_to_br | split: '<br />'
+  %}
+  {%- capture specifications -%}
+    {%- for str in metafield_keys -%}
+      {%- liquid
+        assign title = null
+        assign parts = str | strip | split: ':'
+
+        if parts.size == 1
+          assign key_parts = str | strip | split: '.'
+          assign namespace = key_parts[0]
+          assign key = key_parts[1]
+        else
+          assign title = parts[0]
+          assign key_parts = parts[1] | strip | split: '.'
+          assign namespace = key_parts[0]
+          assign key = key_parts[1]
+        endif
+
+        assign metafield_obj = product.metafields[namespace][key]
+      -%}
+      {%- if metafield_obj -%}
+        {%- assign default_title = key | replace: '_', ' ' | capitalize -%}
+        {%- assign value = metafield_obj.value | join: ', ' -%}
+        <tr>
+          <td>{{ title | default: default_title }}</td>
+          <td>{{ value }}</td>
+        </tr>
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+{% endif %}
+
+{% if specifications != blank %}
+  <smooth-collapse
+    class="accordion block-accordion block-product-specifications"
+    {{ block.shopify_attributes }}
+    {% if block.settings.open_by_default %}
+      open
+    {% endif %}
+  >
+    <button slot="summary" class="accordion__summary icon-flip-y">
+      {% render 'heading',
+        translation: 'products.product.specifications',
+        tag: 'p',
+        size: 'h6 max-md:text-base'
+      %}
+      <div class="accordion__icon">{{ 'icon-chevron-down.svg' | inline_asset_content }}</div>
+    </button>
+    <div class="accordion__content">
+      <table class="specifications-table">
+        <tbody>
+          {{ specifications }}
+        </tbody>
+      </table>
+    </div>
+  </smooth-collapse>
+{% endif %}

@@ -1,0 +1,25 @@
+<div class="checkbox {{ class }}">
+  <input
+    type="checkbox"
+    id="{{ id }}{{ id_suffix }}"
+    {% if name %}
+      name="{{ name }}"
+    {% endif %}
+    {% if checked %}
+      checked
+    {% endif %}
+    {{ attrs }}
+  >
+  <label class="checkbox__label" for="{{ id }}{{ id_suffix }}">
+    <div class="checkbox__box">
+      {{ 'icon-ui-check.svg' | inline_asset_content }}
+    </div>
+    <span class="checkbox__label-text">
+      {% if label_t != blank %}
+        {{ label_t | t }}
+      {% else %}
+        {{ label }}
+      {% endif %}
+    </span>
+  </label>
+</div>

@@ -1,0 +1,22 @@
+{% liquid
+  assign content = page_content | default: ''
+  assign faq_chunks = content | split: '<script type="application/x-faq-ld+json" data-faq>'
+  assign faq_entities = ''
+  assign faq_total = 0
+%}
+{% for chunk in faq_chunks offset: 1 %}
+  {% assign body = chunk | split: '</script>' | first | strip %}
+  {% if body != blank %}
+    {% capture faq_entities %}{{ faq_entities }}{% if faq_total > 0 %},{% endif %}{{ body }}{% endcapture %}
+    {% assign faq_total = faq_total | plus: 1 %}
+  {% endif %}
+{% endfor %}
+{% if faq_total > 0 %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{{ faq_entities }}]
+    }
+  </script>
+{% endif %}

@@ -1,0 +1,37 @@
+{%- liquid
+  assign value = value | default: 'data-has-bg'
+
+  assign section_color = section.settings.background_color
+
+  # If no color is specified, compare the section background to the page background
+  unless color
+    assign page_color = '255 255 255 / 1.0'
+
+    if settings.color_background != blank and settings.color_background.rgba != '0 0 0 / 0.0'
+      assign page_color = settings.color_background.rgba
+    endif
+
+    if section_color != blank and section_color.rgba != '0 0 0 / 0.0' and section_color.rgba != page_color
+      echo value
+    endif
+  endunless
+
+  # Otherwise compare the specified color against the section or the page background
+  if color == blank or color.rgba == '0 0 0 / 0.0'
+    break
+  endif
+
+  assign background_color = '255 255 255 / 1.0'
+
+  if settings.color_background != blank and settings.color_background.rgba != '0 0 0 / 0.0'
+    assign background_color = settings.color_background
+  endif
+
+  if section_color != blank and section_color.rgba != '0 0 0 / 0.0'
+    assign background_color = section_color
+  endif
+
+  if color.rgba != background_color.rgba
+    echo value
+  endif
+-%}

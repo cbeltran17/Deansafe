@@ -1,0 +1,38 @@
+{% liquid
+  assign line_id = item.index | plus: 1 | append: '-' | append: item.variant_id
+%}
+
+<div class="cart-drawer-item" id="CartDrawerItem-{{ line_id }}">
+  <a href="{{ item.url }}" tabindex="-1">
+    {% render 'image' with item.image,
+      class: 'line-item-image',
+      sizes: '80px',
+      widths: '80,160',
+      lqip: false,
+      decoding: 'async',
+      placeholder: true
+    %}
+  </a>
+  <div class="cart-drawer-item__content">
+    <div class="cart-drawer-item__info">
+      <a href="{{ item.url }}" class="inline-block">
+        <p class="cart-drawer-item__title">{{ item.product.title }}</p>
+      </a>
+      {% unless item.product.has_only_default_variant %}
+        <p class="cart-drawer-item__variant">{{ item.variant.title }}</p>
+      {% endunless %}
+      {% render 'line-item-price', item: item %}
+    </div>
+    <div class="cart-drawer-item__controls">
+      {%- assign quantity_id = 'Quantity-Drawer-' | append: line_id -%}
+      {% render 'line-item-quantity-selector', item: item, size: 'small', id: quantity_id %}
+      {% render 'cart-remove-link', item: item, size: 'small' %}
+    </div>
+  </div>
+  <div class="cart-drawer-item__extra">
+    {% render 'line-item-discounts', item: item %}
+
+    {% render 'line-item-properties', item: item %}
+    <cart-error class="cart-error" key="{{ item.key }}"></cart-error>
+  </div>
+</div>

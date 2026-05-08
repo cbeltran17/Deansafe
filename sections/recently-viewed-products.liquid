@@ -1,0 +1,148 @@
+{% render 'section-meta', blend: true, blend_bg: section.settings.background_color %}
+
+<div class="section-full-width">
+  {% content_for 'block', type: '_section-header', id: 'section-header' %}
+  <recently-viewed-section
+    section-id="recently-viewed-products-carousel"
+    limit="{{ section.settings.max_products }}"
+    columns-min="{{ section.settings.products_per_row_mobile }}"
+    columns-max="{{ section.settings.products_per_row }}"
+    enable-carousel="{{ section.settings.enable_carousel }}"
+    {% if request.page_type == 'product' and product %}
+      product-id="{{ product.id }}"
+    {% endif %}
+  ></recently-viewed-section>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.recently_viewed_products.name",
+  "class": "section-recently-viewed-products",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_carousel",
+      "label": "t:sections.recently_viewed_products.settings.enable_carousel.label",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "max_products",
+      "label": "t:sections.recently_viewed_products.settings.max_products.label",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "products_per_row",
+      "label": "t:sections.recently_viewed_products.settings.products_per_row.label",
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "select",
+      "id": "products_per_row_mobile",
+      "label": "t:sections.recently_viewed_products.settings.products_per_row_mobile.label",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "1.5",
+          "label": "1.5"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "1.5"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.header"
+    },
+    {
+      "type": "text_alignment",
+      "id": "text_alignment",
+      "label": "t:sections.all.text_alignment.label",
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:sections.all.text_color.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_custom_spacing",
+      "label": "t:sections.all.enable_custom_spacing",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "top_spacing",
+      "label": "t:sections.all.top_spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing == true }}"
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "label": "t:sections.all.bottom_spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing == true }}"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "presets": [
+    {
+      "name": "t:sections.recently_viewed_products.name",
+      "category": "t:sections.categories.products",
+      "blocks": [
+        {
+          "id": "section-header",
+          "static": true,
+          "type": "_section-header",
+          "blocks": [
+            {
+              "type": "heading",
+              "settings": {
+                "heading": "t:sections.recently_viewed_products.presets.recently_viewed_products.blocks._section-header.blocks.heading.settings.heading"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

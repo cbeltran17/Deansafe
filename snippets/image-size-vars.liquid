@@ -1,0 +1,94 @@
+{%- comment -%}
+  Outputs a <style> tag that sets sizing CSS variables for a media element.
+
+  Defaults to reading values from section settings, but you can override
+  them via explicit parameters. Also supports customizing the CSS variable
+  prefix and the scoping selector (useful for blocks).
+
+  Params (all optional unless noted):
+  - selector: A descendant selector to append after the root scope
+  - scope: Full root CSS selector. Defaults to '#shopify-section-<id>'
+  - target: A block/section object; if provided, values are read from target.settings
+           and scope defaults to '#shopify-block-<target.id>'
+  - prefix: CSS variable prefix. Defaults to '--media'
+  - breakpoint: Mobile breakpoint width used for the mobile override media query
+      (@media not all and (min-width: <px>)); default 768
+  - min_height: Value for <prefix>-min-height when using 'max_height'
+      to prevent collapsing (e.g. '100%'); default 0
+
+  Value overrides (fallback to section.settings.* when not provided):
+  - image_size
+  - image_height
+  - image_size_mobile
+  - image_height_mobile
+{%- endcomment -%}
+{% liquid
+  assign bp = breakpoint | default: 768
+  assign target = target | default: section
+
+  # Build the root scope selector
+  assign root_selector = scope
+  if root_selector == blank
+    if target.id == section.id
+      assign root_selector = '#shopify-section-' | append: section.id
+    else
+      assign root_selector = '#shopify-block-' | append: target.id
+    endif
+  endif
+
+  assign scope_selector = root_selector
+  if selector
+    assign scope_selector = root_selector | append: ' ' | append: selector
+  endif
+
+  # Resolve values
+  assign image_size = image_size | default: target.settings.image_size
+  assign image_height = image_height | default: target.settings.image_height
+  assign image_size_mobile = image_size_mobile | default: target.settings.image_size_mobile
+  assign image_height_mobile = image_height_mobile | default: target.settings.image_height_mobile
+  assign image = image | default: target.settings.image
+  assign image_mobile = image_mobile | default: target.settings.image_mobile
+
+  # CSS var prefix
+  assign prefix = prefix | default: '--media'
+%}
+<style>
+  {{ scope_selector }} {
+  {% if image_size == 'custom_height' %}
+    {{ prefix }}-aspect-ratio: auto;
+    {{ prefix }}-min-height: {{ image_height }}px;
+  {% elsif image_size == 'max_height' %}
+    {{ prefix }}-max-height: {{ image_height }}px;
+    {{ prefix }}-min-height: {{ min_height | default: 0 }};
+  {% elsif image_size != blank %}
+    {{ prefix }}-aspect-ratio: {{ image_size }};
+  {% elsif image.aspect_ratio != blank %}
+    {{ prefix }}-aspect-ratio: {{ image.aspect_ratio }};
+  {% elsif image == blank and placeholder_ratio != blank %}
+    {{ prefix }}-aspect-ratio: {{ placeholder_ratio }};
+  {% endif %}
+  }
+  {% if image_size_mobile != 'same' %}
+    @media not all and (min-width: {{ bp }}px) {
+      {{ scope_selector }} {
+      {% if image_size_mobile == 'custom_height' %}
+        {{ prefix }}-aspect-ratio: auto;
+        {{ prefix }}-min-height: {{ image_height_mobile }}px;
+        {{ prefix }}-max-height: none;
+      {% elsif image_size_mobile == 'max_height' %}
+        {{ prefix }}-aspect-ratio: var(--__unset);
+        {{ prefix }}-min-height: {{ min_height | default: 0 }};
+        {{ prefix }}-max-height: {{ image_height_mobile }}px;
+      {% elsif image_size_mobile != blank %}
+        {{ prefix }}-aspect-ratio: {{ image_size_mobile }};
+        {{ prefix }}-min-height: 0;
+        {{ prefix }}-max-height: none;
+      {% else %}
+        {{ prefix }}-aspect-ratio: {{ image_mobile.aspect_ratio | default: image.aspect_ratio | default: placeholder_ratio | default: 'var(--__unset)' }};
+        {{ prefix }}-min-height: 0;
+        {{ prefix }}-max-height: none;
+      {% endif %}
+      }
+    }
+  {% endif %}
+</style>

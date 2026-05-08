@@ -1,0 +1,54 @@
+<animation-element
+  selector=".shopify-block"
+  autoplay
+  class="section-header block-spacing {% render 'text-alignment' with section.settings.heading_alignment %}"
+  id="shopify-block-{{ block.id }}"
+  {% if block.settings.enable_custom_spacing %}
+    style="--section-header-custom-bottom-spacing: {% render 'rfs' with block.settings.bottom_spacing, base: 24 %};"
+  {% endif %}
+>
+  {%- content_for 'blocks' -%}
+</animation-element>
+
+{% schema %}
+{
+  "name": "t:blocks._section_header.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_custom_spacing",
+      "label": "t:blocks._section_header.settings.enable_custom_spacing.label",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "label": "t:blocks._section_header.settings.bottom_spacing.label",
+      "min": 0,
+      "max": 80,
+      "step": 8,
+      "unit": "px",
+      "default": 32,
+      "visible_if": "{{ block.settings.enable_custom_spacing == true }}"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "heading"
+    },
+    {
+      "type": "paragraph"
+    },
+    {
+      "type": "caption"
+    },
+    {
+      "type": "custom-spacing"
+    }
+  ]
+}
+{% endschema %}

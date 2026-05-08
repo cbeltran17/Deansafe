@@ -1,0 +1,20 @@
+<variant-picker class="contents">
+  {% for option in product.options_with_values %}
+    <div>
+      <p class="sticky-add-to-cart__option-name">{{ option.name }}</p>
+      <listbox-element
+        data-product-option
+        variant="inline"
+        placement="bottom"
+        form="{{ product_form_id }}"
+        name="options[{{ option.name | escape }}]"
+        id="{{ section.id }}-sticky-add-to-cart-{{ option.name }}"
+        value="{{ option.selected_value | escape }}"
+      >
+        <template>
+          {% render 'product-option-listbox-items', option: option %}
+        </template>
+      </listbox-element>
+    </div>
+  {% endfor %}
+</variant-picker>

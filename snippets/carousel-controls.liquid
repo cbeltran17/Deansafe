@@ -1,0 +1,24 @@
+{% liquid
+  if controls == blank
+    assign controls = section.id | append: '-carousel'
+  endif
+%}
+
+<animation-element
+  autoplay
+  selector="scroll-carousel-bar, .carousel-button-wrapper"
+  class="carousel-controls"
+>
+  <scroll-carousel-bar
+    class="block"
+    aria-controls="{{ controls }}"
+  ></scroll-carousel-bar>
+  <div class="carousel-controls__buttons">
+    <div class="carousel-button-wrapper">
+      {% render 'carousel-button', direction: 'prev', controls: controls, size: size %}
+    </div>
+    <div class="carousel-button-wrapper">
+      {% render 'carousel-button', direction: 'next', controls: controls, size: size %}
+    </div>
+  </div>
+</animation-element>

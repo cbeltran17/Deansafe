@@ -1,0 +1,59 @@
+{% render 'email-signup-input',
+  button_style: block.settings.style,
+  button_background_color: block.settings.background_color,
+  button_text_color: block.settings.text_color
+%}
+
+{% schema %}
+{
+  "name": "t:blocks.email_signup.name",
+  "class": "block-email-signup",
+  "settings": [
+    {
+      "type": "select",
+      "id": "style",
+      "label": "t:blocks.email_signup.settings.style.label",
+      "options": [
+        {
+          "value": "primary",
+          "label": "t:blocks.button.settings.style.options.primary.label"
+        },
+        {
+          "value": "secondary",
+          "label": "t:blocks.button.settings.style.options.secondary.label"
+        },
+        {
+          "value": "white",
+          "label": "t:blocks.button.settings.style.options.white.label"
+        },
+        {
+          "value": "black",
+          "label": "t:blocks.button.settings.style.options.black.label"
+        },
+        {
+          "value": "custom",
+          "label": "t:blocks.button.settings.style.options.custom.label"
+        }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:blocks.button.settings.background_color.label",
+      "visible_if": "{{ block.settings.style == 'custom' }}"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:blocks.button.settings.text_color.label",
+      "visible_if": "{{ block.settings.style == 'custom' }}"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.email_signup.name"
+    }
+  ]
+}
+{% endschema %}

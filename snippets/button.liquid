@@ -1,0 +1,70 @@
+{% liquid
+  assign tag = 'button'
+  assign is = is | default: 'button-element'
+  assign type = type | default: 'button'
+  assign variant = variant | default: 'solid'
+  assign size = size | default: 'md'
+
+  if href != blank
+    assign tag = 'a'
+    assign is = ''
+    assign type = ''
+  endif
+
+  assign class = class | append: ' button--' | append: size
+  assign class = class | append: ' button--' | append: variant
+%}
+
+{% capture button_attributes %}
+  class="button {{ class }}"
+  style="
+    {% render 'button-vars', background: background_color, color: text_color %}
+  "
+  {% if is != blank %}is="{{ is }}"{% endif %}
+  {% if href != blank %}href="{{ href }}"{% endif %}
+  {% if slot != blank %}slot="{{ slot }}"{% endif %}
+  {% if name != blank %}name="{{ name }}"{% endif %}
+  {% if type != blank %}type="{{ type }}"{% endif %}
+  {% if aria_label != blank %}aria-label="{{ aria_label }}"{% endif %}
+
+  {{ attrs }}
+{% endcapture %}
+
+{% capture label_content %}
+  {%- if translation -%}
+    {{- translation | t -}}
+  {%- else -%}
+    {{- button -}}
+  {%- endif -%}
+{% endcapture %}
+
+<{{ tag }}
+  {{ button_attributes }}
+  {% if auto_loading %}
+    auto-loading
+  {% endif %}
+  {% if effect != blank %}
+    data-effect="{{ effect }}"
+  {% endif %}
+>
+  <span class="button__label" data-part="label">
+    {{ label_content }}
+  </span>
+  {% if variant == 'flip' %}
+    <span class="button__label button__label--copy" aria-hidden="true">{{ label_content }}</span>
+  {% endif %}
+  {% if tag == 'button' %}
+    <svg
+      data-part="spinner"
+      class="spinner button__spinner"
+      style="display:none"
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g class="spinner__inner">
+        <circle cx="12" cy="12" r="9.5" fill="none" stroke-width="2" stroke="currentColor"></circle>
+      </g>
+    </svg>
+  {% endif %}
+</{{ tag }}>

@@ -1,0 +1,18 @@
+<div id="shopify-block-{{ block.id }}" {{ block.shopify_attributes }} class="custom-spacing">
+  <style>
+    {% if block.settings.use_different_value_on_mobile %}
+      #shopify-block-{{ block.id }} {
+        height: {{ block.settings.spacing_mobile }}px;
+      }
+      @media (min-width: 768px) {
+        #shopify-block-{{ block.id }} {
+          height: {{ block.settings.spacing }}px;
+        }
+      }
+    {% else %}
+      #shopify-block-{{ block.id }} {
+        height: {% render 'rfs' with block.settings.spacing %};
+      }
+    {% endif %}
+  </style>
+</div>

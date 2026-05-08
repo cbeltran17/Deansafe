@@ -1,0 +1,71 @@
+{%- liquid
+  assign selector_type = type | default: 'country'
+
+  if selector_type == 'country' and localization.available_countries.size < 2
+    break
+  endif
+
+  if selector_type == 'language' and localization.available_languages.size < 2
+    break
+  endif
+-%}
+
+{%- form 'localization' -%}
+  <localization-listbox
+    {% if placement %}
+      placement="{{ placement }}"
+    {% endif %}
+    {% if backdrop %}
+      backdrop="{{ backdrop }}"
+    {% endif %}
+    class="market-selector {{ class }}"
+    type="{{ selector_type }}"
+    cross-offset="{{ cross_offset | default: '-24' }}"
+  >
+    <button class="market-selector__button icon-flip-y" slot="button">
+      {% if selector_type == 'language' %}
+        {{ 'icon-ui-globe.svg' | inline_asset_content }}
+        <span>{{ localization.language.endonym_name }}</span>
+      {% else %}
+        {{ 'icon-ui-location.svg' | inline_asset_content }}
+        <span>
+          {{-
+            'general.localization.country.label'
+            | t:
+              name: localization.country.name,
+              currency_iso_code: localization.country.currency.iso_code,
+              currency_symbol: localization.country.currency.symbol
+          -}}
+        </span>
+      {% endif %}
+      {{ 'icon-chevron-down.svg' | inline_asset_content }}
+    </button>
+
+    <template>
+      {% if selector_type == 'language' %}
+        {% for language in localization.available_languages %}
+          <div
+            data-value="{{ language.iso_code }}"
+            data-title="{{ language.endonym_name }}"
+          >
+            <span class="market-selector__iso-code">{{ language.iso_code }}</span>
+            <span>{{ language.endonym_name }}</span>
+          </div>
+        {% endfor %}
+      {% else %}
+        {% for country in localization.available_countries %}
+          <div data-value="{{ country.iso_code }}">
+            {% render 'country-flag', country: country %}
+            {{
+              'general.localization.country.option_label'
+              | t:
+                name: country.name,
+                currency_iso_code: country.currency.iso_code,
+                currency_symbol: country.currency.symbol
+            }}
+          </div>
+        {% endfor %}
+      {% endif %}
+    </template>
+  </localization-listbox>
+{%- endform -%}

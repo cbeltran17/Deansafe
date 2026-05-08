@@ -1,0 +1,52 @@
+{% liquid
+  assign show_excerpt = show_excerpt | default: true, allow_false: true
+
+  capture sizes
+    if section.settings.show_newsletter_card
+      render 'sizes', base: 1, lg: 1.5
+    else
+      render 'sizes', base: 1
+    endif
+  endcapture
+%}
+
+<div
+  class="featured-article-card media-with-overlay media-with-overlay--bottom-left"
+  role="{{ role }}"
+  id="ArticleCard-{{ section.id }}-{{ article.id }}"
+>
+  <div class="media-with-overlay__media">
+    {% render 'image' with article.image,
+      sizes: sizes,
+      width: 3840,
+      widths: '360, 780, 896, 1024, 1280, 1536, 2048, 2560, 3840',
+      placeholder: true,
+      placeholder_absolute: true
+    %}
+  </div>
+
+  <div class="media-with-overlay__overlay">
+    <div class="media-with-overlay__content featured-article-card__content">
+      {% render 'article-meta', article: article, tag_class: 'article-tag--transparent' %}
+
+      <a class="featured-article-card__title" href="{{ article.url }}">
+        {{ article.title }}
+      </a>
+
+      {% if show_excerpt and article.excerpt_or_content != blank %}
+        <div class="featured-article-card__excerpt">
+          {{ article.excerpt_or_content | strip_html | truncatewords: 30 }}
+        </div>
+      {% endif %}
+
+      <div class="featured-article-card__actions">
+        {% render 'button' with 'Read more',
+          href: article.url,
+          class: 'featured-article-card__button',
+          background_color: '#FFFFFF',
+          text_color: '#000000'
+        %}
+      </div>
+    </div>
+  </div>
+</div>

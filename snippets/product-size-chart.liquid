@@ -1,0 +1,44 @@
+{% liquid
+  if block.settings.size_chart_page == blank
+    break
+  endif
+
+  assign target_names = 'configuration.product.size_chart_options' | t | split: ','
+  assign our_name = option.name | downcase
+
+  for name in target_names
+    assign trimmed_name = name | downcase | strip
+
+    if our_name == trimmed_name
+      assign match = true
+      break
+    endif
+  endfor
+
+  unless match
+    break
+  endunless
+%}
+
+<button class="product-size-chart-link" data-modal="{{ block.id }}-SizeChartModal">
+  {{ 'icon-ruler.svg' | inline_asset_content }}
+  <span>
+    {{- 'products.product.size_chart' | t }}
+  </span>
+</button>
+
+<modal-element strategy="drawer" id="{{ block.id }}-SizeChartModal" append-to-body hidden>
+  <div>
+    <div class="modal-header">
+      <div class="flex justify-between">
+        <p class="h5">{{ block.settings.size_chart_page.title }}</p>
+        {% render 'modal-close' %}
+      </div>
+    </div>
+    <div class="modal-section">
+      <div class="prose">
+        {{ block.settings.size_chart_page.content }}
+      </div>
+    </div>
+  </div>
+</modal-element>

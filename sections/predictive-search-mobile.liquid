@@ -1,0 +1,71 @@
+{% liquid
+  assign results_size = predictive_search.resources.queries.size | plus: predictive_search.resources.products.size | plus: predictive_search.resources.collections.size | plus: predictive_search.resources.pages.size | plus: predictive_search.resources.articles.size
+%}
+
+{% if results_size == 0 %}
+  <div class="predictive-search">
+    <p class="predictive-search__no-results">
+      {{ 'general.search.no_results_with_terms' | t: terms: predictive_search.terms }}
+    </p>
+  </div>
+  {% break %}
+{% endif %}
+
+<div class="predictive-search">
+  <div class="predictive-search__results">
+    {% if predictive_search.resources.queries.size > 0 %}
+      <div class="predictive-search__category">
+        <p class="predictive-search__category-title">{{ 'general.search.suggestions' | t }}</p>
+        {% for query in predictive_search.resources.queries %}
+          {% render 'predictive-search-query', query: query %}
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if predictive_search.resources.products.size > 0 %}
+      <div class="predictive-search__category">
+        <p class="predictive-search__category-title">{{ 'general.search.products' | t }}</p>
+        <ul class="predictive-search__product-list">
+          {% for product in predictive_search.resources.products %}
+            <li>
+              {% render 'predictive-search-product', product: product %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+    {% if predictive_search.resources.collections.size > 0 %}
+      <div class="predictive-search__category">
+        <p class="predictive-search__category-title">{{ 'general.search.collections' | t }}</p>
+        <ul class="predictive-search__collections-list">
+          {% for collection in predictive_search.resources.collections %}
+            <li>
+              {% render 'predictive-search-collection', collection: collection %}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+    {% if predictive_search.resources.articles.size > 0 %}
+      <div class="predictive-search__category">
+        <p class="predictive-search__category-title">{{ 'general.search.blog_posts' | t }}</p>
+        <div class="predictive-search__page-list">
+          {% for article in predictive_search.resources.articles %}
+            {% render 'predictive-search-page', page: article %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+    {% if predictive_search.resources.pages.size > 0 %}
+      <div class="predictive-search__category">
+        <p class="predictive-search__category-title">{{ 'general.search.pages' | t }}</p>
+        <div class="predictive-search__page-list">
+          {% for page in predictive_search.resources.pages %}
+            {% render 'predictive-search-page', page: page %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+
+  {% render 'predictive-search-more-results-btn' %}
+</div>

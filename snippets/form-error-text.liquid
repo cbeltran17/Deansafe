@@ -1,0 +1,12 @@
+{%- comment -%}
+  Renders a form error message for a specific field.
+
+  Parameters:
+  - form: The form object containing errors
+  - key: The form field name (e.g., 'email', 'password')
+{%- endcomment -%}
+
+{%- if form.errors.translated_fields[key] != blank and form.errors.messages[key] != blank -%}
+  {{- form.errors.translated_fields[key] | capitalize }}
+  {{ form.errors.messages[key] -}}
+{%- endif -%}

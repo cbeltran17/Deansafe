@@ -1,0 +1,82 @@
+{% liquid
+  assign index = section.blocks | find_index: 'id', block.id
+  assign placeholder = index | modulo: 6 | plus: 1 | prepend: 'collection-'
+%}
+
+{% capture sizes %}
+  {% render 'sizes-carousel',
+    min: section.settings.collections_per_row_mobile,
+    max: section.settings.collections_per_row,
+    item_width: 240
+  %}
+{% endcapture %}
+
+{% liquid
+  assign style = block.settings.style | default: 'overlay'
+  assign id = 'shopify-block-' | append: block.id
+%}
+
+{% render 'collection-card',
+  id: id,
+  style: style,
+  collection: block.settings.collection,
+  image: block.settings.image,
+  title: block.settings.title,
+  description: block.settings.description,
+  sizes: sizes,
+  placeholder: placeholder,
+  image_aspect_ratio: section.settings.image_size,
+  attributes: block.shopify_attributes
+%}
+
+{% schema %}
+{
+  "name": "t:blocks._collection_list_item.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "t:blocks._collection_list_item.settings.collection.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:blocks._collection_list_item.settings.image.label",
+      "info": "t:blocks._collection_list_item.settings.image.info"
+    },
+    {
+      "type": "select",
+      "id": "style",
+      "label": "t:blocks._collection_list_item.settings.style.label",
+      "options": [
+        {
+          "value": "overlay",
+          "label": "t:blocks._collection_list_item.settings.style.options.overlay.label"
+        },
+        {
+          "value": "card",
+          "label": "t:blocks._collection_list_item.settings.style.options.card.label"
+        }
+      ],
+      "default": "overlay"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:blocks._collection_list_item.settings.title.label",
+      "info": "t:blocks._collection_list_item.settings.title.info"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "t:blocks._collection_list_item.settings.description.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks._collection_list_item.name"
+    }
+  ]
+}
+{% endschema %}

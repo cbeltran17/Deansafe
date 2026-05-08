@@ -1,0 +1,36 @@
+{%- capture attrs -%}
+  name="add"
+  data-section-ref="add_to_cart{% if block %}-{{ block.id }}{% endif %}-{{ id }}"
+  data-part="btn-add-to-cart"
+  {% if product.selected_or_first_available_variant.available == false
+    or product.selected_or_first_available_variant == blank
+  %}
+    disabled
+  {% endif %}
+  {% if id != blank %}
+    id="{{ id }}"
+  {% endif %}
+{%- endcapture -%}
+
+{%- capture content -%}
+  {% if product.selected_or_first_available_variant.available %}
+    {% if add_to_cart_text %}
+      {{ add_to_cart_text }}
+    {% else %}
+      {{ 'products.product.add_to_cart' | t }}
+    {% endif %}
+  {% elsif product.selected_or_first_available_variant %}
+    {{ 'products.product.sold_out' | t }}
+  {% else %}
+    {{ 'products.product.unavailable' | t }}
+  {% endif %}
+{%- endcapture -%}
+
+{% render 'button' with content,
+  attrs: attrs,
+  class: 'btn-add-to-cart w-full',
+  type: 'submit',
+  variant: 'flip',
+  background_color: block.settings.add_to_cart_background_color,
+  text_color: block.settings.add_to_cart_text_color
+%}

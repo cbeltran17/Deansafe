@@ -1,0 +1,74 @@
+{% liquid
+  assign carousel_id = 'complementary-products-carousel-' | append: section.id
+  assign limit = block.settings.limit | default: 8
+  assign heading = block.settings.heading
+%}
+
+<product-recommendations
+  class="product-complementary-products"
+  section-id="{{ section.id }}"
+  product-id="{{ product.id }}"
+  limit="{{ limit }}"
+  intent="complementary"
+  loading="eager"
+  {{ block.shopify_attributes }}
+>
+  {% if recommendations.performed and recommendations.products_count > 0 %}
+    <div class="product-complementary-products__heading">
+      {% if heading != blank %}
+        <p class="subheading-lg">{{ heading }}</p>
+      {% endif %}
+      <div class="product-complementary-products__seperator"></div>
+      {% if block.settings.carousel %}
+        {% render 'carousel-button', direction: 'prev', controls: carousel_id, size: 'xs' %}
+        {% render 'carousel-button', direction: 'next', controls: carousel_id, size: 'xs' %}
+      {% endif %}
+    </div>
+
+    <grid-carousel
+      id="{{ carousel_id }}"
+      {% if block.settings.carousel == false %}
+        wrap
+      {% endif %}
+      style="
+        --carousel-gap: 2rem;
+        --carousel-columns: 1;
+        --carousel-scroll-snap-type: x mandatory;
+      "
+    >
+      {% for product in recommendations.products %}
+        <div class="product-horizontal">
+          {% if product.featured_media %}
+            <a href="{{ product.url }}" class="product-horizontal__media" tabindex="-1">
+              {% render 'image' with product.featured_media,
+                class: 'line-item-image',
+                sizes: '80px',
+                widths: '80,160',
+                lqip: false
+              %}
+            </a>
+          {% endif %}
+          <div class="product-horizontal__info">
+            <a href="{{ product.url }}" class="inline-block">
+              <p class="product-horizontal__title">{{ product.title }}</p>
+            </a>
+            {% render 'price', product: product %}
+          </div>
+          <div class="product-horizontal__controls">
+            {% render 'product-card-add-to-cart',
+              product: product,
+              icon: true,
+              class: 'complementary-product__add-to-cart button--solid button--icon-md'
+            %}
+          </div>
+        </div>
+      {% endfor %}
+    </grid-carousel>
+    {% if block.settings.carousel %}
+      <carousel-dots
+        class="carousel-dots carousel-dots--simple"
+        aria-controls="{{ carousel_id }}"
+      ></carousel-dots>
+    {% endif %}
+  {% endif %}
+</product-recommendations>

@@ -1,0 +1,239 @@
+{% render 'section-meta', blend: true, blend_bg: section.settings.background_color %}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    --scrolling-text-gap: {% render 'rfs', rfs: section.settings.gap, base: 16 %};
+  }
+</style>
+
+<marquee-element
+  class="scrolling-text"
+  speed="{{ section.settings.speed }}"
+  direction="{{ section.settings.direction }}"
+>
+  <div class="scrolling-text__track" data-part="track">
+    {%- for block in section.blocks -%}
+      {% case block.type %}
+        {% when 'text' %}
+          <span
+            class="scrolling-text__item scrolling-text__text scrolling-text__text--{{ block.settings.font }}"
+            style="--scrolling-item-font-size: {% render 'rfs', rfs: block.settings.font_size, base: 32 %}"
+            {{ block.shopify_attributes }}
+          >
+            {{ block.settings.text }}
+          </span>
+
+        {% when 'image' %}
+          {% liquid
+            if block.settings.link != blank
+              assign tag = 'a'
+            else
+              assign tag = 'div'
+            endif
+
+            if block.settings.image != blank
+              assign target_height_px = block.settings.image_height | default: 64
+              assign aspect_ratio = block.settings.image.aspect_ratio | default: 1
+              assign width_1x = target_height_px | times: aspect_ratio | round
+              assign width_2x = width_1x | times: 2
+              capture widths
+                echo width_1x
+                echo ','
+                echo width_2x
+              endcapture
+            endif
+          %}
+          <{{ tag }}
+            {% if block.settings.link != blank %}
+              href="{{ block.settings.link }}"
+            {% endif %}
+            class="scrolling-text__item scrolling-text__image"
+            style="--scrolling-item-image-height: {% render 'rfs', rfs: block.settings.image_height, base: 32 %}"
+            {{ block.shopify_attributes }}
+            aria-hidden="true"
+            tabindex="-1"
+          >
+            {% if block.settings.image != blank %}
+              {{ block.settings.image | image_url: width: width_2x | image_tag: widths: widths }}
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'placeholder' }}
+            {% endif %}
+          </{{ tag }}>
+      {% endcase %}
+    {%- endfor -%}
+  </div>
+</marquee-element>
+
+{% schema %}
+{
+  "name": "t:sections.scrolling_text.name",
+  "tag": "section",
+  "class": "section-scrolling-text",
+  "settings": [
+    {
+      "type": "range",
+      "id": "speed",
+      "label": "t:sections.scrolling_text.settings.speed.label",
+      "min": 20,
+      "max": 120,
+      "step": 10,
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "t:sections.scrolling_text.settings.gap.label",
+      "min": 16,
+      "max": 64,
+      "step": 8,
+      "default": 32,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "direction",
+      "label": "t:sections.scrolling_text.settings.direction.label",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.scrolling_text.settings.direction.options.left.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.scrolling_text.settings.direction.options.right.label"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:sections.all.text_color.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_custom_spacing",
+      "label": "t:sections.all.enable_custom_spacing",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "top_spacing",
+      "label": "t:sections.all.top_spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing }}"
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "label": "t:sections.all.bottom_spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing }}"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "t:sections.scrolling_text.blocks.text.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "t:sections.scrolling_text.blocks.text.settings.text.label",
+          "default": "t:sections.scrolling_text.blocks.text.settings.text.default"
+        },
+        {
+          "type": "select",
+          "id": "font",
+          "label": "t:sections.scrolling_text.blocks.text.settings.font.label",
+          "options": [
+            {
+              "value": "heading",
+              "label": "t:sections.scrolling_text.blocks.text.settings.font.options.heading.label"
+            },
+            {
+              "value": "body",
+              "label": "t:sections.scrolling_text.blocks.text.settings.font.options.body.label"
+            }
+          ],
+          "default": "heading"
+        },
+        {
+          "type": "range",
+          "id": "font_size",
+          "min": 16,
+          "max": 160,
+          "step": 8,
+          "unit": "px",
+          "label": "t:sections.scrolling_text.blocks.text.settings.font_size.label",
+          "default": 48
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "t:sections.scrolling_text.blocks.image.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.all.image.label"
+        },
+        {
+          "type": "range",
+          "id": "image_height",
+          "min": 16,
+          "max": 192,
+          "step": 16,
+          "unit": "px",
+          "label": "t:sections.all.image_height.label",
+          "default": 64
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.all.link.label"
+        }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "presets": [
+    {
+      "name": "t:sections.scrolling_text.name",
+      "blocks": [
+        {
+          "type": "text"
+        },
+        {
+          "type": "image"
+        }
+      ],
+      "category": "t:sections.categories.content"
+    }
+  ]
+}
+{% endschema %}

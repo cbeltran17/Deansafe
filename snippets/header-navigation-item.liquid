@@ -1,0 +1,21 @@
+{%- liquid
+  if mega_menu_settings
+    for item in mega_menu_settings
+      assign target = '<mega-menu-target>' | append: link.title | append: '</mega-menu-target>'
+
+      if item contains target
+        assign mega_menu_id = item | split: '<mega-menu-id>' | last | split: '</mega-menu-id>' | first
+        break
+      endif
+    endfor
+  endif
+-%}
+{%- if link.links != blank and mega_menu_id == blank -%}
+  {% render 'header-navigation-dropdown', link: link, link_position: link_position %}
+{%- else -%}
+  {% render 'header-navigation-link',
+    link: link,
+    mega_menu_id: mega_menu_id,
+    link_position: link_position
+  %}
+{%- endif -%}

@@ -1,0 +1,36 @@
+{% liquid
+  assign size_factor = base_size | divided_by: 16.0
+%}
+
+<style>
+  :root {
+    {% case font_setting %}
+      {% when 'heading' %}
+        --{{ type }}-font-family: var(--font-family-display);
+        --{{ type }}-font-weight: var(--font-weight-display);
+        --{{ type }}-font-style: var(--font-style-display);
+      {% when 'bold' %}
+        --{{ type }}-font-family: var(--font-family-body);
+        --{{ type }}-font-weight: var(--font-weight-bold);
+        --{{ type }}-font-style: var(--font-style-body);
+      {% when 'medium' %}
+        --{{ type }}-font-family: var(--font-family-body);
+        --{{ type }}-font-weight: var(--font-weight-medium);
+        --{{ type }}-font-style: var(--font-style-body);
+      {% else %}
+        --{{ type }}-font-family: var(--font-family-body);
+        --{{ type }}-font-weight: var(--font-weight-normal);
+        --{{ type }}-font-style: var(--font-style-body);
+    {% endcase %}
+
+    {% if base_size != blank %}
+    --{{ type }}-font-size: calc(var(--body-base-font-size) * {{ size_factor }});
+    {% endif %}
+
+    {% if capitalize %}
+    --{{ type }}-text-transform: uppercase;
+    {% else %}
+    --{{ type }}-text-transform: none;
+    {% endif %}
+  }
+</style>

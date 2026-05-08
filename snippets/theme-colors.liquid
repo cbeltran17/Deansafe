@@ -1,0 +1,51 @@
+<style>
+  :root {
+    {% comment %} Colors {% endcomment %}
+    --page-heading-color: {{ settings.color_headings.rgb }};
+    --heading-color: var(--page-heading-color);
+
+    --page-text-color: {{ settings.color_text.rgb }};
+    --text-color: var(--page-text-color);
+
+    --text-highlight-color: {{ settings.color_text_highlight }};
+    {% assign text_highlight_marker_alpha = settings.color_text_highlight.alpha | times: 0.5 %}
+    --text-highlight-marker-color: {{ settings.color_text_highlight | color_modify: 'alpha', text_highlight_marker_alpha }};
+
+    --page-background-color: {{ settings.color_background.rgb }};
+    --background-color: var(--page-background-color);
+
+    --product-in-stock-color: {{ settings.color_product_in_stock.rgb }};
+    --product-out-of-stock-color: {{ settings.color_product_out_of_stock.rgb }};
+
+    {% render 'button-vars', type: 'primary', background: settings.color_button_primary_background, color: settings.color_button_primary_text %}
+    {% render 'button-vars', type: 'secondary', background: settings.color_button_secondary_background, color: settings.color_button_secondary_text %}
+
+    --button-color: var(--button-primary-color);
+    --button-background: var(--button-primary-background);
+    --button-background-hover: var(--button-primary-background-hover);
+    --button-background-active: var(--button-primary-background-active);
+
+    --button-shopify-checkout-color: var(--button-secondary-color);
+    --button-shopify-checkout-background: var(--button-secondary-background);
+    --button-shopify-checkout-background-hover: var(--button-secondary-background-hover);
+    --button-shopify-checkout-background-active: var(--button-secondary-background-active);
+
+    --product-sale-badge-background: {{ settings.color_product_sale_badge.rgb }};
+    --product-sale-badge-color: {% render 'get-foreground' with settings.color_product_sale_badge %};
+
+    --product-custom-badge-background: {{ settings.color_product_custom_badge.rgb }};
+    --product-custom-badge-color: {% render 'get-foreground' with settings.color_product_custom_badge %};
+
+    --active-filter-background: 246 246 246;
+    --active-filter-color: 40 40 40;
+    --active-filter-icon-color: 120 120 120;
+
+    --product-card-background: {{ settings.color_product_card_background.rgb }};
+    --product-card-color: {{ settings.color_product_card_text.rgb }};
+
+    --free-shipping-bar-fill: {{ settings.color_free_shipping_bar.rgb }};
+
+    --article-tag-background: {{ settings.color_article_tag_background.rgb }};
+    --article-tag-text: {{ settings.color_article_tag_text.rgb }};
+  }
+</style>

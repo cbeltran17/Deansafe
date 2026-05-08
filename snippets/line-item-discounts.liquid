@@ -1,0 +1,16 @@
+{% if item.line_level_discount_allocations.size > 0 %}
+  <ul
+    class="line-item-discounts"
+    aria-label="{{ 'customer.order.discount' | t }}"
+  >
+    {% for discount_allocation in item.line_level_discount_allocations %}
+      <li class="line-item-discounts__item">
+        {{ 'icon-discount.svg' | inline_asset_content }}
+        <span>
+          {{ discount_allocation.discount_application.title }}
+          (-{{ discount_allocation.amount | money }})
+        </span>
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}

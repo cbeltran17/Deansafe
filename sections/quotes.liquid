@@ -1,0 +1,229 @@
+{% render 'section-meta', blend: true, blend_bg: section.settings.background_color %}
+
+{% liquid
+  assign slideshow_id = section.id | append: '-quotes'
+%}
+
+<style>
+  #shopify-section-{{ section.id }} {
+    {% render 'color-var' with section.settings.rating_star_color, name: 'rating-star-filled-color' %}
+  }
+</style>
+
+<div class="section-full-width">
+  <div class="container-inline-size">
+    <div class="relative">
+      <slideshow-element
+        animate-height
+        class="slideshow quotes"
+        id="{{ slideshow_id }}"
+        transition="slideshow-fade"
+        {% if section.settings.autoplay %}
+          autoplay="{{ section.settings.autoplay_interval | times: 1000 }}"
+        {% endif %}
+      >
+        {% for block in section.blocks %}
+          <blockquote
+            class="slideshow__slide quotes__slide"
+            id="shopify-block-{{ block.id }}"
+            {{ block.shopify_attributes }}
+          >
+            <animation-element
+              {% if forloop.first %}
+                autoplay
+              {% endif %}
+              selector=".quotes__rating, .quotes__text, .quotes__cite"
+              stagger="100"
+              delay="100"
+            >
+              {% if block.settings.show_rating %}
+                <div class="quotes__rating">
+                  {% render 'rating-stars', rating: block.settings.rating %}
+                </div>
+              {% endif %}
+              <div class="quotes__content">
+                {% if block.settings.quote != blank %}
+                  <split-text mode="lines" class="quotes__text {{ section.settings.quote_size }}">
+                    {{ block.settings.quote }}
+                  </split-text>
+                {% endif %}
+              </div>
+              {% if block.settings.cite != blank %}
+                <cite class="quotes__cite">&mdash; {{ block.settings.cite }}</cite>
+              {% endif %}
+            </animation-element>
+          </blockquote>
+        {% endfor %}
+      </slideshow-element>
+
+      <div class="quotes__controls">
+        <carousel-dots
+          class="carousel-dots--slideshow"
+          aria-controls="{{ slideshow_id }}"
+        ></carousel-dots>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.quotes.name",
+  "class": "section-quotes",
+  "settings": [
+    {
+      "type": "select",
+      "id": "quote_size",
+      "label": "t:sections.quotes.settings.quote_size.label",
+      "options": [
+        {
+          "value": "h1",
+          "label": "t:sections.quotes.settings.quote_size.options.h_1.label"
+        },
+        {
+          "value": "h2",
+          "label": "t:sections.quotes.settings.quote_size.options.h_2.label"
+        },
+        {
+          "value": "h3",
+          "label": "t:sections.quotes.settings.quote_size.options.h_3.label"
+        }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.quotes.headers.autoplay.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "t:sections.quotes.settings.autoplay.label",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_interval",
+      "min": 3,
+      "max": 15,
+      "step": 1,
+      "unit": "s",
+      "label": "t:sections.quotes.settings.autoplay_interval.label",
+      "default": 5,
+      "visible_if": "{{ section.settings.autoplay == true }}"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:sections.all.text_color.label"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "t:sections.all.heading_color.label"
+    },
+    {
+      "type": "color",
+      "id": "rating_star_color",
+      "label": "t:sections.quotes.settings.rating_star_color.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.headers.spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_custom_spacing",
+      "label": "t:sections.all.enable_custom_spacing",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "top_spacing",
+      "label": "t:sections.all.top_spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing }}"
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "label": "t:sections.all.bottom_spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing }}"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quote",
+      "name": "t:sections.quotes.blocks.quote.name",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "show_rating",
+          "label": "t:sections.quotes.blocks.quote.settings.show_rating.label",
+          "default": true
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "t:sections.quotes.blocks.quote.settings.rating.label",
+          "min": 3,
+          "max": 5,
+          "step": 0.5,
+          "default": 5,
+          "visible_if": "{{ block.settings.show_rating == true }}"
+        },
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "t:sections.quotes.blocks.quote.settings.quote.label",
+          "default": "t:sections.quotes.blocks.quote.settings.quote.default"
+        },
+        {
+          "type": "text",
+          "id": "cite",
+          "label": "t:sections.quotes.blocks.quote.settings.cite.label",
+          "default": "t:sections.quotes.blocks.quote.settings.cite.default"
+        }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "presets": [
+    {
+      "name": "t:sections.quotes.name",
+      "blocks": [
+        {
+          "type": "quote"
+        },
+        {
+          "type": "quote"
+        },
+        {
+          "type": "quote"
+        }
+      ],
+      "category": "t:sections.categories.content"
+    }
+  ]
+}
+{% endschema %}

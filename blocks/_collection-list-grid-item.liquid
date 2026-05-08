@@ -1,0 +1,52 @@
+{% liquid
+  assign image = block.settings.image | default: block.settings.collection.featured_image
+  assign title = block.settings.title | default: block.settings.collection.title | default: 'Collection'
+%}
+
+<a
+  id="shopify-block-{{ block.id }}"
+  class="shopify-block collection-list-grid-item media-hover-zoom"
+  {{ block.shopify_attributes }}
+  href="{{ block.settings.collection.url }}"
+>
+  {% render 'image' with image,
+    placeholder: true,
+    loading: 'lazy',
+    sizes: 'auto',
+    widths: '64, 128, 192, 256, 384, 512, 768',
+    lqip: false
+  %}
+  <span class="link-inner">{{ title }}</span>
+  {% comment %} {{ 'icon-chevron-right.svg' | inline_asset_content -}} {% endcomment %}
+</a>
+
+{% schema %}
+{
+  "name": "t:blocks._collection_list_grid_item.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "t:blocks._collection_list_grid_item.settings.collection.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:blocks._collection_list_grid_item.settings.image.label",
+      "info": "t:blocks._collection_list_grid_item.settings.image.info"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:blocks._collection_list_grid_item.settings.title.label",
+      "info": "t:blocks._collection_list_grid_item.settings.title.info"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks._collection_list_grid_item.name"
+    }
+  ]
+}
+{% endschema %}

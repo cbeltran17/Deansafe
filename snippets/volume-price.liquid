@@ -1,0 +1,40 @@
+{% liquid
+  assign price_min = product.price_min
+  assign price_max = product.price_max
+
+  assign money_price_min = price_min | money
+  assign money_price_max = price_max | money
+
+  if settings.currency_code_enabled
+    assign money_price_min = price_min | money_with_currency
+    assign money_price_max = price_max | money_with_currency
+  endif
+%}
+
+<span class="volume-price">
+  {% if target.compare_at_price %}
+    {% unless product.price_varies == false and product.compare_at_price_varies %}
+      <span class="sr-only">
+        {{- 'products.product.price.regular_price' | t -}}
+      </span>
+      <span>
+        <s class="price-item price-item--regular variant-item__old-price">
+          {% if settings.currency_code_enabled %}
+            {{ target.compare_at_price | money_with_currency }}
+          {% else %}
+            {{ target.compare_at_price | money }}
+          {% endif %}
+        </s>
+      </span>
+    {% endunless %}
+  {% endif %}
+  <span class="sr-only">
+    {{- 'products.product.price.regular_price' | t -}}
+  </span>
+  <span class="price-item price-item--regular">
+    {{-
+      'products.product.volume_pricing.price_range'
+      | t: minimum: money_price_min, maximum: money_price_max
+    -}}
+  </span>
+</span>

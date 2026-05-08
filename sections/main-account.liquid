@@ -1,0 +1,144 @@
+{% render 'section-meta' %}
+
+<div class="account-content">
+  {% render 'account-header' %}
+
+  {% paginate customer.orders by 16 %}
+    {%- if customer.orders.size > 0 -%}
+      <div class="orders-overview">
+        <table class="orders-table order-table-desktop">
+          <thead>
+            <tr>
+              <th id="ColumnOrder" scope="col">
+                {{ 'customer.orders.order' | t }}
+              </th>
+              <th id="ColumnDate" scope="col">
+                {{ 'customer.orders.date' | t }}
+              </th>
+              <th id="ColumnTotal" scope="col">
+                {{ 'customer.orders.total' | t }}
+              </th>
+              <th id="ColumnPayment" scope="col">
+                {{ 'customer.orders.payment_status' | t }}
+              </th>
+              <th id="ColumnFulfillment" scope="col">
+                {{- 'customer.orders.fulfillment_status' | t -}}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {%- for order in customer.orders -%}
+              <tr>
+                <td id="RowOrder-{{ order.id }}">
+                  <a
+                    class="orders-table__link"
+                    href="{{ order.customer_url }}"
+                    aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}"
+                  >
+                    {{- order.name -}}
+                  </a>
+                </td>
+                <td headers="RowOrder-{{ order.id }} ColumnDate">
+                  {{- order.created_at | time_tag: format: 'date' -}}
+                </td>
+                <td headers="RowOrder-{{ order.id }} ColumnTotal">
+                  {{- order.total_price | money -}}
+                </td>
+                <td
+                  headers="RowOrder-{{ order.id }} ColumnPayment"
+                >
+                  <span class="status-pill financial-status-{{ order.financial_status }}">
+                    {{ order.financial_status_label }}
+                  </span>
+                </td>
+                <td
+                  headers="RowOrder-{{ order.id }} ColumnFulfillment"
+                >
+                  <span class="status-pill fulfillment-status-{{ order.fulfillment_status }}">
+                    {{ order.fulfillment_status_label }}
+                  </span>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+        <div class="orders-mobile">
+          {% for order in customer.orders %}
+            <div class="order-card">
+              <div class="order-card__header">
+                <a
+                  class="order-card__number"
+                  href="{{ order.customer_url }}"
+                  aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}"
+                >
+                  {{- 'customer.orders.order_number' | t: name: order.name -}}
+                </a>
+              </div>
+              <div class="order-card__body">
+                <div class="order-card__row">
+                  <div class="order-card__label">{{ 'customer.orders.date' | t }}</div>
+                  <div class="order-card__value">
+                    {{- order.created_at | time_tag: format: 'date' -}}
+                  </div>
+                </div>
+                <div class="order-card__row">
+                  <div class="order-card__label">{{ 'customer.orders.total' | t }}</div>
+                  <div class="order-card__value">{{- order.total_price | money -}}</div>
+                </div>
+                <div class="order-card__row">
+                  <div class="order-card__label">{{ 'customer.orders.payment_status' | t }}</div>
+                  <span class="status-pill financial-status-{{ order.financial_status }}">
+                    {{ order.financial_status_label }}
+                  </span>
+                </div>
+                <div class="order-card__row">
+                  <div class="order-card__label">
+                    {{ 'customer.orders.fulfillment_status' | t }}
+                  </div>
+                  <span class="status-pill fulfillment-status-{{ order.fulfillment_status }}">
+                    {{ order.fulfillment_status_label }}
+                  </span>
+                </div>
+              </div>
+              <div class="order-card__footer">
+                {% render 'button',
+                  translation: 'customer.orders.view_order_button',
+                  href: order.customer_url,
+                  size: 'sm',
+                  class: 'w-full'
+                %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        {% render 'pagination-classic', paginate: paginate, scroll_to_target: '.orders-overview' %}
+      </div>
+    {% else %}
+      <p>{{ 'customer.orders.none' | t }}</p>
+    {% endif %}
+  {% endpaginate %}
+
+  {% if false %}
+    <div class="account-details">
+      <h2 class="h4 mb-6">{{ 'customer.account.details' | t }}</h2>
+
+      {{ customer.default_address | format_address }}
+
+      {% capture button_content %}
+        {{ 'customer.account.view_addresses' | t: count: customer.addresses_count }}
+      {% endcapture %}
+
+      {% render 'button' with button_content, href: routes.account_addresses_url, class: 'mt-8' %}
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main_account.name",
+  "class": "section-main-account",
+  "settings": []
+}
+{% endschema %}

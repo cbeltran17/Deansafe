@@ -1,0 +1,38 @@
+<style>
+  #shopify-block-{{ block.id }} {
+    {% render 'color-var' with block.settings.rating_star_color, name: 'rating-star-filled-color' %}
+  }
+</style>
+
+<div class="rating-average">
+  <span>{{ block.settings.average_rating }} / 5</span>
+  {% render 'rating-stars', rating: block.settings.average_rating %}
+</div>
+
+{% schema %}
+{
+  "name": "t:blocks.rating.name",
+  "class": "block-rating",
+  "settings": [
+    {
+      "type": "range",
+      "id": "average_rating",
+      "label": "t:blocks.rating.settings.average_rating.label",
+      "min": 3,
+      "max": 5,
+      "step": 0.1,
+      "default": 4.9
+    },
+    {
+      "type": "color",
+      "id": "rating_star_color",
+      "label": "t:blocks.rating.settings.rating_star_color.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks.rating.name"
+    }
+  ]
+}
+{% endschema %}

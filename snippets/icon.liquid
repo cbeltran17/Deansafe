@@ -1,0 +1,5 @@
+{%- liquid
+  assign filename = 'icon-' | append: icon | append: '.svg'
+-%}
+
+<div class="icon">{{ filename | inline_asset_content }}</div>

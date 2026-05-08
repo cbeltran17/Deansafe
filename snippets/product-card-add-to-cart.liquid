@@ -1,0 +1,66 @@
+{% doc %}
+  Renders an add-to-cart or quick-view button for product cards.
+  Shows "Quick Add" for single-variant products, "Quick View" for multi-variant products.
+
+  @param {object} product - The product object
+  @param {object} [collection] - Collection for URL context
+  @param {boolean} [icon] - Display cart icon instead of text
+  @param {string} [size] - Button size (passed to button snippet)
+  @param {string} [class] - Additional CSS classes
+  @param {string} [variant] - Button variant style
+  @param {boolean} [from_api] - Whether it's being rendered from Section Rendering API
+
+  @example
+  {% render 'product-card-add-to-cart', product: product %}
+  @example
+  {% render 'product-card-add-to-cart',
+    product: product,
+    collection: collection,
+    icon: true,
+    size: 'sm'
+  %}
+{% enddoc %}
+
+{% liquid
+  if product.available == false
+    break
+  endif
+
+  assign product_url = product.url
+
+  if product.selected_variant
+    assign product_url = product.selected_variant.url
+  endif
+
+  if collection and from_api == true or section.settings.include_collection_url
+    assign product_url = product_url | within: collection
+  endif
+%}
+
+{% capture button_content %}
+  {% if icon == true %}
+    {{ 'icon-cart.svg' | inline_asset_content }}
+  {% elsif product.has_only_default_variant %}
+    <span>{{ 'products.product.quick_add' | t }}</span>
+  {% else %}
+    <span>{{ 'products.product.quick_view' | t }}</span>
+  {% endif %}
+{% endcapture %}
+
+{% capture attrs %}
+  url="{{ product_url }}"
+  {% if product.has_only_default_variant %}
+    aria-label="{{ 'accessibility.product_quick_add_button' | t: product: product.title }}"
+    variant-id="{{ product.selected_or_first_available_variant.id }}"
+  {% else %}
+    aria-label="{{ 'accessibility.product_quick_view_button' | t: product: product.title }}"
+  {% endif %}
+{% endcapture %}
+
+{% render 'button' with button_content,
+  is: 'add-to-cart-button',
+  size: size,
+  attrs: attrs,
+  class: class,
+  variant: variant
+%}

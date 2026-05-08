@@ -1,0 +1,43 @@
+{% liquid
+  assign direction = direction | default: 'horizontal'
+%}
+<media-carousel-thumbnails
+  tabindex="-1"
+  data-section-ref="thumbnails{{ scope }}"
+  id="{{ section.id }}-media-thumbnails{{ scope }}"
+  direction="{{ direction }}"
+  class="product-carousel-thumbnails product-carousel-thumbnails--{{ direction }} {{ class }}"
+  aria-controls="{{ section.id }}-media"
+>
+  <button
+    tabindex="-1"
+    aria-hidden="true"
+    class="product-carousel-thumbnails__button product-carousel-thumbnails__button--prev"
+    direction="prev"
+    is="carousel-button"
+    slot="before"
+    aria-controls="{{ section.id }}-media-thumbnails{{ scope }}"
+    aria-label="{{ 'accessibility.previous' | t }}"
+  >
+    {{ 'icon-chevron-down.svg' | inline_asset_content }}
+  </button>
+
+  {% render 'product-media-loop',
+    product: product,
+    only_selected_variant_images: section.settings.only_selected_variant_images,
+    snippet: 'product-media-thumbnail'
+  %}
+
+  <button
+    tabindex="-1"
+    aria-hidden="true"
+    class="product-carousel-thumbnails__button product-carousel-thumbnails__button--next"
+    direction="next"
+    is="carousel-button"
+    slot="after"
+    aria-controls="{{ section.id }}-media-thumbnails{{ scope }}"
+    aria-label="{{ 'accessibility.next' | t }}"
+  >
+    {{ 'icon-chevron-down.svg' | inline_asset_content }}
+  </button>
+</media-carousel-thumbnails>

@@ -1,0 +1,42 @@
+{% if article.image %}
+  {% liquid
+    if block.settings.full_width
+      assign sizes = '100vw'
+    else
+      assign image_width = section.settings.content_width | plus: 96
+      capture sizes
+        render 'sizes', base: 1, page_width: image_width
+      endcapture
+    endif
+  %}
+  <style>
+    #shopify-section-{{ section.id }} {
+      {% if block.settings.aspect_ratio != 'auto' %}
+        --article-image-aspect-ratio: {{ block.settings.aspect_ratio }};
+      {% endif %}
+
+      {% if block.settings.full_width %}
+        --article-image-border-radius: 0;
+      {% else  %}
+        --article-image-max-width: calc(var(--article-content-width) + 96px);
+      {% endif %}
+    }
+
+    {% unless block.settings.full_width %}
+      @media not all and (min-width: {{ image_width }}px) {
+        #shopify-section-{{ section.id }} {
+          --article-image-border-radius: 0;
+        }
+      }
+    {% endunless %}
+  </style>
+
+  <div class="article-featured-image {% if block.settings.full_width %}article-featured-image--full-width{% endif %}">
+    {% render 'image' with article.image,
+      width: 3840,
+      widths: '360, 780, 896, 1024, 1280, 1536, 2048, 2560, 3840',
+      class: 'article__image',
+      sizes: sizes
+    %}
+  </div>
+{% endif %}

@@ -1,0 +1,64 @@
+{%- liquid
+  if full_width == true
+    render 'sizes-full-width', base: base, sm: sm, md: md, lg: lg, xl: xl, hd: hd
+    break
+  endif
+
+  assign page_width = page_width | default: settings.page_width
+  assign first = true
+
+  assign clamp_ratio = null
+  if hd != null and page_width >= 1536
+    assign clamp_ratio = hd
+  elsif xl != null and page_width >= 1280
+    assign clamp_ratio = xl
+  elsif lg != null and page_width >= 1024
+    assign clamp_ratio = lg
+  elsif md != null and page_width >= 768
+    assign clamp_ratio = md
+  elsif sm != null and page_width >= 640
+    assign clamp_ratio = sm
+  elsif base != null
+    assign clamp_ratio = base
+  endif
+-%}
+
+{%- if clamp_ratio != null -%}
+  (min-width: {{ page_width }}px) {{ page_width | divided_by: clamp_ratio | round }}px
+  {%- assign first = false -%}
+{%- endif -%}
+
+{%- if hd != null -%}
+  {%- if first == false -%},{%- endif -%}
+  (min-width: 1536px) {{ 100.0 | divided_by: hd | round: 2 }}vw
+  {%- assign first = false -%}
+{%- endif -%}
+
+{%- if xl != null -%}
+  {%- if first == false -%},{%- endif -%}
+  (min-width: 1280px) {{ 100.0 | divided_by: xl | round: 2 }}vw
+  {%- assign first = false -%}
+{%- endif -%}
+
+{%- if lg != null -%}
+  {%- if first == false -%},{%- endif -%}
+  (min-width: 1024px) {{ 100.0 | divided_by: lg | round: 2 }}vw
+  {%- assign first = false -%}
+{%- endif -%}
+
+{%- if md != null -%}
+  {%- if first == false -%},{%- endif -%}
+  (min-width: 768px) {{ 100.0 | divided_by: md | round: 2 }}vw
+  {%- assign first = false -%}
+{%- endif -%}
+
+{%- if sm != null -%}
+  {%- if first == false -%},{%- endif -%}
+  (min-width: 640px) {{ 100.0 | divided_by: sm | round: 2 }}vw
+  {%- assign first = false -%}
+{%- endif -%}
+
+{%- if base != null -%}
+  {%- if first == false -%},{%- endif -%}
+  {{ 100.0 | divided_by: base | round: 2 }}vw
+{%- endif -%}

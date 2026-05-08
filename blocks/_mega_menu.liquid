@@ -1,0 +1,112 @@
+{% liquid
+  assign menu_item = section.settings.menu.links | find: 'title', block.settings.menu_item | default: section.settings.menu.links[0]
+  assign main_content = ''
+  assign badges_content = ''
+
+  for item in block.blocks
+    capture content
+      render item
+    endcapture
+
+    if content contains '<menu-item-badge>'
+      assign badges_content = badges_content | append: content
+    else
+      assign main_content = main_content | append: content
+    endif
+  endfor
+
+  assign badges = badges_content | split: '<menu-item-badge>'
+%}
+
+{% if menu_item %}
+  <div
+    id="{{ block.id }}"
+    tabindex="-1"
+    {{ block.shopify_attributes }}
+  >
+    <style>
+      #{{ block.id }} {
+        --promotion-card-width: {{ block.settings.promotion_card_width }}px;
+        --mega-menu-promotions-direction: {{ block.settings.promotion_cards_direction }};
+      }
+    </style>
+    <div class="mega-menu-page">
+      <div class="mega-menu-page__links">
+        {% for link in menu_item.links %}
+          <ul data-link-group class="mega-menu-list">
+            {% render 'mega-menu-link', link: link, badges: badges, class: 'font-medium' %}
+            {% if link.links %}
+              {% for link in link.links %}
+                {% render 'mega-menu-link', link: link, badges: badges %}
+              {% endfor %}
+            {% endif %}
+          </ul>
+        {% endfor %}
+      </div>
+      <div class="mega-menu-page__promotions">
+        {{ main_content }}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+<template>
+  <mega-menu-settings>
+    <mega-menu-id>{{ block.id }}</mega-menu-id>
+    <mega-menu-target>{{ menu_item.title }}</mega-menu-target>
+    <mega-menu-content>{{ main_content }}</mega-menu-content>
+  </mega-menu-settings>
+</template>
+
+{% schema %}
+{
+  "name": "t:blocks._mega_menu.name",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "menu_item",
+      "label": "t:blocks._mega_menu.settings.menu_item.label"
+    },
+    {
+      "type": "select",
+      "id": "promotion_cards_direction",
+      "label": "t:blocks._mega_menu.settings.promotion_cards_direction.label",
+      "options": [
+        {
+          "value": "row",
+          "label": "t:blocks._mega_menu.settings.promotion_cards_direction.options.row.label"
+        },
+        {
+          "value": "column",
+          "label": "t:blocks._mega_menu.settings.promotion_cards_direction.options.column.label"
+        }
+      ],
+      "default": "column"
+    },
+    {
+      "type": "range",
+      "id": "promotion_card_width",
+      "label": "t:blocks._mega_menu.settings.promotion_card_width.label",
+      "min": 220,
+      "max": 360,
+      "step": 10,
+      "default": 280,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "_menu_promotion_card"
+    },
+    {
+      "type": "_menu_item_badge"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks._mega_menu.name"
+    }
+  ]
+}
+{% endschema %}

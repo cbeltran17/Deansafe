@@ -1,0 +1,82 @@
+{% capture footer_title %}
+  {% if block.settings.show_heading %}
+    <p id="{{ block.id }}-heading" class="footer-link-list__title">
+      {{ block.settings.heading | default: block.settings.links.title }}
+    </p>
+  {% endif %}
+{% endcapture %}
+
+{% capture footer_content %}
+  {% if block.settings.links != blank %}
+    <nav
+      {% if block.settings.show_heading %}
+        aria-labelledby="{{ block.id }}-heading"
+      {% endif %}
+    >
+      <ul>
+        {% for link in block.settings.links.links %}
+          <li>
+            <a href="{{ link.url }}">
+              <span class="link-inner">{{ link.title }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  {% endif %}
+{% endcapture %}
+
+{% if section.settings.collapse_links_on_mobile %}
+  <div class="footer-link-collapse sm:hidden">
+    <smooth-collapse>
+      <button
+        slot="summary"
+        class="footer-link-collapse__summary icon-flip-y"
+      >
+        {{ block.settings.heading | default: block.settings.links.title }}
+        {{ 'icon-chevron-down.svg' | inline_asset_content }}
+      </button>
+      <div class="footer-link-collapse__content">{{ footer_content }}</div>
+    </smooth-collapse>
+  </div>
+
+  <div class="footer-link-desktop max-sm:hidden">
+    {{ footer_title }}
+    {{ footer_content }}
+  </div>
+{% else %}
+  {{ footer_title }}
+  {{ footer_content }}
+{% endif %}
+
+{% schema %}
+{
+  "name": "t:blocks._footer_links.name",
+  "class": "block-footer-links footer-link-list",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_heading",
+      "label": "t:blocks._footer_links.settings.show_heading.label",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:blocks._footer_links.settings.heading.label",
+      "visible_if": "{{ block.settings.show_heading == true }}",
+      "info": "t:blocks._footer_links.settings.heading.info"
+    },
+    {
+      "type": "link_list",
+      "id": "links",
+      "label": "t:blocks._footer_links.settings.links.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:blocks._footer_links.name"
+    }
+  ]
+}
+{% endschema %}
