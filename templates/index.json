@@ -349,6 +349,7 @@
         "collection_list_item_tEnHTL",
         "collection_list_item_Gi6rwd"
       ],
+      "disabled": true,
       "name": "t:sections.collection_list.name",
       "settings": {
         "enable_carousel": false,
@@ -363,6 +364,70 @@
         "enable_custom_spacing": false,
         "top_spacing": 80,
         "bottom_spacing": 80
+      }
+    },
+    "brands_diMQE9": {
+      "type": "brands",
+      "blocks": {
+        "brand_wbR9hm": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/fort-knox_6d7a6c18-eab7-4fe5-a698-c425541f8b05.jpg",
+            "link": ""
+          }
+        },
+        "brand_aQ37ed": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/fort-knox_6d7a6c18-eab7-4fe5-a698-c425541f8b05.jpg",
+            "link": ""
+          }
+        },
+        "brand_Mbep9X": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/fort-knox_6d7a6c18-eab7-4fe5-a698-c425541f8b05.jpg",
+            "link": ""
+          }
+        },
+        "brand_maKX7b": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/fort-knox_6d7a6c18-eab7-4fe5-a698-c425541f8b05.jpg",
+            "link": ""
+          }
+        },
+        "brand_YUx7jX": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/fort-knox_6d7a6c18-eab7-4fe5-a698-c425541f8b05.jpg",
+            "link": ""
+          }
+        },
+        "brand_MCrgWa": {
+          "type": "brand",
+          "settings": {
+            "image": "shopify://shop_images/fort-knox_6d7a6c18-eab7-4fe5-a698-c425541f8b05.jpg",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "brand_wbR9hm",
+        "brand_aQ37ed",
+        "brand_Mbep9X",
+        "brand_maKX7b",
+        "brand_YUx7jX",
+        "brand_MCrgWa"
+      ],
+      "name": "Brands",
+      "settings": {
+        "title": "Top Brands",
+        "subtitle": "",
+        "link_label": "View All Brands",
+        "link_url": "shopify://pages/brands",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "image_with_text_slider_aYpUQJ": {
@@ -491,70 +556,6 @@
         "enable_custom_spacing": false,
         "top_spacing": 80,
         "bottom_spacing": 80
-      }
-    },
-    "brands_diMQE9": {
-      "type": "brands",
-      "blocks": {
-        "brand_wbR9hm": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/fort-knox_6d7a6c18-eab7-4fe5-a698-c425541f8b05.jpg",
-            "link": ""
-          }
-        },
-        "brand_aQ37ed": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/fort-knox_6d7a6c18-eab7-4fe5-a698-c425541f8b05.jpg",
-            "link": ""
-          }
-        },
-        "brand_Mbep9X": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/fort-knox_6d7a6c18-eab7-4fe5-a698-c425541f8b05.jpg",
-            "link": ""
-          }
-        },
-        "brand_maKX7b": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/fort-knox_6d7a6c18-eab7-4fe5-a698-c425541f8b05.jpg",
-            "link": ""
-          }
-        },
-        "brand_YUx7jX": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/fort-knox_6d7a6c18-eab7-4fe5-a698-c425541f8b05.jpg",
-            "link": ""
-          }
-        },
-        "brand_MCrgWa": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/fort-knox_6d7a6c18-eab7-4fe5-a698-c425541f8b05.jpg",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "brand_wbR9hm",
-        "brand_aQ37ed",
-        "brand_Mbep9X",
-        "brand_maKX7b",
-        "brand_YUx7jX",
-        "brand_MCrgWa"
-      ],
-      "name": "Brands",
-      "settings": {
-        "title": "Top Brands",
-        "subtitle": "",
-        "link_label": "View All Brands",
-        "link_url": "shopify://pages/brands",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "testimonials_eR6HaW": {
@@ -1060,8 +1061,8 @@
     "text_with_icons_Pb9XgQ",
     "multiple_featured_collections_zGjR6b",
     "collection_list_cwecAX",
-    "image_with_text_slider_aYpUQJ",
     "brands_diMQE9",
+    "image_with_text_slider_aYpUQJ",
     "testimonials_eR6HaW",
     "video_BDLyyz",
     "locations_j7XtTV",
