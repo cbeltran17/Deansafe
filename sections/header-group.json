@@ -14,6 +14,18 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_8BMT9h": {
+          "type": "_announcement",
+          "name": "t:blocks._announcement.name",
+          "settings": {
+            "show_icon": false,
+            "icon": "badge-discount",
+            "text": "Welcome to our store",
+            "link": "",
+            "link_text": ""
+          },
+          "blocks": {}
+        },
         "announcement": {
           "type": "_announcement",
           "settings": {
@@ -27,6 +39,7 @@
         }
       },
       "block_order": [
+        "announcement_8BMT9h",
         "announcement"
       ],
       "settings": {
