@@ -372,42 +372,35 @@
         "brand_wbR9hm": {
           "type": "brand",
           "settings": {
-            "image": "shopify://shop_images/fort-knox_6d7a6c18-eab7-4fe5-a698-c425541f8b05.jpg",
+            "image": "shopify://shop_images/PB_AMSEC.jpg",
             "link": ""
           }
         },
         "brand_aQ37ed": {
           "type": "brand",
           "settings": {
-            "image": "shopify://shop_images/fort-knox_6d7a6c18-eab7-4fe5-a698-c425541f8b05.jpg",
+            "image": "shopify://shop_images/PB_fort-knox_400x_0fe11340-2b89-439f-bde7-3df4c607ab27.jpg",
             "link": ""
           }
         },
         "brand_Mbep9X": {
           "type": "brand",
           "settings": {
-            "image": "shopify://shop_images/fort-knox_6d7a6c18-eab7-4fe5-a698-c425541f8b05.jpg",
+            "image": "shopify://shop_images/PB_liberty.jpg",
             "link": ""
           }
         },
         "brand_maKX7b": {
           "type": "brand",
           "settings": {
-            "image": "shopify://shop_images/fort-knox_6d7a6c18-eab7-4fe5-a698-c425541f8b05.jpg",
+            "image": "shopify://shop_images/PB_Stealth.jpg",
             "link": ""
           }
         },
         "brand_YUx7jX": {
           "type": "brand",
           "settings": {
-            "image": "shopify://shop_images/fort-knox_6d7a6c18-eab7-4fe5-a698-c425541f8b05.jpg",
-            "link": ""
-          }
-        },
-        "brand_MCrgWa": {
-          "type": "brand",
-          "settings": {
-            "image": "shopify://shop_images/fort-knox_6d7a6c18-eab7-4fe5-a698-c425541f8b05.jpg",
+            "image": "shopify://shop_images/PB-browning-safe.jpg",
             "link": ""
           }
         }
@@ -417,8 +410,7 @@
         "brand_aQ37ed",
         "brand_Mbep9X",
         "brand_maKX7b",
-        "brand_YUx7jX",
-        "brand_MCrgWa"
+        "brand_YUx7jX"
       ],
       "name": "Brands",
       "settings": {
