@@ -394,14 +394,14 @@
           "type": "brand",
           "settings": {
             "image": "shopify://shop_images/PB_Stealth.jpg",
-            "link": ""
+            "link": "https://deansafe.com/collections/stealth-safe"
           }
         },
         "brand_YUx7jX": {
           "type": "brand",
           "settings": {
             "image": "shopify://shop_images/PB-browning-safe.jpg",
-            "link": ""
+            "link": "https://deansafe.com/collections/browning-safes"
           }
         }
       },
