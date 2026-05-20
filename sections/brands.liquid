@@ -116,7 +116,7 @@
     <div class="brands-header">
       <div class="brands-header__text">
         {%- if section.settings.title != blank -%}
-          <h2>{{ section.settings.title | escape }}</h2>
+          <div class="h1"><p>{{ section.settings.title | escape }}</p></div>
         {%- endif -%}
         {%- if section.settings.subtitle != blank -%}
           <p>{{ section.settings.subtitle | escape }}</p>
