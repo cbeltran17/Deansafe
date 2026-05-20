@@ -549,10 +549,10 @@
       ],
       "name": "Brands",
       "settings": {
-        "title": "BRANDS THAT WE LOVE",
-        "subtitle": "Find the perfect safe for your lifestyle.",
+        "title": "Top Brands",
+        "subtitle": "",
         "link_label": "View All Brands",
-        "link_url": "",
+        "link_url": "shopify://pages/brands",
         "padding_top": 36,
         "padding_bottom": 36
       }
