@@ -1,0 +1,252 @@
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .brands-wrapper {
+    max-width: var(--page-width, 1200px);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .brands-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+    gap: 1.5rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .brands-header {
+      flex-direction: row;
+      align-items: flex-end;
+    }
+  }
+
+  .brands-header__text h2 {
+    font-size: calc(var(--font-heading-scale) * 2.4rem);
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .brands-header__text p {
+    font-size: 1.6rem;
+    color: rgba(var(--color-foreground), 0.75);
+    margin: 0;
+  }
+
+  .brands-header__link a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(var(--color-foreground));
+    font-weight: 500;
+    font-size: 1.5rem;
+    transition: opacity 0.3s ease;
+  }
+
+  .brands-header__link a:hover {
+    opacity: 0.7;
+  }
+
+  .brands-header__link svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-left: 0.8rem;
+  }
+
+  .brands-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  @media screen and (min-width: 750px) {
+    .brands-logos {
+      justify-content: space-between;
+      gap: 2rem;
+    }
+  }
+
+  .brands-logo__item {
+    flex: 0 1 calc(33.333% - 2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 160px;
+  }
+
+  @media screen and (min-width: 990px) {
+    .brands-logo__item {
+      flex: 0 1 auto;
+    }
+  }
+
+  .brands-logo__item img,
+  .brands-logo__item svg {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    mix-blend-mode: multiply; /* Helps transparent logos blend with backgrounds */
+  }
+
+  .brands-logo__item svg {
+    fill: rgb(var(--color-foreground));
+    background-color: rgba(var(--color-foreground), 0.05);
+    padding: 2rem;
+  }
+{% endstyle %}
+
+<div class="brands-section section-{{ section.id }}-padding">
+  <div class="brands-wrapper">
+    <div class="brands-header">
+      <div class="brands-header__text">
+        {%- if section.settings.title != blank -%}
+          <h2>{{ section.settings.title | escape }}</h2>
+        {%- endif -%}
+        {%- if section.settings.subtitle != blank -%}
+          <p>{{ section.settings.subtitle | escape }}</p>
+        {%- endif -%}
+      </div>
+
+      {%- if section.settings.link_label != blank and section.settings.link_url != blank -%}
+        <div class="brands-header__link">
+          <a href="{{ section.settings.link_url }}">
+            {{ section.settings.link_label | escape }}
+            <svg viewBox="0 0 14 10" fill="none" aria-hidden="true" focusable="false" role="presentation" class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="currentColor">
+            </svg>
+          </a>
+        </div>
+      {%- endif -%}
+    </div>
+
+    <div class="brands-logos">
+      {%- for block in section.blocks -%}
+        <div class="brands-logo__item" {{ block.shopify_attributes }}>
+          {%- if block.settings.link != blank -%}
+            <a href="{{ block.settings.link }}" aria-label="Brand logo link">
+          {%- endif -%}
+
+          {%- if block.settings.image != blank -%}
+            {%- assign image_alt = block.settings.image.alt | default: shop.name | escape -%}
+            {{ block.settings.image | image_url: width: 320 | image_tag: 
+              loading: 'lazy', 
+              alt: image_alt,
+              widths: '160, 320',
+              sizes: '(min-width: 750px) 160px, 50vw'
+            }}
+          {%- else -%}
+            {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+
+          {%- if block.settings.link != blank -%}
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Brands",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "BRANDS THAT WE LOVE",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "default": "Find the perfect safe for your lifestyle.",
+      "label": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "link_label",
+      "default": "View All Brands",
+      "label": "Link label"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "header",
+      "content": "Section Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "brand",
+      "name": "Brand",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Logo Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Brand Link (Optional)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Brands",
+      "blocks": [
+        { "type": "brand" },
+        { "type": "brand" },
+        { "type": "brand" },
+        { "type": "brand" },
+        { "type": "brand" },
+        { "type": "brand" }
+      ]
+    }
+  ]
+}
+{% endschema %}
