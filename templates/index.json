@@ -158,8 +158,8 @@
         "text_color": "",
         "heading_color": "",
         "icon_color": "#89af70",
-        "enable_custom_spacing": false,
-        "top_spacing": 80,
+        "enable_custom_spacing": true,
+        "top_spacing": 40,
         "bottom_spacing": 80
       }
     },
