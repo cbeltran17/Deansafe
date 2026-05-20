@@ -14,6 +14,18 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_w8Wai8": {
+          "type": "_announcement",
+          "name": "t:blocks._announcement.name",
+          "settings": {
+            "show_icon": false,
+            "icon": "badge-discount",
+            "text": "Welcome to our store",
+            "link": "",
+            "link_text": "sdad"
+          },
+          "blocks": {}
+        },
         "announcement": {
           "type": "_announcement",
           "settings": {
@@ -27,12 +39,13 @@
         }
       },
       "block_order": [
+        "announcement_w8Wai8",
         "announcement"
       ],
       "settings": {
         "show_country_selector": false,
         "show_language_selector": false,
-        "show_social_icons": true,
+        "show_social_icons": false,
         "autoplay_interval": 5,
         "background_color": "#1e1e1e",
         "text_color": "#ffffff"
