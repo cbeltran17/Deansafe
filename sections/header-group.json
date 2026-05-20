@@ -32,7 +32,7 @@
       "settings": {
         "show_country_selector": false,
         "show_language_selector": false,
-        "show_social_icons": false,
+        "show_social_icons": true,
         "autoplay_interval": 5,
         "background_color": "#1e1e1e",
         "text_color": "#ffffff"
