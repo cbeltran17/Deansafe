@@ -184,7 +184,7 @@
             "collection": "fort-knox-handgun-safes",
             "products": [],
             "label": "HANDGUN SAFES",
-            "show_link": false,
+            "show_link": true,
             "link_url": "",
             "link_text": ""
           },
@@ -197,7 +197,7 @@
             "collection": "fort-knox-home-safes",
             "products": [],
             "label": "HOME SAFES",
-            "show_link": false,
+            "show_link": true,
             "link_url": "",
             "link_text": ""
           },
@@ -210,7 +210,7 @@
             "collection": "fort-knox-vault-doors",
             "products": [],
             "label": "VAULT DOORS",
-            "show_link": false,
+            "show_link": true,
             "link_url": "",
             "link_text": ""
           },
