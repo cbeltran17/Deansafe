@@ -853,6 +853,7 @@
         "bundle_product_My4U6x",
         "bundle_product_7hxrDW"
       ],
+      "disabled": true,
       "name": "t:sections.product_bundle.name",
       "settings": {
         "image": "shopify://shop_images/the-hunt-for-savings-rebate.png",
