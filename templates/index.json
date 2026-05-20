@@ -172,7 +172,7 @@
             "collection": "gun-safe-and-rifle-safes",
             "products": [],
             "label": "RIFLE SAFES",
-            "show_link": false,
+            "show_link": true,
             "link_url": "",
             "link_text": ""
           },
