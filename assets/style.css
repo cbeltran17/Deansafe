@@ -14,6 +14,33 @@
     padding: 0;
 }
 
+
+.anouncement-location-wrapper {
+    position: relative;
+}
+
+.anouncement-location-wrapper .overlay-location-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.anouncement-location-wrapper .location-inner-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.anouncement-location-wrapper .location-inner-wrapper p {
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;
+}
+
 @media (min-width: 48rem) {
     .text-with-icons--desktop-horizontal .text-with-icons__item {
         justify-content: center;
