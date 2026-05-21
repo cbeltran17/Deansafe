@@ -44,6 +44,12 @@
           </div>
         {% endif %}
 
+        {% if section.settings.show_location %}
+          <div class="anouncement-location-wrapper">
+            <p>{{ section.settings.loction_text }}</p>
+          </div>
+        {% endif %}
+
         {% if section.settings.show_social_icons %}
           {% render 'social-icons', size: 'xs' %}
         {% endif %}
