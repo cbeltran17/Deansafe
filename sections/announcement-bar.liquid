@@ -46,10 +46,16 @@
 
         {% if section.settings.show_location %}
           <div class="anouncement-location-wrapper">
+            
+            {% if section.settings.show_icon %}
+              
+            {% endif %}
+
             {% if section.settings.show_icon %}
               {% render 'icon' with section.settings.icon %}
             {% endif %}
             <p>{{ section.settings.loction_text }}</p>
+
           </div>
         {% endif %}
 
@@ -696,7 +702,7 @@
     },
     {
       "type": "url",
-      "id": "loction_link",
+      "id": "location_link",
       "label": "Location link"
     },
     {
