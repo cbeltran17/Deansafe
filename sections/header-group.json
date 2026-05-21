@@ -38,7 +38,7 @@
         "show_icon": true,
         "icon": "location",
         "loction_text": "Find nearest store location",
-        "loction_link": "",
+        "location_link": "shopify://pages/showroom-locations",
         "background_color": "#1e1e1e",
         "text_color": "#ffffff"
       }
