@@ -216,9 +216,9 @@
       "settings": {
         "hide_text_on_mobile": false,
         "show_icon": true,
-        "icon": "location",
-        "link": "shopify://pages/showroom-locations",
-        "heading": "Find nearest store location",
+        "icon": "badge-discount",
+        "link": "",
+        "heading": "Memorial Day Sale Is Live - Save up to $350 Off Select Safes",
         "text": "",
         "background_color": "#095f41",
         "text_color": "#ffffff"
