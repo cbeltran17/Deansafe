@@ -47,14 +47,18 @@
         {% if section.settings.show_location %}
           <div class="anouncement-location-wrapper">
             
-            {% if section.settings.show_icon %}
-              
+            {% if section.settings.location_link %}
+              <a href="{{ section.settings.location_link }}">
             {% endif %}
 
             {% if section.settings.show_icon %}
               {% render 'icon' with section.settings.icon %}
             {% endif %}
             <p>{{ section.settings.loction_text }}</p>
+
+            {% if section.settings.location_link %}
+              </a>
+            {% endif %}
 
           </div>
         {% endif %}
