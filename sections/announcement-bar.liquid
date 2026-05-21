@@ -19,7 +19,7 @@
 >
   <div class="announcement-bar__inner">
     {% content_for 'blocks' %}
-    {% if show_country or show_language or section.settings.show_social_icons %}
+    {% if show_country or show_language or section.settings.show_social_icons or section.settings.show_location %}
       <div class="announcement-bar__actions">
         {% if show_country or show_language %}
           <div class="announcement-bar__localization">
