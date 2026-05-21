@@ -51,11 +51,12 @@
               <a href="{{ section.settings.location_link }}" class="overlay-location-link" aria-label="{{ section.settings.loction_text }}"></a>
             {% endif %}
 
-            {% if section.settings.show_icon %}
-              {% render 'icon' with section.settings.icon %}
-            {% endif %}
-            <p>{{ section.settings.loction_text }}</p>
-
+            <div class="location-inner-wrapper">
+              {% if section.settings.show_icon %}
+                {% render 'icon' with section.settings.icon %}
+              {% endif %}
+              <p>{{ section.settings.loction_text }}</p>
+            </div>
           </div>
         {% endif %}
 
