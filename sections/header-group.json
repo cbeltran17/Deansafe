@@ -35,6 +35,8 @@
         "show_social_icons": true,
         "autoplay_interval": 5,
         "show_location": true,
+        "show_icon": true,
+        "icon": "location",
         "loction_text": "Find nearest store location",
         "loction_link": "",
         "background_color": "#1e1e1e",
