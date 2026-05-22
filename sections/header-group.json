@@ -174,6 +174,8 @@
         "secondary_menu": "",
         "mobile_menu": "",
         "mobile_layout": "logo-center",
+        "hide_account_icon": true,
+        "show_expert_help_header": false,
         "mobile_menu_show_social_icons": true,
         "mobile_menu_show_country_selector": true,
         "mobile_menu_show_language_selector": true,
