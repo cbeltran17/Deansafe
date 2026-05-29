@@ -901,9 +901,10 @@
         "collection_list_item_CegiqQ": {
           "type": "_collection_list_item",
           "settings": {
-            "collection": "",
+            "collection": "gun-safe-and-rifle-safes",
+            "image": "shopify://shop_images/rifle-safes.png",
             "style": "overlay",
-            "title": "",
+            "title": "Rifle Safes",
             "description": ""
           },
           "blocks": {}
@@ -911,9 +912,10 @@
         "collection_list_item_cUwhhr": {
           "type": "_collection_list_item",
           "settings": {
-            "collection": "",
+            "collection": "1-hour-to-2-hours-of-fire-protection",
+            "image": "shopify://shop_images/handgun-safes.png",
             "style": "overlay",
-            "title": "",
+            "title": "Handgun Safes",
             "description": ""
           },
           "blocks": {}
@@ -921,9 +923,10 @@
         "collection_list_item_LGfrqC": {
           "type": "_collection_list_item",
           "settings": {
-            "collection": "",
+            "collection": "1-hour-fire-rated-home-safes",
+            "image": "shopify://shop_images/home-safes.png",
             "style": "overlay",
-            "title": "",
+            "title": "Home Safes",
             "description": ""
           },
           "blocks": {}
@@ -932,9 +935,10 @@
           "type": "_collection_list_item",
           "name": "t:blocks._collection_list_item.name",
           "settings": {
-            "collection": "",
+            "collection": "american-security-amsec-drop-safes",
+            "image": "shopify://shop_images/depository.png",
             "style": "overlay",
-            "title": "",
+            "title": "Depository",
             "description": ""
           },
           "blocks": {}
@@ -943,9 +947,10 @@
           "type": "_collection_list_item",
           "name": "t:blocks._collection_list_item.name",
           "settings": {
-            "collection": "",
+            "collection": "american-security-amsec-safes",
+            "image": "shopify://shop_images/vault-doors.png",
             "style": "overlay",
-            "title": "",
+            "title": "Vault Doors",
             "description": ""
           },
           "blocks": {}
@@ -954,9 +959,10 @@
           "type": "_collection_list_item",
           "name": "t:blocks._collection_list_item.name",
           "settings": {
-            "collection": "",
+            "collection": "barska-biometric-safes",
+            "image": "shopify://shop_images/biometric.png",
             "style": "overlay",
-            "title": "",
+            "title": "Biometric",
             "description": ""
           },
           "blocks": {}
@@ -965,9 +971,10 @@
           "type": "_collection_list_item",
           "name": "t:blocks._collection_list_item.name",
           "settings": {
-            "collection": "",
+            "collection": "american-security-amsec-floor-safes",
+            "image": "shopify://shop_images/made-in-usa.png",
             "style": "overlay",
-            "title": "",
+            "title": "Made in USA",
             "description": ""
           },
           "blocks": {}
@@ -976,9 +983,10 @@
           "type": "_collection_list_item",
           "name": "t:blocks._collection_list_item.name",
           "settings": {
-            "collection": "",
+            "collection": "american-secuirty-amsec-bfii-gun-safes",
+            "image": "shopify://shop_images/used-safes.png",
             "style": "overlay",
-            "title": "",
+            "title": "Used Safes",
             "description": ""
           },
           "blocks": {}
