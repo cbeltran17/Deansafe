@@ -892,6 +892,7 @@
           "type": "_collection_list_item",
           "settings": {
             "collection": "100-minute-fire-rated-safes",
+            "image": "shopify://shop_images/safes.png",
             "style": "overlay",
             "title": "New Arrivals",
             "description": ""
