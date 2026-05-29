@@ -1034,7 +1034,7 @@
       "name": "Collection Grid",
       "settings": {
         "collections_per_row": 4,
-        "collections_per_row_mobile": "1",
+        "collections_per_row_mobile": "2",
         "image_size": "1/1",
         "text_alignment": "center",
         "background_color": "",
