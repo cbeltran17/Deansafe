@@ -871,7 +871,7 @@
       ],
       "name": "t:sections.collection_list.name",
       "settings": {
-        "enable_carousel": false,
+        "enable_carousel": true,
         "collections_per_row": 4,
         "collections_per_row_mobile": "2",
         "image_size": "",
