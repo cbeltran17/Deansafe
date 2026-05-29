@@ -730,7 +730,9 @@
       ],
       "name": "Locations",
       "settings": {
-        "heading": "Our Locations"
+        "heading": "Our Locations",
+        "padding_top": 0,
+        "padding_bottom": 80
       }
     },
     "collection_list_tfYQqN": {
