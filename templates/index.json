@@ -1046,6 +1046,53 @@
         "top_spacing": 80,
         "bottom_spacing": 80
       }
+    },
+    "rich_text_J99DQP": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_4PyLij": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h3",
+            "heading": "Can't find what you're looking for? Take our Safe Buyers Quiz",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "button_enhcBp": {
+          "type": "button",
+          "settings": {
+            "size": "md",
+            "variant": "solid",
+            "label": "Signup",
+            "url": "/",
+            "style": "white",
+            "background_color": "",
+            "text_color": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_4PyLij",
+        "button_enhcBp"
+      ],
+      "name": "t:sections.rich_text.name",
+      "settings": {
+        "full_width": false,
+        "text_alignment": "center",
+        "background_color": "#095f41",
+        "text_color": "#ffffff",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
     }
   },
   "order": [
@@ -1061,6 +1108,7 @@
     "collection_list_tfYQqN",
     "product_bundle_QyxApU",
     "featured_blog_4NL9V9",
-    "text_with_icons_T7ptVJ"
+    "text_with_icons_T7ptVJ",
+    "rich_text_J99DQP"
   ]
 }

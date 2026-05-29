@@ -1,1 +1,162 @@
-{"type":"footer","name":"Footer","sections":{"multicolumn_38BerY":{"type":"multicolumn","blocks":{"column_QpGbHx":{"type":"_column","settings":{"media_type":"image","video_autoplay":false,"heading_size":"h4","heading":"Can't find what you're looking for? Take our Safe Buyers Quiz","content":"","link_url":"#","link_text":"Signup","link_style":"button"},"blocks":{}},"section-header":{"type":"_section-header","static":true,"settings":{"enable_custom_spacing":false,"bottom_spacing":32},"blocks":{}}},"block_order":["column_QpGbHx"],"name":"t:sections.multicolumn.name","settings":{"enable_carousel":false,"columns":1,"columns_mobile":1,"column_gap":24,"column_alignment":"center","text_alignment":"center","background_color":"#1a1a18","text_color":"#ffffff","enable_custom_spacing":true,"top_spacing":24,"bottom_spacing":24}},"footer":{"type":"footer","blocks":{"footer_content_fniKcG":{"type":"_footer_content","name":"t:blocks._footer_content.name","settings":{"text_alignment":"left","text_alignment_mobile":"left","enable_follow_on_shop":false},"blocks":{"image_tEDKQW":{"type":"image","name":"t:blocks.image.name","settings":{"image":"shopify:\/\/shop_images\/deansafe-logo.png","rounded_corners":true,"full_width":true,"width":256,"image_size":"","image_height":480,"image_size_mobile":"same","image_height_mobile":480},"blocks":{}},"paragraph_TRywDd":{"type":"paragraph","name":"t:blocks.paragraph.name","settings":{"paragraph_size":"prose-base","paragraph_width":"medium","text_color":"text-text","content":"<p>CONTACT DEAN SAFE<\/p><p>Call: <a href=\"tel:+18008277534\" title=\"tel:+18008277534\">(800) 827-7534<\/a><br\/>Email: <a href=\"mailto:info@deansafe.com\" title=\"mailto:info@deansafe.com\">info@deansafe.com<\/a><\/p>"},"blocks":{}},"social_icons_a3qhtJ":{"type":"social-icons","name":"t:blocks.social_icons.name","settings":{"size":"medium"},"blocks":{}}},"block_order":["image_tEDKQW","paragraph_TRywDd","social_icons_a3qhtJ"]},"footer_links_WkK7fT":{"type":"_footer_links","name":"t:blocks._footer_links.name","settings":{"show_heading":true,"heading":"","links":"shop"},"blocks":{}},"footer_links_ibxjkH":{"type":"_footer_links","name":"t:blocks._footer_links.name","settings":{"show_heading":true,"heading":"","links":"support"},"blocks":{}}},"block_order":["footer_content_fniKcG","footer_links_WkK7fT","footer_links_ibxjkH"],"settings":{"collapse_links_on_mobile":true,"show_country_selector":true,"show_language_selector":true,"show_payment_icons":true,"enable_email_signup":true,"email_signup_heading":"Newsletter","email_signup_text":"Subscribe to receive updates, access to exclusive deals, and more.","button_style":"white","background_color":"#0f0f0f","text_color":"#ffffff","heading_color":"#ffffff","bottom_bar_background_color":"#141414","enable_custom_spacing":false,"top_spacing":80,"bottom_spacing":80}}},"order":["multicolumn_38BerY","footer"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "multicolumn_38BerY": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_QpGbHx": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Can't find what you're looking for? Take our Safe Buyers Quiz",
+            "content": "",
+            "link_url": "#",
+            "link_text": "Signup",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "column_QpGbHx"
+      ],
+      "disabled": true,
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "enable_carousel": false,
+        "columns": 1,
+        "columns_mobile": 1,
+        "column_gap": 24,
+        "column_alignment": "center",
+        "text_alignment": "center",
+        "background_color": "#1a1a18",
+        "text_color": "#ffffff",
+        "enable_custom_spacing": true,
+        "top_spacing": 24,
+        "bottom_spacing": 24
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer_content_fniKcG": {
+          "type": "_footer_content",
+          "name": "t:blocks._footer_content.name",
+          "settings": {
+            "text_alignment": "left",
+            "text_alignment_mobile": "left",
+            "enable_follow_on_shop": false
+          },
+          "blocks": {
+            "image_tEDKQW": {
+              "type": "image",
+              "name": "t:blocks.image.name",
+              "settings": {
+                "image": "shopify://shop_images/deansafe-logo.png",
+                "rounded_corners": true,
+                "full_width": true,
+                "width": 256,
+                "image_size": "",
+                "image_height": 480,
+                "image_size_mobile": "same",
+                "image_height_mobile": 480
+              },
+              "blocks": {}
+            },
+            "paragraph_TRywDd": {
+              "type": "paragraph",
+              "name": "t:blocks.paragraph.name",
+              "settings": {
+                "paragraph_size": "prose-base",
+                "paragraph_width": "medium",
+                "text_color": "text-text",
+                "content": "<p>CONTACT DEAN SAFE</p><p>Call: <a href=\"tel:+18008277534\" title=\"tel:+18008277534\">(800) 827-7534</a><br/>Email: <a href=\"mailto:info@deansafe.com\" title=\"mailto:info@deansafe.com\">info@deansafe.com</a></p>"
+              },
+              "blocks": {}
+            },
+            "social_icons_a3qhtJ": {
+              "type": "social-icons",
+              "name": "t:blocks.social_icons.name",
+              "settings": {
+                "size": "medium"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_tEDKQW",
+            "paragraph_TRywDd",
+            "social_icons_a3qhtJ"
+          ]
+        },
+        "footer_links_WkK7fT": {
+          "type": "_footer_links",
+          "name": "t:blocks._footer_links.name",
+          "settings": {
+            "show_heading": true,
+            "heading": "",
+            "links": "shop"
+          },
+          "blocks": {}
+        },
+        "footer_links_ibxjkH": {
+          "type": "_footer_links",
+          "name": "t:blocks._footer_links.name",
+          "settings": {
+            "show_heading": true,
+            "heading": "",
+            "links": "support"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "footer_content_fniKcG",
+        "footer_links_WkK7fT",
+        "footer_links_ibxjkH"
+      ],
+      "settings": {
+        "collapse_links_on_mobile": true,
+        "show_country_selector": true,
+        "show_language_selector": true,
+        "show_payment_icons": true,
+        "enable_email_signup": true,
+        "email_signup_heading": "Newsletter",
+        "email_signup_text": "Subscribe to receive updates, access to exclusive deals, and more.",
+        "button_style": "white",
+        "background_color": "#0f0f0f",
+        "text_color": "#ffffff",
+        "heading_color": "#ffffff",
+        "bottom_bar_background_color": "#141414",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    }
+  },
+  "order": [
+    "multicolumn_38BerY",
+    "footer"
+  ]
+}
