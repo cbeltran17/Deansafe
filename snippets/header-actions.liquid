@@ -2,6 +2,8 @@
 
   {% if section.settings.show_expert_help_header %}
     <div>
+      {% render 'icon' with section.settings.show_expert_help_button_icon %}
+      
       {% capture content %}
         {% render 'icon' with section.settings.action_button_icon %}
         <span>{{ section.settings.action_button_text }}</span>
