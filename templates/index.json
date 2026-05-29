@@ -891,9 +891,9 @@
         "collection_list_item_BeDkzy": {
           "type": "_collection_list_item",
           "settings": {
-            "collection": "",
+            "collection": "100-minute-fire-rated-safes",
             "style": "overlay",
-            "title": "",
+            "title": "New Arrivals",
             "description": ""
           },
           "blocks": {}
@@ -1039,8 +1039,8 @@
         "text_alignment": "center",
         "background_color": "",
         "text_color": "",
-        "card_background_color": "#F7F7F7",
-        "card_text_color": "#1E1E1E",
+        "card_background_color": "#f7f7f7",
+        "card_text_color": "#1e1e1e",
         "enable_custom_spacing": true,
         "top_spacing": 0,
         "bottom_spacing": 80
