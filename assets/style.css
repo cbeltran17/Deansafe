@@ -41,9 +41,30 @@
     font-size: 16px;
 }
 
+.expert-help-header-link .icon {
+    position: relative;
+    border-radius: 9999px;
+    background-color: rgb(var(--text-color) / 3.9%);
+    padding: .5rem;
+}
+
+.expert-help-header-link {
+    display: grid;
+    width: max-content;
+    grid-auto-flow: column;
+    align-items: center;
+    column-gap: .75rem;
+}
+
 @media (min-width: 48rem) {
     .text-with-icons--desktop-horizontal .text-with-icons__item {
         justify-content: center;
+    }
+}
+
+@media (max-width: 768px) { 
+    .expert-help-header-link .icon {
+        width: 2.25rem;
     }
 }
 
