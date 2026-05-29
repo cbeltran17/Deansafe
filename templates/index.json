@@ -1068,7 +1068,7 @@
         "button_enhcBp": {
           "type": "button",
           "settings": {
-            "size": "md",
+            "size": "lg",
             "variant": "solid",
             "label": "Signup",
             "url": "/",
