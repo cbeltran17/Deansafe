@@ -4,7 +4,7 @@
     <div>
       {% capture content %}
         {% render 'icon' with section.settings.action_button_icon %}
-        <span>{{ section.settings.action_button_text }}</span>
+        {% comment %} <span>{{ section.settings.action_button_text }}</span> {% endcomment %}
       {% endcapture %}
       {% render 'button' with content,
         class: 'header__action-button',
