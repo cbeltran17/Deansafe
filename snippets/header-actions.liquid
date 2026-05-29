@@ -1,19 +1,10 @@
 <div class="header__actions">
 
   {% if section.settings.show_expert_help_header %}
-    <div>
-      {% render 'icon' with section.settings.show_expert_help_button_icon %}
-      
-      {% capture content %}
-        {% render 'icon' with section.settings.action_button_icon %}
-        <span>{{ section.settings.action_button_text }}</span>
-      {% endcapture %}
-      {% render 'button' with content,
-        class: 'header__action-button',
-        href: section.settings.action_button_link,
-        background_color: section.settings.action_button_background_color,
-        text_color: section.settings.action_button_text_color
-      %}
+    <div class="expert-help-header-wrapper">
+      <a href="tel:18008277534" class="expert-help-header-link">
+        {% render 'icon' with section.settings.show_expert_help_button_icon %}
+      </a>
     </div>
   {% endif %}
 
