@@ -979,7 +979,7 @@
       "settings": {
         "enable_carousel": false,
         "collections_per_row": 4,
-        "collections_per_row_mobile": "1.5",
+        "collections_per_row_mobile": "2",
         "image_size": "",
         "text_alignment": "center",
         "background_color": "",
