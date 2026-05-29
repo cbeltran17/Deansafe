@@ -419,7 +419,7 @@
         "link_label": "View All Brands",
         "link_url": "shopify://pages/brands",
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 80
       }
     },
     "image_with_text_slider_aYpUQJ": {
@@ -546,8 +546,8 @@
         "autoplay": false,
         "autoplay_interval": 5,
         "enable_custom_spacing": true,
-        "top_spacing": 32,
-        "bottom_spacing": 96
+        "top_spacing": 0,
+        "bottom_spacing": 80
       }
     },
     "testimonials_eR6HaW": {
@@ -656,9 +656,9 @@
         "rating_star_color": "rgba(0,0,0,0)",
         "testimonial_background": "#ffffff",
         "testimonial_text": "rgba(0,0,0,0)",
-        "enable_custom_spacing": false,
+        "enable_custom_spacing": true,
         "top_spacing": 80,
-        "bottom_spacing": 128
+        "bottom_spacing": 80
       }
     },
     "video_BDLyyz": {
@@ -878,7 +878,7 @@
         "text_color": "",
         "card_background_color": "#f7f7f7",
         "card_text_color": "#1e1e1e",
-        "enable_custom_spacing": false,
+        "enable_custom_spacing": true,
         "top_spacing": 80,
         "bottom_spacing": 80
       }
@@ -990,8 +990,8 @@
         "text_alignment": "center",
         "background_color": "rgba(0,0,0,0)",
         "text_color": "",
-        "enable_custom_spacing": false,
-        "top_spacing": 80,
+        "enable_custom_spacing": true,
+        "top_spacing": 0,
         "bottom_spacing": 80
       }
     },
@@ -1042,8 +1042,8 @@
         "text_color": "",
         "heading_color": "",
         "icon_color": "",
-        "enable_custom_spacing": false,
-        "top_spacing": 80,
+        "enable_custom_spacing": true,
+        "top_spacing": 0,
         "bottom_spacing": 80
       }
     },
@@ -1089,8 +1089,8 @@
         "text_alignment": "center",
         "background_color": "#095f41",
         "text_color": "#ffffff",
-        "enable_custom_spacing": false,
-        "top_spacing": 80,
+        "enable_custom_spacing": true,
+        "top_spacing": 0,
         "bottom_spacing": 80
       }
     }
