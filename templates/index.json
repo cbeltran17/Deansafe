@@ -881,7 +881,7 @@
         "card_background_color": "#f7f7f7",
         "card_text_color": "#1e1e1e",
         "enable_custom_spacing": true,
-        "top_spacing": 80,
+        "top_spacing": 0,
         "bottom_spacing": 80
       }
     },
