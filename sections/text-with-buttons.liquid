@@ -1,3 +1,17 @@
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
 <style>
   .text-with-buttons-wrapper--{{ section.id }} .text-with-buttons-inner {
     background-color: {{ section.settings.bg_color }};
@@ -14,7 +28,7 @@
   }
 </style>
 
-<div class="text-with-buttons-wrapper section-full-width text-with-buttons-wrapper--{{ section.id }}">
+<div class="text-with-buttons-wrapper section-full-width section-{{ section.id }}-padding text-with-buttons-wrapper--{{ section.id }}">
   <div class="text-with-buttons-inner">
     
     <div class="twb-content">
