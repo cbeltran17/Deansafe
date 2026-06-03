@@ -451,6 +451,7 @@
           "type": "_column",
           "settings": {
             "media_type": "image",
+            "image": "shopify://shop_images/vault-doors.png",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "Type-C fireboard",
@@ -465,10 +466,11 @@
           "type": "_column",
           "settings": {
             "media_type": "image",
+            "image": "shopify://shop_images/vault-doors.png",
             "video_autoplay": false,
             "heading_size": "h4",
-            "heading": "Highlight your store's features",
-            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
+            "heading": "Thermal barrier",
+            "content": "<p>Expanding seal activates under heat to block smoke and flame intrusion.</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "button"
@@ -479,10 +481,11 @@
           "type": "_column",
           "settings": {
             "media_type": "image",
+            "image": "shopify://shop_images/vault-doors.png",
             "video_autoplay": false,
             "heading_size": "h4",
-            "heading": "Highlight your store's features",
-            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
+            "heading": "Smoke & fire seal",
+            "content": "<p>Palusol door seal expands many times its size when exposed to fire.</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "button"
@@ -493,10 +496,43 @@
           "type": "_column",
           "settings": {
             "media_type": "image",
+            "image": "shopify://shop_images/vault-doors.png",
             "video_autoplay": false,
             "heading_size": "h4",
-            "heading": "Highlight your store's features",
-            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
+            "heading": "Security plate",
+            "content": "<p>Hardened drill-resistant plate protects the lock from forced entry.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_efPEQg": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/vault-doors.png",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Solid construction",
+            "content": "<p>Heavy-gauge steel body and door with robust boltwork.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_BHqFwW": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/vault-doors.png",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Fire rating",
+            "content": "<p>Independently verified fire endurance at rated temperature.</p>",
             "link_url": "",
             "link_text": "",
             "link_style": "button"
@@ -537,12 +573,14 @@
         "column_jkiGnK",
         "column_6Fhhz4",
         "column_mHYJFw",
-        "column_aP6pVL"
+        "column_aP6pVL",
+        "column_efPEQg",
+        "column_BHqFwW"
       ],
       "name": "t:sections.multicolumn.name",
       "settings": {
-        "enable_carousel": true,
-        "columns": 4,
+        "enable_carousel": false,
+        "columns": 3,
         "columns_mobile": 1,
         "column_gap": 24,
         "column_alignment": "left",
