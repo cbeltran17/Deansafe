@@ -64,7 +64,7 @@
         "specifications_wEeYpQ": {
           "type": "specifications",
           "settings": {
-            "show_under_gallery": true,
+            "show_under_gallery": false,
             "open_by_default": true,
             "custom_content": "{{ product.metafields.custom.specifications | metafield_tag }}"
           }
