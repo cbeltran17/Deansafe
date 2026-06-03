@@ -61,6 +61,14 @@
             "show_taxes_notice": false
           }
         },
+        "specifications_wEeYpQ": {
+          "type": "specifications",
+          "settings": {
+            "show_under_gallery": true,
+            "open_by_default": true,
+            "custom_content": "{{ product.metafields.custom.specifications | metafield_tag }}"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -116,14 +124,6 @@
             "limit": 8
           }
         },
-        "specifications_wEeYpQ": {
-          "type": "specifications",
-          "settings": {
-            "show_under_gallery": true,
-            "open_by_default": true,
-            "custom_content": "{{ product.metafields.custom.specifications | metafield_tag }}"
-          }
-        },
         "collapsible_content_RP9waj": {
           "type": "collapsible_content",
           "settings": {
@@ -161,13 +161,13 @@
         "text_9Ymd3A",
         "text_6tQUfi",
         "price",
+        "specifications_wEeYpQ",
         "variant_picker",
         "stock_QrwbPC",
         "buy_buttons",
         "pickup_availability_TA3kPj",
         "text_M3prhM",
         "complementary_products_kfHDGT",
-        "specifications_wEeYpQ",
         "collapsible_content_RP9waj",
         "collapsible_content_katQQa",
         "collapsible_content_bqNeAx"
