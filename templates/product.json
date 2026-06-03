@@ -352,6 +352,7 @@
       ],
       "name": "t:sections.image_with_text.name",
       "settings": {
+        "image": "shopify://shop_images/safes.png",
         "full_width": false,
         "gap": false,
         "image_width": 100,
