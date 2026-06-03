@@ -356,7 +356,7 @@
         "full_width": false,
         "gap": false,
         "image_width": 100,
-        "image_position": "right",
+        "image_position": "left",
         "image_size": "",
         "image_height": 480,
         "image_size_mobile": "same",
@@ -424,6 +424,7 @@
         "paragraph_BXV3kb",
         "button_group_4HphQi"
       ],
+      "disabled": true,
       "name": "t:sections.image_with_text_overlay.name",
       "settings": {
         "image": "{{ product.metafields.custom.promotion_banner_image.value }}",
