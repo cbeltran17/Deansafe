@@ -61,7 +61,7 @@
 }
 
 #judgeme_product_reviews {
-    max-width: 100%;
+    max-width: 100% !important;
 	padding-left: max(3rem, calc((100vw - 1500px - 0px) / 2));
 	padding-right: max(3rem, calc((100vw - 1500px - 0px) / 2));
 }
