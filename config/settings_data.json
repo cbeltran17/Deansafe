@@ -69,7 +69,14 @@
     "social_instagram_link": "https://www.instagram.com/dean.safe/",
     "social_youtube_link": "https://www.youtube.com/user/DeanSafe",
     "social_twitter_link": "https://x.com/DeanSafe",
-    "content_for_index": []
+    "content_for_index": [],
+    "blocks": {
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      }
+    }
   },
   "installed_preset_name": "Atlas",
   "presets": {
