@@ -300,6 +300,73 @@
         "bottom_spacing": 80
       }
     },
+    "text_with_buttons_LKmyaM": {
+      "type": "text-with-buttons",
+      "name": "Text with Buttons",
+      "settings": {
+        "heading": "Still not sure what you need?",
+        "text": "<p>Talk to a real expert at one of our showrooms or over the phone. We have helped thousands of customers find the right safe.</p>",
+        "btn1_label": "Find Your Safe",
+        "btn1_link": "",
+        "btn2_label": "Contact An Expert",
+        "btn2_link": "",
+        "bg_color": "#095f41",
+        "heading_color": "#ffffff",
+        "text_color": "#f0f0f0",
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    },
+    "image_with_text_MWfGHh": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_FTQPPx": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h2",
+            "heading": "Brand Overview",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_pDYhDF": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "medium",
+            "text_color": "primary",
+            "content": "<p>For more than 30 years, Fort Knox has been a leader in the safe and vault industry, earning a reputation for exceptional quality, innovative engineering, and dependable protection. Every Fort Knox safe is handcrafted in the USA using premium materials and precision manufacturing techniques, ensuring long-lasting security for firearms, valuables, important documents, and personal belongings.</p><p>Fort Knox is committed to delivering superior security, advanced fire protection, and outstanding customer service. Their safes are designed to exceed industry standards and incorporate exclusive features that enhance strength, durability, and performance. Backed by one of the most comprehensive lifetime warranties in the industry, Fort Knox products provide customers with confidence and peace of mind, making them a trusted choice for those seeking reliable protection for what matters most.</p>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_FTQPPx",
+        "paragraph_pDYhDF"
+      ],
+      "name": "t:sections.image_with_text.name",
+      "settings": {
+        "full_width": false,
+        "gap": false,
+        "image_width": 100,
+        "image_position": "right",
+        "image_size": "",
+        "image_height": 480,
+        "image_size_mobile": "same",
+        "image_height_mobile": 480,
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
     "image_with_text_overlay_J6ygxY": {
       "type": "image-with-text-overlay",
       "blocks": {
@@ -374,30 +441,14 @@
         "top_spacing": 0,
         "bottom_spacing": 80
       }
-    },
-    "text_with_buttons_LKmyaM": {
-      "type": "text-with-buttons",
-      "name": "Text with Buttons",
-      "settings": {
-        "heading": "Still not sure what you need?",
-        "text": "<p>Talk to a real expert at one of our showrooms or over the phone. We have helped thousands of customers find the right safe.</p>",
-        "btn1_label": "Find Your Safe",
-        "btn1_link": "",
-        "btn2_label": "Contact An Expert",
-        "btn2_link": "",
-        "bg_color": "#095f41",
-        "heading_color": "#ffffff",
-        "text_color": "#f0f0f0",
-        "padding_top": 0,
-        "padding_bottom": 80
-      }
     }
   },
   "order": [
     "main",
     "text_with_icons_dFFE7Y",
     "related_products_LQc4rq",
-    "image_with_text_overlay_J6ygxY",
-    "text_with_buttons_LKmyaM"
+    "text_with_buttons_LKmyaM",
+    "image_with_text_MWfGHh",
+    "image_with_text_overlay_J6ygxY"
   ]
 }
