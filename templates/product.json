@@ -374,12 +374,28 @@
         "top_spacing": 80,
         "bottom_spacing": 80
       }
+    },
+    "text_with_buttons_LKmyaM": {
+      "type": "text-with-buttons",
+      "name": "Text with Buttons",
+      "settings": {
+        "heading": "Still not sure what you need?",
+        "text": "<p>Talk to a real expert at one of our showrooms or over the phone. We have helped thousands of customers find the right safe.</p>",
+        "btn1_label": "Find your safe",
+        "btn1_link": "",
+        "btn2_label": "Contact an expert",
+        "btn2_link": "",
+        "bg_color": "#0F2614",
+        "heading_color": "#ffffff",
+        "text_color": "#f0f0f0"
+      }
     }
   },
   "order": [
     "main",
     "text_with_icons_dFFE7Y",
     "related_products_LQc4rq",
-    "image_with_text_overlay_J6ygxY"
+    "image_with_text_overlay_J6ygxY",
+    "text_with_buttons_LKmyaM"
   ]
 }
