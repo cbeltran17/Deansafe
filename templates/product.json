@@ -444,6 +444,116 @@
         "bottom_spacing": 80
       }
     },
+    "multicolumn_Mrb3pi": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_jkiGnK": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Type-C fireboard",
+            "content": "<p>Multi-layer fireboard construction tested for sustained heat protection.<br/><br/></p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_6Fhhz4": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Highlight your store's features",
+            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_mHYJFw": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Highlight your store's features",
+            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_aP6pVL": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Highlight your store's features",
+            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
+          },
+          "blocks": {
+            "heading_TT6Ljz": {
+              "type": "heading",
+              "name": "t:blocks.heading.name",
+              "settings": {
+                "full_width": false,
+                "max_width": 500,
+                "heading_size": "h2",
+                "heading": "Features",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "",
+                "highlight_color": "",
+                "heading_seo_tag": "p"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_TT6Ljz"
+          ]
+        }
+      },
+      "block_order": [
+        "column_jkiGnK",
+        "column_6Fhhz4",
+        "column_mHYJFw",
+        "column_aP6pVL"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "enable_carousel": true,
+        "columns": 4,
+        "columns_mobile": 1,
+        "column_gap": 24,
+        "column_alignment": "left",
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": true,
+        "top_spacing": 0,
+        "bottom_spacing": 80
+      }
+    },
     "1780495853db7fc4ac": {
       "type": "apps",
       "blocks": {
@@ -470,6 +580,7 @@
     "text_with_buttons_LKmyaM",
     "image_with_text_MWfGHh",
     "image_with_text_overlay_J6ygxY",
+    "multicolumn_Mrb3pi",
     "1780495853db7fc4ac"
   ]
 }
