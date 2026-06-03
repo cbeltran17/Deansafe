@@ -249,8 +249,8 @@
         "text_color": "",
         "heading_color": "",
         "icon_color": "",
-        "enable_custom_spacing": false,
-        "top_spacing": 80,
+        "enable_custom_spacing": true,
+        "top_spacing": 0,
         "bottom_spacing": 80
       }
     },
@@ -295,8 +295,8 @@
         "text_alignment": "center",
         "background_color": "",
         "text_color": "",
-        "enable_custom_spacing": false,
-        "top_spacing": 80,
+        "enable_custom_spacing": true,
+        "top_spacing": 0,
         "bottom_spacing": 80
       }
     },
@@ -370,8 +370,8 @@
         "text_color": "#ffffff",
         "overlay_color": "#000000",
         "overlay_opacity": 30,
-        "enable_custom_spacing": false,
-        "top_spacing": 80,
+        "enable_custom_spacing": true,
+        "top_spacing": 0,
         "bottom_spacing": 80
       }
     },
@@ -385,7 +385,7 @@
         "btn1_link": "",
         "btn2_label": "Contact an expert",
         "btn2_link": "",
-        "bg_color": "#0F2614",
+        "bg_color": "#0f2614",
         "heading_color": "#ffffff",
         "text_color": "#f0f0f0"
       }
