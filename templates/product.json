@@ -451,7 +451,7 @@
           "type": "_column",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/vault-doors.png",
+            "image": "shopify://shop_images/HP-locations-BANNER.jpg",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "Type-C fireboard",
@@ -466,7 +466,7 @@
           "type": "_column",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/vault-doors.png",
+            "image": "shopify://shop_images/HP-locations-BANNER.jpg",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "Thermal barrier",
@@ -481,7 +481,7 @@
           "type": "_column",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/vault-doors.png",
+            "image": "shopify://shop_images/HP-locations-BANNER.jpg",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "Smoke & fire seal",
@@ -496,7 +496,7 @@
           "type": "_column",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/vault-doors.png",
+            "image": "shopify://shop_images/HP-locations-BANNER.jpg",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "Security plate",
@@ -512,7 +512,7 @@
           "name": "t:blocks._column.name",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/vault-doors.png",
+            "image": "shopify://shop_images/HP-locations-BANNER.jpg",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "Solid construction",
@@ -528,7 +528,7 @@
           "name": "t:blocks._column.name",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/vault-doors.png",
+            "image": "shopify://shop_images/HP-locations-BANNER.jpg",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "Fire rating",
@@ -581,7 +581,7 @@
       "settings": {
         "enable_carousel": false,
         "columns": 3,
-        "columns_mobile": 2,
+        "columns_mobile": 1,
         "column_gap": 24,
         "column_alignment": "left",
         "text_alignment": "center",
