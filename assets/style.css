@@ -66,6 +66,10 @@
 	padding-right: max(3rem, calc((100vw - 1500px - 0px) / 2));
 }
 
+#judgeme_product_reviews .jm-text.jm-review-widget-minimal-header__title {
+    font-size: 36px;
+}
+
 @media (min-width: 48rem) {
     .text-with-icons--desktop-horizontal .text-with-icons__item {
         justify-content: center;
