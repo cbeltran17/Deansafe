@@ -71,7 +71,7 @@
 }
 
 .product-card__price .price__item.price__compare-at {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .price__compare-at:after {
@@ -79,7 +79,7 @@
 }
 
 .product-card__price .price__item.price__sale {
-    font-size: 20px;
+    font-size: 18px;
     color: #1e1e1e;
 }
 
