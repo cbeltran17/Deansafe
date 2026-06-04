@@ -621,6 +621,58 @@
         "bottom_spacing": 80
       }
     },
+    "collapsible_content_B7H7eD": {
+      "type": "collapsible-content",
+      "blocks": {
+        "content_mXarDJ": {
+          "type": "content",
+          "settings": {
+            "open": false,
+            "title": "Collapsible row",
+            "content": "<p>Provide answers to common questions your audience might have. It can help reduce customer support inquiries and improve their overall experience.</p>",
+            "content_from_page": ""
+          }
+        },
+        "content_x8TUQb": {
+          "type": "content",
+          "settings": {
+            "open": false,
+            "title": "Collapsible row",
+            "content": "<p>Provide answers to common questions your audience might have. It can help reduce customer support inquiries and improve their overall experience.</p>",
+            "content_from_page": ""
+          }
+        },
+        "content_jbAJcT": {
+          "type": "content",
+          "settings": {
+            "open": false,
+            "title": "Collapsible row",
+            "content": "<p>Provide answers to common questions your audience might have. It can help reduce customer support inquiries and improve their overall experience.</p>",
+            "content_from_page": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_mXarDJ",
+        "content_x8TUQb",
+        "content_jbAJcT"
+      ],
+      "name": "t:sections.collapsible_content.name",
+      "settings": {
+        "icon": "",
+        "heading_size": "h4",
+        "heading": "Collapsible content",
+        "description": "<p>Have questions about choosing the right gun safe? Our Frequently Asked Questions section covers everything from safe sizes and security features to installation and fire protection, helping you make a confident and informed decision.</p>",
+        "background_color": "",
+        "text_color": "",
+        "heading_color": "",
+        "icon_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80,
+        "enable_structured_data": true
+      }
+    },
     "1780495853db7fc4ac": {
       "type": "apps",
       "blocks": {
@@ -649,6 +701,7 @@
     "image_with_text_overlay_J6ygxY",
     "multicolumn_Mrb3pi",
     "video_WmL4ea",
+    "collapsible_content_B7H7eD",
     "1780495853db7fc4ac"
   ]
 }
