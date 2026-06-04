@@ -973,7 +973,7 @@
           "name": "t:blocks._collection_list_item.name",
           "settings": {
             "collection": "american-security-amsec-floor-safes",
-            "image": "shopify://shop_images/made-in-usa.png",
+            "image": "shopify://shop_images/banner.png",
             "style": "overlay",
             "title": "Made in USA",
             "description": ""
@@ -983,6 +983,7 @@
         "collection_list_item_7ALQgF": {
           "type": "_collection_list_item",
           "name": "t:blocks._collection_list_item.name",
+          "disabled": true,
           "settings": {
             "collection": "american-secuirty-amsec-bfii-gun-safes",
             "image": "shopify://shop_images/used-safes.png",
