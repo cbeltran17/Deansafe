@@ -628,8 +628,8 @@
           "type": "content",
           "settings": {
             "open": false,
-            "title": "Collapsible row",
-            "content": "<p>Provide answers to common questions your audience might have. It can help reduce customer support inquiries and improve their overall experience.</p>",
+            "title": "How many firearms can the FTK Maverick 6637 hold?",
+            "content": "<p>The FTK Maverick 6637 is designed to store up to 48 firearms and includes adjustable shelving and a configurable interior, allowing you to organize long guns, handguns, ammunition, and other valuables efficiently.</p>",
             "content_from_page": ""
           }
         },
@@ -637,8 +637,8 @@
           "type": "content",
           "settings": {
             "open": false,
-            "title": "Collapsible row",
-            "content": "<p>Provide answers to common questions your audience might have. It can help reduce customer support inquiries and improve their overall experience.</p>",
+            "title": "What level of fire protection does the FTK Maverick 6637 provide?",
+            "content": "<p>The safe features a reinforced 1-1/8\" fire door, fireboard insulation, and a heat-activated door seal. It is rated for up to 90 minutes of fire protection at temperatures reaching 1600°F.</p>",
             "content_from_page": ""
           }
         },
@@ -646,8 +646,26 @@
           "type": "content",
           "settings": {
             "open": false,
-            "title": "Collapsible row",
-            "content": "<p>Provide answers to common questions your audience might have. It can help reduce customer support inquiries and improve their overall experience.</p>",
+            "title": "What security features are included with the FTK Maverick 6637?",
+            "content": "<p>The Maverick 6637 includes UL Residential Security Container (RSC) certification, 11-gauge steel body construction, a reinforced steel door, nine 1.5-inch locking bolts, a drill-resistant hard plate, and a UL-rated S&G Group II mechanical lock for enhanced protection against unauthorized access.</p>",
+            "content_from_page": ""
+          }
+        },
+        "content_6zG6BA": {
+          "type": "content",
+          "settings": {
+            "open": false,
+            "title": "Does the FTK Maverick 6637 include power access inside the safe?",
+            "content": "<p>Yes. The safe comes with a factory-installed power outlet, allowing you to conveniently power accessories such as dehumidifiers, lighting systems, watch winders, and charging devices.</p>",
+            "content_from_page": ""
+          }
+        },
+        "content_jUexQd": {
+          "type": "content",
+          "settings": {
+            "open": false,
+            "title": "What warranty comes with the FTK Maverick 6637?",
+            "content": "<p>Fort Knox backs the Maverick 6637 with a lifetime factory warranty, demonstrating their commitment to long-term quality, craftsmanship, and customer support.</p>",
             "content_from_page": ""
           }
         }
@@ -655,7 +673,9 @@
       "block_order": [
         "content_mXarDJ",
         "content_x8TUQb",
-        "content_jbAJcT"
+        "content_jbAJcT",
+        "content_6zG6BA",
+        "content_jUexQd"
       ],
       "name": "t:sections.collapsible_content.name",
       "settings": {
