@@ -52,7 +52,7 @@
     "icon_fill_opacity": 30,
     "page_width": 1500,
     "product_card_show_vendor": false,
-    "product_card_show_quick_add": false,
+    "product_card_show_quick_add": true,
     "product_card_show_stock": false,
     "product_card_text_alignment": "left",
     "product_card_show_discount_badge": false,
