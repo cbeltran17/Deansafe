@@ -118,46 +118,52 @@
           "type": "icon_text",
           "settings": {
             "icon_name": "truck",
-            "custom_icon": "shopify://shop_images/truck.svg",
-            "heading": "Free Shipping Sitewide",
-            "text": "Free on ordes over $100"
+            "heading": "Free Shipping",
+            "text": "On orders $100+"
           }
         },
         "icon_text_zfBAKM": {
           "type": "icon_text",
           "settings": {
-            "icon_name": "truck",
-            "custom_icon": "shopify://shop_images/live.svg",
-            "heading": "Live Customer Support",
-            "text": "Full protection guaranteed"
+            "icon_name": "return",
+            "heading": "Easy Returns",
+            "text": "30 day returns"
           }
         },
         "icon_text_gnGBtT": {
           "type": "icon_text",
           "settings": {
-            "icon_name": "return",
-            "custom_icon": "shopify://shop_images/satisfaction.svg",
-            "heading": "Satisfaction Guaranteed",
-            "text": "24/7 technical assistance"
+            "icon_name": "headphones",
+            "heading": "Live Customer Support",
+            "text": "Real safe experts"
+          }
+        },
+        "icon_text_fUexkD": {
+          "type": "icon_text",
+          "settings": {
+            "icon_name": "package",
+            "heading": "Showroom Pickup",
+            "text": "3 social locations"
           }
         }
       },
       "block_order": [
         "icon_text_ECGfJY",
         "icon_text_zfBAKM",
-        "icon_text_gnGBtT"
+        "icon_text_gnGBtT",
+        "icon_text_fUexkD"
       ],
       "name": "t:sections.text_with_icons.name",
       "settings": {
         "enable_carousel_on_mobile": false,
-        "columns_per_row": 3,
+        "columns_per_row": 4,
         "columns_per_row_mobile": "2",
         "icon_position": "left",
         "icon_position_mobile": "top",
         "background_color": "",
         "text_color": "",
         "heading_color": "",
-        "icon_color": "#89af70",
+        "icon_color": "rgba(0,0,0,0)",
         "enable_custom_spacing": true,
         "top_spacing": 0,
         "bottom_spacing": 80
