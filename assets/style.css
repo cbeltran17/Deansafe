@@ -1,3 +1,7 @@
+.shopify-product-form #infiniteoptions-container {
+    display: none !important;
+}
+
 .collection-banner-description {
     max-width: 100%;
     text-align: left;
