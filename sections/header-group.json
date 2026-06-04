@@ -174,7 +174,7 @@
         "secondary_menu": "",
         "mobile_menu": "",
         "mobile_layout": "logo-center",
-        "hide_account_icon": true,
+        "hide_account_icon": false,
         "show_expert_help_header": true,
         "show_expert_help_button_icon": "phone",
         "mobile_menu_show_social_icons": true,
