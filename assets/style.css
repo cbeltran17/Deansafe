@@ -99,6 +99,10 @@ media-lightbox media-carousel .media-carousel img {
     mix-blend-mode: multiply;
 }
 
+.header .header__actions .header-action-btn__text {
+    display: none;
+}
+
 @media (min-width: 48rem) {
     .text-with-icons--desktop-horizontal .text-with-icons__item {
         justify-content: center;
