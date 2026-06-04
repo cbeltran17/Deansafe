@@ -1174,34 +1174,40 @@
           "type": "icon_text",
           "settings": {
             "icon_name": "truck",
-            "custom_icon": "shopify://shop_images/truck.svg",
-            "heading": "Free Shipping Sitewide",
-            "text": "Free on ordes over $100"
+            "heading": "Free Shipping",
+            "text": "On orders $100+"
           }
         },
         "icon_text_VxggTY": {
           "type": "icon_text",
           "settings": {
-            "icon_name": "truck",
-            "custom_icon": "shopify://shop_images/live.svg",
-            "heading": "Live Customer Support",
-            "text": "Full protection guaranteed"
+            "icon_name": "return",
+            "heading": "Easy Returns",
+            "text": "30 day returns"
           }
         },
         "icon_text_PA4MAB": {
           "type": "icon_text",
           "settings": {
-            "icon_name": "return",
-            "custom_icon": "shopify://shop_images/satisfaction.svg",
-            "heading": "Satisfaction Guaranteed",
-            "text": "24/7 technical assistance"
+            "icon_name": "headphones",
+            "heading": "Live Customer Support",
+            "text": "Real safe experts"
+          }
+        },
+        "icon_text_EAqrkM": {
+          "type": "icon_text",
+          "settings": {
+            "icon_name": "package",
+            "heading": "Showroom Pickup",
+            "text": "3 social locations"
           }
         }
       },
       "block_order": [
         "icon_text_BKbmYp",
         "icon_text_VxggTY",
-        "icon_text_PA4MAB"
+        "icon_text_PA4MAB",
+        "icon_text_EAqrkM"
       ],
       "name": "t:sections.text_with_icons.name",
       "settings": {
