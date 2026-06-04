@@ -83,6 +83,14 @@
     color: #1e1e1e;
 }
 
+.collection-grid-item .product-card__overlay {
+    background-color: #f5f5f5;
+}
+
+.collection-grid-item .product-card__overlay img {
+    mix-blend-mode: multiply;
+}
+
 @media (min-width: 48rem) {
     .text-with-icons--desktop-horizontal .text-with-icons__item {
         justify-content: center;
