@@ -24,10 +24,23 @@
             "link_text": ""
           },
           "blocks": {}
+        },
+        "announcement_HKhNmm": {
+          "type": "_announcement",
+          "name": "t:blocks._announcement.name",
+          "settings": {
+            "show_icon": false,
+            "icon": "badge-discount",
+            "text": "Call Our Safe Experts at  <a href=\"tel:18008277534\"><strong>800-827-7534</strong></a>",
+            "link": "",
+            "link_text": ""
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "announcement"
+        "announcement",
+        "announcement_HKhNmm"
       ],
       "settings": {
         "show_country_selector": false,
