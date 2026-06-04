@@ -869,6 +869,7 @@
         "collection_list_item_c86kmG",
         "collection_list_item_DUrGFt"
       ],
+      "disabled": true,
       "name": "t:sections.collection_list.name",
       "settings": {
         "enable_carousel": true,
