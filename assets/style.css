@@ -130,6 +130,18 @@ media-lightbox media-carousel .media-carousel img {
     margin-left: 1rem;
 }
 
+.stock-notification-banner .stock-line-1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.stock-notification-banner .stock-line-1 .check-icon svg {
+    width: 16px;
+    color: #095f41;
+}
+
 @media (min-width: 48rem) {
     .text-with-icons--desktop-horizontal .text-with-icons__item {
         justify-content: center;
