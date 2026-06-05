@@ -147,6 +147,17 @@ media-lightbox media-carousel .media-carousel img {
     background-color: #095f41;
 }
 
+a.button.self-center.button--sm.button--outline-light {
+    background: #1e1e1e;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+a.button.self-center.button--sm.button--outline-light label svg path {
+    fill: #fff;
+}
+
 @media (min-width: 48rem) {
     .text-with-icons--desktop-horizontal .text-with-icons__item {
         justify-content: center;
