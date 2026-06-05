@@ -2,7 +2,7 @@
 
   {% if section.settings.show_expert_help_header and section.settings.show_expert_help_button_url != blank %}
     <div class="expert-help-header-wrapper">
-      <a href="{{ show_expert_help_button_url }}" class="expert-help-header-link">
+      <a href="{{ section.settings.show_expert_help_button_url }}" class="expert-help-header-link">
         {% render 'icon' with section.settings.show_expert_help_button_icon %}
       </a>
     </div>
