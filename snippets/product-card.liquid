@@ -156,9 +156,11 @@
       <a href="{{ product_url }}">{{ title }}</a>
     </h2>
 
-    <div class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}'>
-      {{ product.metafields.judgeme.badge }}
-    </div>
+    {% if product.metafields.judgeme.badge %}
+      <div class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}'>
+        {{ product.metafields.judgeme.badge }}
+      </div>
+    {% endif %}
 
     {% render 'price', product: product, class: 'product-card__price' %}
 
