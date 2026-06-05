@@ -620,7 +620,8 @@
       },
       "name": "t:sections.video.name",
       "settings": {
-        "video_url": "https://www.youtube.com/watch?v=N-QiaS4bZvg&t=3s",
+        "video": "{{ product.metafields.custom.product_video.value }}",
+        "video_url": "",
         "controls": true,
         "autoplay": false,
         "muted": false,
