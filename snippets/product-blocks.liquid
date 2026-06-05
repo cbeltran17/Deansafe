@@ -24,6 +24,9 @@
       {% render 'product-price', product: product, block: block %}
     {% when 'stock' %}
       {% render 'product-stock', product: product, block: block %}
+    {% when 'customized_stock' %}
+      testing
+
     {% when 'variant_picker' %}
       {% render 'product-variant-picker',
         product: product,
