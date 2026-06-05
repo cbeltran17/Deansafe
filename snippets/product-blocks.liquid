@@ -25,28 +25,28 @@
     {% when 'stock' %}
       {% render 'product-stock', product: product, block: block %}
     {% when 'customized_stock' %}
-      <div class="stock-notification-banner">
+      {% if product.metafields.custom.product_status != blank or product.metafields.custom.available_colors != blank or product.metafields.custom.shipment_time != blank %}
+        <div class="stock-notification-banner">
+          {% if product.metafields.custom.product_status != blank %}
+            <div class="stock-line-1">
+              <span class="check-icon">✓</span> 
+              <span class="stock-highlight">{{ product.metafields.custom.product_status }}</span>
+            </div>
+          {% endif %}
 
-        {% if product.metafields.custom.product_status != blank %}
-        <div class="stock-line-1">
-          <span class="check-icon">✓</span> 
-          <span class="stock-highlight">{{ product.metafields.custom.product_status }}</span>
+          {% if product.metafields.custom.available_colors != blank %}
+            <ul class="stock-line-2">
+              <li>{{ product.metafields.custom.available_colors }}</li>
+            </ul>
+          {% endif %}
+
+          {% if product.metafields.custom.shipment_time != blank %}
+            <div class="stock-line-3">
+              {{ product.metafields.custom.shipment_time }}
+            </div>
+          {% endif %}
         </div>
-        {% endif %}
-
-        {% if product.metafields.custom.available_colors != blank %}
-        <ul class="stock-line-2">
-          <li>{{ product.metafields.custom.available_colors }}</li>
-        </ul>
-        {% endif %}
-
-        {% if product.metafields.custom.shipment_time != blank %}
-        <div class="stock-line-3">
-          {{ product.metafields.custom.shipment_time }}
-        </div>
-        {% endif %}
-
-      </div>
+      {% endif %}
     {% when 'variant_picker' %}
       {% render 'product-variant-picker',
         product: product,
