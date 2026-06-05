@@ -147,14 +147,14 @@ media-lightbox media-carousel .media-carousel img {
     background-color: #095f41;
 }
 
-a.button.self-center.button--sm.button--outline-light {
+.section-multiple-featured-collections .view-all-container button {
     background: #1e1e1e;
     color: #fff;
     text-transform: capitalize;
     font-weight: 600;
 }
 
-a.button.self-center.button--sm.button--outline-light svg path {
+.section-multiple-featured-collections .view-all-container button svg path {
     fill: #fff;
 }
 
