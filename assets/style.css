@@ -154,7 +154,7 @@ a.button.self-center.button--sm.button--outline-light {
     font-weight: 600;
 }
 
-a.button.self-center.button--sm.button--outline-light label svg path {
+a.button.self-center.button--sm.button--outline-light svg path {
     fill: #fff;
 }
 
