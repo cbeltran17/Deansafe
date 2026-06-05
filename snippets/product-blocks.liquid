@@ -54,13 +54,8 @@
         </div>
       {% endif %}
     {% when 'model_sizes' %}
-      
-      
-      
-      {%- comment -%} 
-        1. Get the size label for the CURRENT product. 
-      {%- endcomment -%}
-      {%- assign current_display_name = product.metafields.custom.short_name | default: product.title -%}
+ 
+      {%- assign current_display_name = product.metafields.custom.model_size_name | default: product.title -%}
 
       <div class="model-sizes-wrapper">
         <div class="model-sizes-header">
