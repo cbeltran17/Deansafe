@@ -54,39 +54,39 @@
         </div>
       {% endif %}
     {% when 'model_sizes' %}
- 
-      {%- assign current_display_name = product.metafields.custom.model_size_name | default: product.title -%}
+      {% if product.metafields.custom.model_sizes != blank %}
+        {%- assign current_display_name = product.metafields.custom.model_size_name | default: product.title -%}
 
-      <div class="model-sizes-wrapper">
-        <div class="model-sizes-header">
-          <span class="model-sizes-title">MODEL SIZES</span>
-          <span class="model-sizes-active-label">{{ current_display_name }}</span>
-        </div>
+        <div class="model-sizes-wrapper">
+          <div class="model-sizes-header">
+            <span class="model-sizes-title">MODEL SIZES</span>
+            <span class="model-sizes-active-label">{{ current_display_name }}</span>
+          </div>
 
-        <div class="model-sizes-grid">
-          
-          <a href="{{ product.url }}" class="model-size-pill is-active">
-            {{ current_display_name }}
-          </a>
-
-          {% if product.metafields.custom.model_sizes != blank %}
-            {%- assign model_sizes = product.metafields.custom.model_sizes.value -%}
+          <div class="model-sizes-grid">
             
-            {%- for sibling in model_sizes -%}
-              
-              {%- if sibling.handle == product.handle -%}
-                {%- continue -%}
-              {%- endif -%}
-              
-              {%- assign sibling_display_name = sibling.metafields.custom.model_size_name | default: sibling.title -%}
+            <a href="{{ product.url }}" class="model-size-pill is-active">
+              {{ current_display_name }}
+            </a>
 
-              <a href="{{ sibling.url }}" class="model-size-pill">
-                {{ sibling_display_name }}
-              </a>
+            {% if product.metafields.custom.model_sizes != blank %}
+              {%- assign model_sizes = product.metafields.custom.model_sizes.value -%}
               
-            {%- endfor -%}
+              {%- for sibling in model_sizes -%}
+                
+                {%- if sibling.handle == product.handle -%}
+                  {%- continue -%}
+                {%- endif -%}
+                
+                {%- assign sibling_display_name = sibling.metafields.custom.model_size_name | default: sibling.title -%}
+
+                <a href="{{ sibling.url }}" class="model-size-pill">
+                  {{ sibling_display_name }}
+                </a>
+                
+              {%- endfor -%}
+            {% endif %}
           {% endif %}
-          
         </div>
       </div>
 
