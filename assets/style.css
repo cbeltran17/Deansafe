@@ -153,11 +153,11 @@ media-lightbox media-carousel .media-carousel img {
     text-transform: capitalize;
     font-weight: 600;
     padding: 8px 20px;
-} */
+}
 
 .section-multiple-featured-collections .view-all-container .button svg path {
     fill: #fff;
-}
+} */
 
 @media (min-width: 48rem) {
     .text-with-icons--desktop-horizontal .text-with-icons__item {
