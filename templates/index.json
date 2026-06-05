@@ -274,7 +274,7 @@
       "settings": {
         "enable_carousel": true,
         "max_products": 20,
-        "products_per_row": 5,
+        "products_per_row": 4,
         "products_per_row_mobile": "1.5",
         "heading_alignment": "left",
         "background_color": "",
