@@ -79,7 +79,7 @@
     border-color: #949494;
 }
 
-.product-card__price .price__item.price__sale {
+.product-card__price .price__item.price__sale, .product-card__price .price__item.price__regular {
     font-size: 18px;
     font-weight: 600;
     color: #1e1e1e;
