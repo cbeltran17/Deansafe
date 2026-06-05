@@ -86,7 +86,7 @@
                 {%- continue -%}
               {%- endif -%}
               
-              {%- assign sibling_display_name = sibling.metafields.custom.short_name | default: sibling.title -%}
+              {%- assign sibling_display_name = sibling.metafields.custom.model_size_name | default: sibling.title -%}
 
               <a href="{{ sibling.url }}" class="model-size-pill">
                 {{ sibling_display_name }}
