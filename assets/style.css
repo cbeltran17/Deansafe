@@ -138,7 +138,7 @@ media-lightbox media-carousel .media-carousel img {
     color: #095f41;
 }
 
-.section-multiple-featured-collections .multiple-collections-header .radio-button .radio-button input:checked+label {
+.section-multiple-featured-collections .multiple-collections-header .radio-button input:checked+label {
     border: none;
     background-color: #095f41;
 }
