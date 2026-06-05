@@ -185,7 +185,7 @@ media-lightbox media-carousel .media-carousel img {
 
 .model-sizes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Neatly aligns the pills */
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   gap: 8px;
 }
 
@@ -195,7 +195,7 @@ media-lightbox media-carousel .media-carousel img {
   justify-content: center;
   padding: 10px 15px;
   border: 1px solid #dcdcdc;
-  border-radius: 30px; /* Gives the rounded pill shape */
+  border-radius: 30px;
   text-decoration: none;
   color: #000;
   font-size: 14px;
@@ -204,13 +204,13 @@ media-lightbox media-carousel .media-carousel img {
 }
 
 .model-size-pill:hover {
-  border-color: #537050; /* Subtle hover effect using the active color */
+  border-color: #095f41; 
 }
 
 .model-size-pill.is-active {
-  background-color: #537050; /* The exact dark green from your image */
+  background-color: #095f41; 
   color: #fff;
-  border-color: #537050;
+  border-color: #095f41;
   font-weight: 500;
 }
 
