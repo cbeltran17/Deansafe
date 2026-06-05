@@ -40,6 +40,7 @@
         },
         "text_9Ymd3A": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "show_under_gallery": false,
             "heading": "",
@@ -53,6 +54,7 @@
         },
         "text_6tQUfi": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "show_under_gallery": false,
             "heading": "",
@@ -299,10 +301,10 @@
       },
       "name": "Related products",
       "settings": {
-        "enable_carousel": true,
-        "max_products": 10,
-        "products_per_row": 5,
-        "products_per_row_mobile": "1.5",
+        "enable_carousel": false,
+        "max_products": 4,
+        "products_per_row": 4,
+        "products_per_row_mobile": "2",
         "text_alignment": "center",
         "background_color": "",
         "text_color": "",
