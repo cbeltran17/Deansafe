@@ -29,6 +29,15 @@
             "show_sku": true
           }
         },
+        "customized_stock_RphCJD": {
+          "type": "customized_stock",
+          "settings": {
+            "show_progress_bar": true,
+            "enable_low_stock_message": true,
+            "enable_out_of_stock_message": true,
+            "enable_backorder_message": true
+          }
+        },
         "text_9Ymd3A": {
           "type": "text",
           "settings": {
@@ -59,15 +68,6 @@
           "type": "price",
           "settings": {
             "show_taxes_notice": false
-          }
-        },
-        "customized_stock_RphCJD": {
-          "type": "customized_stock",
-          "settings": {
-            "show_progress_bar": true,
-            "enable_low_stock_message": true,
-            "enable_out_of_stock_message": true,
-            "enable_backorder_message": true
           }
         },
         "specifications_wEeYpQ": {
@@ -168,10 +168,10 @@
       "block_order": [
         "title",
         "vendor_HWM4hy",
+        "customized_stock_RphCJD",
         "text_9Ymd3A",
         "text_6tQUfi",
         "price",
-        "customized_stock_RphCJD",
         "specifications_wEeYpQ",
         "variant_picker",
         "stock_QrwbPC",
