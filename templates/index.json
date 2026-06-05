@@ -716,6 +716,7 @@
       ],
       "name": "t:sections.image_with_text.name",
       "settings": {
+        "image": "shopify://shop_images/Simi-Showroom-Outside-building-image-narrow_compressed.jpg",
         "full_width": false,
         "gap": false,
         "image_width": 100,
