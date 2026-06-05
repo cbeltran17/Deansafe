@@ -30,16 +30,16 @@
         {% if product.metafields.custom.product_status != blank %}
         <div class="stock-line-1">
           <span class="check-icon">✓</span> 
-          <span class="stock-highlight">Select Color Options In Stock</span> — Ships in 2-5 Business Days
+          <span class="stock-highlight">{{ product.metafields.custom.product_status }}</span>
         </div>
         {% endif %}
 
         <ul class="stock-line-2">
-          <li>Black Textured / Chrome Hardware / SecuRam TopLit Electronic Lock</li>
+          <li></li>
         </ul>
 
         <div class="stock-line-3">
-          Forged Red color option with S&G e-lock ships in 6-8 weeks
+          
         </div>
       </div>
     {% when 'variant_picker' %}
