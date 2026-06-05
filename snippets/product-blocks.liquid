@@ -65,23 +65,15 @@
 
         <div class="model-sizes-grid">
           
-          {%- comment -%} 
-            2. Manually output the CURRENT product in the FIRST position.
-            Since we are viewing this product, it is always 'is-active'.
-          {%- endcomment -%}
           <a href="{{ product.url }}" class="model-size-pill is-active">
             {{ current_display_name }}
           </a>
 
-          {%- comment -%} 
-            3. Loop through the metafield for the REST of the sizes.
-          {%- endcomment -%}
           {% if product.metafields.custom.model_sizes != blank %}
             {%- assign model_sizes = product.metafields.custom.model_sizes.value -%}
             
             {%- for sibling in model_sizes -%}
               
-              {%- comment -%} Failsafe: Skip this sibling if a merchant accidentally added the current product to the metafield list {%- endcomment -%}
               {%- if sibling.handle == product.handle -%}
                 {%- continue -%}
               {%- endif -%}
