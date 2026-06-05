@@ -1,3 +1,4 @@
+{% if section.settings.video != blank %}
 {% render 'section-meta', blend: true, blend_bg: section.settings.background_color %}
 
 <div class="section-full-width">
@@ -14,7 +15,7 @@
     loop: section.settings.loop
   %}
 </div>
-
+{% endif %}
 {% schema %}
 {
   "name": "t:sections.video.name",
