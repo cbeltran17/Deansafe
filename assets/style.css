@@ -161,6 +161,60 @@ media-lightbox media-carousel .media-carousel img {
     fill: #fff;
 } */
 
+.model-sizes-wrapper {
+  margin-bottom: 1.5rem;
+  font-family: inherit;
+}
+
+.model-sizes-header {
+  margin-bottom: 10px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.model-sizes-title {
+  font-weight: 600;
+  color: #000;
+  margin-right: 5px;
+}
+
+.model-sizes-active-label {
+  font-weight: 400;
+  color: #888; /* Matches the greyed-out text in your design */
+}
+
+.model-sizes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Neatly aligns the pills */
+  gap: 8px;
+}
+
+.model-size-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  border: 1px solid #dcdcdc;
+  border-radius: 30px; /* Gives the rounded pill shape */
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.model-size-pill:hover {
+  border-color: #537050; /* Subtle hover effect using the active color */
+}
+
+.model-size-pill.is-active {
+  background-color: #537050; /* The exact dark green from your image */
+  color: #fff;
+  border-color: #537050;
+  font-weight: 500;
+}
+
+
 @media (min-width: 48rem) {
     .text-with-icons--desktop-horizontal .text-with-icons__item {
         justify-content: center;
