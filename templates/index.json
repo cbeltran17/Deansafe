@@ -675,8 +675,8 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h1",
-            "heading": "Image with text",
+            "heading_size": "h2",
+            "heading": "About Dean Safe",
             "highlight_type": "underline",
             "highlight_layer": "default",
             "heading_color": "",
@@ -691,7 +691,7 @@
             "paragraph_size": "md",
             "paragraph_width": "medium",
             "text_color": "primary",
-            "content": "<p>Showcase visual content with accompanying text. Use this section to feature a product, collection, or message alongside an image for added impact.</p>"
+            "content": "<p>Family-owned and operated since 1978, Dean Safe has been selling top-quality safes at the best prices for nearly half a century. Our three Southern California showrooms feature top-pick gun & rifle safes, home & jewelry safes, wall safes, floor safes, vault doors, and nearly every type of safe you can think of — and any in-stock order received by 12 PM PST ships the same business day.</p><p>In 1993, we became one of the first online safe stores. Since then, we’ve grown on2 the web by offering same-day shipping, fast delivery, and dependable customer service. Thousands of reviews and unmatched referrals from happy customers let us proudly stand behind every product we carry, so when you're ready to buy you can be confident you're getting the best combination of price, selection, and service anywhere.</p>"
           },
           "blocks": {}
         },
@@ -700,8 +700,8 @@
           "settings": {
             "size": "md",
             "variant": "solid",
-            "label": "Button",
-            "url": "",
+            "label": "Read More",
+            "url": "shopify://pages/sivadesacoou",
             "style": "primary",
             "background_color": "",
             "text_color": ""
