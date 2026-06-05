@@ -11,11 +11,11 @@
     }
   }
 
-  .brands-wrapper {
+  /* .brands-wrapper {
     max-width: var(--page-width, 1200px);
     margin: 0 auto;
     padding: 0 1.5rem;
-  }
+  } */
 
   .brands-header {
     display: flex;
@@ -112,7 +112,7 @@
 {% endstyle %}
 
 <div class="brands-section section-{{ section.id }}-padding">
-  <div class="brands-wrapper">
+  <div class="brands-wrapper section-full-width">
     <div class="brands-header">
       <div class="brands-header__text">
         {%- if section.settings.title != blank -%}
