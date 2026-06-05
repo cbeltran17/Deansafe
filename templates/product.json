@@ -31,12 +31,7 @@
         },
         "customized_stock_RphCJD": {
           "type": "customized_stock",
-          "settings": {
-            "show_progress_bar": true,
-            "enable_low_stock_message": true,
-            "enable_out_of_stock_message": true,
-            "enable_backorder_message": true
-          }
+          "settings": {}
         },
         "text_9Ymd3A": {
           "type": "text",
@@ -79,6 +74,10 @@
             "open_by_default": true,
             "custom_content": "{{ product.metafields.custom.specifications | metafield_tag }}"
           }
+        },
+        "model_sizes_rim6en": {
+          "type": "model_sizes",
+          "settings": {}
         },
         "variant_picker": {
           "type": "variant_picker",
@@ -175,6 +174,7 @@
         "text_6tQUfi",
         "price",
         "specifications_wEeYpQ",
+        "model_sizes_rim6en",
         "variant_picker",
         "stock_QrwbPC",
         "buy_buttons",
