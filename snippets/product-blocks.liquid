@@ -38,13 +38,14 @@
         <ul class="stock-line-2">
           <li></li>
         </ul>
-        {% endif %}v
+        {% endif %}
 
         {% if product.metafields.custom.shipment_time != blank %}
         <div class="stock-line-3">
           
         </div>
         {% endif %}
+
       </div>
     {% when 'variant_picker' %}
       {% render 'product-variant-picker',
