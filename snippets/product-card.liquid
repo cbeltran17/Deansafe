@@ -156,11 +156,9 @@
       <a href="{{ product_url }}">{{ title }}</a>
     </h2>
 
-    {% if product.metafields.judgeme.reviews_count and product.metafields.judgeme.reviews_count != 0 and product.metafields.judgeme.reviews_count != "0" %}
-      <div class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}'>
-        {{ product.metafields.judgeme.badge }}
-      </div>
-    {% endif %}
+    <div class='jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}'>
+      {{ product.metafields.judgeme.badge }}
+    </div>
 
     {% render 'price', product: product, class: 'product-card__price' %}
 
