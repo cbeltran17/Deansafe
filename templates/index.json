@@ -192,7 +192,7 @@
             "label": "HANDGUN SAFES",
             "show_link": true,
             "link_url": "",
-            "link_text": ""
+            "link_text": "View All"
           },
           "blocks": {}
         },
@@ -205,7 +205,7 @@
             "label": "HOME SAFES",
             "show_link": true,
             "link_url": "",
-            "link_text": ""
+            "link_text": "View All"
           },
           "blocks": {}
         },
@@ -218,7 +218,7 @@
             "label": "VAULT DOORS",
             "show_link": true,
             "link_url": "",
-            "link_text": ""
+            "link_text": "View All"
           },
           "blocks": {}
         },
