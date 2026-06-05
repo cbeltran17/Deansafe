@@ -36,13 +36,13 @@
 
         {% if product.metafields.custom.available_colors != blank %}
         <ul class="stock-line-2">
-          <li></li>
+          <li>{{ product.metafields.custom.available_colors }}</li>
         </ul>
         {% endif %}
 
         {% if product.metafields.custom.shipment_time != blank %}
         <div class="stock-line-3">
-          
+          {{ product.metafields.custom.shipment_time }}
         </div>
         {% endif %}
 
