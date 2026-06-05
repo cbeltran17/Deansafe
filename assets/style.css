@@ -178,18 +178,18 @@ media-lightbox media-carousel .media-carousel img {
   margin-right: 5px;
 }
 
-.model-sizes-active-label {
+.product-model-sizes .model-sizes-active-label {
   font-weight: 400;
   color: #888; 
 }
 
-.model-sizes-grid {
+.product-model-sizes .model-sizes-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   gap: 8px;
 }
 
-.model-size-pill {
+.product-model-sizes .model-size-pill {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -203,17 +203,16 @@ media-lightbox media-carousel .media-carousel img {
   transition: all 0.2s ease;
 }
 
-.model-size-pill:hover {
+.product-model-sizes .model-size-pill:hover {
   border-color: #095f41; 
 }
 
-.model-size-pill.is-active {
+.product-model-sizes .model-size-pill.is-active {
   background-color: #095f41; 
   color: #fff;
   border-color: #095f41;
   font-weight: 500;
 }
-
 
 @media (min-width: 48rem) {
     .text-with-icons--desktop-horizontal .text-with-icons__item {
