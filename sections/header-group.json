@@ -190,6 +190,7 @@
         "hide_account_icon": false,
         "show_expert_help_header": true,
         "show_expert_help_button_icon": "question",
+        "show_expert_help_button_url": "shopify://pages/contact",
         "mobile_menu_show_social_icons": true,
         "mobile_menu_show_country_selector": true,
         "mobile_menu_show_language_selector": true,
