@@ -26,10 +26,13 @@
       {% render 'product-stock', product: product, block: block %}
     {% when 'customized_stock' %}
       <div class="stock-notification-banner">
+
+        {% if product.metafields.custom.product_status != blank %}
         <div class="stock-line-1">
           <span class="check-icon">✓</span> 
           <span class="stock-highlight">Select Color Options In Stock</span> — Ships in 2-5 Business Days
         </div>
+        {% endif %}
 
         <ul class="stock-line-2">
           <li>Black Textured / Chrome Hardware / SecuRam TopLit Electronic Lock</li>
