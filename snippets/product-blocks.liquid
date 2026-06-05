@@ -55,42 +55,54 @@
       {% endif %}
     {% when 'model_sizes' %}
       
-      {% if product.metafields.custom.model_sizes != blank %}
-        {%- assign model_sizes = product.metafields.custom.model_sizes.value -%}
+      
+      
+      {%- comment -%} 
+  1. Get the size label for the CURRENT product. 
+{%- endcomment -%}
+{%- assign current_display_name = product.metafields.custom.short_name | default: product.title -%}
 
-        {%- comment -%} 
-          1. Get the active size label directly from the CURRENT product's metafield. 
-          (Fallback to the standard product title if it's blank).
-        {%- endcomment -%}
-        {%- assign active_size_label = product.metafields.custom.short_name | default: product.title -%}
+<div class="model-sizes-wrapper">
+  <div class="model-sizes-header">
+    <span class="model-sizes-title">MODEL SIZES</span>
+    <span class="model-sizes-active-label">{{ current_display_name }}</span>
+  </div>
 
-        <div class="model-sizes-wrapper">
-          <div class="model-sizes-header">
-            <span class="model-sizes-title">MODEL SIZES</span>
-            <span class="model-sizes-active-label">{{ active_size_label }}</span>
-          </div>
+  <div class="model-sizes-grid">
+    
+    {%- comment -%} 
+      2. Manually output the CURRENT product in the FIRST position.
+      Since we are viewing this product, it is always 'is-active'.
+    {%- endcomment -%}
+    <a href="{{ product.url }}" class="model-size-pill is-active">
+      {{ current_display_name }}
+    </a>
 
-          <div class="model-sizes-grid">
-            {%- for sibling in model_sizes -%}
-              
-              {%- comment -%} 
-                2. Pull the display name directly from the sibling product.
-              {%- endcomment -%}
-              {%- assign display_name = sibling.metafields.custom.short_name | default: sibling.title -%}
-              
-              {%- comment -%} 3. Check if this is the active product {%- endcomment -%}
-              {%- assign is_active = false -%}
-              {%- if sibling.handle == product.handle -%}
-                {%- assign is_active = true -%}
-              {%- endif -%}
+    {%- comment -%} 
+      3. Loop through the metafield for the REST of the sizes.
+    {%- endcomment -%}
+    {% if product.metafields.custom.model_sizes != blank %}
+      {%- assign model_sizes = product.metafields.custom.model_sizes.value -%}
+      
+      {%- for sibling in model_sizes -%}
+        
+        {%- comment -%} Failsafe: Skip this sibling if a merchant accidentally added the current product to the metafield list {%- endcomment -%}
+        {%- if sibling.handle == product.handle -%}
+          {%- continue -%}
+        {%- endif -%}
+        
+        {%- assign sibling_display_name = sibling.metafields.custom.short_name | default: sibling.title -%}
 
-              <a href="{{ sibling.url }}" class="model-size-pill {% if is_active %}is-active{% endif %}">
-                {{ display_name }}
-              </a>
-            {%- endfor -%}
-          </div>
-        </div>
-      {% endif %}
+        <a href="{{ sibling.url }}" class="model-size-pill">
+          {{ sibling_display_name }}
+        </a>
+        
+      {%- endfor -%}
+    {% endif %}
+    
+  </div>
+</div>
+
 
 
     {% when 'variant_picker' %}
