@@ -667,6 +667,70 @@
         "bottom_spacing": 80
       }
     },
+    "image_with_text_j73R7X": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_c6XryV": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h1",
+            "heading": "Image with text",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_rKNtxq": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "medium",
+            "text_color": "primary",
+            "content": "<p>Showcase visual content with accompanying text. Use this section to feature a product, collection, or message alongside an image for added impact.</p>"
+          },
+          "blocks": {}
+        },
+        "button_jmVUhW": {
+          "type": "button",
+          "settings": {
+            "size": "md",
+            "variant": "solid",
+            "label": "Button",
+            "url": "",
+            "style": "primary",
+            "background_color": "",
+            "text_color": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_c6XryV",
+        "paragraph_rKNtxq",
+        "button_jmVUhW"
+      ],
+      "name": "t:sections.image_with_text.name",
+      "settings": {
+        "full_width": false,
+        "gap": false,
+        "image_width": 100,
+        "image_position": "right",
+        "image_size": "",
+        "image_height": 480,
+        "image_size_mobile": "same",
+        "image_height_mobile": 480,
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": true,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
     "video_BDLyyz": {
       "type": "video",
       "blocks": {
@@ -737,7 +801,7 @@
       "name": "Locations",
       "settings": {
         "heading": "Our Locations",
-        "padding_top": 80,
+        "padding_top": 0,
         "padding_bottom": 80
       }
     },
@@ -1281,6 +1345,7 @@
     "brands_diMQE9",
     "image_with_text_slider_aYpUQJ",
     "testimonials_eR6HaW",
+    "image_with_text_j73R7X",
     "video_BDLyyz",
     "locations_j7XtTV",
     "collection_list_tfYQqN",
