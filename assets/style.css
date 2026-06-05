@@ -152,6 +152,7 @@ media-lightbox media-carousel .media-carousel img {
     color: #fff;
     text-transform: capitalize;
     font-weight: 600;
+    padding: 8px 20px;
 }
 
 .section-multiple-featured-collections .view-all-container .button svg path {
