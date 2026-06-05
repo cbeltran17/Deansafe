@@ -161,18 +161,18 @@ media-lightbox media-carousel .media-carousel img {
     fill: #fff;
 } */
 
-.product-model-sizes .model-sizes-wrapper {
+.product-model-sizes.model-sizes-wrapper {
   margin-bottom: 1.5rem;
   font-family: inherit;
 }
 
-.model-sizes-header {
+.product-model-sizes .model-sizes-header {
   margin-bottom: 10px;
   font-size: 16px;
   letter-spacing: 0.5px;
 }
 
-.model-sizes-title {
+.product-model-sizes .model-sizes-title {
   font-weight: 600;
   color: #000;
   margin-right: 5px;
