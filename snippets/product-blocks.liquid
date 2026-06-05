@@ -57,9 +57,9 @@
       {% if product.metafields.custom.model_sizes != blank %}
         {%- assign current_display_name = product.metafields.custom.model_size_name | default: product.title -%}
 
-        <div class="model-sizes-wrapper">
+        <div class="product-model-sizes model-sizes-wrapper">
           <div class="model-sizes-header">
-            <span class="model-sizes-title">MODEL SIZES</span>
+            <span class="model-sizes-title">Model Sizes</span>
             <span class="model-sizes-active-label">{{ current_display_name }}</span>
           </div>
 
