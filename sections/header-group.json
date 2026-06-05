@@ -193,7 +193,7 @@
         "mobile_menu_show_social_icons": true,
         "mobile_menu_show_country_selector": true,
         "mobile_menu_show_language_selector": true,
-        "show_action_button": true,
+        "show_action_button": false,
         "action_button_icon": "check-circle",
         "action_button_link": "tel:18008277534",
         "action_button_text": "Expert help",
