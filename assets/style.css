@@ -180,7 +180,7 @@ media-lightbox media-carousel .media-carousel img {
 
 .model-sizes-active-label {
   font-weight: 400;
-  color: #888; /* Matches the greyed-out text in your design */
+  color: #888; 
 }
 
 .model-sizes-grid {
