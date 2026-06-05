@@ -61,6 +61,15 @@
             "show_taxes_notice": false
           }
         },
+        "customized_stock_RphCJD": {
+          "type": "customized_stock",
+          "settings": {
+            "show_progress_bar": true,
+            "enable_low_stock_message": true,
+            "enable_out_of_stock_message": true,
+            "enable_backorder_message": true
+          }
+        },
         "specifications_wEeYpQ": {
           "type": "specifications",
           "settings": {
@@ -81,6 +90,7 @@
         },
         "stock_QrwbPC": {
           "type": "stock",
+          "disabled": true,
           "settings": {
             "show_progress_bar": true,
             "enable_low_stock_message": true,
@@ -161,6 +171,7 @@
         "text_9Ymd3A",
         "text_6tQUfi",
         "price",
+        "customized_stock_RphCJD",
         "specifications_wEeYpQ",
         "variant_picker",
         "stock_QrwbPC",
