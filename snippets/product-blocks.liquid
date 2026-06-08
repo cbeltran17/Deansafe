@@ -25,7 +25,13 @@
     {% when 'stock' %}
       {% render 'product-stock', product: product, block: block %}
     {% when 'customized_stock' %}
-      {% if product.metafields.custom.product_status != blank or product.metafields.custom.available_colors != blank or product.metafields.custom.shipment_time != blank and product.tags contains "In Stock" %}
+
+      {% assign has_custom_data = false %}
+      {% if product.metafields.custom.product_status != blank or product.metafields.custom.available_colors != blank or product.metafields.custom.shipment_time != blank %}
+        {% assign has_custom_data = true %}
+      {% endif %}
+
+      {% if has_custom_data and product.tags contains "In Stock" %}
         <div class="stock-notification-banner {% if product.tags contains "In Stock" %}in-stock{% endif %}">
           {% if product.metafields.custom.product_status != blank %}
             <div class="stock-line-1">
@@ -53,7 +59,7 @@
           {% endif %}
         </div>
 
-      {% elsif product.metafields.custom.product_status != blank or product.metafields.custom.available_colors != blank or product.metafields.custom.shipment_time != blank and product.tags contains "Out of Stock" %}
+      {% elsif has_custom_data and product.tags contains "Out of Stock" %}
         <div class="stock-notification-banner {% if product.tags contains "Out of Stock" %}out-of-stock{% endif %}">
           {% if product.metafields.custom.product_status != blank %}
             <div class="stock-line-1">
