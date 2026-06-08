@@ -124,6 +124,15 @@ media-lightbox media-carousel .media-carousel img {
     color: #095f41;
 }
 
+.stock-notification-banner.out-of-stock {
+    border: 2px solid #df2e35;
+    background-color: #ffabaf;
+}
+
+.stock-notification-banner.out-of-stock .stock-line-1 .check-icon svg {
+    color: #df2e35;
+}
+
 .stock-notification-banner .stock-line-3 {
     font-style: italic;
     color: #6b6b6b;
