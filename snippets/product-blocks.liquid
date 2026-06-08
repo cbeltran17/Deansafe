@@ -58,7 +58,31 @@
             </div>
           {% endif %}
         </div>
+      {% elsif has_custom_data and product.tags contains "Dropship" %}
+        <div class="stock-notification-banner {% if product.tags contains "Dropship" %}dropship{% endif %}">
+          {% if product.metafields.custom.product_status != blank %}
+            <div class="stock-line-1">
+              <span class="check-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <path fill="#E53935" d="M12 2L1 21h22L12 2zm1 14h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+                </svg> 
+              </span> 
+              <span class="stock-highlight">{{ product.metafields.custom.product_status }}</span>
+            </div>
+          {% endif %}
 
+          {% if product.metafields.custom.available_colors != blank %}
+            <ul class="stock-line-2">
+              <li>{{ product.metafields.custom.available_colors }}</li>
+            </ul>
+          {% endif %}
+
+          {% if product.metafields.custom.shipment_time != blank %}
+            <div class="stock-line-3">
+              {{ product.metafields.custom.shipment_time }}
+            </div>
+          {% endif %}
+        </div>
       {% elsif has_custom_data and product.tags contains "Out of Stock" %}
         <div class="stock-notification-banner {% if product.tags contains "Out of Stock" %}out-of-stock{% endif %}">
           {% if product.metafields.custom.product_status != blank %}
