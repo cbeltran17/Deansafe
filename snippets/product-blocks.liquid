@@ -26,7 +26,7 @@
       {% render 'product-stock', product: product, block: block %}
     {% when 'customized_stock' %}
       {% if product.metafields.custom.product_status != blank or product.metafields.custom.available_colors != blank or product.metafields.custom.shipment_time != blank %}
-        <div class="stock-notification-banner {% if product.tags == "In Stock" %}in-stock{% endif %}">
+        <div class="stock-notification-banner {% if product.tags contains "In Stock" %}in-stock{% endif %}">
           {% if product.metafields.custom.product_status != blank %}
             <div class="stock-line-1">
               <span class="check-icon">
