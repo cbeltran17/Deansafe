@@ -120,6 +120,10 @@ media-lightbox media-carousel .media-carousel img {
     background-color: #ebf9ed;
 }
 
+.stock-notification-banner.in-stock-green strong {
+    color: #095f41;
+}
+
 .stock-notification-banner.in-stock-green .stock-line-1 .check-icon svg {
     color: #095f41;
 }
