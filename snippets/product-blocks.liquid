@@ -97,7 +97,7 @@
                   <path d="M15 9L9 15M9 9L15 15" stroke="#E53935" stroke-linecap="round" stroke-linejoin="round" style="stroke-width: 1.5px;"></path>
                 </svg>
               </span> 
-              <span class="stock-highlight">{{ product.metafields.custom.product_status }}</span>
+              <span class="stock-highlight">{{ product.metafields.custom.product_status | metafield_tag }}</span>
             </div>
           {% endif %}
 
