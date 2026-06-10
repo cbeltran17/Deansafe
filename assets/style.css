@@ -137,12 +137,12 @@ media-lightbox media-carousel .media-carousel img {
     color: #df2e35;
 }
 
-.stock-notification-banner.dropship {
+.stock-notification-banner.dropship-yellow {
     border: 2px solid #fbbf24;
     background-color: #fffbeb;
 }
 
-.stock-notification-banner.dropship .stock-line-1 .check-icon svg {
+.stock-notification-banner.dropship-yellow .stock-line-1 .check-icon svg {
     color: #fbbf24;
 }
 

@@ -63,8 +63,8 @@
             </div>
           {% endif %}
         </div>
-      {% elsif has_custom_data and product.tags contains "Dropship" %}
-        <div class="stock-notification-banner {% if product.tags contains "Dropship" %}dropship{% endif %}">
+      {% elsif has_custom_data and product.tags contains "Dropship Yellow" %}
+        <div class="stock-notification-banner {% if product.tags contains "Dropship Yellow" %}dropship-yellow{% endif %}">
           {% if product.metafields.custom.product_status != blank %}
             <div class="stock-line-1">
               <span class="check-icon">
