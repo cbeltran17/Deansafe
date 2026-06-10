@@ -36,13 +36,18 @@
           {% if product.metafields.custom.product_status != blank %}
             <div class="stock-line-1">
               <span class="check-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="icon-scalable">
-                  <path d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12Z" fill="currentColor" style="--opacity: 0.4;"></path>
-                  <path d="M17 3.33782C15.5291 2.48697 13.8214 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 11.3151 21.9311 10.6462 21.8 10" stroke="currentColor" stroke-linecap="round" style="--stroke-width: 1.5px;"></path>
-                  <path d="M8 12.5C8 12.5 9.5 12.5 11.5 16C11.5 16 17.0588 6.83333 22 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="--stroke-width: 1.5px;"></path>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    d="M6 12l4 4L18 6"
+                    fill="none"
+                    stroke="#2E6B2E"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>  
               </span> 
-              <span class="stock-highlight">{{ product.metafields.custom.product_status }}</span>
+              <span class="stock-highlight">{{ product.metafields.custom.product_status | metafield_tag }}</span>
             </div>
           {% endif %}
 
