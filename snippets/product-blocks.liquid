@@ -72,7 +72,7 @@
                   <path fill="#fbbf24" d="M12 2L1 21h22L12 2zm1 14h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
                 </svg> 
               </span> 
-              <span class="stock-highlight">{{ product.metafields.custom.product_status }}</span>
+              <span class="stock-highlight">{{ product.metafields.custom.product_status | metafield_tag }}</span>
             </div>
           {% endif %}
 
