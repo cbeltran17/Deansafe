@@ -129,12 +129,16 @@ media-lightbox media-carousel .media-carousel img {
 }
 
 .stock-notification-banner.out-of-stock-red {
-    border: 2px solid #df2e35;
+    border: 2px solid #933424;
     background-color: #fbf2f3;
 }
 
+.stock-notification-banner.out-of-stock-red strong {
+    color: #933424;
+}
+
 .stock-notification-banner.out-of-stock-red .stock-line-1 .check-icon svg {
-    color: #df2e35;
+    color: #933424;
 }
 
 .stock-notification-banner.dropship-yellow {
