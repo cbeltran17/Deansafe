@@ -31,8 +31,8 @@
         {% assign has_custom_data = true %}
       {% endif %}
 
-      {% if has_custom_data and product.tags contains "In Stock" %}
-        <div class="stock-notification-banner {% if product.tags contains "In Stock" %}in-stock{% endif %}">
+      {% if has_custom_data and product.tags contains "In Stock Green" %}
+        <div class="stock-notification-banner {% if product.tags contains "In Stock Green" %}in-stock-green{% endif %}">
           {% if product.metafields.custom.product_status != blank %}
             <div class="stock-line-1">
               <span class="check-icon">
