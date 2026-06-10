@@ -142,6 +142,10 @@ media-lightbox media-carousel .media-carousel img {
     background-color: #fffbeb;
 }
 
+.stock-notification-banner.dropship-yellow strong {
+    color: #fbbf24;
+}
+
 .stock-notification-banner.dropship-yellow .stock-line-1 .check-icon svg {
     color: #fbbf24;
 }
