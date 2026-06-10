@@ -128,12 +128,12 @@ media-lightbox media-carousel .media-carousel img {
     color: #095f41;
 }
 
-.stock-notification-banner.out-of-stock {
+.stock-notification-banner.out-of-stock-red {
     border: 2px solid #df2e35;
     background-color: #fbf2f3;
 }
 
-.stock-notification-banner.out-of-stock .stock-line-1 .check-icon svg {
+.stock-notification-banner.out-of-stock-red .stock-line-1 .check-icon svg {
     color: #df2e35;
 }
 

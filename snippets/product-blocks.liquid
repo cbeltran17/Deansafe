@@ -86,8 +86,8 @@
             </div>
           {% endif %}
         </div>
-      {% elsif has_custom_data and product.tags contains "Out of Stock" %}
-        <div class="stock-notification-banner {% if product.tags contains "Out of Stock" %}out-of-stock{% endif %}">
+      {% elsif has_custom_data and product.tags contains "Out Of Stock Red" %}
+        <div class="stock-notification-banner {% if product.tags contains "Out Of Stock Red" %}out-of-stock-red{% endif %}">
           {% if product.metafields.custom.product_status != blank %}
             <div class="stock-line-1">
               <span class="check-icon">
