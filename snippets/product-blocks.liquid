@@ -98,9 +98,7 @@
           {% endif %}
 
           {% if product.metafields.custom.available_colors != blank %}
-            <ul class="stock-line-2">
-              <li>{{ product.metafields.custom.available_colors }}</li>
-            </ul>
+            <span class="stock-line-2">{{ product.metafields.custom.available_colors }}</span>
           {% endif %}
 
           {% if product.metafields.custom.shipment_time != blank %}
