@@ -99,6 +99,10 @@
             "enable_backorder_message": true
           }
         },
+        "aris_product_options_avisplus_options_block_Jpc34r": {
+          "type": "shopify://apps/aris-product-options/blocks/avisplus-options-block/e076618e-4c9c-447f-ad6d-4f1577799c29",
+          "settings": {}
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -177,6 +181,7 @@
         "model_sizes_rim6en",
         "variant_picker",
         "stock_QrwbPC",
+        "aris_product_options_avisplus_options_block_Jpc34r",
         "buy_buttons",
         "pickup_availability_TA3kPj",
         "text_M3prhM",
