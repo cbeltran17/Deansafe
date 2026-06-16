@@ -166,9 +166,9 @@
       "settings": {
         "only_selected_variant_images": false,
         "product_gallery_width": 57,
-        "product_gallery_type": "carousel",
+        "product_gallery_type": "grid",
         "carousel_thumbnails_position": "left",
-        "grid_type": "two-columns-featured",
+        "grid_type": "one-column",
         "carousel_indicator_mobile": "thumbnails",
         "video_autoplay": false,
         "video_muted": true,
