@@ -27,13 +27,13 @@
     {% when 'customized_stock' %}
 
       {% assign has_custom_data = false %}
-      {% if product.metafields.custom.product_status != blank or product.metafields.custom.available_colors != blank or product.metafields.custom.shipment_time != blank %}
+      {% if product.metafields.custom.product_status.value != blank or product.metafields.custom.available_colors != blank or product.metafields.custom.shipment_time != blank %}
         {% assign has_custom_data = true %}
       {% endif %}
 
       {% if has_custom_data and product.tags contains "Green - In Stock" %}
         <div class="stock-notification-banner {% if product.tags contains "Green - In Stock" %}in-stock-green{% endif %}">
-          {% if product.metafields.custom.product_status != blank %}
+          {% if product.metafields.custom.product_status.value != blank %}
             <div class="stock-line-1">
               <span class="check-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
