@@ -108,6 +108,7 @@
           {% endif %}
         </div>
       {% else %}
+        {{ has_custom_data }}
         {% if has_custom_data %}
           <div class="stock-notification-banner dropship-yellow">
             {% if product.metafields.custom.product_status != blank %}
