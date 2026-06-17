@@ -88,7 +88,7 @@
         </div>
       {% elsif has_custom_data and product.tags contains "Red - Out of Stock" %}
         <div class="stock-notification-banner {% if product.tags contains "Red - Out of Stock" %}out-of-stock-red{% endif %}">
-          {% if product.metafields.custom.product_status != blank %}
+          {% if product.metafields.custom.product_status.value.children.size > 0 %}
             <div class="stock-line-1">
               <span class="check-icon">
                 <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="17" r="1" fill="#933424"></circle> <path d="M12 10L12 14" stroke="#933424" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M3.44722 18.1056L10.2111 4.57771C10.9482 3.10361 13.0518 3.10362 13.7889 4.57771L20.5528 18.1056C21.2177 19.4354 20.2507 21 18.7639 21H5.23607C3.7493 21 2.78231 19.4354 3.44722 18.1056Z" stroke="#933424" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
