@@ -27,7 +27,7 @@
     {% when 'customized_stock' %}
 
       {% assign has_custom_data = false %}
-      {% if product.metafields.custom.product_status != blank or product.metafields.custom.available_colors != blank or product.metafields.custom.shipment_time != blank %}
+      {% if product.metafields.custom.product_status.value.children.size > 0 or product.metafields.custom.available_colors != blank or product.metafields.custom.shipment_time != blank %}
         {% assign has_custom_data = true %}
       {% endif %}
 
