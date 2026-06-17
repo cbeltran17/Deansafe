@@ -110,9 +110,9 @@
       {% else %}
         {{ has_custom_data }}
 
-        Product Status: {{ product.metafields.custom.product_status.value | json }}
-        Available Colors: {{ product.metafields.custom.available_colors.value | json }}
-        Shipment Time: {{ product.metafields.custom.shipment_time.value | json }}
+        Product Status: {{ product.metafields.custom.product_status.value | json }}<br><br>
+        Available Colors: {{ product.metafields.custom.available_colors.value | json }}<br><br>
+        Shipment Time: {{ product.metafields.custom.shipment_time.value | json }}<br><br>
 
         {% if has_custom_data %}
           <div class="stock-notification-banner dropship-yellow">
