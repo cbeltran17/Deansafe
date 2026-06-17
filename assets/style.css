@@ -130,6 +130,7 @@ media-lightbox media-carousel .media-carousel img {
 
 .stock-notification-banner.out-of-stock-red {
     border: 2px solid #933424;
+    background: transparent;
 }
 
 .stock-notification-banner.out-of-stock-red strong {
@@ -142,7 +143,7 @@ media-lightbox media-carousel .media-carousel img {
 
 .stock-notification-banner.dropship-yellow {
     border: 2px solid #cba139;
-    background-color: #fcf6e5;
+    background: transparent;
 }
 
 .stock-notification-banner.dropship-yellow strong {
