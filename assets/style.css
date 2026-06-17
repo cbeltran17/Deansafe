@@ -117,7 +117,7 @@ media-lightbox media-carousel .media-carousel img {
 
 .stock-notification-banner.in-stock-green {
     border: 2px solid #095f41;
-    background-color: #ebf9ed;
+    background: transparent;
 }
 
 .stock-notification-banner.in-stock-green strong {
