@@ -147,7 +147,7 @@
             "show_under_gallery": true,
             "open_by_default": false,
             "heading": "Instructions",
-            "content": "",
+            "content": "{{ product.metafields.custom.instructions | metafield_tag }}",
             "content_from_page": ""
           }
         }
