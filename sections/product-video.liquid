@@ -17,8 +17,8 @@
 </style> 
 
 {% if product.metafields.custom.youtube_video != blank %}
-    <div class="section-full-width">
-        <section class="product-video-section">
+    <section class="product-video-section">
+        <div class="section-full-width">
             <div class="product-video-wrapper">
             {% assign video_value = product.metafields.custom.youtube_video.value %}
 
@@ -43,8 +43,8 @@
                 </iframe>
             {% endif %}
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 {% endif %}
 
 {% schema %}
