@@ -301,7 +301,6 @@
     },
     "text_with_buttons_LKmyaM": {
       "type": "text-with-buttons",
-      "disabled": true,
       "name": "Text with Buttons",
       "settings": {
         "heading": "Still not sure what you need?",
