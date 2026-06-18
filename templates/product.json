@@ -140,6 +140,16 @@
             "content": "{{ product.metafields.custom.features | metafield_tag }}",
             "content_from_page": ""
           }
+        },
+        "collapsible_content_4BbmbA": {
+          "type": "collapsible_content",
+          "settings": {
+            "show_under_gallery": true,
+            "open_by_default": false,
+            "heading": "Instructions",
+            "content": "",
+            "content_from_page": ""
+          }
         }
       },
       "block_order": [
@@ -158,7 +168,8 @@
         "complementary_products_kfHDGT",
         "collapsible_content_RP9waj",
         "collapsible_content_katQQa",
-        "collapsible_content_bqNeAx"
+        "collapsible_content_bqNeAx",
+        "collapsible_content_4BbmbA"
       ],
       "custom_css": [
         ".product-info p {margin-top: 0; margin-bottom: 0;}"
