@@ -164,7 +164,7 @@
         ".product-info p {margin-top: 0; margin-bottom: 0;}"
       ],
       "settings": {
-        "only_selected_variant_images": false,
+        "only_selected_variant_images": true,
         "product_gallery_width": 57,
         "product_gallery_type": "grid",
         "carousel_thumbnails_position": "left",
