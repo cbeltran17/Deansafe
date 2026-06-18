@@ -591,6 +591,11 @@
         "bottom_spacing": 80
       }
     },
+    "product_video_XbazBB": {
+      "type": "product-video",
+      "name": "Product Video",
+      "settings": {}
+    },
     "video_WmL4ea": {
       "type": "video",
       "blocks": {
@@ -720,6 +725,7 @@
     "image_with_text_MWfGHh",
     "image_with_text_overlay_J6ygxY",
     "multicolumn_Mrb3pi",
+    "product_video_XbazBB",
     "video_WmL4ea",
     "collapsible_content_B7H7eD",
     "1780495853db7fc4ac"
