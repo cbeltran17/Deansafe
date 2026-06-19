@@ -349,7 +349,6 @@
         "heading_FTQPPx",
         "paragraph_pDYhDF"
       ],
-      "disabled": true,
       "name": "t:sections.image_with_text.name",
       "settings": {
         "image": "shopify://shop_images/safes.png",
@@ -424,7 +423,6 @@
         "paragraph_BXV3kb",
         "button_group_4HphQi"
       ],
-      "disabled": true,
       "name": "t:sections.image_with_text_overlay.name",
       "settings": {
         "image": "{{ product.metafields.custom.promotion_banner_image.value }}",
@@ -577,7 +575,6 @@
         "column_efPEQg",
         "column_BHqFwW"
       ],
-      "disabled": true,
       "name": "t:sections.multicolumn.name",
       "settings": {
         "enable_carousel": false,
@@ -611,7 +608,6 @@
           "blocks": {}
         }
       },
-      "disabled": true,
       "name": "t:sections.video.name",
       "settings": {
         "video": "{{ product.metafields.custom.product_video.value }}",
@@ -685,7 +681,6 @@
         "content_6zG6BA",
         "content_jUexQd"
       ],
-      "disabled": true,
       "name": "t:sections.collapsible_content.name",
       "settings": {
         "icon": "",
