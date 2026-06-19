@@ -117,7 +117,7 @@
             "show_under_gallery": true,
             "open_by_default": false,
             "heading": "Description",
-            "content": "{{ product.metafields.custom.description | metafield_tag }}",
+            "content": "<p>{{ product.metafields.custom.description | metafield_tag }}</p>",
             "content_from_page": ""
           }
         },
@@ -177,7 +177,7 @@
       "settings": {
         "only_selected_variant_images": false,
         "product_gallery_width": 57,
-        "product_gallery_type": "carousel",
+        "product_gallery_type": "grid",
         "carousel_thumbnails_position": "left",
         "grid_type": "one-column",
         "carousel_indicator_mobile": "thumbnails",
