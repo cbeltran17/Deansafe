@@ -116,16 +116,16 @@ media-lightbox media-carousel .media-carousel img {
 }
 
 .stock-notification-banner.in-stock-green {
-    border: 2px solid #095f41;
+    border: 2px solid #3d9e2d;
     background: transparent;
 }
 
 .stock-notification-banner.in-stock-green strong {
-    color: #095f41;
+    color: #1a5e1a;
 }
 
 .stock-notification-banner.in-stock-green .stock-line-1 .check-icon svg {
-    color: #095f41;
+    color: #1a5e1a;
 }
 
 .stock-notification-banner.out-of-stock-red {
