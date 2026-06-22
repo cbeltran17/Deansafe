@@ -287,15 +287,8 @@
       },
       "name": "Related Products V2",
       "settings": {
-        "manual_products": [
-          "accessory-kit-light-kit-and-dehumidifier",
-          "amg-lighkitt-8",
-          "american-security-esl10xl-lock-option-1",
-          "american-security-esl10xl-lock-option",
-          "american-security-esl5-lock-option",
-          "american-security-key-locking-dial"
-        ],
-        "enable_carousel": true,
+        "manual_products": [],
+        "enable_carousel": false,
         "max_products": 10,
         "products_per_row": 4,
         "products_per_row_mobile": "1.5",
