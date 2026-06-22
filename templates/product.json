@@ -253,6 +253,60 @@
         "bottom_spacing": 80
       }
     },
+    "related_products_v2_CVCVwT": {
+      "type": "related-products-v2",
+      "blocks": {
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
+          },
+          "blocks": {
+            "heading_CideqE": {
+              "type": "heading",
+              "settings": {
+                "full_width": true,
+                "max_width": 500,
+                "heading_size": "h2",
+                "heading": "You may also like",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "",
+                "highlight_color": "",
+                "heading_seo_tag": "p"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_CideqE"
+          ]
+        }
+      },
+      "name": "Related Products V2",
+      "settings": {
+        "manual_products": [
+          "accessory-kit-light-kit-and-dehumidifier",
+          "amg-lighkitt-8",
+          "american-security-esl10xl-lock-option-1",
+          "american-security-esl10xl-lock-option",
+          "american-security-esl5-lock-option",
+          "american-security-key-locking-dial"
+        ],
+        "enable_carousel": true,
+        "max_products": 10,
+        "products_per_row": 4,
+        "products_per_row_mobile": "1.5",
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
     "related_products_LQc4rq": {
       "type": "related-products",
       "blocks": {
@@ -285,6 +339,7 @@
           ]
         }
       },
+      "disabled": true,
       "name": "Related products",
       "settings": {
         "enable_carousel": false,
@@ -719,6 +774,7 @@
   "order": [
     "main",
     "text_with_icons_dFFE7Y",
+    "related_products_v2_CVCVwT",
     "related_products_LQc4rq",
     "text_with_buttons_LKmyaM",
     "image_with_text_MWfGHh",
