@@ -288,10 +288,10 @@
       "name": "Related Products V2",
       "settings": {
         "manual_products": "{{ product.metafields.custom.related_products.value }}",
-        "enable_carousel": false,
+        "enable_carousel": true,
         "max_products": 10,
         "products_per_row": 4,
-        "products_per_row_mobile": "1.5",
+        "products_per_row_mobile": "1",
         "text_alignment": "center",
         "background_color": "",
         "text_color": "",
