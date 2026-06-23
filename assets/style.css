@@ -279,3 +279,9 @@ media-lightbox media-carousel .media-carousel img {
     }
 }
 
+@media (max-width: 576px) { 
+    .accordion__content .product-video-wrapper iframe {
+        height:250px;
+    }
+}
+
