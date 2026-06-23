@@ -1,10 +1,6 @@
-{% liquid
-  assign body_html = block.settings.content
-  if block.settings.content_from_page != blank and block.settings.content_from_page.content != blank
-    assign body_html = block.settings.content_from_page.content
-  endif
-%}
-{% if body_html != blank %}
+{% assign videos = product.metafields.custom.accordion_youtube_videos.value %}
+
+{% if videos != blank %}
   <smooth-collapse
     class="accordion block-accordion"
     {{ block.shopify_attributes }}
@@ -16,8 +12,30 @@
       {% render 'heading', block: block, size: 'h6' %}
       <div class="accordion__icon">{{ 'icon-chevron-down.svg' | inline_asset_content }}</div>
     </button>
+
     <div class="accordion__content prose">
-      {{ body_html }}
+      {% for video in videos %}
+        {% assign video_url = video %}
+
+        {% assign video_id = video_url
+          | replace: 'https://www.youtube.com/watch?v=', ''
+          | replace: 'https://youtu.be/', ''
+          | split: '&'
+          | first
+        %}
+
+        <div class="product-video-wrapper" style="margin-bottom:20px;">
+          <iframe
+            width="100%"
+            height="400"
+            src="https://www.youtube.com/embed/{{ video_id }}"
+            title="Product Video {{ forloop.index }}"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      {% endfor %}
     </div>
   </smooth-collapse>
 {% endif %}
