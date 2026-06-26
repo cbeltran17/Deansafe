@@ -256,11 +256,12 @@ media-lightbox media-carousel .media-carousel img {
 }
 
 .product-badge--sale {
-    background-color: #FFD812;
+    background-color: #ffd812;
     color: #000;
     font-size: 14px;
     font-weight: 600;
-    line-height: 1.4em;
+    line-height: 1;
+    padding: 6px 10px;
 }
 
 @media (min-width: 48rem) {
