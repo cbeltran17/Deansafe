@@ -265,11 +265,11 @@ media-lightbox media-carousel .media-carousel img {
 }
 
 .specifications-table tr td:nth-child(1) {
-    width: 30%;
+    width: 35%;
 } 
 
 .specifications-table tr td:nth-child(2) {
-    width: 70%;
+    width: 65%;
 }
 
 @media (min-width: 48rem) {
