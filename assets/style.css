@@ -257,6 +257,7 @@ media-lightbox media-carousel .media-carousel img {
 
 .product-badge--sale {
     background-color: #FFD812;
+    color: #000;
 }
 
 @media (min-width: 48rem) {
