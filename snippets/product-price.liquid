@@ -12,6 +12,11 @@
     <div class="product-price" role="status">
       {% render 'price', product: product, use_variant: true %}
       {% render 'product-badges', product: product, use_variant: true, sold_out: true, sale: true %}
+
+      <span class="product-badge product-badge--sale">
+        testing
+      </span>
+
     </div>
     {% if show_disclaimer %}
       <p class="product-tax-disclaimer prose">
