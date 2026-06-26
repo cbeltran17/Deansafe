@@ -11,7 +11,9 @@
   <div data-section-ref="price">
     <div class="product-price" role="status">
       {% render 'price', product: product, use_variant: true %}
-      {% render 'product-badges', product: product, use_variant: true, sold_out: true, sale: true %}
+      {% comment %}
+        {% render 'product-badges', product: product, use_variant: true, sold_out: true, sale: true %}
+      {% endcomment %}
 
       <span class="product-badge product-badge--sale">
         testing
