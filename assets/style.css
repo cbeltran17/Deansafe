@@ -255,6 +255,10 @@ media-lightbox media-carousel .media-carousel img {
     overflow: hidden;
 }
 
+.product-badge--sale {
+    background-color: #FFD812;
+}
+
 @media (min-width: 48rem) {
     .text-with-icons--desktop-horizontal .text-with-icons__item {
         justify-content: center;
