@@ -264,11 +264,11 @@ media-lightbox media-carousel .media-carousel img {
     padding: 6px 10px;
 }
 
-.specifications-table td {
+.specifications-table tr td:nth-child(1) {
     width: 30%;
 } 
 
-.specifications-table th {
+.specifications-table tr td:nth-child(2) {
     width: 70%;
 }
 
