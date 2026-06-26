@@ -260,6 +260,7 @@ media-lightbox media-carousel .media-carousel img {
     color: #000;
     font-size: 14px;
     font-weight: 600;
+    line-height: 1.4em;
 }
 
 @media (min-width: 48rem) {
