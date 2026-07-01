@@ -1,0 +1,146 @@
+{% schema %}
+{
+  "name": "Collection Links Grid",
+  "tag": "section",
+  "class": "collection-links-grid-section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "desktop_columns",
+      "label": "Desktop Columns",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "mobile_columns",
+      "label": "Mobile Columns",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "button_height",
+      "label": "Button Height",
+      "min": 40,
+      "max": 80,
+      "step": 2,
+      "default": 48
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link",
+      "name": "Link Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Button Text",
+          "default": "RIFLE SAFES"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Links Grid"
+    }
+  ]
+}
+{% endschema %}
+
+<section
+  class="collection-links-grid"
+  style="
+    --desktop-columns: {{ section.settings.desktop_columns }};
+    --mobile-columns: {{ section.settings.mobile_columns }};
+    --button-height: {{ section.settings.button_height }}px;
+  "
+>
+  <div class="page-width">
+    <div class="collection-links-grid__wrapper">
+
+      {% for block in section.blocks %}
+        <a
+          href="{{ block.settings.link | default: '#' }}"
+          class="collection-links-grid__item"
+          {{ block.shopify_attributes }}
+        >
+          {{ block.settings.title }}
+        </a>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+
+<style>
+.collection-links-grid{
+    margin:40px 0;
+}
+
+.collection-links-grid__wrapper{
+    display:grid;
+    grid-template-columns:repeat(var(--desktop-columns),1fr);
+    gap:14px 18px;
+}
+
+.collection-links-grid__item{
+    height:var(--button-height);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    text-decoration:none;
+    color:#111;
+    background:#fff;
+    border:1px solid #d8d8d8;
+    border-radius:12px;
+    font-size:20px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.3px;
+    transition:.25s ease;
+    padding:0 20px;
+}
+
+.collection-links-grid__item:hover{
+    background:#111;
+    color:#fff;
+    border-color:#111;
+}
+
+@media(max-width:990px){
+    .collection-links-grid__wrapper{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .collection-links-grid__item{
+        font-size:16px;
+    }
+}
+
+@media(max-width:749px){
+    .collection-links-grid__wrapper{
+        grid-template-columns:repeat(var(--mobile-columns),1fr);
+        gap:12px;
+    }
+
+    .collection-links-grid__item{
+        font-size:14px;
+        height:44px;
+        padding:0 10px;
+        border-radius:10px;
+    }
+}
+</style>
