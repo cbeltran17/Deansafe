@@ -9,6 +9,67 @@
  */
 {
   "sections": {
+    "collection_links_grid_Kt3E9T": {
+      "type": "collection-links-grid",
+      "blocks": {
+        "link_gi9rEp": {
+          "type": "link",
+          "settings": {
+            "title": "RIFLE SAFES",
+            "link": ""
+          }
+        },
+        "link_67t6D8": {
+          "type": "link",
+          "settings": {
+            "title": "RIFLE SAFES",
+            "link": ""
+          }
+        },
+        "link_fERyit": {
+          "type": "link",
+          "settings": {
+            "title": "RIFLE SAFES",
+            "link": ""
+          }
+        },
+        "link_qFFeiD": {
+          "type": "link",
+          "settings": {
+            "title": "RIFLE SAFES",
+            "link": ""
+          }
+        },
+        "link_Um8GxB": {
+          "type": "link",
+          "settings": {
+            "title": "RIFLE SAFES",
+            "link": ""
+          }
+        },
+        "link_wjf8C9": {
+          "type": "link",
+          "settings": {
+            "title": "RIFLE SAFES",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "link_gi9rEp",
+        "link_67t6D8",
+        "link_fERyit",
+        "link_qFFeiD",
+        "link_Um8GxB",
+        "link_wjf8C9"
+      ],
+      "name": "Collection Links Grid",
+      "settings": {
+        "desktop_columns": 4,
+        "mobile_columns": 2,
+        "button_height": 48
+      }
+    },
     "main-product-grid": {
       "type": "main-collection-grid",
       "disabled": true,
@@ -76,6 +137,7 @@
     }
   },
   "order": [
+    "collection_links_grid_Kt3E9T",
     "main-product-grid",
     "17829080942de3f5ba",
     "main-banner"
