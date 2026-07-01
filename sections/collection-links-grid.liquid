@@ -3,6 +3,10 @@
     margin:40px 0;
 }
 
+.collection-links-grid {
+
+}
+
 .collection-links-grid__wrapper{
     display:grid;
     grid-template-columns:repeat(var(--desktop-columns),1fr);
@@ -67,7 +71,7 @@
     --button-height: {{ section.settings.button_height }}px;
   "
 >
-  <div class="section-full-width">
+  <div class="page-width">
     <div class="collection-links-grid__wrapper">
 
       {% for block in section.blocks %}
