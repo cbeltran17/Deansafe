@@ -31,7 +31,6 @@
       "block_order": [
         "heading_qYi6Rq"
       ],
-      "disabled": true,
       "name": "t:sections.rich_text.name",
       "settings": {
         "full_width": true,
@@ -45,7 +44,6 @@
     },
     "breadcrumb_XFGdae": {
       "type": "breadcrumb",
-      "disabled": true,
       "name": "Breadcrumb",
       "settings": {}
     },
@@ -119,7 +117,6 @@
         "link_QqnYAR",
         "link_xq9e3X"
       ],
-      "disabled": true,
       "name": "Collection Links Grid",
       "settings": {
         "desktop_columns": 4,
@@ -166,6 +163,7 @@
       "block_order": [
         "searchanise_search_filter_app_block_QjD4bd"
       ],
+      "disabled": true,
       "settings": {}
     },
     "main-banner": {
