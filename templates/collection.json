@@ -35,12 +35,17 @@
       "settings": {
         "full_width": true,
         "text_alignment": "center",
-        "background_color": "#F4F4F4",
+        "background_color": "#f4f4f4",
         "text_color": "",
         "enable_custom_spacing": false,
         "top_spacing": 80,
         "bottom_spacing": 80
       }
+    },
+    "breadcrumb_XFGdae": {
+      "type": "breadcrumb",
+      "name": "Breadcrumb",
+      "settings": {}
     },
     "collection_links_grid_Kt3E9T": {
       "type": "collection-links-grid",
@@ -187,6 +192,7 @@
   },
   "order": [
     "rich_text_Myyc3F",
+    "breadcrumb_XFGdae",
     "collection_links_grid_Kt3E9T",
     "main-product-grid",
     "17829080942de3f5ba",
