@@ -53,6 +53,20 @@
             "title": "RIFLE SAFES",
             "link": ""
           }
+        },
+        "link_QqnYAR": {
+          "type": "link",
+          "settings": {
+            "title": "RIFLE SAFES",
+            "link": ""
+          }
+        },
+        "link_xq9e3X": {
+          "type": "link",
+          "settings": {
+            "title": "RIFLE SAFES",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -61,7 +75,9 @@
         "link_fERyit",
         "link_qFFeiD",
         "link_Um8GxB",
-        "link_wjf8C9"
+        "link_wjf8C9",
+        "link_QqnYAR",
+        "link_xq9e3X"
       ],
       "name": "Collection Links Grid",
       "settings": {
