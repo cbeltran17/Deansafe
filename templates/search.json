@@ -1,9 +1,35 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main-search": {
       "type": "main-search",
+      "disabled": true,
+      "settings": {}
+    },
+    "7563b917-3b89-43a4-8c86-c56c0099bcc7": {
+      "type": "apps",
+      "blocks": {
+        "3c59b63a-810a-4568-88a1-ef5923ca7d8c": {
+          "type": "shopify://apps/boost-ai-search-filter/blocks/filter-product-list-ssr/7fc998ae-a150-4367-bab8-505d8a4503f7",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "3c59b63a-810a-4568-88a1-ef5923ca7d8c"
+      ],
       "settings": {}
     }
   },
-  "order": ["main-search"]
+  "order": [
+    "main-search",
+    "7563b917-3b89-43a4-8c86-c56c0099bcc7"
+  ]
 }
