@@ -38,6 +38,9 @@
         {% if gift_card_recipient_feature_active %}
           {% render 'gift-card-recipient-form', product: product, form: form, section: section %}
         {% endif %}
+
+        {{ form | payment_terms }}
+        
         <div class="flex gap-3">
           {%- assign quantity_selector_id = 'Quantity-' | append: block.id -%}
           {% render 'product-quantity-selector', class: 'w-48', id: quantity_selector_id %}
