@@ -87,17 +87,18 @@
         "disabled": false,
         "settings": {}
       },
-      "591ad7dc-0729-48bd-9480-7d227fbae239": {
-        "type": "shopify://apps/boost-ai-search-filter/blocks/boost-sd-ssr/7fc998ae-a150-4367-bab8-505d8a4503f7",
-        "disabled": false,
-        "settings": {
-          "templateId": "ySfFW7Ii3Y"
-        }
-      },
       "e102ce82-eb9f-4e20-91b9-c6d24ad247f5": {
         "type": "shopify://apps/boost-ai-search-filter/blocks/instant-search-app-embedded/7fc998ae-a150-4367-bab8-505d8a4503f7",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
+      },
+      "591ad7dc-0729-48bd-9480-7d227fbae239": {
+        "type": "shopify://apps/boost-ai-search-filter/blocks/boost-sd-ssr/7fc998ae-a150-4367-bab8-505d8a4503f7",
+        "disabled": true,
+        "settings": {
+          "templateId": "ySfFW7Ii3Y",
+          "productGridSelector": ""
+        }
       }
     }
   },
