@@ -127,6 +127,19 @@
         "button_height": 48
       }
     },
+    "1783433673db21171b": {
+      "type": "apps",
+      "blocks": {
+        "boost_ai_search_filter_filter_product_list_ssr_4TWX3J": {
+          "type": "shopify://apps/boost-ai-search-filter/blocks/filter-product-list-ssr/7fc998ae-a150-4367-bab8-505d8a4503f7",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "boost_ai_search_filter_filter_product_list_ssr_4TWX3J"
+      ],
+      "settings": {}
+    },
     "main-product-grid": {
       "type": "main-collection-grid",
       "disabled": true,
@@ -156,22 +169,9 @@
         "product_card_text_color": ""
       }
     },
-    "17829080942de3f5ba": {
-      "type": "apps",
-      "blocks": {
-        "searchanise_search_filter_app_block_QjD4bd": {
-          "type": "shopify://apps/searchanise-search-filter/blocks/app-block/d8f24ada-02b1-458a-bbeb-5bf16d5c921e",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "searchanise_search_filter_app_block_QjD4bd"
-      ],
-      "disabled": true,
-      "settings": {}
-    },
     "main-banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "full_width": true,
         "show_breadcrumbs": false,
@@ -246,34 +246,20 @@
         "background_color": "",
         "text_color": "",
         "heading_color": "",
-        "icon_color": "#095F41",
+        "icon_color": "#095f41",
         "enable_custom_spacing": false,
         "top_spacing": 80,
         "bottom_spacing": 80
       }
-    },
-    "c593c4c6-b5ae-45c5-9b1b-db47a5658469": {
-      "type": "apps",
-      "blocks": {
-        "b23061f4-7fa6-4ba9-933f-914094293e58": {
-          "type": "shopify://apps/boost-ai-search-filter/blocks/filter-product-list-ssr/7fc998ae-a150-4367-bab8-505d8a4503f7",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "b23061f4-7fa6-4ba9-933f-914094293e58"
-      ],
-      "settings": {}
     }
   },
   "order": [
     "rich_text_Myyc3F",
     "breadcrumb_XFGdae",
     "collection_links_grid_Kt3E9T",
+    "1783433673db21171b",
     "main-product-grid",
-    "17829080942de3f5ba",
     "main-banner",
-    "text_with_icons_WfPJDW",
-    "c593c4c6-b5ae-45c5-9b1b-db47a5658469"
+    "text_with_icons_WfPJDW"
   ]
 }
