@@ -29,6 +29,7 @@
       </p>
     {% endif %}
   </div>
+  {% comment %}
   {% if product != blank %}
     {% form 'product', product %}
       <input
@@ -40,4 +41,5 @@
       {{ form | payment_terms }}
     {% endform %}
   {% endif %}
+   {% endcomment %}
 </div>
