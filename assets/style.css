@@ -272,6 +272,10 @@ media-lightbox media-carousel .media-carousel img {
     width: 65%;
 }
 
+.product-card__info .product-card__btn-wrapper {
+    margin: .5rem 0;
+}
+
 @media (min-width: 48rem) {
     .text-with-icons--desktop-horizontal .text-with-icons__item {
         justify-content: center;
