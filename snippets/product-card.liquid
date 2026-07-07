@@ -169,8 +169,11 @@
     {% if show_color_swatches %}
       {% render 'product-card-swatches', product: product, limit: swatch_limit %}
     {% endif %}
+    
+    <div class="product-card__btn-wrapper">
+      {% render 'button', translation: 'products.product_card.view_details', href: product_url %}
+    </div>
 
-    test
   </div>
 
   <div class="product-card__list-btns">
