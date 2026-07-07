@@ -31,7 +31,6 @@
       "block_order": [
         "heading_qYi6Rq"
       ],
-      "disabled": true,
       "name": "t:sections.rich_text.name",
       "settings": {
         "full_width": true,
@@ -45,7 +44,6 @@
     },
     "breadcrumb_XFGdae": {
       "type": "breadcrumb",
-      "disabled": true,
       "name": "Breadcrumb",
       "settings": {}
     },
@@ -119,7 +117,6 @@
         "link_QqnYAR",
         "link_xq9e3X"
       ],
-      "disabled": true,
       "name": "Collection Links Grid",
       "settings": {
         "desktop_columns": 4,
@@ -171,7 +168,6 @@
     },
     "main-banner": {
       "type": "main-collection-banner",
-      "disabled": true,
       "settings": {
         "full_width": true,
         "show_breadcrumbs": false,
@@ -235,7 +231,6 @@
         "icon_text_KFybXg",
         "icon_text_izktht"
       ],
-      "disabled": true,
       "name": "t:sections.text_with_icons.name",
       "settings": {
         "enable_carousel_on_mobile": false,
