@@ -282,6 +282,12 @@ media-lightbox media-carousel .media-carousel img {
     }
 }
 
+@media (min-width: 992px) {
+    .boost-sd-layout {
+        max-width: 1500px;
+    }
+}
+
 @media (max-width: 1024px) { 
     #judgeme_product_reviews {
         padding-left: max(2rem, calc((100vw - 1500px - 0px) / 2));
