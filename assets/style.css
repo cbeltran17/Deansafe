@@ -333,3 +333,10 @@ media-lightbox media-carousel .media-carousel img {
 .boost-sd__product-list .boost-sd__product-item:hover {
     border: none;
 }
+
+.boost-sd__product-list .boost-sd__cta-button  .boost-sd__button {
+    background-color: 000;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+}
