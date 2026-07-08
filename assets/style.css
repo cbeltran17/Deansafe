@@ -312,3 +312,24 @@ media-lightbox media-carousel .media-carousel img {
     }
 }
 
+
+
+
+
+.boost-sd__product-item-grid-view-layout-image {
+    background-color: #f5f5f5;
+}
+
+.boost-sd__product-image-img {
+    mix-blend-mode: multiply;
+}
+
+.boost-sd__product-item {
+    padding: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.boost-sd__product-item:hover {
+    border: none;
+}
