@@ -352,7 +352,9 @@ media-lightbox media-carousel .media-carousel img {
 }
 
 .boost-sd__product-list .boost-sd__product-price-wrapper .boost-sd__product-price-content .boost-sd__product-price--sale {
-    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e1e1e;
 }
 
 .boost-sd__product-list .boost-sd__product-price-wrapper .boost-sd__product-price-content .boost-sd__product-price--compare {
