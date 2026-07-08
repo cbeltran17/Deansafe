@@ -368,3 +368,7 @@ media-lightbox media-carousel .media-carousel img {
     color: #1e1e1e;
     font-weight: 500;
 }
+
+.boost-sd__filter-option-heading {
+    font-size: 16px;
+}
