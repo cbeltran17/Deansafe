@@ -341,4 +341,6 @@ media-lightbox media-carousel .media-carousel img {
     font-size: 1rem;
     border-radius: 64px;
     width: auto;
+    padding-left: 10px;
+    padding-right: 10px; 
 }
