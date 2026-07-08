@@ -349,6 +349,7 @@ media-lightbox media-carousel .media-carousel img {
 .boost-sd__product-list-grid--4-col.boost-sd__product-list--margin .boost-sd__product-item {
     margin-left: calc(22px * .5);
     margin-right: calc(22px * .5);
+    width: calc(25% - 22px);
 }
 
 .boost-sd__product-list .boost-sd__product-price-wrapper .boost-sd__product-price-content .boost-sd__product-price--sale {
