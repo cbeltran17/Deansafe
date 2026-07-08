@@ -221,7 +221,6 @@
       "blocks": {
         "discount": {
           "type": "discount-code-button",
-          "disabled": true,
           "static": true,
           "settings": {
             "discount_code": "Shop Now"
