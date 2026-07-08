@@ -316,7 +316,7 @@ media-lightbox media-carousel .media-carousel img {
 
 
 
-.boost-sd__product-list .boost-sd__product-item-grid-view-layout-image {
+.boost-sd__product-list .boost-sd__product-item-grid-view-layout-image, .boost-sd__product-list .boost-sd__product-item-grid-view-layout-image:hover {
     background-color: #f5f5f5;
 }
 
