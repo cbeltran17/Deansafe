@@ -221,10 +221,9 @@
       "blocks": {
         "discount": {
           "type": "discount-code-button",
-          "disabled": true,
           "static": true,
           "settings": {
-            "discount_code": ""
+            "discount_code": "Shop Now"
           },
           "blocks": {}
         }
@@ -232,9 +231,9 @@
       "name": "t:sections.promotion_bar.name",
       "settings": {
         "hide_text_on_mobile": false,
-        "show_icon": true,
+        "show_icon": false,
         "icon": "badge-discount",
-        "link": "",
+        "link": "shopify://collections/all",
         "heading": "Memorial Day Sale Is Live - Save up to $350 Off Select Safes",
         "text": "",
         "background_color": "#095f41",
