@@ -351,6 +351,6 @@ media-lightbox media-carousel .media-carousel img {
     margin-right: calc(22px * .5);
 }
 
-.boost-sd__product-price-content .boost-sd__product-price--compare {
+.boost-sd__product-list .boost-sd__product-price-wrapper .boost-sd__product-price-content .boost-sd__product-price--compare {
     display: none;
 }
