@@ -369,6 +369,6 @@ media-lightbox media-carousel .media-carousel img {
     font-weight: 500;
 }
 
-.boost-sd__filter-option-heading {
+.boost-sd__filter-tree-vertical-option-list .boost-sd__filter-option .boost-sd__filter-option-heading {
     font-size: 16px;
 }
