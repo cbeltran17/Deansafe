@@ -321,8 +321,7 @@ media-lightbox media-carousel .media-carousel img {
 }
 
 .boost-sd__product-list .boost-sd__product-image-img {
-    /* mix-blend-mode: multiply; */
-    isolation: isolate;
+    mix-blend-mode: multiply;
 }
 
 .boost-sd__product-list .boost-sd__product-item {
