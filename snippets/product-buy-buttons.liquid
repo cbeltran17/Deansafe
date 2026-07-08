@@ -39,17 +39,19 @@
           {% render 'gift-card-recipient-form', product: product, form: form, section: section %}
         {% endif %}
         
-        {% if product != blank %}
-          {% form 'product', product %}
-            <input
-              data-section-ref="installment_variant_id"
-              type="hidden"
-              name="id"
-              value="{{ product.selected_or_first_available_variant.id }}"
-            >
-            {{ form | payment_terms }}
-          {% endform %}
-        {% endif %}
+        <div style="margin-bottom: 1rem;">
+          {% if product != blank %}
+            {% form 'product', product %}
+              <input
+                data-section-ref="installment_variant_id"
+                type="hidden"
+                name="id"
+                value="{{ product.selected_or_first_available_variant.id }}"
+              >
+              {{ form | payment_terms }}
+            {% endform %}
+          {% endif %}
+        </div>  
 
         <div class="flex gap-3">
           {%- assign quantity_selector_id = 'Quantity-' | append: block.id -%}
