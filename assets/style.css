@@ -360,3 +360,8 @@ media-lightbox media-carousel .media-carousel img {
 .boost-sd__product-list .boost-sd__product-price-wrapper .boost-sd__product-price-content .boost-sd__product-price--compare {
     display: none;
 }
+
+.boost-sd__product-info-wrapper .boost-sd__product-info .boost-sd__product-title {
+    color: #1e1e1e;
+    font-weight: 500;
+}
