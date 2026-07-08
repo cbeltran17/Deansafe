@@ -352,7 +352,8 @@ media-lightbox media-carousel .media-carousel img {
     width: calc(25% - 22px);
 }
 
-.boost-sd__product-list .boost-sd__product-price-wrapper .boost-sd__product-price-content .boost-sd__product-price--sale {
+.boost-sd__product-list .boost-sd__product-price-wrapper .boost-sd__product-price-content .boost-sd__product-price--sale, 
+.boost-sd__product-list .boost-sd__product-price-wrapper .boost-sd__product-price-content .boost-sd__product-price--default {
     font-size: 18px;
     font-weight: 600;
     color: #1e1e1e;
