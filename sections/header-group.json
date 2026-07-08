@@ -231,11 +231,11 @@
       "name": "t:sections.promotion_bar.name",
       "settings": {
         "hide_text_on_mobile": false,
-        "show_icon": false,
+        "show_icon": true,
         "icon": "badge-discount",
         "link": "shopify://collections/all",
-        "heading": "Memorial Day Sale Is Live - Save up to $350 Off Select Safes",
-        "text": "",
+        "heading": "Memorial Day Sale Is Live",
+        "text": "- Save up to $350 Off Select Safes",
         "background_color": "#095f41",
         "text_color": "#ffffff"
       }
