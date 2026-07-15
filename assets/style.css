@@ -373,3 +373,7 @@ media-lightbox media-carousel .media-carousel img {
     font-size: 16px;
     font-weight: 500;
 }
+
+.boost-sd__product-item .boost-sd__product-info-wrapper .jdgm-prev-badge .jdgm-prev-badge__text {
+    visibility: visible;
+}
