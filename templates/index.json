@@ -699,7 +699,7 @@
           "type": "button",
           "settings": {
             "size": "md",
-            "variant": "solid",
+            "variant": "outline",
             "label": "Read More",
             "url": "shopify://pages/sivadesacoou",
             "style": "primary",
