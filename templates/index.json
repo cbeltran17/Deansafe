@@ -163,7 +163,7 @@
         "background_color": "",
         "text_color": "",
         "heading_color": "",
-        "icon_color": "#095F41",
+        "icon_color": "#095f41",
         "enable_custom_spacing": true,
         "top_spacing": 0,
         "bottom_spacing": 80
@@ -1284,7 +1284,7 @@
         "background_color": "",
         "text_color": "",
         "heading_color": "",
-        "icon_color": "",
+        "icon_color": "#095F41",
         "enable_custom_spacing": true,
         "top_spacing": 0,
         "bottom_spacing": 80
