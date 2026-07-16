@@ -377,3 +377,7 @@ media-lightbox media-carousel .media-carousel img {
 .boost-sd__product-item .boost-sd__product-info-wrapper .jdgm-prev-badge .jdgm-prev-badge__text {
     visibility: visible;
 }
+
+.boost-sd__filter-option {
+    border-color: rgb(19 19 25 / 9%);
+}
