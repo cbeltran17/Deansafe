@@ -469,7 +469,7 @@
               "name": "t:blocks.button.name",
               "settings": {
                 "size": "md",
-                "variant": "solid",
+                "variant": "outline",
                 "label": "Shop Gun Safes",
                 "url": "shopify://collections/all",
                 "style": "black",
