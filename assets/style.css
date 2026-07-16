@@ -382,6 +382,6 @@ media-lightbox media-carousel .media-carousel img {
     border-color: rgb(19 19 25 / 9%);
 }
 
-.boost-sd__search-form-wrapper {
+.boost-sd-container-search-page .boost-sd__search-form-wrapper {
     max-width: 100%;
 }
