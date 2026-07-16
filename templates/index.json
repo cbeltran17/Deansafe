@@ -1312,7 +1312,7 @@
           "type": "button",
           "settings": {
             "size": "lg",
-            "variant": "solid",
+            "variant": "outline",
             "label": "Signup",
             "url": "/",
             "style": "white",
