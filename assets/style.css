@@ -392,3 +392,7 @@ media-lightbox media-carousel .media-carousel img {
 .boost-sd-container-search-page .boost-sd__search-form-wrapper {
     max-width: 100%;
 }
+
+.boost-sd__product-info-wrapper .boost-sd__product-info {
+    gap: 3px;
+}
