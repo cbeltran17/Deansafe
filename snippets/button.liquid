@@ -13,6 +13,14 @@
 
   assign class = class | append: ' button--' | append: size
   assign class = class | append: ' button--' | append: variant
+
+  if background_color != blank
+    assign brightness = background_color | color_brightness
+    if brightness < 128
+      assign class = class | append: ' is-dark'
+    endif
+  endif
+  
 %}
 
 {% capture button_attributes %}
