@@ -200,6 +200,7 @@
       "settings": {
         "only_selected_variant_images": false,
         "product_gallery_width": 57,
+        "show_breadcrumb": false,
         "product_gallery_type": "carousel",
         "carousel_thumbnails_position": "left",
         "grid_type": "one-column",

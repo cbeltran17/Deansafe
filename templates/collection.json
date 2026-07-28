@@ -42,11 +42,6 @@
         "bottom_spacing": 80
       }
     },
-    "breadcrumb_XFGdae": {
-      "type": "breadcrumb",
-      "name": "Breadcrumb",
-      "settings": {}
-    },
     "collection_links_grid_Kt3E9T": {
       "type": "collection-links-grid",
       "blocks": {
@@ -250,7 +245,6 @@
   },
   "order": [
     "rich_text_Myyc3F",
-    "breadcrumb_XFGdae",
     "collection_links_grid_Kt3E9T",
     "1783433673db21171b",
     "main-product-grid",
