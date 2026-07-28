@@ -97,6 +97,12 @@
         "default": "#000000"
       },
       {
+        "id": "color_button_primary_boxshadow",
+        "type": "color",
+        "label": "Box Shadow",
+        "default": "#000000"
+      },
+      {
         "type": "header",
         "content": "t:settings_schema.colors.headers.secondary_button.content"
       },
