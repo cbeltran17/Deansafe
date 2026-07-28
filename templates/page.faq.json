@@ -23,7 +23,7 @@
             "highlight_layer": "default",
             "heading_color": "",
             "highlight_color": "",
-            "heading_seo_tag": "p"
+            "heading_seo_tag": "h1"
           },
           "blocks": {}
         }
