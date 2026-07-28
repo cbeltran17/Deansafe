@@ -50,7 +50,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h1",
+            "heading_size": "h2",
             "heading": "Watch this detailed video on what to look for when buying a safe:",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -66,7 +66,7 @@
       ],
       "name": "t:sections.video_with_text.name",
       "settings": {
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "video_url": "https://youtu.be/3PK9_KEHml4",
         "full_width": false,
         "gap": false,
         "controls": true,
