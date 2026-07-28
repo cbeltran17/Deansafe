@@ -1,4 +1,4 @@
-{% if section.settings.video != blank %}
+{% if section.settings.video != blank or section.settings.video_url != blank %}
 {% render 'section-meta', blend: true, blend_bg: section.settings.background_color %}
 
 <div class="section-full-width">
