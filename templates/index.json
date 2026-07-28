@@ -526,7 +526,7 @@
                 "variant": "outline",
                 "label": "Shop Gun Safes",
                 "url": "shopify://collections/all",
-                "style": "secondary",
+                "style": "black",
                 "background_color": "",
                 "text_color": ""
               },
