@@ -442,12 +442,452 @@
         "top_spacing": 80,
         "bottom_spacing": 80
       }
+    },
+    "rich_text_ARHQFU": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_BjggAj": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h2",
+            "heading": "Other Gun Safe Questions",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "heading_XNdVd3": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h3",
+            "heading": "What makes a fire safe a fire safe?",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_caTzWy": {
+          "type": "paragraph",
+          "name": "t:blocks.paragraph.name",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p>A fire safe becomes a fire safe as soon as it passes a test designed to rate the safe's ability to last through a fire and keep an internal temperature (inside the safe) of the stated rating with the industry standard being less than 350°. Manufacturers will use a variety of materials to create the insulation needed to maintain that temperature. A common misconception is that the safe will be totally burnt to the ground at the end of the rating, however when you see a 30 minute rating that means the interior of the safe stayed less than 350° up until 30 minutes.</p>"
+          },
+          "blocks": {}
+        },
+        "heading_CjULnd": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h3",
+            "heading": "How are Fire tests conducted?",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_wYCBYg": {
+          "type": "paragraph",
+          "name": "t:blocks.paragraph.name",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p>Every rating agency such as UL, ETL and other independent laboratories all conduct the tests slightly differently. Some agencies will start the clock with the temperature beginning to go up to 1200° to 1800° and others will begin the clock only after the temperature reaches that 1200° to 1800°. For an absolute true rating you can always trust UL as they are the closest mimic to an actual house fire. Due to the construction of Gun Safes, they are unable to pass the drop test included in the UL test.</p>"
+          },
+          "blocks": {}
+        },
+        "heading_VVyUjj": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h3",
+            "heading": "What is ETL?",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_zGmWgm": {
+          "type": "paragraph",
+          "name": "t:blocks.paragraph.name",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p>ETL, Intertek, is a third party testing agency considered the industry standard for Gun Safes as they have more than 100 years of consumer and industrial testing verifications for products with labs in over 14 countries. They are a completely independent organization and do not work for the manufacturers who submit their products for testing. This provides factual scientific results based on pure performance data.</p>"
+          },
+          "blocks": {}
+        },
+        "heading_zpyzXG": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h3",
+            "heading": "What is UL?",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_RHTqMj": {
+          "type": "paragraph",
+          "name": "t:blocks.paragraph.name",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p>UL, Underwriters Laboratories, is a third party American worldwide safety consulting and certification company established in 46 countries and conducts safety analysis for many of the last century's technologies.</p>"
+          },
+          "blocks": {}
+        },
+        "heading_YxRJ8z": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h3",
+            "heading": "What's the difference between a UL test and ETL test?",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_b8KKPE": {
+          "type": "paragraph",
+          "name": "t:blocks.paragraph.name",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p>In a nutshell, UL does everything ETL does and then adds a 28 foot drop test at the end that requires the safe to stay fully intact after it crashes into the cement and then they place it back in the furnace for the same amount of time. Gun Safes are unable to pass this test due to their construction which is why you won't find UL fire tested Gun Safes. UL is the ideal test for home and office safes located in businesses, apartments and condos. It ensures valuable paperwork, cash and valuables are intact if the safe falls up to 28 feet during a fire.</p>"
+          },
+          "blocks": {}
+        },
+        "heading_qQb38b": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h3",
+            "heading": "When does paper burn or char?",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_phXG6D": {
+          "type": "paragraph",
+          "name": "t:blocks.paragraph.name",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p>Paper chars at 350° and burns at 450°. A verified fire rating will keep the temperature below 350° ensuring your papers and cash are safe.</p>"
+          },
+          "blocks": {}
+        },
+        "heading_HGtbUD": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h3",
+            "heading": "Is there such a thing as a Fire Proof Safe?",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_ygg6Kp": {
+          "type": "paragraph",
+          "name": "t:blocks.paragraph.name",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p>There is no such thing as \"Fire Proof\" and several companies have been fined for making these claims. All safes are fire resistant as there is no safe out there that can protect your valuables indefinitely against fire. Each fire resistant safe is tested against a fire and given an hourly rating.</p>"
+          },
+          "blocks": {}
+        },
+        "heading_6kTNYM": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h3",
+            "heading": "Is my hard drive and flash drives safe in a regular fire safe?",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_XaRriq": {
+          "type": "paragraph",
+          "name": "t:blocks.paragraph.name",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p>Temperatures above 125° will ruin electronic data items including flash drives, CDs, external hard drives, tapes and other tech. Most fire safes are rated to keep an internal temperature below 350° which is not sufficient for these types of items.</p>"
+          },
+          "blocks": {}
+        },
+        "heading_ahfac9": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h3",
+            "heading": "Why would I need a 2 hour fire safe if the standard house fire is 20 minutes?",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_qYyLFx": {
+          "type": "paragraph",
+          "name": "t:blocks.paragraph.name",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p>This question brings us back to the common misconception that the safe literally burns by the end of the rating. A longer fire rating doesn't mean your safe will melt later, it means that the interior of the safe is going to stay cooler for longer. While the standard house fire is 20 minutes, that means there are fires that last both much longer and much shorter to create the average. There are also highs and lows for temperatures that make up the average of 1100°. If you are in a high probability fire area such as Southern California, you may be exposed to temperatures well beyond 1100° where a 2 hour fire rating at 1800° will make more sense for you. By investing in a longer fire rating, you are increasing the odds that your items will stay cool and in perfect condition for a longer period of time.</p>"
+          },
+          "blocks": {}
+        },
+        "heading_wzAPWP": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h3",
+            "heading": "What are the different types of Fire Insulation?",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_jKVnnc": {
+          "type": "paragraph",
+          "name": "t:blocks.paragraph.name",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p>Manufacturers will use a variety of different materials to create the fire insulation, some of the most commonly used are:</p><ul><li>Concrete/DryLight</li><li>Sheetrock/Drywall</li><li>Wet Fill</li><li>Fire Clay</li></ul>"
+          },
+          "blocks": {}
+        },
+        "heading_Kk8rkd": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h3",
+            "heading": "Are Internal or External Hinges better?",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_tJFT6c": {
+          "type": "paragraph",
+          "name": "t:blocks.paragraph.name",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p>The placement of the hinge makes absolutely no difference to the security of the safe and are for a matter of convenience in opening the safe. Internal can only open 90° and External can open up to 180°. They also can add an aesthetic feature.</p>"
+          },
+          "blocks": {}
+        },
+        "heading_H9qjJ7": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h3",
+            "heading": "The fire safe I'm looking at has bolts, does that make it a burglary safe?",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_RNwwJC": {
+          "type": "paragraph",
+          "name": "t:blocks.paragraph.name",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p>Absolutely not. Fire safes with bolts can be opened in less than 2 minutes with simple tools and have zero burglary rating or testing involved. The purpose of the bolts is to make the customer feel like the safe is secure and keep coworkers, spouses and kids out of the safe. A burglar with the most basic tools will be able to access a fire safe without a burglary rating without any problem at all.</p>"
+          },
+          "blocks": {}
+        },
+        "heading_AjkpJe": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h3",
+            "heading": "I bought a gun safe that holds 22 guns, but I can't get 22 guns in there. How come?",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_K9Lcnc": {
+          "type": "paragraph",
+          "name": "t:blocks.paragraph.name",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p>Gun capacities are calculated by the manufacturers using a small standard size rifle with no optics or modifications. In current times, nearly everyone uses optics and modifications to their firearms making the gun capacity quantity far less than it can actually hold. We recommend buying much larger than you have as you do not want the firearms banging into each other either potentially causing scratches and damage to the optics. For ideas on increasing your guns storage capacity, please check out our gun safe accessories page and most notably the gun storage solutions category.</p>"
+          },
+          "blocks": {}
+        },
+        "heading_cwxkxr": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h3",
+            "heading": "How do I clean my safe?",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_BjHUgn": {
+          "type": "paragraph",
+          "name": "t:blocks.paragraph.name",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p><strong>Textured Finish:<br/></strong>Use a non-ammonia based glass cleaner. Foam non-ammonia based glass cleaners can be purchased at stores like Costco, Target, & Walmart. For fingerprints that just won't come off, use a tiny bit of mineral spirits dabbed on a soft cloth and gently rub the prints. No guarantee, but it will remove most of the oil from a fingerprint.</p><p><strong>High-Gloss Finish:</strong><br/>Use a non-ammonia based glass cleaner. Using ammonia based glass cleaners like Windex will slowly breakdown the clear coat finish of high-gloss paint. For extra shine, use car polish on your high-gloss safe. Application is the same as on a car.</p>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_BjggAj",
+        "heading_XNdVd3",
+        "paragraph_caTzWy",
+        "heading_CjULnd",
+        "paragraph_wYCBYg",
+        "heading_VVyUjj",
+        "paragraph_zGmWgm",
+        "heading_zpyzXG",
+        "paragraph_RHTqMj",
+        "heading_YxRJ8z",
+        "paragraph_b8KKPE",
+        "heading_qQb38b",
+        "paragraph_phXG6D",
+        "heading_HGtbUD",
+        "paragraph_ygg6Kp",
+        "heading_6kTNYM",
+        "paragraph_XaRriq",
+        "heading_ahfac9",
+        "paragraph_qYyLFx",
+        "heading_wzAPWP",
+        "paragraph_jKVnnc",
+        "heading_Kk8rkd",
+        "paragraph_tJFT6c",
+        "heading_H9qjJ7",
+        "paragraph_RNwwJC",
+        "heading_AjkpJe",
+        "paragraph_K9Lcnc",
+        "heading_cwxkxr",
+        "paragraph_BjHUgn"
+      ],
+      "name": "t:sections.rich_text.name",
+      "settings": {
+        "full_width": true,
+        "text_alignment": "left",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
     }
   },
   "order": [
     "rich_text_fe7CkU",
     "video_MCJJQQ",
     "rich_text_HdLRgq",
-    "rich_text_eyfyKg"
+    "rich_text_eyfyKg",
+    "rich_text_ARHQFU"
   ]
 }
