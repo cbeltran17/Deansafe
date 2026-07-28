@@ -311,11 +311,143 @@
         "top_spacing": 80,
         "bottom_spacing": 80
       }
+    },
+    "rich_text_eyfyKg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_TcXWGr": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h2",
+            "heading": "How do burglary safes differ?",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_8mWn7q": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p><strong>Safes differ in quality based on their ratings, see below for a full breakdown of the most commonly used classes in increasing order of security:</strong></p>"
+          },
+          "blocks": {}
+        },
+        "heading_hfhPXj": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h3",
+            "heading": "1. California Department of Justice (CA DOJ)",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_HBjtqc": {
+          "type": "paragraph",
+          "name": "t:blocks.paragraph.name",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p><strong>Regulatory Gun Safe Standards DOJ regulatory standards require a gun safe to meet ALL of the following requirements:</strong></p><ol><li>Shall be able to fully contain firearms and provide for their secure storage.</li><li>Shall have a locking system consisting of at minimum a mechanical or electronic combination lock. The mechanical or electronic combination lock utilized by the safe shall have at least 10,000 possible combinations consisting of a minimum three numbers, letters, or symbols. The lock shall be protected by a case-hardened (Rc 60+) drill-resistant steel plate, or drill-resistant material of equivalent strength.</li><li>Boltwork shall consist of a minimum of three steel locking bolts of at least 1/2 inch thickness that intrude from the door of the safe into the body of the safe or from the body of the safe into the door of the safe, which are operated by a separate handle and secured by the lock.</li><li>Shall be capable of repeated use. The exterior walls shall be constructed of a minimum 12-gauge thick steel for a single-walled safe, or the sum of the steel walls shall add up to at least .100 inches for safes with two walls. Doors shall be constructed of a minimum of two layers of 12-gauge steel, or one layer of 7-gauge steel compound construction.</li><li>Door hinges shall be protected to prevent the removal of the door. Protective features include, but are not limited to: hinges not exposed to the outside, interlocking door designs, dead bars, jeweler's lugs and active or inactive locking bolts.</li></ol><p><strong>or ALL of the following requirements:</strong></p><ol><li>Is listed as an Underwriters Laboratories Residential Security Container</li><li>Is able to fully contain firearms</li><li>Provides for the secure storage of firearms</li></ol>"
+          },
+          "blocks": {}
+        },
+        "heading_k6cHLp": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h3",
+            "heading": "2. UL RSC (Residential Security Containers)",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_YUBapY": {
+          "type": "paragraph",
+          "name": "t:blocks.paragraph.name",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p>Burglary Classification Residential Security Container (RSC) signifies a combination or keylocked unit designed to offer protection against entry by common mechanical tools. Performance tests are conducted against the entire unit. The basic standard used to investigate in this category is UL 1037, \"Antitheft Alarms and Devices.</p><ol><li>An Anti-theft device, as defined by Paragraph 1.3, shall resist at least 5 minutes of attack that would defeat its purpose.</li><li>Any disassembly of the protected property required to make it removable, is to be included in the 5 minutes of attack test.</li><li>The tools used in the test are to include hammers, chisels, adjustable wrenches, pry bars, punches and screwdrivers. The hammers are not to exceed 3 pounds in head weight, and no tool is to exceed 18 inches in length.</li><li>The product under test is to be mounted securely in its intended position, and the attack is to be carried out by one operator.</li></ol>"
+          },
+          "blocks": {}
+        },
+        "heading_WG3WWi": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h3",
+            "heading": "3. Burglary Classifications",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_GYEjfP": {
+          "type": "paragraph",
+          "name": "t:blocks.paragraph.name",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<ul><li><strong>Burglary Classification TL-15:</strong><br/>Signifies a combination-locked safe designed to offer a limited degree of protection against attack by common mechanical and electrical hand tools and any combination of these means. Has successfully resisted entry* for a net working time of 15 minutes when attacked with common hand tools, picking tools, mechanical or portable electric tools, grinding points, carbide drills and pressure applying devices or mechanisms.</li><li><strong>Burglary Classification TL-30:</strong><br/>Signifies a combination-locked safe designed to offer a moderate degree of protection against attack by common mechanical and electrical tools and any combination of these means. Has successfully resisted entry* for a net working time of 30 minutes when attacked with common hand tools, picking tools, mechanical or portable electric tools, grinding points, carbide drills, pressure applying devices or mechanisms, abrasive cutting wheels and power saws.</li><li><strong>Burglary Classification TRTL-30</strong><br/>Signifies combination locked safe designed to offer a moderate degree of protection against attack by common mechanical and electrical tools and cutting torches and any combination of these means. Has successfully resisted entry* for a net working time of 30 minutes when attacked with common hand tools, picking tools, mechanical or portable electric tools, grinding points, carbide drills, pressure applying devices or mechanisms, abrasive cutting wheels, power saws, impact tools and oxy-fuel gas cutting or welding torch (test gas limited to 1000 cubic feet combined total oxygen and fuel gas).</li><li><strong>Burglary Classification TRTL-60</strong><br/>Signifies a combination-locked safe designed to offer a high degree of protection against attack by common mechanical and electrical tools and cutting torches and any combination of these means. Has successfully resisted entry* for a net working time of 60 minutes when attacked with common hand tools, picking tools, mechanical or portable electric tools, grinding points, carbide drills, pressure applying devices or mechanisms, abrasive cutting wheels, power saws, impact tools and oxy-fuel gas cutting or welding torch test gas limited to 1000 cubic feet combined total oxygen and fuel gas.</li><li><strong>Burglary Classification TXTL-60</strong><br/>Signifies a combination locked safe designed to offer a high degree of protection against attack by common mechanical and electrical tools, cutting torches, high explosives and any combination of these means. Has successfully resisted entry* for a net working time of 60 minutes when attacked with common hand tools, picking tools, mechanical or portable electric tools, grinding points, carbide drills, pressure applying devices or mechanisms, abrasive cutting wheels, power saws, impact tools, oxy-fuel gas cutting or welding torch, nitroglycerin or other high explosives equivalent to not more than 4 ounces of nitroglycerin in one charge (entire test must not use more explosive than that equivalent to 8 ounces of nitroglycerin).</li></ul><p>* Entry means for:<br/>Safes classed TL-15 and TL-30 - Opening the door or making a 6 square inch opening entirely through the door or front face.</p><p>Safes classed TRTL-30 , TRTL-60, and TXTL-60 - Opening the door or making a 2 inch square opening entirely through the door or body.</p>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_TcXWGr",
+        "paragraph_8mWn7q",
+        "heading_hfhPXj",
+        "paragraph_HBjtqc",
+        "heading_k6cHLp",
+        "paragraph_YUBapY",
+        "heading_WG3WWi",
+        "paragraph_GYEjfP"
+      ],
+      "name": "t:sections.rich_text.name",
+      "settings": {
+        "full_width": true,
+        "text_alignment": "left",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
     }
   },
   "order": [
     "rich_text_fe7CkU",
     "video_MCJJQQ",
-    "rich_text_HdLRgq"
+    "rich_text_HdLRgq",
+    "rich_text_eyfyKg"
   ]
 }
