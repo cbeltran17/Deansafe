@@ -91,11 +91,12 @@
         "bottom_spacing": 80
       }
     },
-    "rich_text_fHJm3V": {
+    "rich_text_HdLRgq": {
       "type": "rich-text",
       "blocks": {
-        "heading_meXYYG": {
+        "heading_TkexVr": {
           "type": "heading",
+          "name": "t:blocks.heading.name",
           "settings": {
             "full_width": true,
             "max_width": 500,
@@ -109,8 +110,9 @@
           },
           "blocks": {}
         },
-        "paragraph_LiNm4t": {
+        "paragraph_DeRpBz": {
           "type": "paragraph",
+          "name": "t:blocks.paragraph.name",
           "settings": {
             "paragraph_size": "md",
             "paragraph_width": "full",
@@ -118,11 +120,186 @@
             "content": "<p>Before delving into the components that make up a burglary safe, it's important to understand that there are 32 different ratings designed to create a base of quality for insurance companies to insure the value of the items stored inside. Each level of rating will bump up the quality and features of the safe's security.</p><p><strong>These five components are the key ingredients to what makes up the safe's rating:</strong></p>"
           },
           "blocks": {}
+        },
+        "heading_6DAKRz": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h3",
+            "heading": "1. Steel Thickness",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_emcF8R": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p>Steel Thickness is measured in the reverse of what you would think, so the <strong>higher the gauge number the thinner the steel and the lower the number the thicker the steel</strong>. When it comes to body thickness, Safes typically range anywhere from 14 gauge to 1\". For the door anything from 14 gauge to 1.5\" is commonly used. <strong>The thicker the steel, the longer it will take to get through, thus more steel equals more security</strong>. Thicker steel is also less flexible and more sturdy, making it harder to bend during a pry attack.</p><p>Please see the chart below for a size guide to steel thickness:</p>"
+          },
+          "blocks": {}
+        },
+        "image_xTiGTG": {
+          "type": "image",
+          "name": "t:blocks.image.name",
+          "settings": {
+            "image": "shopify://shop_images/steel-thickness_b627a0bb-dc79-4ec6-aa12-a69357e711b4.jpg",
+            "rounded_corners": true,
+            "full_width": true,
+            "width": 256,
+            "image_size": "",
+            "image_height": 480,
+            "image_size_mobile": "same",
+            "image_height_mobile": 480
+          },
+          "blocks": {}
+        },
+        "heading_Xh9Eiy": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h3",
+            "heading": "2. Number and Size of Locking Bolts",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_AxQGH9": {
+          "type": "paragraph",
+          "name": "t:blocks.paragraph.name",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p>One of our most commonly asked questions is: <strong>Do more bolts equal more security?</strong></p><p>While this is a fantastic question there is more to it than just the number of bolts. You can find safes at big box stores with 20 bolts that can still be pried open in less than 2 minutes because of the size of the bolts and the flexibility in the light gauge door.</p><p><strong>The main function of the steel bolts is to make the door harder to pry open with a crowbar or similar tools during an attack</strong>, however if the safe has a 14 gauge door or less and the bolt length is less than an inch, the number of bolts is irrelevant as the door itself will flex and literally bend open during a pry attack.</p><p>For a general rule of thumb, <strong>the longer, thicker and greater number of bolts, the harder it is to bend or break.</strong> It's also very important to remember that a safe with less bolts can be just as secure as one with more depending on the engineering of the frame and where the bolts are strategically placed.</p>"
+          },
+          "blocks": {}
+        },
+        "heading_yqArxU": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h3",
+            "heading": "3. Locking Mechanism",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_JKDdeH": {
+          "type": "paragraph",
+          "name": "t:blocks.paragraph.name",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p><strong>Here we reach the most common question in the industry: Electronic Lock vs. Mechanical Dial Lock?</strong><br/>While there is no right or wrong answer, we've found that with the ease of use, customizability and better security, electronic locks take the crown over their mechanical dial counterparts.</p><ul><li>Typically you'll find <strong>Electronic Locks</strong> on most safes are classified as UL Grade 1 as it would take roughly 27 years, working 24/7 to manipulate by hand with the 999,999 different combinations available. After 3 or 4 wrong attempts, depending on the lock, a 10 to 15 minute lockout will occur creating a longer time constraint for the would be intruder. There is no question, Electronic Locks are significantly faster to operate than their mechanical counterparts providing quick access for those who know the combination. More key advantages of electronic locks are the user's ability to change the combination at any time without the assistance of a locksmith and having the ability to open it without your eyes, including not needing reading glasses, being in the dark or being blind. Electronic locks do have a battery that needs to be changed periodically. They can last up to 6 years however we recommend swapping it out at least every other year.</li><li><strong>Mechanical Dial Locks</strong> are classified as UL Group 2 and are significantly slower to operate than their Electronic counterparts. Dial Locks are secure however they can be manipulated by a machine or picked by an experienced safe cracker in under an hour. To change the combination on a mechanical dial lock the assistance of a locksmith is necessary. Considering the time length it takes to operate mechanical locks, we've found that many customer use the key locking dial feature to lock the dial while leaving the combination entered. This leaves the safe vulnerable in the un-locked position and makes it much easier for a burglar to pick your safe open.</li><li><strong>Duet, Dual & Redundant Locks:</strong> New to the market are a combination of the two styles of locks. Duet locks will have both the Electronic capabilities and a dial in one lock. For an example, check out the Cannon EMP lock with the dial in the middle of the lock and the electronic numbers located on the top. This guarantees access in the event the electronics malfunction or the batteries die. Another style is known as the Redundant lock where you will find the standard electronic lock and the standard mechanical lock both on the door of the safe with the ability to use either one to open the safe. Please see pictures below for examples of the different styles of locks.</li></ul>"
+          },
+          "blocks": {}
+        },
+        "heading_m7kyjP": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h3",
+            "heading": "4. Hardplate",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_hACV8h": {
+          "type": "paragraph",
+          "name": "t:blocks.paragraph.name",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p>Most hardcore safe guys will tell you a lock is only as good as the hardplate protecting it and I like to equate it to going into a football game without your helmet. You can still tackle people, catch touchdowns and play the game, however one good hit to the head and you could be out for life. Similarly, <strong>the hardplate stands between the outside of the safe and the interior lock protecting the locking mechanism on the inside of the safe from being drilled</strong>. There are several different types but the most common is just a nice thick piece of heat treated, hardened steel varying in size, once again depending on the safe's rating.</p><p>Another type of hardplate is called \"ball-bearing\" commonly used by Fort Knox and Liberty safe where the hardplate will be made up of little metal balls that causes the drill bit to continually slip creating a high level of frustration for the driller. Other types of hardplates include diamond bit, carbide and various, exotic materials for drill-shattering hardplates.</p><p>Most manufacturers will use a special \"proprietary\" recipe that they don't want you to know the components to as they know their competitors will attempt to steal it. All in all, having a hardplate is as important as wearing your helmet during a football game.</p>"
+          },
+          "blocks": {}
+        },
+        "image_yWBHxg": {
+          "type": "image",
+          "name": "t:blocks.image.name",
+          "settings": {
+            "image": "shopify://shop_images/hardplate.jpg",
+            "rounded_corners": true,
+            "full_width": true,
+            "width": 256,
+            "image_size": "",
+            "image_height": 480,
+            "image_size_mobile": "same",
+            "image_height_mobile": 480
+          },
+          "blocks": {}
+        },
+        "heading_XWXwQ3": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h3",
+            "heading": "5. Relockers",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_LpmAnz": {
+          "type": "paragraph",
+          "name": "t:blocks.paragraph.name",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p>A Relocker is <strong>a device designed to relock the safe causing all bolts to lock in place when the original lock is damaged or removed</strong>. During a drill attack, the driller will drill into or around the lock to find the release point, also known as the bolt that goes in and out of the lock called the nose.</p><p>Some manufacturers will use both an internal and external relocker for these scenarios:</p><ul><li>An <strong>internal relocker</strong> is located inside the lock itself and when drilled will fire a pin keeping those bolts locked into place.</li><li>An <strong>external relocker</strong> will be located outside of the lock and is often comprised typically of metal or glass. When the drill shatters the external relocker, a pin is once again fired locking the bolts in place.</li></ul><p>Relockers act as your <strong>back-up security during an attack</strong> prolonging the burglars ability to get your safe open. It's important to remember that there are thousands of safes sold out there without relockers or hardplates. A UL rated burglary safe will always have both a hardplate and a relocker.</p>"
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "heading_meXYYG",
-        "paragraph_LiNm4t"
+        "heading_TkexVr",
+        "paragraph_DeRpBz",
+        "heading_6DAKRz",
+        "paragraph_emcF8R",
+        "image_xTiGTG",
+        "heading_Xh9Eiy",
+        "paragraph_AxQGH9",
+        "heading_yqArxU",
+        "paragraph_JKDdeH",
+        "heading_m7kyjP",
+        "paragraph_hACV8h",
+        "image_yWBHxg",
+        "heading_XWXwQ3",
+        "paragraph_LpmAnz"
       ],
       "name": "t:sections.rich_text.name",
       "settings": {
@@ -139,6 +316,6 @@
   "order": [
     "rich_text_fe7CkU",
     "video_MCJJQQ",
-    "rich_text_fHJm3V"
+    "rich_text_HdLRgq"
   ]
 }
