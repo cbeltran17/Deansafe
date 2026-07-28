@@ -42,40 +42,48 @@
         "bottom_spacing": 80
       }
     },
-    "video_with_text_wxptDW": {
-      "type": "video-with-text",
+    "video_MCJJQQ": {
+      "type": "video",
       "blocks": {
-        "heading_eQghKA": {
-          "type": "heading",
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
           "settings": {
-            "full_width": true,
-            "max_width": 500,
-            "heading_size": "h2",
-            "heading": "Watch this detailed video on what to look for when buying a safe:",
-            "highlight_type": "underline",
-            "highlight_layer": "default",
-            "heading_color": "",
-            "highlight_color": "",
-            "heading_seo_tag": "p"
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
           },
-          "blocks": {}
+          "blocks": {
+            "heading_FyMqfp": {
+              "type": "heading",
+              "name": "t:blocks.heading.name",
+              "settings": {
+                "full_width": true,
+                "max_width": 500,
+                "heading_size": "h2",
+                "heading": "Watch this detailed video on what to look for when buying a safe:",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "",
+                "highlight_color": "",
+                "heading_seo_tag": "p"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_FyMqfp"
+          ]
         }
       },
-      "block_order": [
-        "heading_eQghKA"
-      ],
-      "name": "t:sections.video_with_text.name",
+      "name": "t:sections.video.name",
       "settings": {
         "video_url": "https://youtu.be/3PK9_KEHml4",
-        "full_width": false,
-        "gap": false,
         "controls": true,
         "autoplay": false,
         "muted": false,
         "loop": false,
-        "image_width": 100,
-        "image_position": "right",
-        "image_size": "",
+        "video_size": "",
+        "text_alignment": "left",
         "background_color": "",
         "text_color": "",
         "enable_custom_spacing": false,
@@ -86,6 +94,6 @@
   },
   "order": [
     "rich_text_fe7CkU",
-    "video_with_text_wxptDW"
+    "video_MCJJQQ"
   ]
 }
