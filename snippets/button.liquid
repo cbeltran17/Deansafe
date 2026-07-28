@@ -20,8 +20,10 @@
       assign class = class | append: ' is-dark'
     endif
   endif
-  
+
 %}
+
+{{ class }}
 
 {% capture button_attributes %}
   class="button {{ class }}"
