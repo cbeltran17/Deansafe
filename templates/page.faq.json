@@ -90,10 +90,55 @@
         "top_spacing": 80,
         "bottom_spacing": 80
       }
+    },
+    "rich_text_fHJm3V": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_meXYYG": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h2",
+            "heading": "What makes a burglary safe a burglary safe?",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_LiNm4t": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p>Before delving into the components that make up a burglary safe, it's important to understand that there are 32 different ratings designed to create a base of quality for insurance companies to insure the value of the items stored inside. Each level of rating will bump up the quality and features of the safe's security.</p><p><strong>These five components are the key ingredients to what makes up the safe's rating:</strong></p>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_meXYYG",
+        "paragraph_LiNm4t"
+      ],
+      "name": "t:sections.rich_text.name",
+      "settings": {
+        "full_width": true,
+        "text_alignment": "left",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
     }
   },
   "order": [
     "rich_text_fe7CkU",
-    "video_MCJJQQ"
+    "video_MCJJQQ",
+    "rich_text_fHJm3V"
   ]
 }
