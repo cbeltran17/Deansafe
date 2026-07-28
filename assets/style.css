@@ -4,6 +4,7 @@
 
 .button--outline {
     box-shadow: inset 0 0 0 1px rgb(var(--button-background));
+    font-weight: 400;
 }
 
 .collection-banner-description {
