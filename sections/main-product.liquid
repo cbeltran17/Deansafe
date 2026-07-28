@@ -10,9 +10,12 @@
   class="product-section"
   product-url="{{ product.url | within: collection | escape }}"
 >
+
+  {% if section.settings.show_breadcrumb %}
   <div class="product-breadcrumbs">
     {% render 'breadcrumbs' %}
   </div>
+  {% endif %}
 
   <a href="#{{ section.id }}-ProductInfo" class="skip-to-content">
     {{ 'accessibility.skip_to_product_info' | t }}
