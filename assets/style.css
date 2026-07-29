@@ -124,7 +124,7 @@ media-lightbox media-carousel .media-carousel img {
 }
 
 .stock-notification-banner.in-stock-green {
-    border: 2px solid #3d9e2d;
+    border: none;
     background: #eff7ec;
 }
 
@@ -137,7 +137,7 @@ media-lightbox media-carousel .media-carousel img {
 }
 
 .stock-notification-banner.out-of-stock-red {
-    border: 2px solid #b61a1a;
+    border: none;
     background: #fbeded;
 }
 
@@ -150,7 +150,7 @@ media-lightbox media-carousel .media-carousel img {
 }
 
 .stock-notification-banner.dropship-yellow {
-    border: 2px solid #d4a016;
+    border: none;
     background: #fdf7e6;
 }
 
