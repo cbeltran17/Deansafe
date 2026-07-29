@@ -439,6 +439,16 @@
             "text_color": ""
           },
           "blocks": {
+            "icon_tBPiPd": {
+              "type": "icon",
+              "name": "t:blocks.icon.name",
+              "settings": {
+                "icon": "shield",
+                "size": 32,
+                "text_color": ""
+              },
+              "blocks": {}
+            },
             "heading_X36FN6": {
               "type": "heading",
               "settings": {
@@ -480,6 +490,7 @@
             }
           },
           "block_order": [
+            "icon_tBPiPd",
             "heading_X36FN6",
             "paragraph_pQPgiQ",
             "button_RYV6rC"
@@ -488,18 +499,28 @@
         "image_with_text_slide_t9qC3M": {
           "type": "_image_with_text_slide",
           "settings": {
-            "image": "shopify://shop_images/safes.png",
-            "background_color": "#f4f4f4",
+            "image": "shopify://shop_images/Barska_AX13744_14.jpg",
+            "background_color": "#D4D4D4",
             "text_color": "rgba(0,0,0,0)"
           },
           "blocks": {
+            "icon_8qMDAe": {
+              "type": "icon",
+              "name": "t:blocks.icon.name",
+              "settings": {
+                "icon": "sparkles",
+                "size": 32,
+                "text_color": ""
+              },
+              "blocks": {}
+            },
             "heading_kqHmeJ": {
               "type": "heading",
               "settings": {
                 "full_width": true,
                 "max_width": 500,
                 "heading_size": "h2",
-                "heading": "Burglary Safes",
+                "heading": "Fire-Rated Safes",
                 "highlight_type": "underline",
                 "highlight_layer": "default",
                 "heading_color": "",
@@ -534,6 +555,7 @@
             }
           },
           "block_order": [
+            "icon_8qMDAe",
             "heading_kqHmeJ",
             "paragraph_kTCwGC",
             "button_PLpiKP"
@@ -548,7 +570,7 @@
       "settings": {
         "full_width": false,
         "image_position": "right",
-        "image_size": "",
+        "image_size": "1/1",
         "autoplay": false,
         "autoplay_interval": 5,
         "enable_custom_spacing": true,
