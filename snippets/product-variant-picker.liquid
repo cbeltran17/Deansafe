@@ -73,3 +73,48 @@
     {%- endfor -%}
   </variant-picker>
 {% endunless %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  const product = {{ product | json }};
+
+  function autoSelectSecondOption() {
+
+    const fieldsets = document.querySelectorAll('variant-picker fieldset');
+
+    if (fieldsets.length < 2) return;
+
+    const option1 = fieldsets[0].querySelector('input:checked');
+
+    if (!option1) return;
+
+    const selectedOption1 = option1.value;
+
+    const variant = product.variants.find(v =>
+      v.option1 === selectedOption1 && v.available
+    );
+
+    if (!variant) return;
+
+    fieldsets[1].querySelectorAll('input').forEach(input => {
+
+      if (input.value === variant.option2) {
+
+        input.checked = true;
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+
+      }
+
+    });
+
+  }
+
+  document.querySelectorAll('variant-picker fieldset:first-child input').forEach(input => {
+    input.addEventListener('change', function () {
+      setTimeout(autoSelectSecondOption, 50);
+    });
+  });
+
+});
+</script>
