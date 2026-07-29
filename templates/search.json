@@ -11,7 +11,6 @@
   "sections": {
     "main-search": {
       "type": "main-search",
-      "disabled": true,
       "settings": {
         "products_per_row": 4,
         "products_per_row_mobile": "2",
@@ -44,6 +43,7 @@
       "block_order": [
         "3c59b63a-810a-4568-88a1-ef5923ca7d8c"
       ],
+      "disabled": true,
       "settings": {}
     }
   },
