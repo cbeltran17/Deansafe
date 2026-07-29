@@ -321,6 +321,10 @@ media-lightbox media-carousel .media-carousel img {
   border: none;
   box-shadow: none;
 }
+
+.option-radio-container .option-value-radio--color[data-unavailable] {
+    display: none;
+}
 /* Option Value Radio End */
 
 @media (min-width: 48rem) {
