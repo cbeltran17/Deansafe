@@ -1,12 +1,27 @@
 {% liquid
   assign type = type | default: 'radio'
+
+  assign downcased_option_name = option.name | downcase
+  assign selected_extra_price = ""
+
+  if downcased_option_name == 'color'
+    for option_value in option.values
+      if option_value.selected and option_value.variant
+        if option_value.variant.price > product.price
+          assign price_diff = option_value.variant.price | minus: product.price
+          assign formatted_diff = price_diff | money_without_trailing_zeros
+          assign selected_extra_price = " + " | append: formatted_diff
+        endif
+      endif
+    endfor
+  endif
 %}
 
 <fieldset data-product-option>
   <div class="product-option-label">
     <legend class="contents">
       <span class="product-option-name">{{ option.name }}:</span>
-      <span class="product-option-value">{{ option.selected_value }}</span>
+      <span class="product-option-value">{{ option.selected_value }}{{ selected_extra_price }}</span>
     </legend>
     {% render 'product-size-chart', option: option, block: block %}
   </div>
