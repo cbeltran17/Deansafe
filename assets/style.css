@@ -125,7 +125,7 @@ media-lightbox media-carousel .media-carousel img {
 
 .stock-notification-banner.in-stock-green {
     border: 2px solid #3d9e2d;
-    background: transparent;
+    background: #eff7ec;
 }
 
 .stock-notification-banner.in-stock-green strong {
@@ -138,7 +138,7 @@ media-lightbox media-carousel .media-carousel img {
 
 .stock-notification-banner.out-of-stock-red {
     border: 2px solid #b61a1a;
-    background: transparent;
+    background: #fbeded;
 }
 
 .stock-notification-banner.out-of-stock-red strong {
@@ -151,7 +151,7 @@ media-lightbox media-carousel .media-carousel img {
 
 .stock-notification-banner.dropship-yellow {
     border: 2px solid #d4a016;
-    background: transparent;
+    background: #fdf7e6;
 }
 
 .stock-notification-banner.dropship-yellow strong {
