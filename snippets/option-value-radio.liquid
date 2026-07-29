@@ -15,7 +15,8 @@
   if downcased_option_name == 'color' and option_value.variant
     if option_value.variant.price > product.price
       assign price_diff = option_value.variant.price | minus: product.price
-      assign extra_price_text = " + " | append: (price_diff | money_without_trailing_zeros)
+      assign formatted_diff = price_diff | money_without_trailing_zeros
+      assign extra_price_text = " + " | append: formatted_diff
     endif
   endif
 %}
