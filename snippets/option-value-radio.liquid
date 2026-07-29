@@ -1,5 +1,19 @@
+{% liquid
+  assign is_color_option = false
+  assign downcased_option_name = option.name | downcase
+  
+  if downcased_option_name == 'color' or downcased_option_name == 'hardware color'
+    assign is_color_option = true
+    assign value_name = option_value.name | default: option_value
+    
+    assign file_name = value_name | downcase | replace: ' ', '-' | append: '.png'
+    assign swatch_image_url = file_name | file_url
+    assign fallback_color = value_name | downcase | replace: ' ', ''
+  endif
+%}
+
 <div
-  class="option-value-radio"
+  class="option-value-radio {% if is_color_option %}option-value-radio--color{% endif %}"
   {% if option_value.available == false %}
     data-unavailable
   {% endif %}
@@ -16,8 +30,17 @@
       checked
     {% endif %}
   >
-  <label for="{{ id }}-{{ index }}">
-    <span> {{ option_value }} </span>
+  <label for="{{ id }}-{{ index }}" title="{{ option_value }}">
+    {% if is_color_option %}
+      <span 
+        class="radio-swatch-image" 
+        style="background-image: url('{{ swatch_image_url }}'); background-color: {{ fallback_color }};"
+      ></span>
+      <span class="sr-only"> {{ option_value }} </span>
+    {% else %}
+      <span> {{ option_value }} </span>
+    {% endif %}
+
     {% if option_value.available == false %}
       <span class="sr-only">{{ 'products.product.sold_out' | t }}</span>
       {% render 'svg-diagonal-line' %}
