@@ -10,6 +10,14 @@
     assign swatch_image_url = file_name | file_url
     assign fallback_color = value_name | downcase | replace: ' ', ''
   endif
+
+  assign extra_price_text = ""
+  if downcased_option_name == 'color' and option_value.variant
+    if option_value.variant.price > product.price
+      assign price_diff = option_value.variant.price | minus: product.price
+      assign extra_price_text = " + " | append: (price_diff | money_without_trailing_zeros)
+    endif
+  endif
 %}
 
 <div
@@ -26,19 +34,20 @@
     data-product-url="{{ option_value.product_url }}"
     data-variant-id="{{ option_value.variant.id }}"
     data-option-value-id="{{ option_value.id }}"
+    data-display-value="{{ option_value | escape }}{{ extra_price_text }}"
     {% if option_value.selected %}
       checked
     {% endif %}
   >
-  <label for="{{ id }}-{{ index }}" title="{{ option_value }}">
+  <label for="{{ id }}-{{ index }}" title="{{ option_value }}{{ extra_price_text }}">
     {% if is_color_option %}
       <span 
         class="radio-swatch-image" 
         style="background-image: url('{{ swatch_image_url }}'); background-color: {{ fallback_color }};"
       ></span>
-      <span class="sr-only"> {{ option_value }} </span>
+      <span class="sr-only"> {{ option_value }}{{ extra_price_text }} </span>
     {% else %}
-      <span> {{ option_value }} </span>
+      <span> {{ option_value }}{{ extra_price_text }} </span>
     {% endif %}
 
     {% if option_value.available == false %}
