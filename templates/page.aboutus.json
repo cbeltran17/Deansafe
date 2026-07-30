@@ -250,7 +250,7 @@
       "name": "t:sections.image_with_text.name",
       "settings": {
         "image": "shopify://shop_images/arleta-showroom-old.jpg",
-        "full_width": true,
+        "full_width": false,
         "gap": false,
         "image_width": 100,
         "image_position": "left",
@@ -260,7 +260,7 @@
         "image_height_mobile": 480,
         "background_color": "",
         "text_color": "",
-        "enable_custom_spacing": true,
+        "enable_custom_spacing": false,
         "top_spacing": 80,
         "bottom_spacing": 80
       }
