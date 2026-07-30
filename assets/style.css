@@ -177,7 +177,7 @@ media-lightbox media-carousel .media-carousel img {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 5px;
+    gap: 12px;
 }
 
 .stock-notification-banner .stock-line-1 .check-icon svg {
