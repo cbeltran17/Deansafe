@@ -250,7 +250,7 @@
       "name": "t:sections.image_with_text.name",
       "settings": {
         "image": "shopify://shop_images/arleta-showroom-old.jpg",
-        "full_width": false,
+        "full_width": true,
         "gap": false,
         "image_width": 100,
         "image_position": "left",
