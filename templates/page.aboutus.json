@@ -201,7 +201,7 @@
       ],
       "name": "t:sections.multicolumn.name",
       "settings": {
-        "enable_carousel": true,
+        "enable_carousel": false,
         "columns": 3,
         "columns_mobile": 1,
         "column_gap": 24,
