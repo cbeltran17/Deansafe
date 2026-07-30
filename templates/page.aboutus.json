@@ -204,7 +204,7 @@
         "enable_carousel": true,
         "columns": 3,
         "columns_mobile": 1,
-        "column_gap": 16,
+        "column_gap": 24,
         "column_alignment": "center",
         "text_alignment": "center",
         "background_color": "",
