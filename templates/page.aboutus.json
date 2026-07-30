@@ -143,12 +143,13 @@
           "type": "_column",
           "settings": {
             "media_type": "image",
+            "image": "shopify://shop_images/DS-Simi-Valley-Showroom-Banner.jpg",
             "video_autoplay": false,
             "heading_size": "h4",
-            "heading": "Highlight your store's features",
+            "heading": "Simi Valley / Ventura",
             "content": "<p>Use these columns to share details about your products, services, or values.</p>",
-            "link_url": "",
-            "link_text": "",
+            "link_url": "shopify://pages/sivadesacoou",
+            "link_text": "View Location",
             "link_style": "button"
           },
           "blocks": {}
@@ -181,20 +182,6 @@
           },
           "blocks": {}
         },
-        "column_VbVdWj": {
-          "type": "_column",
-          "settings": {
-            "media_type": "image",
-            "video_autoplay": false,
-            "heading_size": "h4",
-            "heading": "Highlight your store's features",
-            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "button"
-          },
-          "blocks": {}
-        },
         "section-header": {
           "type": "_section-header",
           "static": true,
@@ -208,15 +195,14 @@
       "block_order": [
         "column_j3UPGX",
         "column_dCDb3z",
-        "column_g7WnDJ",
-        "column_VbVdWj"
+        "column_g7WnDJ"
       ],
       "name": "t:sections.multicolumn.name",
       "settings": {
         "enable_carousel": true,
-        "columns": 4,
+        "columns": 3,
         "columns_mobile": 1,
-        "column_gap": 24,
+        "column_gap": 16,
         "column_alignment": "center",
         "text_alignment": "center",
         "background_color": "",
