@@ -89,7 +89,7 @@
         "background_color": "",
         "enable_custom_spacing": true,
         "top_spacing": 40,
-        "bottom_spacing": 80
+        "bottom_spacing": 0
       }
     },
     "rich_text_j679EW": {
@@ -132,8 +132,8 @@
         "background_color": "",
         "text_color": "",
         "enable_custom_spacing": true,
-        "top_spacing": 0,
-        "bottom_spacing": 80
+        "top_spacing": 32,
+        "bottom_spacing": 40
       }
     }
   },
