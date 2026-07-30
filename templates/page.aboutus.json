@@ -133,7 +133,7 @@
         "text_color": "",
         "enable_custom_spacing": true,
         "top_spacing": 0,
-        "bottom_spacing": 80
+        "bottom_spacing": 16
       }
     },
     "multicolumn_pkzWWd": {
@@ -147,10 +147,10 @@
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "Simi Valley / Ventura",
-            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
+            "content": "",
             "link_url": "shopify://pages/sivadesacoou",
             "link_text": "View Location",
-            "link_style": "button"
+            "link_style": "link"
           },
           "blocks": {}
         },
@@ -158,13 +158,14 @@
           "type": "_column",
           "settings": {
             "media_type": "image",
+            "image": "shopify://shop_images/Showroom-NoHo_2.jpg",
             "video_autoplay": false,
             "heading_size": "h4",
-            "heading": "Highlight your store's features",
-            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "button"
+            "heading": "North Hollywood / San Fernando",
+            "content": "",
+            "link_url": "shopify://pages/desacoarca91",
+            "link_text": "View Location",
+            "link_style": "link"
           },
           "blocks": {}
         },
@@ -172,13 +173,14 @@
           "type": "_column",
           "settings": {
             "media_type": "image",
+            "image": "shopify://shop_images/Culver-city-banner-image-2.jpg",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "Highlight your store's features",
-            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "button"
+            "content": "",
+            "link_url": "shopify://pages/los-angeles-culver-city-store",
+            "link_text": "View Location",
+            "link_style": "link"
           },
           "blocks": {}
         },
