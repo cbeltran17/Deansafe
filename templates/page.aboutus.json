@@ -88,7 +88,7 @@
         "autoplay_interval": 5,
         "background_color": "",
         "enable_custom_spacing": true,
-        "top_spacing": 80,
+        "top_spacing": 40,
         "bottom_spacing": 80
       }
     },
