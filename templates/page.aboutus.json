@@ -135,12 +135,103 @@
         "top_spacing": 32,
         "bottom_spacing": 40
       }
+    },
+    "multicolumn_pkzWWd": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_j3UPGX": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Highlight your store's features",
+            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_dCDb3z": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Highlight your store's features",
+            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_g7WnDJ": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Highlight your store's features",
+            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_VbVdWj": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Highlight your store's features",
+            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "column_j3UPGX",
+        "column_dCDb3z",
+        "column_g7WnDJ",
+        "column_VbVdWj"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "enable_carousel": true,
+        "columns": 4,
+        "columns_mobile": 1,
+        "column_gap": 24,
+        "column_alignment": "center",
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
     }
   },
   "order": [
     "main",
     "rich_text_fkYPmR",
     "slideshow_Ht9ekq",
-    "rich_text_j679EW"
+    "rich_text_j679EW",
+    "multicolumn_pkzWWd"
   ]
 }
