@@ -264,6 +264,36 @@
         "top_spacing": 24,
         "bottom_spacing": 24
       }
+    },
+    "video_zL8qQP": {
+      "type": "video",
+      "blocks": {
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
+          },
+          "blocks": {}
+        }
+      },
+      "name": "t:sections.video.name",
+      "settings": {
+        "video": "shopify://files/videos/Simi Warehouse video D1 v2.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "controls": true,
+        "autoplay": false,
+        "muted": false,
+        "loop": false,
+        "video_size": "",
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": true,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
     }
   },
   "order": [
@@ -272,6 +302,7 @@
     "slideshow_Ht9ekq",
     "rich_text_j679EW",
     "multicolumn_pkzWWd",
-    "image_with_text_Yn6LAH"
+    "image_with_text_Yn6LAH",
+    "video_zL8qQP"
   ]
 }
