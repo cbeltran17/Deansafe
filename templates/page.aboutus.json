@@ -82,7 +82,7 @@
       "name": "t:sections.slideshow.name",
       "settings": {
         "full_width": true,
-        "media_size": "custom_height",
+        "media_size": "original",
         "height": 640,
         "autoplay": true,
         "autoplay_interval": 5,
