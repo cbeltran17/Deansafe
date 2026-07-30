@@ -116,7 +116,7 @@ media-lightbox media-carousel .media-carousel img {
 .stock-notification-banner {
     border-radius: 12px;
     padding: 14px;
-    font-size: 14px;
+    font-size: 15px;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -171,6 +171,7 @@ media-lightbox media-carousel .media-carousel img {
 .stock-notification-banner ul.stock-line-2 {
     list-style: outside;
     margin-left: 3.2rem;
+    font-size: 13px;
 }
 
 .stock-notification-banner .stock-line-1 {
