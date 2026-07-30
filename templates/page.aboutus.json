@@ -127,7 +127,7 @@
       ],
       "name": "t:sections.rich_text.name",
       "settings": {
-        "full_width": false,
+        "full_width": true,
         "text_alignment": "center",
         "background_color": "",
         "text_color": "",
