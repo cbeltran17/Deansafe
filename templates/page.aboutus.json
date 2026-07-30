@@ -213,6 +213,57 @@
         "top_spacing": 80,
         "bottom_spacing": 80
       }
+    },
+    "image_with_text_Yn6LAH": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_8jqTQJ": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h2",
+            "heading": "Small Mom & Pop",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_hUcMDz": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "medium",
+            "text_color": "primary",
+            "content": "<p>Our first safe store opened in the San Fernando Valley in early 1978, where three generations of the Dean family have served the public ever since.</p><p>Over the years <a href=\"https://www.deansafe.com/\">Dean Safe</a> has gone from a modest 700 square foot lockshop, into the largest safe supplier on the West Coast with 3 showroom locations and over 15,000 square feet of store and warehouse. We often have inventory into the thousands, with knowledgeable safe experts and delivery personnel to guide you through every step of your safe buying and installation process.</p><p>Our mission is simple: We strive to help protect your family, home, and business from the unfortunate events of burglary, theft, fire, and gun violence. We urge you to <strong>make a lifetime investment in your peace of mind</strong> and take the extra step to preventing the headache or heartache associated with these unfortunate events. With our massive inventory, stellar customer service, and extensive safe knowledge, we can fit you with the best safe for your needs the very first time.</p><p><em>Image: First 'Dean Safe' Gun Safe Showroom in Arleta, CA</em></p>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_8jqTQJ",
+        "paragraph_hUcMDz"
+      ],
+      "name": "t:sections.image_with_text.name",
+      "settings": {
+        "image": "shopify://shop_images/arleta-showroom-old.jpg",
+        "full_width": false,
+        "gap": false,
+        "image_width": 100,
+        "image_position": "left",
+        "image_size": "",
+        "image_height": 480,
+        "image_size_mobile": "same",
+        "image_height_mobile": 480,
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": true,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
     }
   },
   "order": [
@@ -220,6 +271,7 @@
     "rich_text_fkYPmR",
     "slideshow_Ht9ekq",
     "rich_text_j679EW",
-    "multicolumn_pkzWWd"
+    "multicolumn_pkzWWd",
+    "image_with_text_Yn6LAH"
   ]
 }
