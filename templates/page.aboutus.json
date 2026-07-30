@@ -57,10 +57,45 @@
         "top_spacing": 24,
         "bottom_spacing": 24
       }
+    },
+    "slideshow_Ht9ekq": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_gXfDCw": {
+          "type": "_slide",
+          "settings": {
+            "type": "image",
+            "image": "shopify://shop_images/Simi-Showroom-Outside-building-image-narrow_compressed.jpg",
+            "content_position": "middle-center",
+            "content_position_mobile": "",
+            "text_color": "#FFFFFF",
+            "heading_color": "",
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_opacity": 30
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "slide_gXfDCw"
+      ],
+      "name": "t:sections.slideshow.name",
+      "settings": {
+        "full_width": true,
+        "media_size": "custom_height",
+        "height": 640,
+        "autoplay": true,
+        "autoplay_interval": 5,
+        "background_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
     }
   },
   "order": [
     "main",
-    "rich_text_fkYPmR"
+    "rich_text_fkYPmR",
+    "slideshow_Ht9ekq"
   ]
 }
