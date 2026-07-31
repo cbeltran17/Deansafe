@@ -131,10 +131,86 @@
         "top_spacing": 80,
         "bottom_spacing": 80
       }
+    },
+    "multicolumn_locations_UABhK3": {
+      "type": "multicolumn-locations",
+      "blocks": {
+        "location_qeMQWE": {
+          "type": "location",
+          "settings": {
+            "image": "shopify://shop_images/Culver-city-image.jpg",
+            "title": "Culver City",
+            "subtitle": "WEST LOS ANGELES",
+            "address": "<p>11284 Washington Place<br/>Culver City, CA 90230<br/><strong>(310) 945-4099</strong></p>",
+            "day_1": "Mon - Fri",
+            "time_1": "10:00 AM - 6:00 PM",
+            "day_2": "Saturday",
+            "time_2": "10:00 AM - 3:00 PM",
+            "day_3": "Sunday",
+            "time_3": "Closed",
+            "btn_1_label": "VIEW LOCATION",
+            "btn_1_link": "",
+            "btn_2_label": "DIRECTIONS",
+            "btn_2_link": ""
+          }
+        },
+        "location_pNThH8": {
+          "type": "location",
+          "settings": {
+            "title": "Culver City",
+            "subtitle": "WEST LOS ANGELES",
+            "address": "<p>11284 Washington Place<br>Culver City, CA 90230<br><strong>(310) 945-4099</strong></p>",
+            "day_1": "Mon - Fri",
+            "time_1": "10:00 AM - 6:00 PM",
+            "day_2": "Saturday",
+            "time_2": "10:00 AM - 3:00 PM",
+            "day_3": "Sunday",
+            "time_3": "Closed",
+            "btn_1_label": "VIEW LOCATION",
+            "btn_1_link": "",
+            "btn_2_label": "DIRECTIONS",
+            "btn_2_link": ""
+          }
+        },
+        "location_UrJeey": {
+          "type": "location",
+          "settings": {
+            "title": "Culver City",
+            "subtitle": "WEST LOS ANGELES",
+            "address": "<p>11284 Washington Place<br>Culver City, CA 90230<br><strong>(310) 945-4099</strong></p>",
+            "day_1": "Mon - Fri",
+            "time_1": "10:00 AM - 6:00 PM",
+            "day_2": "Saturday",
+            "time_2": "10:00 AM - 3:00 PM",
+            "day_3": "Sunday",
+            "time_3": "Closed",
+            "btn_1_label": "VIEW LOCATION",
+            "btn_1_link": "",
+            "btn_2_label": "DIRECTIONS",
+            "btn_2_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "location_qeMQWE",
+        "location_pNThH8",
+        "location_UrJeey"
+      ],
+      "name": "Multicolumn Locations",
+      "settings": {
+        "heading": "OUR LOCATIONS",
+        "accent_color": "#F8D12F",
+        "full_width": false,
+        "background_color": "#FFFFFF",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
     }
   },
   "order": [
     "main",
-    "multi_image_with_text_AnhbPK"
+    "multi_image_with_text_AnhbPK",
+    "multicolumn_locations_UABhK3"
   ]
 }
