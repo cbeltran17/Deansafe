@@ -1,12 +1,17 @@
 <style>
   #shopify-section-{{ section.id }} {
-    padding-top: {{ section.settings.top_spacing }}px;
-    padding-bottom: {{ section.settings.bottom_spacing }}px;
     background-color: {{ section.settings.background_color }};
   }
 
-  .locations-container {
-    max-width: var(--page-width, 1400px);
+  {% if section.settings.enable_custom_spacing %}
+    #shopify-section-{{ section.id }} {
+      padding-top: {{ section.settings.top_spacing }}px;
+      padding-bottom: {{ section.settings.bottom_spacing }}px;
+    }
+  {% endif %}
+
+  .locations-container-{{ section.id }} {
+    max-width: {% if section.settings.full_width %}100%{% else %}var(--page-width, 1400px){% endif %};
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -136,7 +141,7 @@
   .location-actions {
     display: flex;
     gap: 12px;
-    margin-top: auto; /* Pushes buttons to bottom of card */
+    margin-top: auto;
     padding-top: 24px;
     border-top: 1px solid #EAEAEA;
   }
@@ -172,7 +177,7 @@
   }
 </style>
 
-<div class="locations-container">
+<div class="locations-container-{{ section.id }}">
   {% if section.settings.heading != blank %}
     <div class="locations-header">
       <h2 class="locations-header-title">{{ section.settings.heading }}</h2>
@@ -268,6 +273,20 @@
       "default": "#F8D12F"
     },
     {
+      "type": "header",
+      "content": "Layout Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Make section full width",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
       "type": "color",
       "id": "background_color",
       "label": "Section Background",
@@ -275,27 +294,35 @@
     },
     {
       "type": "header",
-      "content": "Section Spacing"
+      "content": "Spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_custom_spacing",
+      "label": "Enable custom spacing",
+      "default": false
     },
     {
       "type": "range",
       "id": "top_spacing",
-      "label": "Top Spacing",
+      "label": "Top spacing",
       "min": 0,
-      "max": 120,
-      "step": 4,
+      "max": 128,
+      "step": 8,
       "unit": "px",
-      "default": 60
+      "default": 80,
+      "visible_if": "{{ section.settings.enable_custom_spacing == true }}"
     },
     {
       "type": "range",
       "id": "bottom_spacing",
-      "label": "Bottom Spacing",
+      "label": "Bottom spacing",
       "min": 0,
-      "max": 120,
-      "step": 4,
+      "max": 128,
+      "step": 8,
       "unit": "px",
-      "default": 60
+      "default": 80,
+      "visible_if": "{{ section.settings.enable_custom_spacing == true }}"
     }
   ],
   "blocks": [
