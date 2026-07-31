@@ -1,0 +1,242 @@
+{% liquid
+  assign lg_ratio = 200.0 | divided_by: section.settings.image_width
+  capture sizes
+    render 'sizes', base: 1, lg: lg_ratio
+  endcapture
+
+  if section.settings.full_width == false
+    assign blend = true
+  endif
+%}
+
+{% render 'section-meta', blend: blend %}
+
+{% render 'image-size-vars',
+  selector: '.media-with-text__media',
+  breakpoint: 1024,
+  min_width: '100%'
+%}
+
+<style>
+  .multi-image-grid-{{ section.id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: {{ section.settings.grid_gap }}px;
+    width: 100%;
+    height: 100%;
+  }
+  .multi-image-grid__item {
+    display: flex;
+    overflow: hidden;
+  }
+  .multi-image-grid__item img,
+  .multi-image-grid__item svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .multi-image-grid__item-1 { 
+    grid-column: 1 / -1;
+  }
+  .multi-image-grid__item-2 { 
+    grid-column: 1 / 2; 
+  }
+  .multi-image-grid__item-3 { 
+    grid-column: 2 / 3; 
+  }
+</style>
+
+{% capture media %}
+  <div class="multi-image-grid-{{ section.id }}">
+    <div class="multi-image-grid__item multi-image-grid__item-1">
+      {% if section.settings.image_1 != blank %}
+        {{ section.settings.image_1 | image_url: width: 1600 | image_tag: loading: 'lazy', sizes: sizes }}
+      {% else %}
+        {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {% endif %}
+    </div>
+    
+    <div class="multi-image-grid__item multi-image-grid__item-2">
+      {% if section.settings.image_2 != blank %}
+        {{ section.settings.image_2 | image_url: width: 800 | image_tag: loading: 'lazy', sizes: sizes }}
+      {% else %}
+        {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {% endif %}
+    </div>
+
+    <div class="multi-image-grid__item multi-image-grid__item-3">
+      {% if section.settings.image_3 != blank %}
+        {{ section.settings.image_3 | image_url: width: 800 | image_tag: loading: 'lazy', sizes: sizes }}
+      {% else %}
+        {{ 'collection-2' | placeholder_svg_tag: 'placeholder-svg' }}
+      {% endif %}
+    </div>
+  </div>
+{% endcapture %}
+
+{% capture content %}
+  <animation-element
+    stagger="100"
+    autoplay
+    selector=".shopify-block"
+    class="media-with-text__text-inner block-spacing"
+  >
+    {% content_for 'blocks' %}
+  </animation-element>
+{% endcapture %}
+
+{% render 'media-with-text', media: media, content: content, section_spacing: true %}
+
+{% schema %}
+{
+  "name": "Multi image with text",
+  "class": "section-image-with-text section-multi-image-with-text",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Grid Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Top Image (Full Width)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Bottom Left Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Bottom Right Image"
+    },
+    {
+      "type": "range",
+      "id": "grid_gap",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Space between images",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Layout Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Make section full width",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "label": "Image width",
+      "min": 50,
+      "max": 150,
+      "step": 10,
+      "default": 100,
+      "unit": "%"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Desktop image placement",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_custom_spacing",
+      "label": "Enable custom spacing",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "top_spacing",
+      "label": "Top spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing == true }}"
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "label": "Bottom spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing == true }}"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@theme"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "presets": [
+    {
+      "name": "Multi image with text",
+      "category": "Image",
+      "blocks": [
+        {
+          "type": "heading",
+          "settings": {
+            "heading": "Three Showrooms. One Standard.",
+            "heading_size": "h1"
+          }
+        },
+        {
+          "type": "paragraph",
+          "settings": {
+            "content": "<p>Visit any of our retail locations to see our full inventory in person and talk to a safe expert who actually knows safes.</p>"
+          }
+        },
+        {
+          "type": "button"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
