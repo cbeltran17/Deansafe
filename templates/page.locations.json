@@ -24,9 +24,114 @@
         "top_spacing": 80,
         "bottom_spacing": 80
       }
+    },
+    "multi_image_with_text_AnhbPK": {
+      "type": "multi-image-with-text",
+      "blocks": {
+        "caption_39mffB": {
+          "type": "caption",
+          "name": "t:blocks.caption.name",
+          "settings": {
+            "caption": "Southern California",
+            "text_color": ""
+          },
+          "blocks": {}
+        },
+        "heading_489E4w": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h1",
+            "heading": "Three",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "heading_wtRk8a": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h1",
+            "heading": "Showrooms.",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "heading_zaQ9Rg": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h1",
+            "heading": "One Standard.",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_HQkye7": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "medium",
+            "text_color": "primary",
+            "content": "<p>Visit any of our retail locations to see our full inventory in person and talk to a safe expert who actually knows safes.</p>"
+          },
+          "blocks": {}
+        },
+        "button_xDntK8": {
+          "type": "button",
+          "settings": {
+            "size": "md",
+            "variant": "solid",
+            "label": "Call an Expert",
+            "url": "tel:18008277534",
+            "style": "primary",
+            "background_color": "",
+            "text_color": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "caption_39mffB",
+        "heading_489E4w",
+        "heading_wtRk8a",
+        "heading_zaQ9Rg",
+        "paragraph_HQkye7",
+        "button_xDntK8"
+      ],
+      "name": "Multi image with text",
+      "settings": {
+        "grid_gap": 10,
+        "full_width": false,
+        "image_width": 100,
+        "image_position": "right",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "multi_image_with_text_AnhbPK"
   ]
 }
