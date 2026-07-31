@@ -118,6 +118,9 @@
       ],
       "name": "Multi image with text",
       "settings": {
+        "image_1": "shopify://shop_images/DS-Simi-Valley-Showroom-Banner.jpg",
+        "image_2": "shopify://shop_images/Culver-city-banner-image-2.jpg",
+        "image_3": "shopify://shop_images/NoHo-Showroom-image.jpg",
         "grid_gap": 10,
         "full_width": false,
         "image_width": 100,
