@@ -33,7 +33,7 @@
           "name": "t:blocks.caption.name",
           "settings": {
             "caption": "Southern California",
-            "text_color": "#FFE030"
+            "text_color": "#ffe030"
           },
           "blocks": {}
         },
@@ -46,7 +46,7 @@
             "heading": "Three",
             "highlight_type": "underline",
             "highlight_layer": "default",
-            "heading_color": "#FFFFFF",
+            "heading_color": "#ffffff",
             "highlight_color": "",
             "heading_seo_tag": "p"
           },
@@ -62,7 +62,7 @@
             "heading": "Showrooms.",
             "highlight_type": "underline",
             "highlight_layer": "default",
-            "heading_color": "#FFE030",
+            "heading_color": "#ffe030",
             "highlight_color": "",
             "heading_seo_tag": "p"
           },
@@ -78,7 +78,7 @@
             "heading": "One Standard.",
             "highlight_type": "underline",
             "highlight_layer": "default",
-            "heading_color": "#FFFFFF",
+            "heading_color": "#ffffff",
             "highlight_color": "",
             "heading_seo_tag": "p"
           },
@@ -121,12 +121,12 @@
         "image_1": "shopify://shop_images/DS-Simi-Valley-Showroom-Banner.jpg",
         "image_2": "shopify://shop_images/Culver-city-banner-image-2.jpg",
         "image_3": "shopify://shop_images/NoHo-Showroom-image.jpg",
-        "grid_gap": 10,
+        "grid_gap": 0,
         "full_width": false,
         "image_width": 100,
         "image_position": "right",
         "background_color": "#122613",
-        "text_color": "#FFFFFF",
+        "text_color": "#ffffff",
         "enable_custom_spacing": false,
         "top_spacing": 80,
         "bottom_spacing": 80
