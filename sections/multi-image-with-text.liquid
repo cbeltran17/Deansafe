@@ -18,11 +18,11 @@
 %}
 
 <style>
-    {% if section.settings.background_color != blank and section.settings.background_color != 'rgba(0,0,0,0)' %}
-        #shopify-section-{{ section.id }} {
-            background-color: {{ section.settings.background_color }};
-        }
-    {% endif %}
+  {% if section.settings.background_color != blank and section.settings.background_color != 'rgba(0,0,0,0)' %}
+    #shopify-section-{{ section.id }} .media-with-text {
+      background-color: {{ section.settings.background_color }};
+    }
+  {% endif %}
 
   .multi-image-grid-{{ section.id }} {
     display: grid;
