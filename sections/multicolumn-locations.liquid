@@ -1,0 +1,409 @@
+<style>
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.top_spacing }}px;
+    padding-bottom: {{ section.settings.bottom_spacing }}px;
+    background-color: {{ section.settings.background_color }};
+  }
+
+  .locations-container {
+    max-width: var(--page-width, 1400px);
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Header Line Styling */
+  .locations-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .locations-header-title {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #888888;
+    white-space: nowrap;
+    margin: 0;
+  }
+  .locations-header-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #EAEAEA;
+  }
+
+  /* Grid Styling */
+  .locations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  @media screen and (max-width: 990px) {
+    .locations-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 750px) {
+    .locations-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Card Styling */
+  .location-card {
+    background-color: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .location-image-wrapper {
+    position: relative;
+    width: 100%;
+    border-bottom: 4px solid {{ section.settings.accent_color }};
+  }
+  
+  .location-image-wrapper img,
+  .location-image-wrapper svg {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .location-info {
+    padding: 30px 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .location-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333333;
+    margin: 0 0 4px 0;
+  }
+
+  .location-subtitle {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #888888;
+    margin: 0 0 24px 0;
+    font-weight: 600;
+  }
+
+  .location-address {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333333;
+    margin-bottom: 24px;
+  }
+  
+  .location-address p {
+    margin: 0 0 4px 0;
+  }
+
+  /* Hours Table Styling */
+  .location-hours {
+    width: 100%;
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 30px;
+    border-collapse: collapse;
+  }
+  
+  .location-hours td {
+    padding: 4px 0;
+    vertical-align: top;
+  }
+  
+  .location-hours td:first-child {
+    width: 80px;
+    color: #888888;
+  }
+
+  .location-hours td.closed-text {
+    color: #E24F4F;
+  }
+
+  /* Buttons Styling */
+  .location-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: auto; /* Pushes buttons to bottom of card */
+    padding-top: 24px;
+    border-top: 1px solid #EAEAEA;
+  }
+
+  .btn-location {
+    flex: 1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    text-align: center;
+  }
+
+  .btn-location:hover {
+    opacity: 0.85;
+  }
+
+  .btn-solid {
+    background-color: #1A2F1D;
+    color: #FFFFFF;
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    color: #333333;
+    border: 1px solid #333333;
+  }
+</style>
+
+<div class="locations-container">
+  {% if section.settings.heading != blank %}
+    <div class="locations-header">
+      <h2 class="locations-header-title">{{ section.settings.heading }}</h2>
+      <div class="locations-header-line"></div>
+    </div>
+  {% endif %}
+
+  <div class="locations-grid">
+    {% for block in section.blocks %}
+      <div class="location-card" {{ block.shopify_attributes }}>
+        
+        <div class="location-image-wrapper">
+          {% if block.settings.image != blank %}
+            {{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy' }}
+          {% else %}
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          {% endif %}
+        </div>
+
+        <div class="location-info">
+          {% if block.settings.title != blank %}
+            <h3 class="location-title">{{ block.settings.title }}</h3>
+          {% endif %}
+          
+          {% if block.settings.subtitle != blank %}
+            <p class="location-subtitle">{{ block.settings.subtitle }}</p>
+          {% endif %}
+
+          {% if block.settings.address != blank %}
+            <div class="location-address">
+              {{ block.settings.address }}
+            </div>
+          {% endif %}
+
+          <table class="location-hours">
+            <tbody>
+              {% if block.settings.day_1 != blank or block.settings.time_1 != blank %}
+                <tr>
+                  <td>{{ block.settings.day_1 }}</td>
+                  <td class="{% if block.settings.time_1 contains 'Closed' %}closed-text{% endif %}">{{ block.settings.time_1 }}</td>
+                </tr>
+              {% endif %}
+              
+              {% if block.settings.day_2 != blank or block.settings.time_2 != blank %}
+                <tr>
+                  <td>{{ block.settings.day_2 }}</td>
+                  <td class="{% if block.settings.time_2 contains 'Closed' %}closed-text{% endif %}">{{ block.settings.time_2 }}</td>
+                </tr>
+              {% endif %}
+              
+              {% if block.settings.day_3 != blank or block.settings.time_3 != blank %}
+                <tr>
+                  <td>{{ block.settings.day_3 }}</td>
+                  <td class="{% if block.settings.time_3 contains 'Closed' %}closed-text{% endif %}">{{ block.settings.time_3 }}</td>
+                </tr>
+              {% endif %}
+            </tbody>
+          </table>
+
+          <div class="location-actions">
+            {% if block.settings.btn_1_label != blank %}
+              <a href="{{ block.settings.btn_1_link }}" class="btn-location btn-solid">
+                {{ block.settings.btn_1_label }}
+              </a>
+            {% endif %}
+            
+            {% if block.settings.btn_2_label != blank %}
+              <a href="{{ block.settings.btn_2_link }}" class="btn-location btn-outline">
+                {{ block.settings.btn_2_label }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Multicolumn Locations",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "OUR LOCATIONS"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Image Accent Line Color",
+      "default": "#F8D12F"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section Background",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "top_spacing",
+      "label": "Top Spacing",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "label": "Bottom Spacing",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "location",
+      "name": "Location",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Location Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "City / Location Name",
+          "default": "Culver City"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Region / Subtitle",
+          "default": "WEST LOS ANGELES"
+        },
+        {
+          "type": "richtext",
+          "id": "address",
+          "label": "Address and Phone",
+          "default": "<p>11284 Washington Place<br>Culver City, CA 90230<br><strong>(310) 945-4099</strong></p>"
+        },
+        {
+          "type": "header",
+          "content": "Store Hours"
+        },
+        {
+          "type": "text",
+          "id": "day_1",
+          "label": "Day Row 1",
+          "default": "Mon - Fri"
+        },
+        {
+          "type": "text",
+          "id": "time_1",
+          "label": "Time Row 1",
+          "default": "10:00 AM - 6:00 PM"
+        },
+        {
+          "type": "text",
+          "id": "day_2",
+          "label": "Day Row 2",
+          "default": "Saturday"
+        },
+        {
+          "type": "text",
+          "id": "time_2",
+          "label": "Time Row 2",
+          "default": "10:00 AM - 3:00 PM"
+        },
+        {
+          "type": "text",
+          "id": "day_3",
+          "label": "Day Row 3",
+          "default": "Sunday"
+        },
+        {
+          "type": "text",
+          "id": "time_3",
+          "label": "Time Row 3 (Type 'Closed' to make it red)",
+          "default": "Closed"
+        },
+        {
+          "type": "header",
+          "content": "Buttons"
+        },
+        {
+          "type": "text",
+          "id": "btn_1_label",
+          "label": "Solid Button Label",
+          "default": "VIEW LOCATION"
+        },
+        {
+          "type": "url",
+          "id": "btn_1_link",
+          "label": "Solid Button Link"
+        },
+        {
+          "type": "text",
+          "id": "btn_2_label",
+          "label": "Outline Button Label",
+          "default": "DIRECTIONS"
+        },
+        {
+          "type": "url",
+          "id": "btn_2_link",
+          "label": "Outline Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Multicolumn Locations",
+      "blocks": [
+        { "type": "location" },
+        { "type": "location" },
+        { "type": "location" }
+      ]
+    }
+  ]
+}
+{% endschema %}
