@@ -273,7 +273,7 @@
       ],
       "name": "Map with text",
       "settings": {
-        "map_iframe": "",
+        "map_iframe": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d845002.7747422213!2d-118.58429499999998!3d34.177233!3m2!1i1024!2i768!4f13.1!2m1!1sdean%20safe!5e0!3m2!1sen!2sus!4v1785749920816!5m2!1sen!2sus\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"strict-origin-when-cross-origin\"></iframe>",
         "full_width": false,
         "gap": false,
         "image_width": 100,
