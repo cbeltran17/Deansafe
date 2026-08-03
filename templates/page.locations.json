@@ -352,9 +352,9 @@
         "btn1_link": "shopify://collections/shop-all-products",
         "btn2_label": "",
         "btn2_link": "",
-        "bg_color": "#FFE030",
-        "heading_color": "#ffffff",
-        "text_color": "#f0f0f0",
+        "bg_color": "#ffe030",
+        "heading_color": "#1E1E1E",
+        "text_color": "#1E1E1E",
         "padding_top": 36,
         "padding_bottom": 36
       }
