@@ -500,7 +500,7 @@
           "type": "_image_with_text_slide",
           "settings": {
             "image": "shopify://shop_images/Barska_AX13744_14.jpg",
-            "background_color": "#D4D4D4",
+            "background_color": "#d4d4d4",
             "text_color": "rgba(0,0,0,0)"
           },
           "blocks": {
@@ -1296,6 +1296,7 @@
         "icon_text_PA4MAB",
         "icon_text_EAqrkM"
       ],
+      "disabled": true,
       "name": "t:sections.text_with_icons.name",
       "settings": {
         "enable_carousel_on_mobile": false,
@@ -1356,7 +1357,7 @@
         "text_color": "#ffffff",
         "enable_custom_spacing": true,
         "top_spacing": 0,
-        "bottom_spacing": 80
+        "bottom_spacing": 0
       }
     }
   },
