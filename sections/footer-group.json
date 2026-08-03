@@ -11,6 +11,64 @@
   "type": "footer",
   "name": "Footer",
   "sections": {
+    "text_with_icons_XiJzpN": {
+      "type": "text-with-icons",
+      "blocks": {
+        "icon_text_XXxHki": {
+          "type": "icon_text",
+          "settings": {
+            "icon_name": "truck",
+            "heading": "Free Shipping",
+            "text": "On orders $100+"
+          }
+        },
+        "icon_text_NqghzU": {
+          "type": "icon_text",
+          "settings": {
+            "icon_name": "return",
+            "heading": "Easy Returns",
+            "text": "30 day returns"
+          }
+        },
+        "icon_text_GxYJQ4": {
+          "type": "icon_text",
+          "settings": {
+            "icon_name": "headphones",
+            "heading": "Live Customer Support",
+            "text": "Real safe experts"
+          }
+        },
+        "icon_text_etNreR": {
+          "type": "icon_text",
+          "settings": {
+            "icon_name": "box",
+            "heading": "Showroom Pickup",
+            "text": "3 social locations"
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_XXxHki",
+        "icon_text_NqghzU",
+        "icon_text_GxYJQ4",
+        "icon_text_etNreR"
+      ],
+      "name": "t:sections.text_with_icons.name",
+      "settings": {
+        "enable_carousel_on_mobile": false,
+        "columns_per_row": 4,
+        "columns_per_row_mobile": "2",
+        "icon_position": "left",
+        "icon_position_mobile": "top",
+        "background_color": "",
+        "text_color": "",
+        "heading_color": "",
+        "icon_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
     "multicolumn_38BerY": {
       "type": "multicolumn",
       "blocks": {
@@ -156,6 +214,7 @@
     }
   },
   "order": [
+    "text_with_icons_XiJzpN",
     "multicolumn_38BerY",
     "footer"
   ]
