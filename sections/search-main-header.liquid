@@ -1,0 +1,41 @@
+{% render 'section-meta', blend: true, blend_bg: section.settings.background_color %}
+
+<div class="section-full-width" style="padding-top: 40px; padding-bottom: 20px;">
+  <div class="mb-12 flex flex-col items-center gap-6">
+    <h1 class="h1">
+      {% if section.settings.heading != blank %}
+        {{ section.settings.heading }}
+      {% else %}
+        {{ 'general.search.search' | t }}
+      {% endif %}
+    </h1>
+    
+    {% render 'search-input', value: search.terms, class: 'w-full max-w-xl', id: 'custom-main-search' %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Search Main Header",
+  "class": "section-main-header-search",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading text",
+      "info": "Leave blank to use the default translation."
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Search Main Header",
+      "category": "Search"
+    }
+  ]
+}
+{% endschema %}
