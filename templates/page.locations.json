@@ -348,13 +348,13 @@
       "settings": {
         "heading": "Can't Make It In?",
         "text": "<p>We ship select products anywhere in the continental US — free of charge. Alaska and Hawaii available on a per-quote basis.</p>",
-        "btn1_label": "Shop Online",
-        "btn1_link": "shopify://collections/shop-all-products",
-        "btn2_label": "",
-        "btn2_link": "",
+        "btn1_label": "",
+        "btn1_link": "",
+        "btn2_label": "Shop Online",
+        "btn2_link": "shopify://collections/shop-all-products",
         "bg_color": "#ffe030",
-        "heading_color": "#1E1E1E",
-        "text_color": "#1E1E1E",
+        "heading_color": "#1e1e1e",
+        "text_color": "#1e1e1e",
         "padding_top": 36,
         "padding_bottom": 36
       }
