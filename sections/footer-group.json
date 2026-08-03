@@ -41,7 +41,7 @@
         "icon_text_etNreR": {
           "type": "icon_text",
           "settings": {
-            "icon_name": "box",
+            "icon_name": "package",
             "heading": "Showroom Pickup",
             "text": "3 social locations"
           }
