@@ -330,10 +330,10 @@
         "columns_per_row_mobile": "1",
         "icon_position": "left",
         "icon_position_mobile": "top",
-        "background_color": "#F4F4F4",
+        "background_color": "",
         "text_color": "",
         "heading_color": "",
-        "icon_color": "#095F41",
+        "icon_color": "#095f41",
         "enable_custom_spacing": true,
         "top_spacing": 80,
         "bottom_spacing": 80
