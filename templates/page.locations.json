@@ -324,7 +324,7 @@
         "icon_text_Qnjetr"
       ],
       "custom_css": [
-        ".section-text-with-icons .container-inline-size {background-color: #f4f4f4; padding: 3rem; border-radius: 12px;}"
+        ".section-text-with-icons .container-inline-size {background-color: #f4f4f4; padding: 2rem; border-radius: 12px;}"
       ],
       "name": "t:sections.text_with_icons.name",
       "settings": {
