@@ -199,9 +199,91 @@
       "name": "Multicolumn Locations",
       "settings": {
         "heading": "OUR LOCATIONS",
-        "accent_color": "#F8D12F",
+        "accent_color": "#f8d12f",
         "full_width": false,
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
+    "map_with_text_kCamMR": {
+      "type": "map-with-text",
+      "blocks": {
+        "heading_KNUXHc": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h2",
+            "heading": "All three locations across",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "heading_iUz8CG": {
+          "type": "heading",
+          "name": "t:blocks.heading.name",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h2",
+            "heading": "Southern California",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_rLazKm": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "medium",
+            "text_color": "primary",
+            "content": "<p>Whether you're coming from the Valley, the Westside, or Ventura County, there's a Dean Safe showroom nearby. Our experts are on the floor to help — no pressure, just knowledge.</p>"
+          },
+          "blocks": {}
+        },
+        "button_LBJxCT": {
+          "type": "button",
+          "settings": {
+            "size": "md",
+            "variant": "solid",
+            "label": "Call (800) 827-7534",
+            "url": "tel:18008277534",
+            "style": "primary",
+            "background_color": "",
+            "text_color": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_KNUXHc",
+        "heading_iUz8CG",
+        "paragraph_rLazKm",
+        "button_LBJxCT"
+      ],
+      "name": "Map with text",
+      "settings": {
+        "map_iframe": "",
+        "full_width": false,
+        "gap": false,
+        "image_width": 100,
+        "image_position": "right",
+        "image_size": "",
+        "image_height": 480,
+        "image_size_mobile": "same",
+        "image_height_mobile": 480,
+        "background_color": "",
+        "text_color": "",
         "enable_custom_spacing": false,
         "top_spacing": 80,
         "bottom_spacing": 80
@@ -211,6 +293,7 @@
   "order": [
     "main",
     "multi_image_with_text_AnhbPK",
-    "multicolumn_locations_UABhK3"
+    "multicolumn_locations_UABhK3",
+    "map_with_text_kCamMR"
   ]
 }
