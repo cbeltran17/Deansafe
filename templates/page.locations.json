@@ -334,7 +334,7 @@
         "text_color": "",
         "heading_color": "",
         "icon_color": "#095F41",
-        "enable_custom_spacing": false,
+        "enable_custom_spacing": true,
         "top_spacing": 80,
         "bottom_spacing": 80
       }
