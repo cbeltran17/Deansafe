@@ -459,6 +459,6 @@ media-lightbox media-carousel .media-carousel img {
     box-shadow: inset 0 0 0 1px rgb(103 100 98);
 }
 
-.boost-sd-container-search-page .boost-sd__search-form-wrapper {
+.boost-sd-container-search-page .boost-sd__search-form-wrapper, .boost-sd-container-search-page .boost-sd__search-result-toolbar-container {
 	display: none;
 }
