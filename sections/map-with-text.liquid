@@ -1,0 +1,293 @@
+{% liquid
+  assign lg_ratio = 200.0 | divided_by: section.settings.image_width
+  capture sizes
+    render 'sizes', base: 1, lg: lg_ratio
+  endcapture
+
+  if section.settings.full_width == false
+    assign blend = true
+  endif
+%}
+
+{% render 'section-meta', blend: blend %}
+
+{% render 'image-size-vars',
+  selector: '.media-with-text__media',
+  breakpoint: 1024,
+  min_width: '100%'
+%}
+
+{% capture media %}
+  <div class="map-iframe-wrapper" style="width: 100%; height: 100%; min-height: 400px; display: block; overflow: hidden;">
+    {% if section.settings.map_iframe != blank %}
+      {{ section.settings.map_iframe | replace: '<iframe', '<iframe style="width: 100%; height: 100%; border: 0; min-height: 400px;"' }}
+    {% else %}
+      <div style="width: 100%; height: 100%; min-height: 400px; background: #f4f4f4; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px;">
+        <p style="color: #666; margin: 0;"><strong>Map Placeholder</strong><br>Paste your Google Maps iframe code in the section settings.</p>
+      </div>
+    {% endif %}
+  </div>
+{% endcapture %}
+
+{% capture content %}
+  <animation-element
+    stagger="100"
+    autoplay
+    selector=".shopify-block"
+    class="media-with-text__text-inner block-spacing"
+  >
+    {% content_for 'blocks' %}
+  </animation-element>
+{% endcapture %}
+
+{% render 'media-with-text', media: media, content: content, section_spacing: true %}
+
+{% schema %}
+{
+  "name": "Map with text",
+  "class": "section-map-with-text",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "map_iframe",
+      "label": "Map Iframe Code",
+      "info": "Go to Google Maps, click 'Share' > 'Embed a map' and paste the HTML code here."
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "gap",
+      "label": "Enable gap",
+      "default": false,
+      "visible_if": "{{ section.settings.full_width == false }}"
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "label": "Map width",
+      "min": 50,
+      "max": 150,
+      "step": 10,
+      "default": 100,
+      "unit": "%"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Map position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "select",
+      "id": "image_size",
+      "label": "Map size proportion",
+      "options": [
+        {
+          "value": "",
+          "label": "Original size"
+        },
+        {
+          "value": "custom_height",
+          "label": "Custom height"
+        },
+        {
+          "value": "max_height",
+          "label": "Max height"
+        },
+        {
+          "value": "2/3",
+          "label": "Portrait (2:3)"
+        },
+        {
+          "value": "3/4",
+          "label": "Portrait (3:4)"
+        },
+        {
+          "value": "1/1",
+          "label": "Square (1:1)"
+        },
+        {
+          "value": "4/3",
+          "label": "Landscape (4:3)"
+        },
+        {
+          "value": "3/2",
+          "label": "Landscape (3:2)"
+        },
+        {
+          "value": "16/9",
+          "label": "Wide (16:9)"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "range",
+      "id": "image_height",
+      "min": 240,
+      "max": 960,
+      "step": 40,
+      "unit": "px",
+      "label": "Map desktop height",
+      "default": 480,
+      "visible_if": "{{ section.settings.image_size == 'custom_height' or section.settings.image_size == 'max_height' }}"
+    },
+    {
+      "type": "header",
+      "content": "Mobile Layout"
+    },
+    {
+      "type": "select",
+      "id": "image_size_mobile",
+      "label": "Map size mobile",
+      "options": [
+        {
+          "value": "same",
+          "label": "Same as desktop"
+        },
+        {
+          "value": "",
+          "label": "Original size"
+        },
+        {
+          "value": "custom_height",
+          "label": "Custom height"
+        },
+        {
+          "value": "max_height",
+          "label": "Max height"
+        },
+        {
+          "value": "2/3",
+          "label": "Portrait (2:3)"
+        },
+        {
+          "value": "3/4",
+          "label": "Portrait (3:4)"
+        },
+        {
+          "value": "1/1",
+          "label": "Square (1:1)"
+        },
+        {
+          "value": "4/3",
+          "label": "Landscape (4:3)"
+        },
+        {
+          "value": "3/2",
+          "label": "Landscape (3:2)"
+        },
+        {
+          "value": "16/9",
+          "label": "Wide (16:9)"
+        }
+      ],
+      "default": "same"
+    },
+    {
+      "type": "range",
+      "id": "image_height_mobile",
+      "min": 240,
+      "max": 960,
+      "step": 40,
+      "unit": "px",
+      "label": "Map mobile height",
+      "default": 480,
+      "visible_if": "{{ section.settings.image_size_mobile == 'custom_height' or section.settings.image_size_mobile == 'max_height' }}"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_custom_spacing",
+      "label": "Enable custom spacing",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "top_spacing",
+      "label": "Top spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing == true }}"
+    },
+    {
+      "type": "range",
+      "id": "bottom_spacing",
+      "label": "Bottom spacing",
+      "min": 0,
+      "max": 128,
+      "step": 8,
+      "default": 80,
+      "unit": "px",
+      "visible_if": "{{ section.settings.enable_custom_spacing == true }}"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@theme"
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "custom.overlay"]
+  },
+  "presets": [
+    {
+      "name": "Map with text",
+      "blocks": [
+        {
+          "type": "heading",
+          "settings": {
+            "heading": "Visit our store",
+            "heading_size": "h2"
+          }
+        },
+        {
+          "type": "paragraph",
+          "settings": {
+            "content": "<p>Find us at our central location. We're open Monday through Friday.</p>"
+          }
+        },
+        {
+          "type": "button"
+        }
+      ],
+      "category": "Media"
+    }
+  ]
+}
+{% endschema %}
