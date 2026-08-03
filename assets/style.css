@@ -462,3 +462,7 @@ media-lightbox media-carousel .media-carousel img {
 .boost-sd-container-search-page .boost-sd__search-form-wrapper, .boost-sd-container-search-page .boost-sd__search-result-toolbar-container {
 	display: none;
 }
+
+.section-main-header-search .mb-12 {
+    margin-bottom: 1rem;
+}
