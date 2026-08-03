@@ -236,7 +236,7 @@
             "heading": "Southern California",
             "highlight_type": "underline",
             "highlight_layer": "default",
-            "heading_color": "#FFE030",
+            "heading_color": "#ffe030",
             "highlight_color": "",
             "heading_seo_tag": "p"
           },
@@ -284,7 +284,56 @@
         "image_size_mobile": "same",
         "image_height_mobile": 480,
         "background_color": "#122613",
-        "text_color": "#FFFFFF",
+        "text_color": "#ffffff",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
+    "text_with_icons_WCi9bh": {
+      "type": "text-with-icons",
+      "blocks": {
+        "icon_text_CMUjYb": {
+          "type": "icon_text",
+          "settings": {
+            "icon_name": "shield",
+            "heading": "40+ Years in Business",
+            "text": "Family-owned and operated since the 1980s with deep roots in Southern California."
+          }
+        },
+        "icon_text_FPCCxe": {
+          "type": "icon_text",
+          "settings": {
+            "icon_name": "user",
+            "heading": "Expert Staff On-Floor",
+            "text": "No commission pressure. Our team gives honest advice so you buy the right safe the first time."
+          }
+        },
+        "icon_text_Qnjetr": {
+          "type": "icon_text",
+          "settings": {
+            "icon_name": "truck",
+            "heading": "Delivery & Installation",
+            "text": "We move and install your safe whether it's up stairs, through a doorway, or bolted to concrete."
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_CMUjYb",
+        "icon_text_FPCCxe",
+        "icon_text_Qnjetr"
+      ],
+      "name": "t:sections.text_with_icons.name",
+      "settings": {
+        "enable_carousel_on_mobile": false,
+        "columns_per_row": 4,
+        "columns_per_row_mobile": "2",
+        "icon_position": "left",
+        "icon_position_mobile": "top",
+        "background_color": "",
+        "text_color": "",
+        "heading_color": "",
+        "icon_color": "",
         "enable_custom_spacing": false,
         "top_spacing": 80,
         "bottom_spacing": 80
@@ -295,6 +344,7 @@
     "main",
     "multi_image_with_text_AnhbPK",
     "multicolumn_locations_UABhK3",
-    "map_with_text_kCamMR"
+    "map_with_text_kCamMR",
+    "text_with_icons_WCi9bh"
   ]
 }
