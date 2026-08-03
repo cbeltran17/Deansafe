@@ -226,6 +226,7 @@
         "icon_text_KFybXg",
         "icon_text_izktht"
       ],
+      "disabled": true,
       "name": "t:sections.text_with_icons.name",
       "settings": {
         "enable_carousel_on_mobile": false,
