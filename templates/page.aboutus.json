@@ -33,7 +33,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h2",
+            "heading_size": "h4",
             "heading": "Largest Selection of In-Stock Safes on the West Coast",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -54,8 +54,8 @@
         "background_color": "#ffe030",
         "text_color": "",
         "enable_custom_spacing": true,
-        "top_spacing": 24,
-        "bottom_spacing": 24
+        "top_spacing": 16,
+        "bottom_spacing": 16
       }
     },
     "slideshow_Ht9ekq": {
