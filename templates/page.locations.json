@@ -341,6 +341,23 @@
         "top_spacing": 80,
         "bottom_spacing": 80
       }
+    },
+    "text_with_buttons_jz99az": {
+      "type": "text-with-buttons",
+      "name": "Text with Buttons",
+      "settings": {
+        "heading": "Can't Make It In?",
+        "text": "<p>We ship select products anywhere in the continental US — free of charge. Alaska and Hawaii available on a per-quote basis.</p>",
+        "btn1_label": "Shop Online",
+        "btn1_link": "shopify://collections/shop-all-products",
+        "btn2_label": "",
+        "btn2_link": "",
+        "bg_color": "#FFE030",
+        "heading_color": "#ffffff",
+        "text_color": "#f0f0f0",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -348,6 +365,7 @@
     "multi_image_with_text_AnhbPK",
     "multicolumn_locations_UABhK3",
     "map_with_text_kCamMR",
-    "text_with_icons_WCi9bh"
+    "text_with_icons_WCi9bh",
+    "text_with_buttons_jz99az"
   ]
 }
