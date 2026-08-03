@@ -33,6 +33,14 @@
         "product_card_text_color": ""
       }
     },
+    "search_main_header_wXQ89B": {
+      "type": "search-main-header",
+      "name": "Search Main Header",
+      "settings": {
+        "heading": "",
+        "background_color": ""
+      }
+    },
     "7563b917-3b89-43a4-8c86-c56c0099bcc7": {
       "type": "apps",
       "blocks": {
@@ -49,6 +57,7 @@
   },
   "order": [
     "main-search",
+    "search_main_header_wXQ89B",
     "7563b917-3b89-43a4-8c86-c56c0099bcc7"
   ]
 }
