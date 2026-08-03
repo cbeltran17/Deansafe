@@ -236,7 +236,7 @@
             "heading": "Southern California",
             "highlight_type": "underline",
             "highlight_layer": "default",
-            "heading_color": "",
+            "heading_color": "#FFE030",
             "highlight_color": "",
             "heading_seo_tag": "p"
           },
@@ -259,7 +259,7 @@
             "variant": "solid",
             "label": "Call (800) 827-7534",
             "url": "tel:18008277534",
-            "style": "primary",
+            "style": "white",
             "background_color": "",
             "text_color": ""
           },
@@ -283,8 +283,8 @@
         "image_height": 480,
         "image_size_mobile": "same",
         "image_height_mobile": 480,
-        "background_color": "",
-        "text_color": "",
+        "background_color": "#122613",
+        "text_color": "#FFFFFF",
         "enable_custom_spacing": false,
         "top_spacing": 80,
         "bottom_spacing": 80
