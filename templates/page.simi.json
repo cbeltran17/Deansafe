@@ -175,7 +175,7 @@
         "button_r6wXmw"
       ],
       "custom_css": [
-        ".media-with-text__text{text-align: right;}"
+        ".media-with-text__text {text-align: right;}"
       ],
       "name": "t:sections.image_with_text.name",
       "settings": {
@@ -194,11 +194,40 @@
         "top_spacing": 80,
         "bottom_spacing": 80
       }
+    },
+    "rich_text_xHaFPF": {
+      "type": "rich-text",
+      "blocks": {
+        "paragraph_JVnymY": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p><em>Visit us in person on the corner of Easy Street and Ward Ave, between First St and Madera Rd in Simi Valley, CA.</em></p>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "paragraph_JVnymY"
+      ],
+      "name": "t:sections.rich_text.name",
+      "settings": {
+        "full_width": true,
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
     }
   },
   "order": [
     "main",
     "slideshow_gUVjwB",
-    "image_with_text_DKV4jA"
+    "image_with_text_DKV4jA",
+    "rich_text_xHaFPF"
   ]
 }
