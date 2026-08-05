@@ -1,0 +1,539 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_width": "medium",
+        "content_text_size": "medium",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "heading_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
+    "slideshow_gUVjwB": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_TedMjB": {
+          "type": "_slide",
+          "settings": {
+            "type": "image",
+            "image": "shopify://shop_images/DS-Simi-Valley-Showroom-Banner.jpg",
+            "content_position": "bottom-center",
+            "content_position_mobile": "",
+            "text_color": "#ffffff",
+            "heading_color": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 50
+          },
+          "blocks": {
+            "heading_pFtAML": {
+              "type": "heading",
+              "settings": {
+                "full_width": true,
+                "max_width": 500,
+                "heading_size": "h0",
+                "heading": "New Simi Showroom",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "",
+                "highlight_color": "",
+                "heading_seo_tag": "p"
+              },
+              "blocks": {}
+            },
+            "paragraph_9aRxHK": {
+              "type": "paragraph",
+              "name": "t:blocks.paragraph.name",
+              "settings": {
+                "paragraph_size": "lg",
+                "paragraph_width": "medium",
+                "text_color": "primary",
+                "content": "<p><a href=\"https://goo.gl/maps/zDbHoCYhQTKisz5z6\" target=\"_blank\" title=\"https://goo.gl/maps/zDbHoCYhQTKisz5z6\">2130 Ward Ave Simi Valley, CA 93065</a></p>"
+              },
+              "blocks": {}
+            },
+            "button_group_eV8rwt": {
+              "type": "button-group",
+              "settings": {},
+              "blocks": {
+                "button_4Q7AMa": {
+                  "type": "button",
+                  "settings": {
+                    "size": "md",
+                    "variant": "outline",
+                    "label": "Get Directions",
+                    "url": "https://goo.gl/maps/zDbHoCYhQTKisz5z6",
+                    "style": "white",
+                    "background_color": "",
+                    "text_color": ""
+                  },
+                  "blocks": {}
+                },
+                "button_baKDDt": {
+                  "type": "button",
+                  "settings": {
+                    "size": "md",
+                    "variant": "outline",
+                    "label": "Call Location",
+                    "url": "tel:+8055265443",
+                    "style": "white",
+                    "background_color": "",
+                    "text_color": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "button_4Q7AMa",
+                "button_baKDDt"
+              ]
+            }
+          },
+          "block_order": [
+            "heading_pFtAML",
+            "paragraph_9aRxHK",
+            "button_group_eV8rwt"
+          ]
+        }
+      },
+      "block_order": [
+        "slide_TedMjB"
+      ],
+      "name": "t:sections.slideshow.name",
+      "settings": {
+        "full_width": false,
+        "media_size": "original",
+        "height": 640,
+        "autoplay": false,
+        "autoplay_interval": 5,
+        "background_color": "",
+        "enable_custom_spacing": true,
+        "top_spacing": 24,
+        "bottom_spacing": 80
+      }
+    },
+    "image_with_text_DKV4jA": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_nXMj8h": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h2",
+            "heading": "Store Information",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_Anf7i6": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "medium",
+            "text_color": "primary",
+            "content": "<p><a href=\"tel:+8055265443\" title=\"tel:+8055265443\"><strong>(805) 526-5443</strong></a></p><p>2130 Ward Ave<br/>Simi Valley, CA 93065</p><p>STORE HOURS (PST)<br/>Monday: <strong>9:00am - 6:00pm</strong><br/>Tuesday: <strong>9:00am - 6:00pm</strong><br/>Wednesday: <strong>9:00am - 6:00pm</strong><br/>Thursday: <strong>9:00am - 6:00pm</strong><br/>Friday: <strong>9:00am - 6:00pm</strong><br/>Saturday: <strong>10:00am - 3:00pm</strong><br/>Sunday: <strong>CLOSED</strong></p><p>PARKING<br/><strong>Free Parking</strong></p>"
+          },
+          "blocks": {}
+        },
+        "button_r6wXmw": {
+          "type": "button",
+          "settings": {
+            "size": "md",
+            "variant": "outline",
+            "label": "Get Directions",
+            "url": "https://www.google.com/maps/place/2130+Ward+Ave,+Simi+Valley,+CA+93065/@34.2743336,-118.7869357,17z/data=!3m1!4b1!4m5!3m4!1s0x80e82ec14503fac9:0x90f5277b6de5ad94!8m2!3d34.2743336!4d-118.784747?shorturl=1",
+            "style": "black",
+            "background_color": "",
+            "text_color": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_nXMj8h",
+        "paragraph_Anf7i6",
+        "button_r6wXmw"
+      ],
+      "custom_css": [
+        ".media-with-text__text {text-align: right;}"
+      ],
+      "name": "t:sections.image_with_text.name",
+      "settings": {
+        "image": "shopify://shop_images/Showroom-Gallery_3.jpg",
+        "full_width": false,
+        "gap": false,
+        "image_width": 100,
+        "image_position": "right",
+        "image_size": "",
+        "image_height": 480,
+        "image_size_mobile": "same",
+        "image_height_mobile": 480,
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
+    "rich_text_xHaFPF": {
+      "type": "rich-text",
+      "blocks": {
+        "paragraph_JVnymY": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p><em>Visit us in person on the corner of Easy Street and Ward Ave, between First St and Madera Rd in Simi Valley, CA.</em></p>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "paragraph_JVnymY"
+      ],
+      "name": "t:sections.rich_text.name",
+      "settings": {
+        "full_width": true,
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": true,
+        "top_spacing": 0,
+        "bottom_spacing": 16
+      }
+    },
+    "map_k4natF": {
+      "type": "map",
+      "blocks": {
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
+          },
+          "blocks": {}
+        }
+      },
+      "name": "Map",
+      "settings": {
+        "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3296.986756651777!2d-118.78483809999999!3d34.274389899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82ec14503fac9%3A0x90f5277b6de5ad94!2s2130%20Ward%20Ave%2C%20Simi%20Valley%2C%20CA%2093065%2C%20USA!5e0!3m2!1sen!2sin!4v1785921489088!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"strict-origin-when-cross-origin\"></iframe>",
+        "map_height": 500,
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
+    "image_with_text_cTB7rD": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_EFaXJi": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h2",
+            "heading": "About Dean Safe Simi Valley",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_EWBkqG": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "medium",
+            "text_color": "primary",
+            "content": "<p>Dean Safe's Simi Valley brand new showroom in Ventura County features the latest and best safes and vaults available today.</p><p>As the largest safe store in Ventura County, our Simi Valley location offers a wide selection of safes from top manufacturers, including both new and used options at discounted prices.</p><p>Our knowledgeable and friendly staff, Mary and Kelly, are available to provide expert advice and assistance in choosing the right safe for your specific needs. In addition to showcasing a diverse range of gun, home, office, handgun, and personal safes, our showroom also offers traditional customer service with the option of will call or white glove delivery for your purchased safe.</p><p>Furthermore, for those in need of relocation or temporary movement of their safe, we provide a professional moving service and encourage you to contact us for a personalized estimate. Come visit us today at our new location on the corner of Easy St. and Ward Ave!</p>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_EFaXJi",
+        "paragraph_EWBkqG"
+      ],
+      "name": "t:sections.image_with_text.name",
+      "settings": {
+        "image": "shopify://shop_images/IMG_0469-2.jpg",
+        "full_width": false,
+        "gap": false,
+        "image_width": 100,
+        "image_position": "left",
+        "image_size": "",
+        "image_height": 480,
+        "image_size_mobile": "same",
+        "image_height_mobile": 480,
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
+    "multicolumn_B3zg7H": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_VVqRJR": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Showroom-Gallery_9.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_RMetaa": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Showroom-Gallery_6.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_qaAQDU": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Showroom-Gallery_7.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_cygByF": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Showroom-Gallery_8.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_4qbJkj": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Showroom-Gallery_4.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_AKHTHz": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Showroom-Gallery_3.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_iCrYMN": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Showroom-Gallery_2.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_9KrPtX": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Showroom-Gallery_1.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
+          },
+          "blocks": {
+            "heading_heXQjj": {
+              "type": "heading",
+              "name": "t:blocks.heading.name",
+              "settings": {
+                "full_width": true,
+                "max_width": 500,
+                "heading_size": "h2",
+                "heading": "Showroom Gallery",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "",
+                "highlight_color": "",
+                "heading_seo_tag": "p"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_heXQjj"
+          ]
+        }
+      },
+      "block_order": [
+        "column_VVqRJR",
+        "column_RMetaa",
+        "column_qaAQDU",
+        "column_cygByF",
+        "column_4qbJkj",
+        "column_AKHTHz",
+        "column_iCrYMN",
+        "column_9KrPtX"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "enable_carousel": true,
+        "columns": 3,
+        "columns_mobile": 1,
+        "column_gap": 8,
+        "column_alignment": "center",
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
+    "rich_text_kbJAqR": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Rm4eLx": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h2",
+            "heading": "More Information",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_z3F74p": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p>Opening originally as a small locksmith shop in Arleta, CA in 1978, Dean Safe has grown tremendously within the past 40 years. Our brand new Simi Valley showroom location opened in October of 2021.</p><p>Dean Safe Simi Valley features the largest selection of safes including gun safes, home and office safes, high security safes, fire and burglary safes,<br/>wall safes, floor safes, drop safes & more. Dean Safe Company offers only the best selection of brand name safes & vaults in the industry, including brands like, American Security Safes (AMSEC), Fort Knox Vaults, Liberty Safes, Rhino, Stealth, Hollon, etc.</p><p>When it comes to protecting your valuable possessions, Dean Safe is the name you can trust. Our safes are designed with the highest level of security in mind, ensuring that your belongings are safe from theft, fire, and other potential risks.</p><p>Our experts at Dean Safe will fit you with the perfect safe for your needs. Dean Safe Company has a team of professional safe movers that offer local in-home delivery and installation. Plus, check out our large collection of used or blemished safes, all at discounted prices. Come meet Mary and Kelly in Dean Safe Simi Valley today!</p>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_Rm4eLx",
+        "paragraph_z3F74p"
+      ],
+      "name": "t:sections.rich_text.name",
+      "settings": {
+        "full_width": true,
+        "text_alignment": "left",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": true,
+        "top_spacing": 0,
+        "bottom_spacing": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "slideshow_gUVjwB",
+    "image_with_text_DKV4jA",
+    "rich_text_xHaFPF",
+    "map_k4natF",
+    "image_with_text_cTB7rD",
+    "multicolumn_B3zg7H",
+    "rich_text_kbJAqR"
+  ]
+}
