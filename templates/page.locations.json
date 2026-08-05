@@ -98,7 +98,7 @@
           "type": "button",
           "settings": {
             "size": "md",
-            "variant": "solid",
+            "variant": "outline",
             "label": "Call an Expert",
             "url": "tel:18008277534",
             "style": "white",
@@ -256,7 +256,7 @@
           "type": "button",
           "settings": {
             "size": "md",
-            "variant": "solid",
+            "variant": "outline",
             "label": "Call (800) 827-7534",
             "url": "tel:18008277534",
             "style": "white",
