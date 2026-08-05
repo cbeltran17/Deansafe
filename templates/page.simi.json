@@ -299,6 +299,202 @@
         "bottom_spacing": 80
       }
     },
+    "media_grid_9YWNVQ": {
+      "type": "media-grid",
+      "blocks": {
+        "media_card_niJdW7": {
+          "type": "_media_card",
+          "settings": {
+            "image": "shopify://shop_images/Showroom-Gallery_9.jpg",
+            "content_position": "middle-center",
+            "image_size": "",
+            "image_height": 480,
+            "content_position_mobile": "",
+            "image_size_mobile": "same",
+            "image_height_mobile": 480,
+            "background_color": "",
+            "text_color": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          },
+          "blocks": {}
+        },
+        "media_card_ffLNJJ": {
+          "type": "_media_card",
+          "settings": {
+            "image": "shopify://shop_images/Showroom-Gallery_6.jpg",
+            "content_position": "middle-center",
+            "image_size": "",
+            "image_height": 480,
+            "content_position_mobile": "",
+            "image_size_mobile": "same",
+            "image_height_mobile": 480,
+            "background_color": "",
+            "text_color": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          },
+          "blocks": {}
+        },
+        "media_card_EtXwqA": {
+          "type": "_media_card",
+          "settings": {
+            "image": "shopify://shop_images/Showroom-Gallery_7.jpg",
+            "content_position": "middle-center",
+            "image_size": "",
+            "image_height": 480,
+            "content_position_mobile": "",
+            "image_size_mobile": "same",
+            "image_height_mobile": 480,
+            "background_color": "",
+            "text_color": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          },
+          "blocks": {}
+        },
+        "media_card_A4JJbi": {
+          "type": "_media_card",
+          "name": "t:blocks._media_card.name",
+          "settings": {
+            "content_position": "middle-center",
+            "image_size": "",
+            "image_height": 480,
+            "content_position_mobile": "",
+            "image_size_mobile": "same",
+            "image_height_mobile": 480,
+            "background_color": "",
+            "text_color": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          },
+          "blocks": {}
+        },
+        "media_card_yfyJRk": {
+          "type": "_media_card",
+          "name": "t:blocks._media_card.name",
+          "settings": {
+            "content_position": "middle-center",
+            "image_size": "",
+            "image_height": 480,
+            "content_position_mobile": "",
+            "image_size_mobile": "same",
+            "image_height_mobile": 480,
+            "background_color": "",
+            "text_color": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          },
+          "blocks": {}
+        },
+        "media_card_7GWaAA": {
+          "type": "_media_card",
+          "name": "t:blocks._media_card.name",
+          "settings": {
+            "content_position": "middle-center",
+            "image_size": "",
+            "image_height": 480,
+            "content_position_mobile": "",
+            "image_size_mobile": "same",
+            "image_height_mobile": 480,
+            "background_color": "",
+            "text_color": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          },
+          "blocks": {}
+        },
+        "media_card_yhBN4N": {
+          "type": "_media_card",
+          "name": "t:blocks._media_card.name",
+          "settings": {
+            "content_position": "middle-center",
+            "image_size": "",
+            "image_height": 480,
+            "content_position_mobile": "",
+            "image_size_mobile": "same",
+            "image_height_mobile": 480,
+            "background_color": "",
+            "text_color": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          },
+          "blocks": {}
+        },
+        "media_card_NmRiXK": {
+          "type": "_media_card",
+          "name": "t:blocks._media_card.name",
+          "settings": {
+            "content_position": "middle-center",
+            "image_size": "",
+            "image_height": 480,
+            "content_position_mobile": "",
+            "image_size_mobile": "same",
+            "image_height_mobile": 480,
+            "background_color": "",
+            "text_color": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          },
+          "blocks": {}
+        },
+        "media_card_ENehVH": {
+          "type": "_media_card",
+          "name": "t:blocks._media_card.name",
+          "settings": {
+            "content_position": "middle-center",
+            "image_size": "",
+            "image_height": 480,
+            "content_position_mobile": "",
+            "image_size_mobile": "same",
+            "image_height_mobile": 480,
+            "background_color": "",
+            "text_color": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          },
+          "blocks": {}
+        },
+        "media_card_aJidBD": {
+          "type": "_media_card",
+          "name": "t:blocks._media_card.name",
+          "settings": {
+            "content_position": "middle-center",
+            "image_size": "",
+            "image_height": 480,
+            "content_position_mobile": "",
+            "image_size_mobile": "same",
+            "image_height_mobile": 480,
+            "background_color": "",
+            "text_color": "",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "media_card_niJdW7",
+        "media_card_ffLNJJ",
+        "media_card_EtXwqA",
+        "media_card_A4JJbi",
+        "media_card_yfyJRk",
+        "media_card_7GWaAA",
+        "media_card_yhBN4N",
+        "media_card_NmRiXK",
+        "media_card_ENehVH",
+        "media_card_aJidBD"
+      ],
+      "name": "t:sections.media_grid.name",
+      "settings": {
+        "layout": "1",
+        "background_color": "",
+        "text_color": "#FFFFFF",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
     "rich_text_kbJAqR": {
       "type": "rich-text",
       "blocks": {
@@ -351,6 +547,7 @@
     "rich_text_xHaFPF",
     "map_k4natF",
     "image_with_text_cTB7rD",
+    "media_grid_9YWNVQ",
     "rich_text_kbJAqR"
   ]
 }
