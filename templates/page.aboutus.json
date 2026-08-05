@@ -51,7 +51,7 @@
       "settings": {
         "full_width": true,
         "text_alignment": "center",
-        "background_color": "#F2D14A",
+        "background_color": "#f2d14a",
         "text_color": "",
         "enable_custom_spacing": true,
         "top_spacing": 16,
@@ -292,7 +292,7 @@
         "text_color": "",
         "enable_custom_spacing": true,
         "top_spacing": 80,
-        "bottom_spacing": 80
+        "bottom_spacing": 0
       }
     }
   },
