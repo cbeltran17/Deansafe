@@ -32,7 +32,7 @@
   {% endif %}
 
   {% if block.settings.link_url != blank and block.settings.link_text != blank %}
-    <div class="block-button test">
+    <div class="block-button">
       {% if block.settings.link_style == 'button' %}
         {% render 'button' with block.settings.link_text, href: block.settings.link_url %}
       {% else %}
