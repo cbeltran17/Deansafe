@@ -141,7 +141,7 @@
             "image": "shopify://shop_images/Culver-city-image.jpg",
             "title": "Culver City",
             "subtitle": "WEST LOS ANGELES",
-            "address": "<p>11284 Washington Place<br/>Culver City, CA 90230<br/><strong>(310) 945-4099</strong></p>",
+            "address": "<p>11284 Washington Place<br/>Culver City, CA 90230<br/><a href=\"tel:+13109454099\" title=\"tel:+13109454099\"><strong>(310) 945-4099</strong></a></p>",
             "day_1": "Mon - Fri",
             "time_1": "10:00 AM - 6:00 PM",
             "day_2": "Saturday",
