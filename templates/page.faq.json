@@ -103,7 +103,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h2",
+            "heading_size": "h3",
             "heading": "What makes a burglary safe a burglary safe?",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -129,7 +129,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h3",
+            "heading_size": "h4",
             "heading": "1. Steel Thickness",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -170,7 +170,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h3",
+            "heading_size": "h4",
             "heading": "2. Number and Size of Locking Bolts",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -197,7 +197,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h3",
+            "heading_size": "h4",
             "heading": "3. Locking Mechanism",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -224,7 +224,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h3",
+            "heading_size": "h4",
             "heading": "4. Hardplate",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -266,7 +266,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h3",
+            "heading_size": "h4",
             "heading": "5. Relockers",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -323,7 +323,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h2",
+            "heading_size": "h3",
             "heading": "How do burglary safes differ?",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -349,7 +349,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h3",
+            "heading_size": "h4",
             "heading": "1. California Department of Justice (CA DOJ)",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -376,7 +376,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h3",
+            "heading_size": "h4",
             "heading": "2. UL RSC (Residential Security Containers)",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -403,7 +403,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h3",
+            "heading_size": "h4",
             "heading": "3. Burglary Classifications",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -454,7 +454,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h2",
+            "heading_size": "h3",
             "heading": "Other Gun Safe Questions",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -470,7 +470,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h3",
+            "heading_size": "h4",
             "heading": "What makes a fire safe a fire safe?",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -497,7 +497,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h3",
+            "heading_size": "h4",
             "heading": "How are Fire tests conducted?",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -524,7 +524,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h3",
+            "heading_size": "h4",
             "heading": "What is ETL?",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -551,7 +551,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h3",
+            "heading_size": "h4",
             "heading": "What is UL?",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -578,7 +578,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h3",
+            "heading_size": "h4",
             "heading": "What's the difference between a UL test and ETL test?",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -605,7 +605,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h3",
+            "heading_size": "h4",
             "heading": "When does paper burn or char?",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -632,7 +632,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h3",
+            "heading_size": "h4",
             "heading": "Is there such a thing as a Fire Proof Safe?",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -659,7 +659,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h3",
+            "heading_size": "h4",
             "heading": "Is my hard drive and flash drives safe in a regular fire safe?",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -686,7 +686,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h3",
+            "heading_size": "h4",
             "heading": "Why would I need a 2 hour fire safe if the standard house fire is 20 minutes?",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -713,7 +713,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h3",
+            "heading_size": "h4",
             "heading": "What are the different types of Fire Insulation?",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -740,7 +740,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h3",
+            "heading_size": "h4",
             "heading": "Are Internal or External Hinges better?",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -767,7 +767,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h3",
+            "heading_size": "h4",
             "heading": "The fire safe I'm looking at has bolts, does that make it a burglary safe?",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -794,7 +794,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h3",
+            "heading_size": "h4",
             "heading": "I bought a gun safe that holds 22 guns, but I can't get 22 guns in there. How come?",
             "highlight_type": "underline",
             "highlight_layer": "default",
@@ -821,7 +821,7 @@
           "settings": {
             "full_width": true,
             "max_width": 500,
-            "heading_size": "h3",
+            "heading_size": "h4",
             "heading": "How do I clean my safe?",
             "highlight_type": "underline",
             "highlight_layer": "default",
