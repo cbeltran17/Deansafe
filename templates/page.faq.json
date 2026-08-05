@@ -75,6 +75,9 @@
           ]
         }
       },
+      "custom_css": [
+        ".video-player{max-width: 600px;}"
+      ],
       "name": "t:sections.video.name",
       "settings": {
         "video_url": "https://youtu.be/3PK9_KEHml4",
