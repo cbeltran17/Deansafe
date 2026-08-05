@@ -880,9 +880,9 @@
         "text_alignment": "left",
         "background_color": "",
         "text_color": "",
-        "enable_custom_spacing": false,
-        "top_spacing": 80,
-        "bottom_spacing": 80
+        "enable_custom_spacing": true,
+        "top_spacing": 0,
+        "bottom_spacing": 0
       }
     }
   },
