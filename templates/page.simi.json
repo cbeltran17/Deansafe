@@ -35,7 +35,7 @@
             "image": "shopify://shop_images/DS-Simi-Valley-Showroom-Banner.jpg",
             "content_position": "bottom-center",
             "content_position_mobile": "",
-            "text_color": "#FFFFFF",
+            "text_color": "#ffffff",
             "heading_color": "",
             "overlay_color": "#000000",
             "overlay_opacity": 50
@@ -122,8 +122,8 @@
         "autoplay": true,
         "autoplay_interval": 5,
         "background_color": "",
-        "enable_custom_spacing": false,
-        "top_spacing": 80,
+        "enable_custom_spacing": true,
+        "top_spacing": 24,
         "bottom_spacing": 80
       }
     }
