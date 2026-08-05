@@ -298,6 +298,50 @@
         "top_spacing": 80,
         "bottom_spacing": 80
       }
+    },
+    "rich_text_kbJAqR": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Rm4eLx": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h2",
+            "heading": "More Information",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_z3F74p": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "full",
+            "text_color": "primary",
+            "content": "<p>Opening originally as a small locksmith shop in Arleta, CA in 1978, Dean Safe has grown tremendously within the past 40 years. Our brand new Simi Valley showroom location opened in October of 2021.</p><p>Dean Safe Simi Valley features the largest selection of safes including gun safes, home and office safes, high security safes, fire and burglary safes,<br/>wall safes, floor safes, drop safes & more. Dean Safe Company offers only the best selection of brand name safes & vaults in the industry, including brands like, American Security Safes (AMSEC), Fort Knox Vaults, Liberty Safes, Rhino, Stealth, Hollon, etc.</p><p>When it comes to protecting your valuable possessions, Dean Safe is the name you can trust. Our safes are designed with the highest level of security in mind, ensuring that your belongings are safe from theft, fire, and other potential risks.</p><p>Our experts at Dean Safe will fit you with the perfect safe for your needs. Dean Safe Company has a team of professional safe movers that offer local in-home delivery and installation. Plus, check out our large collection of used or blemished safes, all at discounted prices. Come meet Mary and Kelly in Dean Safe Simi Valley today!</p>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_Rm4eLx",
+        "paragraph_z3F74p"
+      ],
+      "name": "t:sections.rich_text.name",
+      "settings": {
+        "full_width": true,
+        "text_alignment": "left",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": true,
+        "top_spacing": 0,
+        "bottom_spacing": 0
+      }
     }
   },
   "order": [
@@ -306,6 +350,7 @@
     "image_with_text_DKV4jA",
     "rich_text_xHaFPF",
     "map_k4natF",
-    "image_with_text_cTB7rD"
+    "image_with_text_cTB7rD",
+    "rich_text_kbJAqR"
   ]
 }
