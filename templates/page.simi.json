@@ -370,8 +370,8 @@
             "image": "shopify://shop_images/Showroom-Gallery_4.jpg",
             "video_autoplay": false,
             "heading_size": "h4",
-            "heading": "Highlight your store's features",
-            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
+            "heading": "",
+            "content": "",
             "link_url": "",
             "link_text": "",
             "link_style": "button"
@@ -386,8 +386,8 @@
             "image": "shopify://shop_images/Showroom-Gallery_3.jpg",
             "video_autoplay": false,
             "heading_size": "h4",
-            "heading": "Highlight your store's features",
-            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
+            "heading": "",
+            "content": "",
             "link_url": "",
             "link_text": "",
             "link_style": "button"
@@ -402,8 +402,8 @@
             "image": "shopify://shop_images/Showroom-Gallery_2.jpg",
             "video_autoplay": false,
             "heading_size": "h4",
-            "heading": "Highlight your store's features",
-            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
+            "heading": "",
+            "content": "",
             "link_url": "",
             "link_text": "",
             "link_style": "button"
@@ -418,8 +418,8 @@
             "image": "shopify://shop_images/Showroom-Gallery_1.jpg",
             "video_autoplay": false,
             "heading_size": "h4",
-            "heading": "Highlight your store's features",
-            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
+            "heading": "",
+            "content": "",
             "link_url": "",
             "link_text": "",
             "link_style": "button"
