@@ -75,10 +75,10 @@
                   "type": "button",
                   "settings": {
                     "size": "md",
-                    "variant": "solid",
+                    "variant": "outline",
                     "label": "Get Directions",
                     "url": "https://goo.gl/maps/zDbHoCYhQTKisz5z6",
-                    "style": "primary",
+                    "style": "white",
                     "background_color": "",
                     "text_color": ""
                   },
@@ -88,7 +88,7 @@
                   "type": "button",
                   "settings": {
                     "size": "md",
-                    "variant": "solid",
+                    "variant": "outline",
                     "label": "Call Location",
                     "url": "tel:+8055265443",
                     "style": "white",
