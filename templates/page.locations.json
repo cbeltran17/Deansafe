@@ -168,9 +168,9 @@
             "day_3": "Sunday",
             "time_3": "Closed",
             "btn_1_label": "View Location",
-            "btn_1_link": "",
+            "btn_1_link": "shopify://pages/desacoarca91",
             "btn_2_label": "Directions",
-            "btn_2_link": ""
+            "btn_2_link": "https://maps.google.com/?q=6020+Laurel+Canyon+Blvd+North+Hollywood+CA"
           }
         },
         "location_UrJeey": {
@@ -187,9 +187,9 @@
             "day_3": "Sunday",
             "time_3": "Closed",
             "btn_1_label": "View Location",
-            "btn_1_link": "",
+            "btn_1_link": "shopify://pages/sivadesacoou",
             "btn_2_label": "Directions",
-            "btn_2_link": ""
+            "btn_2_link": "https://www.google.com/maps?q=2130+Ward+Ave+Simi+Valley+CA"
           }
         }
       },
