@@ -322,6 +322,31 @@
         "bottom_spacing": 80
       }
     },
+    "map_bz7cyR": {
+      "type": "map",
+      "blocks": {
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
+          },
+          "blocks": {}
+        }
+      },
+      "name": "Map",
+      "settings": {
+        "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1785927104352!6m8!1m7!1sCAoSLEFGMVFpcE1BdndZV2FreWZ3dV8xWmY1SFJabzRUNTdnLUhQWUlvT3pKN2hC!2m2!1d34.1800249706992!2d-118.3961132391364!3f73.51!4f-4.540000000000006!5f0.4806172136206361\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"strict-origin-when-cross-origin\"></iframe>",
+        "map_height": 500,
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
     "rich_text_kbJAqR": {
       "type": "rich-text",
       "blocks": {
@@ -374,6 +399,7 @@
     "map_k4natF",
     "image_with_text_cTB7rD",
     "image_with_text_7j9f9r",
+    "map_bz7cyR",
     "rich_text_kbJAqR"
   ]
 }
