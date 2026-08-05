@@ -47,7 +47,7 @@
                 "full_width": true,
                 "max_width": 500,
                 "heading_size": "h0",
-                "heading": "New Simi Showroom",
+                "heading": "Culver City Showroom",
                 "highlight_type": "underline",
                 "highlight_layer": "default",
                 "heading_color": "",
@@ -63,7 +63,7 @@
                 "paragraph_size": "lg",
                 "paragraph_width": "medium",
                 "text_color": "primary",
-                "content": "<p><a href=\"https://goo.gl/maps/zDbHoCYhQTKisz5z6\" target=\"_blank\" title=\"https://goo.gl/maps/zDbHoCYhQTKisz5z6\">2130 Ward Ave Simi Valley, CA 93065</a></p>"
+                "content": "<p><a href=\"https://g.page/DeanSafeCulverCity?share\" target=\"_blank\" title=\"https://g.page/DeanSafeCulverCity?share\"><strong>11284 Washington Pl, Culver City, CA 90230</strong></a></p>"
               },
               "blocks": {}
             },
@@ -77,7 +77,7 @@
                     "size": "md",
                     "variant": "outline",
                     "label": "Get Directions",
-                    "url": "https://goo.gl/maps/zDbHoCYhQTKisz5z6",
+                    "url": "https://g.page/DeanSafeCulverCity?share",
                     "style": "white",
                     "background_color": "",
                     "text_color": ""
@@ -90,7 +90,7 @@
                     "size": "md",
                     "variant": "outline",
                     "label": "Call Location",
-                    "url": "tel:+8055265443",
+                    "url": "tel:+13109454099",
                     "style": "white",
                     "background_color": "",
                     "text_color": ""
@@ -151,7 +151,7 @@
             "paragraph_size": "md",
             "paragraph_width": "medium",
             "text_color": "primary",
-            "content": "<p><a href=\"tel:+8055265443\" title=\"tel:+8055265443\"><strong>(805) 526-5443</strong></a></p><p>2130 Ward Ave<br/>Simi Valley, CA 93065</p><p>STORE HOURS (PST)<br/>Monday: <strong>9:00am - 6:00pm</strong><br/>Tuesday: <strong>9:00am - 6:00pm</strong><br/>Wednesday: <strong>9:00am - 6:00pm</strong><br/>Thursday: <strong>9:00am - 6:00pm</strong><br/>Friday: <strong>9:00am - 6:00pm</strong><br/>Saturday: <strong>10:00am - 3:00pm</strong><br/>Sunday: <strong>CLOSED</strong></p><p>PARKING<br/><strong>Free Parking</strong></p>"
+            "content": "<p><a href=\"tel:+13109454099\"><strong>(310) 945-4099</strong></a></p><p>11284 Washington Place<br/>Culver City, CA 90230</p><p>STORE HOURS (PST)<strong><br/></strong>Monday: <strong>10:00am - 6:00pm</strong><br/>Tuesday: <strong>10:00am - 6:00pm</strong><br/>Wednesday: <strong>10:00am - 6:00pm</strong><br/>Thursday: <strong>10:00am - 6:00pm</strong><br/>Friday: <strong>10:00am - 6:00pm</strong><br/>Saturday: <strong>10:00am - 3:00pm</strong><br/>Sunday: <strong>CLOSED</strong></p><p>PARKING<br/><strong>Free Parking<br/></strong><em>In rear of building off Sawtelle Blvd</em></p>"
           },
           "blocks": {}
         },
@@ -161,7 +161,7 @@
             "size": "md",
             "variant": "outline",
             "label": "Get Directions",
-            "url": "https://www.google.com/maps/place/2130+Ward+Ave,+Simi+Valley,+CA+93065/@34.2743336,-118.7869357,17z/data=!3m1!4b1!4m5!3m4!1s0x80e82ec14503fac9:0x90f5277b6de5ad94!8m2!3d34.2743336!4d-118.784747?shorturl=1",
+            "url": "https://g.page/DeanSafeCulverCity?share",
             "style": "black",
             "background_color": "",
             "text_color": ""
@@ -179,7 +179,7 @@
       ],
       "name": "t:sections.image_with_text.name",
       "settings": {
-        "image": "shopify://shop_images/Showroom-Gallery_3.jpg",
+        "image": "shopify://shop_images/culver-city-showroom_1024.jpg",
         "full_width": false,
         "gap": false,
         "image_width": 100,
@@ -193,34 +193,6 @@
         "enable_custom_spacing": false,
         "top_spacing": 80,
         "bottom_spacing": 80
-      }
-    },
-    "rich_text_xHaFPF": {
-      "type": "rich-text",
-      "blocks": {
-        "paragraph_JVnymY": {
-          "type": "paragraph",
-          "settings": {
-            "paragraph_size": "md",
-            "paragraph_width": "full",
-            "text_color": "primary",
-            "content": "<p><em>Visit us in person on the corner of Easy Street and Ward Ave, between First St and Madera Rd in Simi Valley, CA.</em></p>"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "paragraph_JVnymY"
-      ],
-      "name": "t:sections.rich_text.name",
-      "settings": {
-        "full_width": true,
-        "text_alignment": "center",
-        "background_color": "",
-        "text_color": "",
-        "enable_custom_spacing": true,
-        "top_spacing": 0,
-        "bottom_spacing": 16
       }
     },
     "map_k4natF": {
@@ -238,7 +210,7 @@
       },
       "name": "Map",
       "settings": {
-        "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3296.986756651777!2d-118.78483809999999!3d34.274389899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82ec14503fac9%3A0x90f5277b6de5ad94!2s2130%20Ward%20Ave%2C%20Simi%20Valley%2C%20CA%2093065%2C%20USA!5e0!3m2!1sen!2sin!4v1785921489088!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"strict-origin-when-cross-origin\"></iframe>",
+        "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.428642631097!2d-118.41618969999999!3d34.0072067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2ba3f7dd89921%3A0xaf0ca17efdf94daa!2s11284%20Washington%20Pl%2C%20Culver%20City%2C%20CA%2090230%2C%20USA!5e0!3m2!1sen!2sin!4v1785927353180!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"strict-origin-when-cross-origin\"></iframe>",
         "map_height": 500,
         "text_alignment": "center",
         "background_color": "",
@@ -257,7 +229,7 @@
             "full_width": true,
             "max_width": 500,
             "heading_size": "h2",
-            "heading": "About Dean Safe Simi Valley",
+            "heading": "About Dean Safe Culver City",
             "highlight_type": "underline",
             "highlight_layer": "default",
             "heading_color": "",
@@ -272,7 +244,7 @@
             "paragraph_size": "md",
             "paragraph_width": "medium",
             "text_color": "primary",
-            "content": "<p>Dean Safe's Simi Valley brand new showroom in Ventura County features the latest and best safes and vaults available today.</p><p>As the largest safe store in Ventura County, our Simi Valley location offers a wide selection of safes from top manufacturers, including both new and used options at discounted prices.</p><p>Our knowledgeable and friendly staff, Mary and Kelly, are available to provide expert advice and assistance in choosing the right safe for your specific needs. In addition to showcasing a diverse range of gun, home, office, handgun, and personal safes, our showroom also offers traditional customer service with the option of will call or white glove delivery for your purchased safe.</p><p>Furthermore, for those in need of relocation or temporary movement of their safe, we provide a professional moving service and encourage you to contact us for a personalized estimate. Come visit us today at our new location on the corner of Easy St. and Ward Ave!</p>"
+            "content": "<p>At Dean Safe's Culver City showroom, you'll find a vast selection of high-quality safes to meet all your security needs. Our expert sales team members, Jacque and Kim, are ready to assist you in finding the perfect safe for your home or office. With our beautiful showroom, conveniently located in West Los Angeles, you can browse through a variety of options, including home safes, office safes, wall safes, floor safes, and much more.</p><p>Our Culver City showroom is the perfect place to see and feel the quality of our safes firsthand. Our knowledgeable sales team members will guide you through the different options available, helping you make an informed decision based on your specific requirements. Whether you need a safe for your home, office, or any other location, we have a wide range of sizes, styles, and features to choose from.</p><p>When you visit our showroom, you can expect a professional and informative experience. Our team is dedicated to providing exceptional customer service and ensuring that you find the perfect safe to meet your needs. We understand that security is a top priority, and we take pride in offering top-of-the-line safes that provide the ultimate protection for your valuables.</p><p>Don't compromise on the safety of your belongings. Visit Dean Safe's Culver City showroom today and explore our extensive collection of safes. Our expert sales team members, Jacque and Kim, are ready to assist you in finding the perfect safe to secure your valuable possessions. Trust Dean Safe for all your security needs.</p>"
           },
           "blocks": {}
         }
@@ -283,7 +255,7 @@
       ],
       "name": "t:sections.image_with_text.name",
       "settings": {
-        "image": "shopify://shop_images/IMG_0469-2.jpg",
+        "image": "shopify://shop_images/culver-city-showroom2_1024.jpg",
         "full_width": false,
         "gap": false,
         "image_width": 100,
@@ -302,72 +274,12 @@
     "multicolumn_B3zg7H": {
       "type": "multicolumn",
       "blocks": {
-        "column_VVqRJR": {
-          "type": "_column",
-          "settings": {
-            "media_type": "image",
-            "image": "shopify://shop_images/Showroom-Gallery_9.jpg",
-            "video_autoplay": false,
-            "heading_size": "h4",
-            "heading": "",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "button"
-          },
-          "blocks": {}
-        },
-        "column_RMetaa": {
-          "type": "_column",
-          "settings": {
-            "media_type": "image",
-            "image": "shopify://shop_images/Showroom-Gallery_6.jpg",
-            "video_autoplay": false,
-            "heading_size": "h4",
-            "heading": "",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "button"
-          },
-          "blocks": {}
-        },
-        "column_qaAQDU": {
-          "type": "_column",
-          "settings": {
-            "media_type": "image",
-            "image": "shopify://shop_images/Showroom-Gallery_7.jpg",
-            "video_autoplay": false,
-            "heading_size": "h4",
-            "heading": "",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "button"
-          },
-          "blocks": {}
-        },
-        "column_cygByF": {
-          "type": "_column",
-          "settings": {
-            "media_type": "image",
-            "image": "shopify://shop_images/Showroom-Gallery_8.jpg",
-            "video_autoplay": false,
-            "heading_size": "h4",
-            "heading": "",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "button"
-          },
-          "blocks": {}
-        },
         "column_4qbJkj": {
           "type": "_column",
           "name": "t:blocks._column.name",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/Showroom-Gallery_4.jpg",
+            "image": "shopify://shop_images/culver-image-2.jpg",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "",
@@ -383,7 +295,7 @@
           "name": "t:blocks._column.name",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/Showroom-Gallery_3.jpg",
+            "image": "shopify://shop_images/culver-image-1.jpg",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "",
@@ -399,7 +311,7 @@
           "name": "t:blocks._column.name",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/Showroom-Gallery_2.jpg",
+            "image": "shopify://shop_images/culver-image-4.jpg",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "",
@@ -415,7 +327,7 @@
           "name": "t:blocks._column.name",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/Showroom-Gallery_1.jpg",
+            "image": "shopify://shop_images/culver-image-3.jpg",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "",
@@ -457,10 +369,6 @@
         }
       },
       "block_order": [
-        "column_VVqRJR",
-        "column_RMetaa",
-        "column_qaAQDU",
-        "column_cygByF",
         "column_4qbJkj",
         "column_AKHTHz",
         "column_iCrYMN",
@@ -473,6 +381,31 @@
         "columns_mobile": 1,
         "column_gap": 8,
         "column_alignment": "center",
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
+    "map_Nn6any": {
+      "type": "map",
+      "blocks": {
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
+          },
+          "blocks": {}
+        }
+      },
+      "name": "Map",
+      "settings": {
+        "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!4v1785927520874!6m8!1m7!1sCAoSLEFGMVFpcE5GTGVSNXYwaTh5SWtOV25rbTYwTmVxelJCV19EbnNfMFU5NUda!2m2!1d34.00712857822674!2d-118.4161026191623!3f351.56!4f-0.9699999999999989!5f0.4000000000000002\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"strict-origin-when-cross-origin\"></iframe>",
+        "map_height": 500,
         "text_alignment": "center",
         "background_color": "",
         "text_color": "",
@@ -505,7 +438,7 @@
             "paragraph_size": "md",
             "paragraph_width": "full",
             "text_color": "primary",
-            "content": "<p>Opening originally as a small locksmith shop in Arleta, CA in 1978, Dean Safe has grown tremendously within the past 40 years. Our brand new Simi Valley showroom location opened in October of 2021.</p><p>Dean Safe Simi Valley features the largest selection of safes including gun safes, home and office safes, high security safes, fire and burglary safes,<br/>wall safes, floor safes, drop safes & more. Dean Safe Company offers only the best selection of brand name safes & vaults in the industry, including brands like, American Security Safes (AMSEC), Fort Knox Vaults, Liberty Safes, Rhino, Stealth, Hollon, etc.</p><p>When it comes to protecting your valuable possessions, Dean Safe is the name you can trust. Our safes are designed with the highest level of security in mind, ensuring that your belongings are safe from theft, fire, and other potential risks.</p><p>Our experts at Dean Safe will fit you with the perfect safe for your needs. Dean Safe Company has a team of professional safe movers that offer local in-home delivery and installation. Plus, check out our large collection of used or blemished safes, all at discounted prices. Come meet Mary and Kelly in Dean Safe Simi Valley today!</p>"
+            "content": "<p>Opening originally as a small locksmith shop in Arleta, CA in 1978, Dean Safe has grown tremendously within the past 40 years. Our West Los Angeles showroom location opened in October of 2014 in Culver City, California.</p><p>Dean Safe Culver City features a large selection of safes including gun safes, home and office safes, high security safes, fire and burglary safes, wall safes, floor safes, drop safes, and more. Dean Safe Company offers only the best selection of brand name safes and vaults in the industry, including brands like, American Security Safes (AMSEC), Fort Knox Vaults, Liberty Safes, Rhino, Stealth, Hollon, etc.</p><p>When it comes to protecting your valuable possessions, Dean Safe is the name you can trust. Our safes are designed with the highest level of security in mind, ensuring that your belongings are safe from theft, fire, and other potential risks.</p><p>Our experts at Dean Safe will fit you with the perfect safe for your needs. Dean Safe Company has a team of professional safe movers that offer local in-home delivery and installation. Come meet Jacque and Kim in Dean Safe Culver City today!</p>"
           },
           "blocks": {}
         }
@@ -530,10 +463,10 @@
     "main",
     "slideshow_gUVjwB",
     "image_with_text_DKV4jA",
-    "rich_text_xHaFPF",
     "map_k4natF",
     "image_with_text_cTB7rD",
     "multicolumn_B3zg7H",
+    "map_Nn6any",
     "rich_text_kbJAqR"
   ]
 }
