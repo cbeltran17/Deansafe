@@ -150,7 +150,7 @@
             "content": "",
             "link_url": "shopify://pages/sivadesacoou",
             "link_text": "View Location",
-            "link_style": "link"
+            "link_style": "button"
           },
           "blocks": {}
         },
@@ -165,7 +165,7 @@
             "content": "",
             "link_url": "shopify://pages/desacoarca91",
             "link_text": "View Location",
-            "link_style": "link"
+            "link_style": "button"
           },
           "blocks": {}
         },
@@ -180,7 +180,7 @@
             "content": "",
             "link_url": "shopify://pages/los-angeles-culver-city-store",
             "link_text": "View Location",
-            "link_style": "link"
+            "link_style": "button"
           },
           "blocks": {}
         },
