@@ -247,6 +247,57 @@
         "top_spacing": 80,
         "bottom_spacing": 80
       }
+    },
+    "image_with_text_cTB7rD": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_EFaXJi": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h2",
+            "heading": "About Dean Safe Simi Valley",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_EWBkqG": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "medium",
+            "text_color": "primary",
+            "content": "<p>Dean Safe's Simi Valley brand new showroom in Ventura County features the latest and best safes and vaults available today.</p><p>As the largest safe store in Ventura County, our Simi Valley location offers a wide selection of safes from top manufacturers, including both new and used options at discounted prices.</p><p>Our knowledgeable and friendly staff, Mary and Kelly, are available to provide expert advice and assistance in choosing the right safe for your specific needs. In addition to showcasing a diverse range of gun, home, office, handgun, and personal safes, our showroom also offers traditional customer service with the option of will call or white glove delivery for your purchased safe.</p><p>Furthermore, for those in need of relocation or temporary movement of their safe, we provide a professional moving service and encourage you to contact us for a personalized estimate. Come visit us today at our new location on the corner of Easy St. and Ward Ave!</p>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_EFaXJi",
+        "paragraph_EWBkqG"
+      ],
+      "name": "t:sections.image_with_text.name",
+      "settings": {
+        "image": "shopify://shop_images/IMG_0469-2.jpg",
+        "full_width": false,
+        "gap": false,
+        "image_width": 100,
+        "image_position": "left",
+        "image_size": "",
+        "image_height": 480,
+        "image_size_mobile": "same",
+        "image_height_mobile": 480,
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
     }
   },
   "order": [
@@ -254,6 +305,7 @@
     "slideshow_gUVjwB",
     "image_with_text_DKV4jA",
     "rich_text_xHaFPF",
-    "map_k4natF"
+    "map_k4natF",
+    "image_with_text_cTB7rD"
   ]
 }
