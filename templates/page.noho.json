@@ -151,7 +151,7 @@
             "paragraph_size": "md",
             "paragraph_width": "medium",
             "text_color": "primary",
-            "content": "<p><a href=\"tel:+8055265443\" title=\"tel:+8055265443\"><strong>(805) 526-5443</strong></a></p><p>2130 Ward Ave<br/>Simi Valley, CA 93065</p><p>STORE HOURS (PST)<br/>Monday: <strong>9:00am - 6:00pm</strong><br/>Tuesday: <strong>9:00am - 6:00pm</strong><br/>Wednesday: <strong>9:00am - 6:00pm</strong><br/>Thursday: <strong>9:00am - 6:00pm</strong><br/>Friday: <strong>9:00am - 6:00pm</strong><br/>Saturday: <strong>10:00am - 3:00pm</strong><br/>Sunday: <strong>CLOSED</strong></p><p>PARKING<br/><strong>Free Parking</strong></p>"
+            "content": "<p><a href=\"tel:+18189971234\" title=\"tel:+18189971234\"><strong>(818) 997-1234</strong></a></p><p>6020 Laurel Canyon Blvd<br/>North Hollywood, CA 91606</p><p>STORE HOURS (PST)<strong><br/></strong>Monday: <strong>9:00am - 6:00pm</strong><br/>Tuesday: <strong>9:00am - 6:00pm</strong><br/>Wednesday: <strong>9:00am - 6:00pm</strong><br/>Thursday: <strong>9:00am - 6:00pm</strong><br/>Friday: <strong>9:00am - 6:00pm</strong><br/>Saturday: <strong>10:00am - 3:00pm</strong><br/>Sunday: <strong>CLOSED</strong></p><p>PARKING<br/><strong>Free Parking</strong></p>"
           },
           "blocks": {}
         },
@@ -161,7 +161,7 @@
             "size": "md",
             "variant": "outline",
             "label": "Get Directions",
-            "url": "https://www.google.com/maps/place/2130+Ward+Ave,+Simi+Valley,+CA+93065/@34.2743336,-118.7869357,17z/data=!3m1!4b1!4m5!3m4!1s0x80e82ec14503fac9:0x90f5277b6de5ad94!8m2!3d34.2743336!4d-118.784747?shorturl=1",
+            "url": "https://maps.app.goo.gl/T9HkqrqTcUBj6vW17",
             "style": "black",
             "background_color": "",
             "text_color": ""
@@ -195,34 +195,6 @@
         "bottom_spacing": 80
       }
     },
-    "rich_text_xHaFPF": {
-      "type": "rich-text",
-      "blocks": {
-        "paragraph_JVnymY": {
-          "type": "paragraph",
-          "settings": {
-            "paragraph_size": "md",
-            "paragraph_width": "full",
-            "text_color": "primary",
-            "content": "<p><em>Visit us in person on the corner of Easy Street and Ward Ave, between First St and Madera Rd in Simi Valley, CA.</em></p>"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "paragraph_JVnymY"
-      ],
-      "name": "t:sections.rich_text.name",
-      "settings": {
-        "full_width": true,
-        "text_alignment": "center",
-        "background_color": "",
-        "text_color": "",
-        "enable_custom_spacing": true,
-        "top_spacing": 0,
-        "bottom_spacing": 16
-      }
-    },
     "map_k4natF": {
       "type": "map",
       "blocks": {
@@ -238,7 +210,7 @@
       },
       "name": "Map",
       "settings": {
-        "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3296.986756651777!2d-118.78483809999999!3d34.274389899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82ec14503fac9%3A0x90f5277b6de5ad94!2s2130%20Ward%20Ave%2C%20Simi%20Valley%2C%20CA%2093065%2C%20USA!5e0!3m2!1sen!2sin!4v1785921489088!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"strict-origin-when-cross-origin\"></iframe>",
+        "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3300.6847333875435!2d-118.39612839999998!3d34.1799773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c29676f7191dd7%3A0x65f96c71ae130fb6!2s6020%20Laurel%20Canyon%20Blvd%2C%20Valley%20Glen%2C%20CA%2091606%2C%20USA!5e0!3m2!1sen!2sin!4v1785926944919!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"strict-origin-when-cross-origin\"></iframe>",
         "map_height": 500,
         "text_alignment": "center",
         "background_color": "",
@@ -257,7 +229,7 @@
             "full_width": true,
             "max_width": 500,
             "heading_size": "h2",
-            "heading": "About Dean Safe Simi Valley",
+            "heading": "Safe Experts",
             "highlight_type": "underline",
             "highlight_layer": "default",
             "heading_color": "",
@@ -272,7 +244,7 @@
             "paragraph_size": "md",
             "paragraph_width": "medium",
             "text_color": "primary",
-            "content": "<p>Dean Safe's Simi Valley brand new showroom in Ventura County features the latest and best safes and vaults available today.</p><p>As the largest safe store in Ventura County, our Simi Valley location offers a wide selection of safes from top manufacturers, including both new and used options at discounted prices.</p><p>Our knowledgeable and friendly staff, Mary and Kelly, are available to provide expert advice and assistance in choosing the right safe for your specific needs. In addition to showcasing a diverse range of gun, home, office, handgun, and personal safes, our showroom also offers traditional customer service with the option of will call or white glove delivery for your purchased safe.</p><p>Furthermore, for those in need of relocation or temporary movement of their safe, we provide a professional moving service and encourage you to contact us for a personalized estimate. Come visit us today at our new location on the corner of Easy St. and Ward Ave!</p>"
+            "content": "<p>When it comes to choosing the perfect safe, there are several factors to consider. Josh and Moses will take the time to understand your unique requirements and provide personalized recommendations based on their expertise. They will guide you through the following considerations:</p><p><strong>Size and Capacity<br/></strong>One of the first things to consider is the size and capacity of the safe. Our experts will help you determine the appropriate dimensions based on the items you plan to store. Whether you need a compact safe for your handguns or a larger vault for your valuable collections, Josh and Moses will ensure that you find the perfect fit.</p><p><strong>Security Features<br/></strong>Our safes and vaults are equipped with advanced security features to protect your belongings from theft and unauthorized access. Josh and Moses will explain the different locking mechanisms, fireproofing options, and additional security features available, ensuring that you make an informed decision based on your specific security needs.</p><p><strong>Accessibility<br/></strong>Accessibility is another crucial factor to consider when choosing a safe. Our experts will discuss various options, such as biometric fingerprint scanners, electronic keypads, or traditional combination locks to ensure that you can easily access your belongings while maintaining the highest level of security.</p><p><strong>Installation and Maintenance<br/></strong>Josh and Moses will also provide guidance on the installation and maintenance of your chosen safe or vault. They will explain the necessary steps to ensure proper installation and offer tips on how to maintain the longevity and functionality of your security solution.</p>"
           },
           "blocks": {}
         }
@@ -283,7 +255,7 @@
       ],
       "name": "t:sections.image_with_text.name",
       "settings": {
-        "image": "shopify://shop_images/IMG_0469-2.jpg",
+        "image": "shopify://shop_images/IMG_8438-small2.jpg",
         "full_width": false,
         "gap": false,
         "image_width": 100,
@@ -299,185 +271,54 @@
         "bottom_spacing": 80
       }
     },
-    "multicolumn_B3zg7H": {
-      "type": "multicolumn",
+    "image_with_text_7j9f9r": {
+      "type": "image-with-text",
       "blocks": {
-        "column_VVqRJR": {
-          "type": "_column",
+        "heading_VrgkmH": {
+          "type": "heading",
           "settings": {
-            "media_type": "image",
-            "image": "shopify://shop_images/Showroom-Gallery_9.jpg",
-            "video_autoplay": false,
-            "heading_size": "h4",
-            "heading": "",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "button"
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h2",
+            "heading": "About Dean Safe North Hollywood",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
           },
           "blocks": {}
         },
-        "column_RMetaa": {
-          "type": "_column",
+        "paragraph_U7GPgC": {
+          "type": "paragraph",
           "settings": {
-            "media_type": "image",
-            "image": "shopify://shop_images/Showroom-Gallery_6.jpg",
-            "video_autoplay": false,
-            "heading_size": "h4",
-            "heading": "",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "button"
+            "paragraph_size": "md",
+            "paragraph_width": "medium",
+            "text_color": "primary",
+            "content": "<p>Welcome to Dean Safe's North Hollywood showroom, where our experts, Josh and Moses, are ready to assist you in finding the perfect safe or vault to meet your specific needs. With his extensive knowledge and expertise, you can trust that you will receive the highest level of guidance and support in selecting the right security solution.</p><p>At Dean Safe, we understand the importance of protecting your valuable possessions and firearms. That's why we offer a wide range of high-quality safes and vaults that are designed to provide maximum security and peace of mind.</p><p>At Dean Safe, we pride ourselves on our commitment to customer satisfaction. Our experts, Josh and Moses, is dedicated to helping you find the perfect safe or vault that meets your unique needs. Visit our North Hollywood showroom today and let our knowledgeable expert guide you towards the ultimate security solution.</p>"
           },
           "blocks": {}
-        },
-        "column_qaAQDU": {
-          "type": "_column",
-          "settings": {
-            "media_type": "image",
-            "image": "shopify://shop_images/Showroom-Gallery_7.jpg",
-            "video_autoplay": false,
-            "heading_size": "h4",
-            "heading": "",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "button"
-          },
-          "blocks": {}
-        },
-        "column_cygByF": {
-          "type": "_column",
-          "settings": {
-            "media_type": "image",
-            "image": "shopify://shop_images/Showroom-Gallery_8.jpg",
-            "video_autoplay": false,
-            "heading_size": "h4",
-            "heading": "",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "button"
-          },
-          "blocks": {}
-        },
-        "column_4qbJkj": {
-          "type": "_column",
-          "name": "t:blocks._column.name",
-          "settings": {
-            "media_type": "image",
-            "image": "shopify://shop_images/Showroom-Gallery_4.jpg",
-            "video_autoplay": false,
-            "heading_size": "h4",
-            "heading": "",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "button"
-          },
-          "blocks": {}
-        },
-        "column_AKHTHz": {
-          "type": "_column",
-          "name": "t:blocks._column.name",
-          "settings": {
-            "media_type": "image",
-            "image": "shopify://shop_images/Showroom-Gallery_3.jpg",
-            "video_autoplay": false,
-            "heading_size": "h4",
-            "heading": "",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "button"
-          },
-          "blocks": {}
-        },
-        "column_iCrYMN": {
-          "type": "_column",
-          "name": "t:blocks._column.name",
-          "settings": {
-            "media_type": "image",
-            "image": "shopify://shop_images/Showroom-Gallery_2.jpg",
-            "video_autoplay": false,
-            "heading_size": "h4",
-            "heading": "",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "button"
-          },
-          "blocks": {}
-        },
-        "column_9KrPtX": {
-          "type": "_column",
-          "name": "t:blocks._column.name",
-          "settings": {
-            "media_type": "image",
-            "image": "shopify://shop_images/Showroom-Gallery_1.jpg",
-            "video_autoplay": false,
-            "heading_size": "h4",
-            "heading": "",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "button"
-          },
-          "blocks": {}
-        },
-        "section-header": {
-          "type": "_section-header",
-          "static": true,
-          "settings": {
-            "enable_custom_spacing": false,
-            "bottom_spacing": 32
-          },
-          "blocks": {
-            "heading_heXQjj": {
-              "type": "heading",
-              "name": "t:blocks.heading.name",
-              "settings": {
-                "full_width": true,
-                "max_width": 500,
-                "heading_size": "h2",
-                "heading": "Showroom Gallery",
-                "highlight_type": "underline",
-                "highlight_layer": "default",
-                "heading_color": "",
-                "highlight_color": "",
-                "heading_seo_tag": "p"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "heading_heXQjj"
-          ]
         }
       },
       "block_order": [
-        "column_VVqRJR",
-        "column_RMetaa",
-        "column_qaAQDU",
-        "column_cygByF",
-        "column_4qbJkj",
-        "column_AKHTHz",
-        "column_iCrYMN",
-        "column_9KrPtX"
+        "heading_VrgkmH",
+        "paragraph_U7GPgC"
       ],
-      "name": "t:sections.multicolumn.name",
+      "name": "t:sections.image_with_text.name",
       "settings": {
-        "enable_carousel": true,
-        "columns": 3,
-        "columns_mobile": 1,
-        "column_gap": 8,
-        "column_alignment": "center",
-        "text_alignment": "center",
+        "image": "shopify://shop_images/NoHo-Gallery-1.jpg",
+        "full_width": false,
+        "gap": false,
+        "image_width": 100,
+        "image_position": "right",
+        "image_size": "",
+        "image_height": 480,
+        "image_size_mobile": "same",
+        "image_height_mobile": 480,
         "background_color": "",
         "text_color": "",
-        "enable_custom_spacing": false,
-        "top_spacing": 80,
+        "enable_custom_spacing": true,
+        "top_spacing": 0,
         "bottom_spacing": 80
       }
     },
@@ -505,7 +346,7 @@
             "paragraph_size": "md",
             "paragraph_width": "full",
             "text_color": "primary",
-            "content": "<p>Opening originally as a small locksmith shop in Arleta, CA in 1978, Dean Safe has grown tremendously within the past 40 years. Our brand new Simi Valley showroom location opened in October of 2021.</p><p>Dean Safe Simi Valley features the largest selection of safes including gun safes, home and office safes, high security safes, fire and burglary safes,<br/>wall safes, floor safes, drop safes & more. Dean Safe Company offers only the best selection of brand name safes & vaults in the industry, including brands like, American Security Safes (AMSEC), Fort Knox Vaults, Liberty Safes, Rhino, Stealth, Hollon, etc.</p><p>When it comes to protecting your valuable possessions, Dean Safe is the name you can trust. Our safes are designed with the highest level of security in mind, ensuring that your belongings are safe from theft, fire, and other potential risks.</p><p>Our experts at Dean Safe will fit you with the perfect safe for your needs. Dean Safe Company has a team of professional safe movers that offer local in-home delivery and installation. Plus, check out our large collection of used or blemished safes, all at discounted prices. Come meet Mary and Kelly in Dean Safe Simi Valley today!</p>"
+            "content": "<p>Opening originally as a small locksmith shop in Arleta, CA in 1978, Dean Safe has grown tremendously within the past 40 years. Dean Safe San Fernando showroom location opened in October of 2016 in North Hollywood, California.</p><p>Dean Safe North Hollywood features a large selection of safes including gun safes, home and office safes, high security safes, fire and burglary safes, handgun safes, wall safes, floor safes, drop safes & more. Dean Safe Company offers only the best selection of brand name safes & vaults in the industry, including brands like, American Security Safes (AMSEC), For Knox Vaults, Liberty Safes, Rhino, Stealth, Hollon, etc.</p><p>When it comes to protecting your valuable possessions, Dean Safe is the name you can trust. Our safes are designed with the highest level of security in mind, ensuring that your belongings are safe from theft, fire, and other potential risks.</p><p>All our experts at Dean Safe will fit you with the perfect safe for your needs. Dean Safe Company has a team of professional safe movers that offer local in-home delivery and installation. Come meet Josh and Moses in Dean Safe North Hollywood today!</p>"
           },
           "blocks": {}
         }
@@ -530,10 +371,9 @@
     "main",
     "slideshow_gUVjwB",
     "image_with_text_DKV4jA",
-    "rich_text_xHaFPF",
     "map_k4natF",
     "image_with_text_cTB7rD",
-    "multicolumn_B3zg7H",
+    "image_with_text_7j9f9r",
     "rich_text_kbJAqR"
   ]
 }
