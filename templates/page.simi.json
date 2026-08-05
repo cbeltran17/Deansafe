@@ -126,10 +126,76 @@
         "top_spacing": 24,
         "bottom_spacing": 80
       }
+    },
+    "image_with_text_DKV4jA": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_nXMj8h": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h2",
+            "heading": "Store Information",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_Anf7i6": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "medium",
+            "text_color": "primary",
+            "content": "<p><a href=\"tel:+8055265443\" title=\"tel:+8055265443\"><strong>(805) 526-5443</strong></a></p><p>2130 Ward Ave<br/>Simi Valley, CA 93065</p><p>STORE HOURS (PST)<br/>Monday: <strong>9:00am - 6:00pm</strong><br/>Tuesday: <strong>9:00am - 6:00pm</strong><br/>Wednesday: <strong>9:00am - 6:00pm</strong><br/>Thursday: <strong>9:00am - 6:00pm</strong><br/>Friday: <strong>9:00am - 6:00pm</strong><br/>Saturday: <strong>10:00am - 3:00pm</strong><br/>Sunday: <strong>CLOSED</strong></p><p>PARKING<br/><strong>Free Parking</strong></p>"
+          },
+          "blocks": {}
+        },
+        "button_r6wXmw": {
+          "type": "button",
+          "settings": {
+            "size": "md",
+            "variant": "outline",
+            "label": "Get Directions",
+            "url": "https://www.google.com/maps/place/2130+Ward+Ave,+Simi+Valley,+CA+93065/@34.2743336,-118.7869357,17z/data=!3m1!4b1!4m5!3m4!1s0x80e82ec14503fac9:0x90f5277b6de5ad94!8m2!3d34.2743336!4d-118.784747?shorturl=1",
+            "style": "black",
+            "background_color": "",
+            "text_color": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_nXMj8h",
+        "paragraph_Anf7i6",
+        "button_r6wXmw"
+      ],
+      "name": "t:sections.image_with_text.name",
+      "settings": {
+        "image": "shopify://shop_images/Showroom-Gallery_3.jpg",
+        "full_width": false,
+        "gap": false,
+        "image_width": 100,
+        "image_position": "right",
+        "image_size": "",
+        "image_height": 480,
+        "image_size_mobile": "same",
+        "image_height_mobile": 480,
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
     }
   },
   "order": [
     "main",
-    "slideshow_gUVjwB"
+    "slideshow_gUVjwB",
+    "image_with_text_DKV4jA"
   ]
 }
