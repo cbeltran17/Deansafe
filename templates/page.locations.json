@@ -127,9 +127,9 @@
         "image_position": "right",
         "background_color": "#122613",
         "text_color": "#ffffff",
-        "enable_custom_spacing": false,
-        "top_spacing": 80,
-        "bottom_spacing": 80
+        "enable_custom_spacing": true,
+        "top_spacing": 24,
+        "bottom_spacing": 0
       }
     },
     "multicolumn_locations_UABhK3": {
