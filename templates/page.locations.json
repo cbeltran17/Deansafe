@@ -149,9 +149,9 @@
             "day_3": "Sunday",
             "time_3": "Closed",
             "btn_1_label": "View Location",
-            "btn_1_link": "",
+            "btn_1_link": "shopify://pages/los-angeles-culver-city-store",
             "btn_2_label": "Directions",
-            "btn_2_link": ""
+            "btn_2_link": "https://www.google.com/maps?q=11284+Washington+Place+Culver+City+CA"
           }
         },
         "location_pNThH8": {
