@@ -37,9 +37,9 @@
         "text_alignment": "left",
         "background_color": "",
         "text_color": "",
-        "enable_custom_spacing": false,
-        "top_spacing": 80,
-        "bottom_spacing": 80
+        "enable_custom_spacing": true,
+        "top_spacing": 32,
+        "bottom_spacing": 32
       }
     },
     "video_MCJJQQ": {
@@ -76,7 +76,7 @@
         }
       },
       "custom_css": [
-        ".video-player{max-width: 600px;}"
+        ".video-player {max-width: 600px;}"
       ],
       "name": "t:sections.video.name",
       "settings": {
