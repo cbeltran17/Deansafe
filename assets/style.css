@@ -115,7 +115,7 @@ media-lightbox media-carousel .media-carousel img {
 
 .stock-notification-banner {
     border-radius: 12px;
-    padding: 14px;
+    padding: 1.25rem;
     font-size: 15px;
     display: flex;
     flex-direction: column;
