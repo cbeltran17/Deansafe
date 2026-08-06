@@ -185,6 +185,7 @@ media-lightbox media-carousel .media-carousel img {
     align-items: center;
     gap: 12px;
     font-size: 18px;
+    line-height: 1.5rem;
 }
 
 .stock-notification-banner .stock-line-1 .check-icon svg {
