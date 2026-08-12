@@ -285,93 +285,6 @@
         "bottom_spacing": 80
       }
     },
-    "collection_list_cwecAX": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_list_item_MDgxcj": {
-          "type": "_collection_list_item",
-          "settings": {
-            "collection": "american-security-amsec-safes",
-            "image": "shopify://shop_images/AMSEC-HP-tile.jpg",
-            "style": "overlay",
-            "title": "",
-            "description": ""
-          },
-          "blocks": {}
-        },
-        "collection_list_item_tEnHTL": {
-          "type": "_collection_list_item",
-          "settings": {
-            "collection": "liberty-safe",
-            "image": "shopify://shop_images/Liberty-HP-tile.jpg",
-            "style": "overlay",
-            "title": "Liberty Safe",
-            "description": ""
-          },
-          "blocks": {}
-        },
-        "collection_list_item_Gi6rwd": {
-          "type": "_collection_list_item",
-          "settings": {
-            "collection": "fort-knox-gun-safes-and-vaults",
-            "image": "shopify://shop_images/Fort-Knox-HP-tile.jpg",
-            "style": "overlay",
-            "title": "Fort Knox",
-            "description": ""
-          },
-          "blocks": {}
-        },
-        "section-header": {
-          "type": "_section-header",
-          "static": true,
-          "settings": {
-            "enable_custom_spacing": false,
-            "bottom_spacing": 32
-          },
-          "blocks": {
-            "heading_D9TLVG": {
-              "type": "heading",
-              "settings": {
-                "full_width": true,
-                "max_width": 500,
-                "heading_size": "h2",
-                "heading": "Top Brands",
-                "highlight_type": "underline",
-                "highlight_layer": "default",
-                "heading_color": "",
-                "highlight_color": "",
-                "heading_seo_tag": "p"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "heading_D9TLVG"
-          ]
-        }
-      },
-      "block_order": [
-        "collection_list_item_MDgxcj",
-        "collection_list_item_tEnHTL",
-        "collection_list_item_Gi6rwd"
-      ],
-      "disabled": true,
-      "name": "t:sections.collection_list.name",
-      "settings": {
-        "enable_carousel": false,
-        "collections_per_row": 3,
-        "collections_per_row_mobile": "1.5",
-        "image_size": "1/1",
-        "text_alignment": "center",
-        "background_color": "",
-        "text_color": "",
-        "card_background_color": "#f7f7f7",
-        "card_text_color": "#1e1e1e",
-        "enable_custom_spacing": false,
-        "top_spacing": 80,
-        "bottom_spacing": 80
-      }
-    },
     "brands_diMQE9": {
       "type": "brands",
       "blocks": {
@@ -754,37 +667,6 @@
         "bottom_spacing": 80
       }
     },
-    "video_BDLyyz": {
-      "type": "video",
-      "blocks": {
-        "section-header": {
-          "type": "_section-header",
-          "static": true,
-          "settings": {
-            "enable_custom_spacing": false,
-            "bottom_spacing": 32
-          },
-          "blocks": {}
-        }
-      },
-      "disabled": true,
-      "name": "t:sections.video.name",
-      "settings": {
-        "video": "shopify://files/videos/Simi Warehouse video D1 v2.mp4",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "controls": true,
-        "autoplay": false,
-        "muted": false,
-        "loop": false,
-        "video_size": "",
-        "text_alignment": "center",
-        "background_color": "",
-        "text_color": "",
-        "enable_custom_spacing": false,
-        "top_spacing": 80,
-        "bottom_spacing": 80
-      }
-    },
     "locations_j7XtTV": {
       "type": "locations",
       "blocks": {
@@ -826,157 +708,6 @@
         "heading": "Our Locations",
         "padding_top": 0,
         "padding_bottom": 80
-      }
-    },
-    "collection_list_tfYQqN": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_list_item_8Nxrhx": {
-          "type": "_collection_list_item",
-          "settings": {
-            "collection": "gun-safe-and-rifle-safes",
-            "image": "shopify://shop_images/rifle-safes.png",
-            "style": "overlay",
-            "title": "Rifle Safes",
-            "description": ""
-          },
-          "blocks": {}
-        },
-        "collection_list_item_rwrwAr": {
-          "type": "_collection_list_item",
-          "name": "t:blocks._collection_list_item.name",
-          "settings": {
-            "collection": "1-hour-fire-rated-gun-safes",
-            "image": "shopify://shop_images/handgun-safes.png",
-            "style": "overlay",
-            "title": "Handgun Safes",
-            "description": ""
-          },
-          "blocks": {}
-        },
-        "collection_list_item_pDymbK": {
-          "type": "_collection_list_item",
-          "name": "t:blocks._collection_list_item.name",
-          "settings": {
-            "collection": "100-minute-fire-rated-safes",
-            "image": "shopify://shop_images/home-safes.png",
-            "style": "overlay",
-            "title": "Home Safes",
-            "description": ""
-          },
-          "blocks": {}
-        },
-        "collection_list_item_hF8q6B": {
-          "type": "_collection_list_item",
-          "settings": {
-            "collection": "25-36-gun-capacity-gun-safes",
-            "image": "shopify://shop_images/depository.png",
-            "style": "overlay",
-            "title": "Depository",
-            "description": ""
-          },
-          "blocks": {}
-        },
-        "collection_list_item_AGPjtV": {
-          "type": "_collection_list_item",
-          "settings": {
-            "collection": "17-24-gun-capacity-gun-safes",
-            "image": "shopify://shop_images/vault-doors.png",
-            "style": "overlay",
-            "title": "Vault Doors",
-            "description": ""
-          },
-          "blocks": {}
-        },
-        "collection_list_item_k8gp4p": {
-          "type": "_collection_list_item",
-          "settings": {
-            "collection": "1-hour-fire-rated-home-safes",
-            "image": "shopify://shop_images/biometric.png",
-            "style": "overlay",
-            "title": "Biometric",
-            "description": ""
-          },
-          "blocks": {}
-        },
-        "collection_list_item_c86kmG": {
-          "type": "_collection_list_item",
-          "name": "t:blocks._collection_list_item.name",
-          "settings": {
-            "collection": "100-minute-fire-rated-safes",
-            "image": "shopify://shop_images/made-in-usa.png",
-            "style": "overlay",
-            "title": "Made in USA",
-            "description": ""
-          },
-          "blocks": {}
-        },
-        "collection_list_item_DUrGFt": {
-          "type": "_collection_list_item",
-          "name": "t:blocks._collection_list_item.name",
-          "settings": {
-            "collection": "110-minute-fire-rated-safes",
-            "image": "shopify://shop_images/used-safes.png",
-            "style": "overlay",
-            "title": "Used Safes",
-            "description": ""
-          },
-          "blocks": {}
-        },
-        "section-header": {
-          "type": "_section-header",
-          "static": true,
-          "settings": {
-            "enable_custom_spacing": false,
-            "bottom_spacing": 32
-          },
-          "blocks": {
-            "heading_DfyYn9": {
-              "type": "heading",
-              "settings": {
-                "full_width": true,
-                "max_width": 500,
-                "heading_size": "h2",
-                "heading": "Shop by Category",
-                "highlight_type": "underline",
-                "highlight_layer": "default",
-                "heading_color": "",
-                "highlight_color": "",
-                "heading_seo_tag": "p"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "heading_DfyYn9"
-          ]
-        }
-      },
-      "block_order": [
-        "collection_list_item_8Nxrhx",
-        "collection_list_item_rwrwAr",
-        "collection_list_item_pDymbK",
-        "collection_list_item_hF8q6B",
-        "collection_list_item_AGPjtV",
-        "collection_list_item_k8gp4p",
-        "collection_list_item_c86kmG",
-        "collection_list_item_DUrGFt"
-      ],
-      "disabled": true,
-      "name": "t:sections.collection_list.name",
-      "settings": {
-        "enable_carousel": true,
-        "collections_per_row": 4,
-        "collections_per_row_mobile": "1.5",
-        "image_size": "",
-        "text_alignment": "center",
-        "background_color": "",
-        "text_color": "",
-        "card_background_color": "#f7f7f7",
-        "card_text_color": "#1e1e1e",
-        "enable_custom_spacing": true,
-        "top_spacing": 0,
-        "bottom_spacing": 80
       }
     },
     "collection_grid_hkfyek": {
@@ -1142,55 +873,6 @@
         "bottom_spacing": 80
       }
     },
-    "product_bundle_QyxApU": {
-      "type": "product-bundle",
-      "blocks": {
-        "bundle_product_pEcBEf": {
-          "type": "bundle_product",
-          "settings": {
-            "product": "browning-hunter-tall-htr49t-gun-safe"
-          }
-        },
-        "bundle_product_My4U6x": {
-          "type": "bundle_product",
-          "settings": {
-            "product": "stl-pistol-holster-compact"
-          }
-        },
-        "bundle_product_7hxrDW": {
-          "type": "bundle_product",
-          "settings": {
-            "product": "stl-dpo-large"
-          }
-        }
-      },
-      "block_order": [
-        "bundle_product_pEcBEf",
-        "bundle_product_My4U6x",
-        "bundle_product_7hxrDW"
-      ],
-      "disabled": true,
-      "name": "t:sections.product_bundle.name",
-      "settings": {
-        "image": "shopify://shop_images/the-hunt-for-savings-rebate.png",
-        "image_size": "1/1",
-        "image_height": 480,
-        "image_size_mobile": "same",
-        "image_height_mobile": 480,
-        "heading_size": "h2",
-        "heading": "The hunt for Savings Rebate",
-        "content": "<p>Save on our updated Hunter Series gun safes. Cash back up to $500</p>",
-        "button_text": "Shop Rebate",
-        "background_color": "",
-        "text_color": "",
-        "heading_color": "",
-        "overlay_color": "#000000",
-        "overlay_opacity": 0,
-        "enable_custom_spacing": false,
-        "top_spacing": 80,
-        "bottom_spacing": 80
-      }
-    },
     "featured_blog_4NL9V9": {
       "type": "featured-blog",
       "blocks": {
@@ -1254,65 +936,6 @@
         "bottom_spacing": 80
       }
     },
-    "text_with_icons_T7ptVJ": {
-      "type": "text-with-icons",
-      "blocks": {
-        "icon_text_BKbmYp": {
-          "type": "icon_text",
-          "settings": {
-            "icon_name": "truck",
-            "heading": "Free Shipping",
-            "text": "On orders $100+"
-          }
-        },
-        "icon_text_VxggTY": {
-          "type": "icon_text",
-          "settings": {
-            "icon_name": "return",
-            "heading": "Easy Returns",
-            "text": "30 day returns"
-          }
-        },
-        "icon_text_PA4MAB": {
-          "type": "icon_text",
-          "settings": {
-            "icon_name": "headphones",
-            "heading": "Live Customer Support",
-            "text": "Real safe experts"
-          }
-        },
-        "icon_text_EAqrkM": {
-          "type": "icon_text",
-          "settings": {
-            "icon_name": "package",
-            "heading": "Showroom Pickup",
-            "text": "3 social locations"
-          }
-        }
-      },
-      "block_order": [
-        "icon_text_BKbmYp",
-        "icon_text_VxggTY",
-        "icon_text_PA4MAB",
-        "icon_text_EAqrkM"
-      ],
-      "disabled": true,
-      "name": "t:sections.text_with_icons.name",
-      "settings": {
-        "enable_carousel_on_mobile": false,
-        "columns_per_row": 4,
-        "columns_per_row_mobile": "2",
-        "icon_position": "left",
-        "icon_position_mobile": "top",
-        "background_color": "",
-        "text_color": "",
-        "heading_color": "",
-        "icon_color": "#095f41",
-        "enable_custom_spacing": true,
-        "top_spacing": 0,
-        "bottom_spacing": 80
-      }
-    },
     "rich_text_J99DQP": {
       "type": "rich-text",
       "blocks": {
@@ -1365,18 +988,13 @@
     "slideshow_TLmBG7",
     "text_with_icons_Pb9XgQ",
     "multiple_featured_collections_zGjR6b",
-    "collection_list_cwecAX",
     "brands_diMQE9",
     "image_with_text_slider_aYpUQJ",
     "testimonials_eR6HaW",
     "image_with_text_j73R7X",
-    "video_BDLyyz",
     "locations_j7XtTV",
-    "collection_list_tfYQqN",
     "collection_grid_hkfyek",
-    "product_bundle_QyxApU",
     "featured_blog_4NL9V9",
-    "text_with_icons_T7ptVJ",
     "rich_text_J99DQP"
   ]
 }
