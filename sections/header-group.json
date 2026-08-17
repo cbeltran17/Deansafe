@@ -157,6 +157,40 @@
                 "overlay_opacity": 10
               },
               "blocks": {}
+            },
+            "menu_promotion_card_TBYxVa": {
+              "type": "_menu_promotion_card",
+              "name": "t:blocks._menu_promotion_card.name",
+              "settings": {
+                "image_size": "",
+                "content_alignment": "promotion-card--content-top",
+                "link": "",
+                "heading": "",
+                "text": "",
+                "badge_text": "",
+                "text_color": "#FFFFFF",
+                "badge_color": "",
+                "overlay_color": "#000000",
+                "overlay_opacity": 10
+              },
+              "blocks": {}
+            },
+            "menu_promotion_card_Dzf8Pn": {
+              "type": "_menu_promotion_card",
+              "name": "t:blocks._menu_promotion_card.name",
+              "settings": {
+                "image_size": "",
+                "content_alignment": "promotion-card--content-top",
+                "link": "",
+                "heading": "",
+                "text": "",
+                "badge_text": "",
+                "text_color": "#FFFFFF",
+                "badge_color": "",
+                "overlay_color": "#000000",
+                "overlay_opacity": 10
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -164,7 +198,9 @@
             "menu_promotion_card_fjnNPD",
             "menu_promotion_card_9mGFwb",
             "menu_promotion_card_z8WzNN",
-            "menu_promotion_card_rdjyCR"
+            "menu_promotion_card_rdjyCR",
+            "menu_promotion_card_TBYxVa",
+            "menu_promotion_card_Dzf8Pn"
           ]
         },
         "mega_menu_jRRcx6": {
