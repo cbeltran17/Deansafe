@@ -6,7 +6,7 @@
     assign is_color_option = true
     assign value_name = option_value.name | default: option_value
     
-    assign file_name = value_name | downcase | replace: ' ', '-' | append: '.png'
+    assign file_name = value_name | handleize | append: '.png'
     assign swatch_image_url = file_name | file_url
     assign fallback_color = value_name | downcase | replace: ' ', ''
   endif
