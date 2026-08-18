@@ -20,7 +20,7 @@
 <fieldset data-product-option>
   <div class="product-option-label">
     <legend class="contents">
-      <span class="product-option-name">{{ option.name }}:</span>
+      <span class="product-option-name">{{ option.name }}{% if product.tags contain "Show Exterior Interior" %} Exterior/Interior{% endif %}:</span>
       <span class="product-option-value">{{ option.selected_value }}{{ selected_extra_price }}</span>
     </legend>
     {% render 'product-size-chart', option: option, block: block %}
