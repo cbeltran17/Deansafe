@@ -168,7 +168,7 @@
                 "heading": "",
                 "text": "",
                 "badge_text": "",
-                "text_color": "#FFFFFF",
+                "text_color": "#ffffff",
                 "badge_color": "",
                 "overlay_color": "#000000",
                 "overlay_opacity": 10
@@ -185,7 +185,7 @@
                 "heading": "",
                 "text": "",
                 "badge_text": "",
-                "text_color": "#FFFFFF",
+                "text_color": "#ffffff",
                 "badge_color": "",
                 "overlay_color": "#000000",
                 "overlay_opacity": 10
@@ -223,8 +223,8 @@
         "secondary_menu": "",
         "mobile_menu": "",
         "mobile_layout": "logo-center",
-        "hide_account_icon": false,
-        "show_expert_help_header": true,
+        "hide_account_icon": true,
+        "show_expert_help_header": false,
         "show_expert_help_button_icon": "mail",
         "show_expert_help_button_url": "shopify://pages/contact",
         "mobile_menu_show_social_icons": true,
