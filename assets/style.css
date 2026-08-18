@@ -344,6 +344,7 @@ media-lightbox media-carousel .media-carousel img {
 
 .product-section .avpoptions-container__v2 .ap-options__optiongroup-container {
     border-color: #e5e7eb;
+    border-radius: 6px;
 }
 
 /* Option Value Radio End */
