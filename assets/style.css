@@ -337,6 +337,11 @@ media-lightbox media-carousel .media-carousel img {
 .option-radio-container .option-value-radio--color[data-unavailable] {
     display: none;
 }
+
+.product-option-name .sublabel {
+    font-size: 14px;
+}
+
 /* Option Value Radio End */
 
 @media (min-width: 48rem) {
