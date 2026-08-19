@@ -490,8 +490,12 @@ media-lightbox media-carousel .media-carousel img {
     display: none;
 }
 
-.promotion-card>*, .promotion-card>::slotted(*) {
+.mega-menu-page__promotions .promotion-card>*, .mega-menu-page__promotions .promotion-card>::slotted(*) {
     grid-area: auto;
+}
+
+.mega-menu-page__promotions .promotion-card__content {
+    text-align: center;
 }
 
 
