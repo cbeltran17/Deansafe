@@ -218,6 +218,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/STL-UL14-gunsafe_2.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://collections/gun-safes",
@@ -271,7 +272,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
-                "image": "shopify://shop_images/GunSafes_VL_gun-cabinet.jpg",
+                "image": "shopify://shop_images/WINSAFES_Ammo-31_front-empty.jpg",
                 "image_size": "",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://collections/gun-cabinets",
@@ -307,7 +308,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
-                "image": "shopify://shop_images/GunSafes_made-in-usa.jpg",
+                "image": "shopify://shop_images/03LifePod10BiometricBlack-Accessories.webp",
                 "image_size": "",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://collections/anti-theft-lock-boxes",
@@ -344,6 +345,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/home-safes.png",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://collections/home-safes",
@@ -361,6 +363,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/dean-safe-amsec-amvault-cf2518-tl30-jewelry-safes-13.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "#",
@@ -378,6 +381,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/Homepage_Burglary-Rating_Image.png",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "#",
@@ -395,6 +399,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/dean-safe-amsec-amvault-tl30x6-cfx252016-high-security-safes-12_b81c3d45-1833-476e-bc49-b56cd00eef0a.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://collections/high-security-safes",
@@ -412,6 +417,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/1812_2-MBG-SRE_3.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "#",
@@ -429,6 +435,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/category-wall-safes_b3657575-2d43-42c5-934e-78e33c9565cb.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://collections/wall-safes",
@@ -446,6 +453,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/category-floor-safes_a3f61997-2563-4f66-a1c4-ee72df9c2c73.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://collections/floor-safes",
@@ -483,6 +491,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/business_commercial_safes.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://collections/business-safes",
@@ -500,6 +509,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/dean-safe-amsec-amvault-tl30x6-cfx252016-high-security-safes-12_b81c3d45-1833-476e-bc49-b56cd00eef0a.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://collections/high-security-safes",
@@ -517,6 +527,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/USED_Brown-Safe_SuperGem-TL30-COM-4018_2.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "#",
@@ -534,6 +545,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/AMSEC_BFS4520_1.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "#",
@@ -568,6 +580,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/STL_DS1614-drop-safe_Front_Canva-edited.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "#",
@@ -604,6 +617,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/03VTiBK-Accessories.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "#",
@@ -621,6 +635,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/Molle_Door_Organizer_Image_3_56ea1e1e-f881-4599-ac1a-315b20bb28be.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "#",
@@ -638,6 +653,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/Rhino_LED-Light-Kit_5-Wand.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "#",
@@ -655,6 +671,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/DS-mega-menu-Accessories_dehumidifiers.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "#",
@@ -672,6 +689,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/STL_Molle_Rifle_Holster_3-pack.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "#",
@@ -689,6 +707,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/DS-mega-menu-Accessories_covers.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "#",
@@ -706,6 +725,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/safe-locks-amsec-lp-rotobolt-redundant-lock-dial-combo-and-electronic-retrofit-kit-1_099bd1e1-02e9-497d-8b15-975c2aa0bb9c.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "#",
@@ -743,6 +763,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/dean-safe-locations-1_5174a1c0-236d-457c-aa3e-9db00b0ecd01.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://pages/showroom-locations",
@@ -760,6 +781,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/Simi-Showroom-Outside-building-image_compressed.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://pages/sivadesacoou",
@@ -777,6 +799,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/Culver-City-Showroom-TBN.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://pages/los-angeles-culver-city-store",
@@ -794,6 +817,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/noho-storefront.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://pages/desacoarca91",
