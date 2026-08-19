@@ -59,6 +59,145 @@
     "header": {
       "type": "header",
       "blocks": {
+        "mega_menu_wc3nbF": {
+          "type": "_mega_menu",
+          "name": "t:blocks._mega_menu.name",
+          "settings": {
+            "menu_item": "Shop By Brand",
+            "promotion_cards_direction": "row",
+            "promotion_card_width": 220
+          },
+          "blocks": {
+            "menu_promotion_card_zer4AH": {
+              "type": "_menu_promotion_card",
+              "name": "t:blocks._menu_promotion_card.name",
+              "settings": {
+                "image_size": "1/1",
+                "content_alignment": "promotion-card--content-bottom",
+                "link": "shopify://pages/brands",
+                "heading": "All Brands",
+                "text": "",
+                "badge_text": "",
+                "text_color": "#FFFFFF",
+                "badge_color": "",
+                "overlay_color": "#000000",
+                "overlay_opacity": 10
+              },
+              "blocks": {}
+            },
+            "menu_promotion_card_b6i6aM": {
+              "type": "_menu_promotion_card",
+              "name": "t:blocks._menu_promotion_card.name",
+              "settings": {
+                "image_size": "1/1",
+                "content_alignment": "promotion-card--content-bottom",
+                "link": "shopify://collections/stealth-safe",
+                "heading": "Stealth Safes",
+                "text": "",
+                "badge_text": "",
+                "text_color": "#FFFFFF",
+                "badge_color": "",
+                "overlay_color": "#000000",
+                "overlay_opacity": 10
+              },
+              "blocks": {}
+            },
+            "menu_promotion_card_yUTLDP": {
+              "type": "_menu_promotion_card",
+              "name": "t:blocks._menu_promotion_card.name",
+              "settings": {
+                "image_size": "1/1",
+                "content_alignment": "promotion-card--content-bottom",
+                "link": "#",
+                "heading": "American Security",
+                "text": "",
+                "badge_text": "",
+                "text_color": "#FFFFFF",
+                "badge_color": "",
+                "overlay_color": "#000000",
+                "overlay_opacity": 10
+              },
+              "blocks": {}
+            },
+            "menu_promotion_card_KVYAzN": {
+              "type": "_menu_promotion_card",
+              "name": "t:blocks._menu_promotion_card.name",
+              "settings": {
+                "image_size": "1/1",
+                "content_alignment": "promotion-card--content-bottom",
+                "link": "shopify://collections/browning-safes",
+                "heading": "Browning",
+                "text": "",
+                "badge_text": "",
+                "text_color": "#FFFFFF",
+                "badge_color": "",
+                "overlay_color": "#000000",
+                "overlay_opacity": 10
+              },
+              "blocks": {}
+            },
+            "menu_promotion_card_Kwk79c": {
+              "type": "_menu_promotion_card",
+              "name": "t:blocks._menu_promotion_card.name",
+              "settings": {
+                "image_size": "1/1",
+                "content_alignment": "promotion-card--content-bottom",
+                "link": "shopify://collections/hollon-safe",
+                "heading": "Hollon Safe",
+                "text": "",
+                "badge_text": "",
+                "text_color": "#FFFFFF",
+                "badge_color": "",
+                "overlay_color": "#000000",
+                "overlay_opacity": 10
+              },
+              "blocks": {}
+            },
+            "menu_promotion_card_fPjrt3": {
+              "type": "_menu_promotion_card",
+              "name": "t:blocks._menu_promotion_card.name",
+              "settings": {
+                "image_size": "1/1",
+                "content_alignment": "promotion-card--content-bottom",
+                "link": "shopify://collections/fort-knox-gun-safes-and-vaults",
+                "heading": "Fort Knox",
+                "text": "",
+                "badge_text": "",
+                "text_color": "#FFFFFF",
+                "badge_color": "",
+                "overlay_color": "#000000",
+                "overlay_opacity": 10
+              },
+              "blocks": {}
+            },
+            "menu_promotion_card_AikztU": {
+              "type": "_menu_promotion_card",
+              "name": "t:blocks._menu_promotion_card.name",
+              "settings": {
+                "image_size": "1/1",
+                "content_alignment": "promotion-card--content-bottom",
+                "link": "shopify://collections/liberty-gun-safes",
+                "heading": "Liberty Safes",
+                "text": "",
+                "badge_text": "",
+                "text_color": "#FFFFFF",
+                "badge_color": "",
+                "overlay_color": "#000000",
+                "overlay_opacity": 10
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "menu_promotion_card_zer4AH",
+            "menu_promotion_card_b6i6aM",
+            "menu_promotion_card_yUTLDP",
+            "menu_promotion_card_KVYAzN",
+            "menu_promotion_card_Kwk79c",
+            "menu_promotion_card_fPjrt3",
+            "menu_promotion_card_AikztU"
+          ]
+        },
         "mega_menu_h4GJGa": {
           "type": "_mega_menu",
           "name": "t:blocks._mega_menu.name",
@@ -215,6 +354,7 @@
         }
       },
       "block_order": [
+        "mega_menu_wc3nbF",
         "mega_menu_h4GJGa",
         "mega_menu_jRRcx6"
       ],
