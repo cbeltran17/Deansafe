@@ -483,6 +483,10 @@ media-lightbox media-carousel .media-carousel img {
 }
 
 
+.mega-menu-page.shop-by-brand .mega-menu-page__promotions {
+    display: none;
+}
+
 @media (min-width: 1024px) { 
     .mega-menu-page.shop-by-brand .mega-menu-page__links {
         display: none;
