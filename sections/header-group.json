@@ -207,9 +207,9 @@
           "type": "_mega_menu",
           "name": "t:blocks._mega_menu.name",
           "settings": {
-            "menu_item": "Info",
+            "menu_item": "Deals & Offers",
             "promotion_cards_direction": "column",
-            "promotion_card_width": 280
+            "promotion_card_width": 220
           },
           "blocks": {}
         }
