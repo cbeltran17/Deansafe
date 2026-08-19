@@ -72,6 +72,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/Top-brands_collage_homepage_FTK.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://pages/brands",
@@ -89,6 +90,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/stealth-safes_mega-menu.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://collections/stealth-safe",
@@ -106,6 +108,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/American-Security-Safes-logo.png",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "#",
@@ -123,6 +126,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/PB-browning-safe.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://collections/browning-safes",
@@ -140,6 +144,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/Hollon_82726653-df5f-4af0-9649-5e75a107e82f.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://collections/hollon-safe",
@@ -157,6 +162,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/fort-knox_6d7a6c18-eab7-4fe5-a698-c425541f8b05.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://collections/fort-knox-gun-safes-and-vaults",
@@ -174,6 +180,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/PB_liberty.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://collections/liberty-safe",
@@ -742,7 +749,7 @@
                 "heading": "View All",
                 "text": "",
                 "badge_text": "",
-                "text_color": "#1E1E1E",
+                "text_color": "#1e1e1e",
                 "badge_color": "",
                 "overlay_color": "#000000",
                 "overlay_opacity": 10
@@ -759,7 +766,7 @@
                 "heading": "Simi Valley",
                 "text": "",
                 "badge_text": "",
-                "text_color": "#1E1E1E",
+                "text_color": "#1e1e1e",
                 "badge_color": "",
                 "overlay_color": "#000000",
                 "overlay_opacity": 10
@@ -776,7 +783,7 @@
                 "heading": "Culver City",
                 "text": "",
                 "badge_text": "",
-                "text_color": "#1E1E1E",
+                "text_color": "#1e1e1e",
                 "badge_color": "",
                 "overlay_color": "#000000",
                 "overlay_opacity": 10
@@ -793,7 +800,7 @@
                 "heading": "North Hollywood",
                 "text": "",
                 "badge_text": "",
-                "text_color": "#1E1E1E",
+                "text_color": "#1e1e1e",
                 "badge_color": "",
                 "overlay_color": "#000000",
                 "overlay_opacity": 10
