@@ -31,7 +31,7 @@
       }
     </style>
     <div class="mega-menu-page">
-      <div class="mega-menu-page__links {{ menu_item.title }}">
+      <div class="mega-menu-page__links {{ menu_item.title | handle }}">
         {% for link in menu_item.links %}
           <ul data-link-group class="mega-menu-list">
             {% render 'mega-menu-link', link: link, badges: badges, class: 'font-medium' %}
