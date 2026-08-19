@@ -78,7 +78,7 @@
                 "heading": "All Brands",
                 "text": "",
                 "badge_text": "",
-                "text_color": "#ffffff",
+                "text_color": "#1E1E1E",
                 "badge_color": "",
                 "overlay_color": "#000000",
                 "overlay_opacity": 10
@@ -95,7 +95,7 @@
                 "heading": "Stealth Safes",
                 "text": "",
                 "badge_text": "",
-                "text_color": "#ffffff",
+                "text_color": "#1E1E1E",
                 "badge_color": "",
                 "overlay_color": "#000000",
                 "overlay_opacity": 10
@@ -112,7 +112,7 @@
                 "heading": "American Security",
                 "text": "",
                 "badge_text": "",
-                "text_color": "#ffffff",
+                "text_color": "#1E1E1E",
                 "badge_color": "",
                 "overlay_color": "#000000",
                 "overlay_opacity": 10
@@ -129,7 +129,7 @@
                 "heading": "Browning",
                 "text": "",
                 "badge_text": "",
-                "text_color": "#ffffff",
+                "text_color": "#1E1E1E",
                 "badge_color": "",
                 "overlay_color": "#000000",
                 "overlay_opacity": 10
@@ -146,7 +146,7 @@
                 "heading": "Hollon Safe",
                 "text": "",
                 "badge_text": "",
-                "text_color": "#ffffff",
+                "text_color": "#1E1E1E",
                 "badge_color": "",
                 "overlay_color": "#000000",
                 "overlay_opacity": 10
@@ -163,7 +163,7 @@
                 "heading": "Fort Knox",
                 "text": "",
                 "badge_text": "",
-                "text_color": "#ffffff",
+                "text_color": "#1E1E1E",
                 "badge_color": "",
                 "overlay_color": "#000000",
                 "overlay_opacity": 10
@@ -180,7 +180,7 @@
                 "heading": "Liberty Safes",
                 "text": "",
                 "badge_text": "",
-                "text_color": "#ffffff",
+                "text_color": "#1E1E1E",
                 "badge_color": "",
                 "overlay_color": "#000000",
                 "overlay_opacity": 10
@@ -217,7 +217,7 @@
                 "heading": "View All",
                 "text": "",
                 "badge_text": "",
-                "text_color": "#FFFFFF",
+                "text_color": "#ffffff",
                 "badge_color": "",
                 "overlay_color": "#000000",
                 "overlay_opacity": 10
