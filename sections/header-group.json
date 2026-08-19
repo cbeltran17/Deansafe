@@ -563,6 +563,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
+                "image": "shopify://shop_images/depository.png",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "#",
