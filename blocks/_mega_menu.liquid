@@ -30,8 +30,8 @@
         --mega-menu-promotions-direction: {{ block.settings.promotion_cards_direction }};
       }
     </style>
-    <div class="mega-menu-page">
-      <div class="mega-menu-page__links {{ menu_item.title | handle }}">
+    <div class="mega-menu-page {{ menu_item.title | handle }}">
+      <div class="mega-menu-page__links">
         {% for link in menu_item.links %}
           <ul data-link-group class="mega-menu-list">
             {% render 'mega-menu-link', link: link, badges: badges, class: 'font-medium' %}
