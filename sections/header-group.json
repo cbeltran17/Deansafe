@@ -217,7 +217,7 @@
                 "heading": "View All",
                 "text": "",
                 "badge_text": "",
-                "text_color": "#ffffff",
+                "text_color": "#1E1E1E",
                 "badge_color": "",
                 "overlay_color": "#000000",
                 "overlay_opacity": 10
@@ -235,7 +235,7 @@
                 "heading": "Rifle / Long Gun Safes",
                 "text": "",
                 "badge_text": "",
-                "text_color": "#ffffff",
+                "text_color": "#1E1E1E",
                 "badge_color": "",
                 "overlay_color": "#000000",
                 "overlay_opacity": 10
@@ -253,7 +253,7 @@
                 "heading": "Handgun Safes",
                 "text": "",
                 "badge_text": "",
-                "text_color": "#ffffff",
+                "text_color": "#1E1E1E",
                 "badge_color": "",
                 "overlay_color": "#000000",
                 "overlay_opacity": 10
@@ -271,7 +271,7 @@
                 "heading": "Gun & Ammo Cabinets",
                 "text": "",
                 "badge_text": "",
-                "text_color": "#ffffff",
+                "text_color": "#1E1E1E",
                 "badge_color": "",
                 "overlay_color": "#000000",
                 "overlay_opacity": 10
@@ -289,7 +289,7 @@
                 "heading": "Vault Doors",
                 "text": "",
                 "badge_text": "",
-                "text_color": "#ffffff",
+                "text_color": "#1E1E1E",
                 "badge_color": "",
                 "overlay_color": "#000000",
                 "overlay_opacity": 10
@@ -307,7 +307,7 @@
                 "heading": "Anti-Theft Lock Boxes",
                 "text": "",
                 "badge_text": "",
-                "text_color": "#ffffff",
+                "text_color": "#1E1E1E",
                 "badge_color": "",
                 "overlay_color": "#000000",
                 "overlay_opacity": 10
