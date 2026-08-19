@@ -482,14 +482,6 @@ media-lightbox media-carousel .media-carousel img {
     margin-bottom: 1rem;
 }
 
-
-.mega-menu-page.shop-by-brand .mega-menu-page__promotions,
-.mobile-menu__page.shop-by-brand .mobile-menu__promotions,
-.mega-menu-page.gun-safes .mega-menu-page__promotions,
-.mobile-menu__page.gun-safes .mobile-menu__promotions {
-    display: none;
-}
-
 .mega-menu-page__promotions .promotion-card>*, .mega-menu-page__promotions .promotion-card>::slotted(*) {
     grid-area: auto;
 }
@@ -498,6 +490,14 @@ media-lightbox media-carousel .media-carousel img {
     text-align: center;
 }
 
+.mega-menu-page.shop-by-brand .mega-menu-page__promotions,
+.mobile-menu__page.shop-by-brand .mobile-menu__promotions,
+.mega-menu-page.gun-safes .mega-menu-page__promotions,
+.mobile-menu__page.gun-safes .mobile-menu__promotions,
+.mega-menu-page.home-safes .mega-menu-page__promotions,
+.mobile-menu__page.home-safes .mobile-menu__promotions {
+    display: none;
+}
 
 @media (min-width: 1024px) {
     .mega-menu-page.shop-by-brand .mega-menu-page__links,
@@ -510,3 +510,6 @@ media-lightbox media-carousel .media-carousel img {
         display: flex;
     }
 }
+
+
+home-safes
