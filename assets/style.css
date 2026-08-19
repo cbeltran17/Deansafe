@@ -347,6 +347,10 @@ media-lightbox media-carousel .media-carousel img {
     border-radius: 6px;
 }
 
+.promotion-card__image img {
+    object-fit: contain;
+}
+
 /* Option Value Radio End */
 
 @media (min-width: 48rem) {
