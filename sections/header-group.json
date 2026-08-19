@@ -72,7 +72,7 @@
               "type": "_menu_promotion_card",
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
-                "image": "shopify://shop_images/Top-brands_collage_homepage_FTK.jpg",
+                "image": "shopify://shop_images/ParkingLotSale_Brands.jpg",
                 "image_size": "1/1",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://pages/brands",
