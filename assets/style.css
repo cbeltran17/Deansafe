@@ -481,3 +481,10 @@ media-lightbox media-carousel .media-carousel img {
 .section-main-header-search .mb-12 {
     margin-bottom: 1rem;
 }
+
+
+@media (min-width: 1024px) { 
+    .mega-menu-page__links.shop-by-brand {
+        display: none;
+    }
+}
