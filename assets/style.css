@@ -484,7 +484,7 @@ media-lightbox media-carousel .media-carousel img {
 
 
 @media (min-width: 1024px) { 
-    .mega-menu-page__links.shop-by-brand {
+    .mega-menu-page.shop-by-brand .mega-menu-page__links {
         display: none;
     }
 }
