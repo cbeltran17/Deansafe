@@ -173,7 +173,7 @@
           "name": "t:blocks._footer_links.name",
           "settings": {
             "show_heading": true,
-            "heading": "",
+            "heading": "Shop",
             "links": "shop-updated"
           },
           "blocks": {}
