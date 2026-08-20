@@ -347,11 +347,19 @@ media-lightbox media-carousel .media-carousel img {
     border-radius: 6px;
 }
 
+/* Option Value Radio End */
+
 .promotion-card__image img {
     object-fit: contain;
 }
 
-/* Option Value Radio End */
+.header__navigation .mega-menu-page {
+	column-gap: 0;
+}
+
+.header__navigation .mega-menu-page .promotion-card {
+    width: 100%;
+}
 
 @media (min-width: 48rem) {
     .text-with-icons--desktop-horizontal .text-with-icons__item {
