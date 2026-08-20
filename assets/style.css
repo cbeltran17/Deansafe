@@ -361,6 +361,10 @@ media-lightbox media-carousel .media-carousel img {
     width: 100%;
 }
 
+.mega-menu-page.locations .promotion-card__image img {
+    object-fit: cover;
+}
+
 @media (min-width: 48rem) {
     .text-with-icons--desktop-horizontal .text-with-icons__item {
         justify-content: center;
