@@ -353,11 +353,11 @@ media-lightbox media-carousel .media-carousel img {
     object-fit: contain;
 }
 
-.header__navigation .mega-menu-page {
+.header-wrapper mega-menu .mega-menu-page {
 	column-gap: 0;
 }
 
-.header__navigation .mega-menu-page .promotion-card {
+.header-wrapper mega-menu .promotion-card {
     width: 100%;
 }
 
