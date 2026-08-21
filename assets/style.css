@@ -367,8 +367,7 @@ media-lightbox media-carousel .media-carousel img {
 
 body #MainContent .shopify-policy__container {
     max-width: 1500px;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0 24px;
 }
 
 
