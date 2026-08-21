@@ -1,18 +1,47 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main_contact": {
       "type": "main-page",
       "disabled": true,
-      "settings": {}
+      "settings": {
+        "content_width": "medium",
+        "content_text_size": "medium",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "heading_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
     },
     "form": {
       "type": "contact-form",
       "settings": {
         "heading_size": "h1",
+        "content_text_size": "medium",
         "heading": "Contact",
-        "content": "<p>Feel free to contact us for any inquiries, feedback, or help you may require. Our committed team is available to offer quick and tailored assistance, ensuring your shopping experience is smooth and enjoyable.</p>"
+        "content": "<p>Feel free to contact us for any inquiries, feedback, or help you may require. Our committed team is available to offer quick and tailored assistance, ensuring your shopping experience is smooth and enjoyable.</p><h2><strong>Customer Service Contact Info</strong></h2><p><strong>For Online Orders / Customer Service:<br/></strong>Call: (818) 899-2222<br/>Email: info@deansafe.com</p><p><strong>Customer Service Business Hours:<br/></strong>Mon-Fri: 8:30am - 4:00pm (PST)<br/>Sat-Sun: CLOSED</p><p><em>Showroom Information under Contact Form</em></p>",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
       }
     }
   },
-  "order": ["main_contact", "form"]
+  "order": [
+    "main_contact",
+    "form"
+  ]
 }
