@@ -436,10 +436,20 @@ body #MainContent .shopify-policy__container {
         padding-left: max(2rem, calc((100vw - 1500px - 0px) / 2));
         padding-right: max(2rem, calc((100vw - 1500px - 0px) / 2));
     }
+
+    body #MainContent .shopify-policy__container {
+        padding-left: max(2rem, calc((100vw - 1500px - 0px) / 2));
+        padding-right: max(2rem, calc((100vw - 1500px - 0px) / 2));
+    }
 }
 
 @media (max-width: 768px) { 
     #judgeme_product_reviews {
+        padding-left: max(1.25rem, calc((100vw - 1500px - 0px) / 2));
+        padding-right: max(1.25rem, calc((100vw - 1500px - 0px) / 2));
+    }
+
+    body #MainContent .shopify-policy__container {
         padding-left: max(1.25rem, calc((100vw - 1500px - 0px) / 2));
         padding-right: max(1.25rem, calc((100vw - 1500px - 0px) / 2));
     }
