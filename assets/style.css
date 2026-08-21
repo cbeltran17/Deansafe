@@ -371,10 +371,14 @@ body #MainContent .shopify-policy__container {
 	padding-right: max(3rem, calc((100vw - 1500px - 0px) / 2));
 }
 
+.shopify-policy__container a {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+}
 
 
-
-/* .shopify-policy__container table {
+.shopify-policy__container table {
   width: 100%;
   border-collapse: collapse;
   font-family: sans-serif; 
@@ -407,7 +411,7 @@ body #MainContent .shopify-policy__container {
 .shopify-policy__container table th:last-child {
   width: 15%;
   text-align: right;
-} */
+}
 
 
 
