@@ -365,6 +365,10 @@ media-lightbox media-carousel .media-carousel img {
     object-fit: cover;
 }
 
+body #MainContent .shopify-policy__container {
+    max-width: 1500px;
+}
+
 @media (min-width: 48rem) {
     .text-with-icons--desktop-horizontal .text-with-icons__item {
         justify-content: center;
