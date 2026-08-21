@@ -375,7 +375,7 @@ body #MainContent .shopify-policy__container {
 
 
 /* Container styling for a full-width, clean table */
-.privacy-table {
+.shopify-policy__container table {
   width: 100%;
   border-collapse: collapse;
   font-family: sans-serif; 
@@ -383,8 +383,8 @@ body #MainContent .shopify-policy__container {
 }
 
 /* Unify padding, alignment, and borders for all cells */
-.privacy-table th, 
-.privacy-table td {
+.shopify-policy__container table th, 
+.shopify-policy__container table td {
   padding: 16px;
   text-align: left;
   vertical-align: top; /* This brings the YES/NO text to the top */
@@ -392,23 +392,23 @@ body #MainContent .shopify-policy__container {
 }
 
 /* Header specific styling */
-.privacy-table th {
+.shopify-policy__container table th {
   font-weight: bold;
   color: #333;
   padding-bottom: 24px; /* Gives extra breathing room under headers */
 }
 
 /* Proportionate column widths */
-.privacy-table td:first-child {
+.shopify-policy__container table td:first-child {
   width: 30%; /* Gives the Category column a fixed proportion */
 }
 
-.privacy-table td:nth-child(2) {
+.shopify-policy__container table td:nth-child(2) {
   width: 55%; /* Allows the Examples column the most space */
 }
 
-.privacy-table td:last-child,
-.privacy-table th:last-child {
+.shopify-policy__container table td:last-child,
+.shopify-policy__container table th:last-child {
   width: 15%;
   text-align: right; /* Aligns the Collected YES/NO cleanly to the right edge */
 }
