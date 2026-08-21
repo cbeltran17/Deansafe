@@ -374,44 +374,40 @@ body #MainContent .shopify-policy__container {
 
 
 
-/* Container styling for a full-width, clean table */
-.shopify-policy__container table {
+/* .shopify-policy__container table {
   width: 100%;
   border-collapse: collapse;
   font-family: sans-serif; 
   line-height: 1.5;
 }
 
-/* Unify padding, alignment, and borders for all cells */
 .shopify-policy__container table th, 
 .shopify-policy__container table td {
   padding: 16px;
   text-align: left;
-  vertical-align: top; /* This brings the YES/NO text to the top */
+  vertical-align: top; 
   border-bottom: 1px solid #eaeaea; 
 }
 
-/* Header specific styling */
 .shopify-policy__container table th {
   font-weight: bold;
   color: #333;
-  padding-bottom: 24px; /* Gives extra breathing room under headers */
+  padding-bottom: 24px;
 }
 
-/* Proportionate column widths */
 .shopify-policy__container table td:first-child {
-  width: 30%; /* Gives the Category column a fixed proportion */
+  width: 30%;
 }
 
 .shopify-policy__container table td:nth-child(2) {
-  width: 55%; /* Allows the Examples column the most space */
+  width: 55%;
 }
 
 .shopify-policy__container table td:last-child,
 .shopify-policy__container table th:last-child {
   width: 15%;
-  text-align: right; /* Aligns the Collected YES/NO cleanly to the right edge */
-}
+  text-align: right;
+} */
 
 
 
