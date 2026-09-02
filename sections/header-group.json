@@ -765,7 +765,7 @@
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
                 "image": "shopify://shop_images/dean-safe-locations-1_5174a1c0-236d-457c-aa3e-9db00b0ecd01.jpg",
-                "image_size": "1/1",
+                "image_size": "4/3",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://pages/showroom-locations",
                 "heading": "View All",
@@ -783,7 +783,7 @@
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
                 "image": "shopify://shop_images/Simi-Showroom-Outside-building-image_compressed.jpg",
-                "image_size": "1/1",
+                "image_size": "4/3",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://pages/sivadesacoou",
                 "heading": "Simi Valley",
@@ -801,7 +801,7 @@
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
                 "image": "shopify://shop_images/Culver-City-Showroom-TBN.jpg",
-                "image_size": "1/1",
+                "image_size": "4/3",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://pages/los-angeles-culver-city-store",
                 "heading": "Culver City",
@@ -819,7 +819,7 @@
               "name": "t:blocks._menu_promotion_card.name",
               "settings": {
                 "image": "shopify://shop_images/noho-storefront.jpg",
-                "image_size": "1/1",
+                "image_size": "4/3",
                 "content_alignment": "promotion-card--content-bottom",
                 "link": "shopify://pages/desacoarca91",
                 "heading": "North Hollywood",
