@@ -209,7 +209,7 @@
         "video_muted": true,
         "video_controls": true,
         "video_loop": false,
-        "sticky_add_to_cart_enabled": true,
+        "sticky_add_to_cart_enabled": false,
         "sticky_add_to_cart_show_vendor": true,
         "background_color": "",
         "text_color": "",
