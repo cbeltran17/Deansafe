@@ -103,7 +103,7 @@
         "full_width": false,
         "media_size": "original",
         "height": 640,
-        "autoplay": true,
+        "autoplay": false,
         "autoplay_interval": 5,
         "background_color": "",
         "enable_custom_spacing": true,
