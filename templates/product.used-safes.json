@@ -1,0 +1,805 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h3",
+            "content": "{{ product.title }}",
+            "text_color": "",
+            "heading_seo_tag": "h1"
+          }
+        },
+        "vendor_HWM4hy": {
+          "type": "vendor",
+          "settings": {
+            "show_vendor": true,
+            "show_vendor_label": true,
+            "show_sku": false
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "customized_stock_RphCJD": {
+          "type": "customized_stock",
+          "settings": {}
+        },
+        "specifications_wEeYpQ": {
+          "type": "specifications",
+          "settings": {
+            "show_under_gallery": false,
+            "open_by_default": true,
+            "custom_content": "{{ product.metafields.custom.specifications | metafield_tag }}"
+          }
+        },
+        "model_sizes_rim6en": {
+          "type": "model_sizes",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "style": "radio",
+            "swatch_selector_style": "swatch",
+            "show_variant_image_for_options": "",
+            "size_chart_page": ""
+          }
+        },
+        "stock_QrwbPC": {
+          "type": "stock",
+          "disabled": true,
+          "settings": {
+            "show_progress_bar": true,
+            "enable_low_stock_message": true,
+            "enable_out_of_stock_message": true,
+            "enable_backorder_message": true
+          }
+        },
+        "aris_product_options_avisplus_options_block_Jpc34r": {
+          "type": "shopify://apps/aris-product-options/blocks/avisplus-options-block/e076618e-4c9c-447f-ad6d-4f1577799c29",
+          "settings": {}
+        },
+        "klarna_on_site_messaging_app_block_KjHr8G": {
+          "type": "shopify://apps/klarna-on-site-messaging/blocks/app-block/b95936a9-74b6-4a95-8103-6a1b6459c25e",
+          "disabled": true,
+          "settings": {
+            "data_key": "top-strip-promotion-badge",
+            "theme": "default",
+            "topPadding": "0",
+            "bottomPadding": "0",
+            "messagePrefix": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout_buttons": true,
+            "show_gift_card_recipient": true,
+            "add_to_cart_background_color": "",
+            "add_to_cart_text_color": "",
+            "buy_it_now_background_color": "",
+            "buy_it_now_text_color": ""
+          }
+        },
+        "pickup_availability_TA3kPj": {
+          "type": "pickup_availability",
+          "settings": {}
+        },
+        "text_M3prhM": {
+          "type": "text",
+          "settings": {
+            "show_under_gallery": false,
+            "heading": "Need help with choosing the right product?",
+            "text": "",
+            "content": "<p><a href=\"/pages/contact\" title=\"Contact\">Click here</a> to reach out to one of our experts.</p>",
+            "icon": "bubble-chat-question",
+            "icon_size": 24,
+            "background_color": "#def7fe",
+            "text_color": "#142355"
+          }
+        },
+        "complementary_products_kfHDGT": {
+          "type": "complementary_products",
+          "settings": {
+            "carousel": true,
+            "heading": "Combine it with",
+            "limit": 8
+          }
+        },
+        "collapsible_content_RP9waj": {
+          "type": "collapsible_content",
+          "settings": {
+            "show_under_gallery": true,
+            "open_by_default": false,
+            "heading": "Description",
+            "content": "<p>{{ product.metafields.custom.description | metafield_tag }}</p>",
+            "content_from_page": ""
+          }
+        },
+        "collapsible_content_katQQa": {
+          "type": "collapsible_content",
+          "settings": {
+            "show_under_gallery": true,
+            "open_by_default": false,
+            "heading": "Security",
+            "content": "{{ product.metafields.custom.security | metafield_tag }}",
+            "content_from_page": ""
+          }
+        },
+        "collapsible_content_bqNeAx": {
+          "type": "collapsible_content",
+          "settings": {
+            "show_under_gallery": true,
+            "open_by_default": false,
+            "heading": "Features",
+            "content": "{{ product.metafields.custom.features | metafield_tag }}",
+            "content_from_page": ""
+          }
+        },
+        "collapsible_content_4BbmbA": {
+          "type": "collapsible_content",
+          "settings": {
+            "show_under_gallery": true,
+            "open_by_default": false,
+            "heading": "Instructions",
+            "content": "{{ product.metafields.custom.instructions | metafield_tag }}",
+            "content_from_page": ""
+          }
+        },
+        "collapsible_videos_QD7mzj": {
+          "type": "collapsible_videos",
+          "settings": {
+            "show_under_gallery": true,
+            "open_by_default": false,
+            "heading": "Videos",
+            "content": "",
+            "content_from_page": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "vendor_HWM4hy",
+        "price",
+        "customized_stock_RphCJD",
+        "specifications_wEeYpQ",
+        "model_sizes_rim6en",
+        "variant_picker",
+        "stock_QrwbPC",
+        "aris_product_options_avisplus_options_block_Jpc34r",
+        "klarna_on_site_messaging_app_block_KjHr8G",
+        "buy_buttons",
+        "pickup_availability_TA3kPj",
+        "text_M3prhM",
+        "complementary_products_kfHDGT",
+        "collapsible_content_RP9waj",
+        "collapsible_content_katQQa",
+        "collapsible_content_bqNeAx",
+        "collapsible_content_4BbmbA",
+        "collapsible_videos_QD7mzj"
+      ],
+      "custom_css": [
+        ".product-info p {margin-top: 0; margin-bottom: 0;}"
+      ],
+      "settings": {
+        "only_selected_variant_images": false,
+        "product_gallery_width": 57,
+        "show_breadcrumb": false,
+        "product_gallery_type": "carousel",
+        "carousel_thumbnails_position": "left",
+        "grid_type": "one-column",
+        "carousel_indicator_mobile": "thumbnails",
+        "video_autoplay": false,
+        "video_muted": true,
+        "video_controls": true,
+        "video_loop": false,
+        "sticky_add_to_cart_enabled": true,
+        "sticky_add_to_cart_show_vendor": true,
+        "background_color": "",
+        "text_color": "",
+        "heading_color": "",
+        "enable_custom_spacing": true,
+        "top_spacing": 24,
+        "bottom_spacing": 80
+      }
+    },
+    "text_with_icons_dFFE7Y": {
+      "type": "text-with-icons",
+      "blocks": {
+        "icon_text_6r4TVL": {
+          "type": "icon_text",
+          "settings": {
+            "icon_name": "truck",
+            "heading": "Free Shipping",
+            "text": "On orders $100+"
+          }
+        },
+        "icon_text_Wdf4ME": {
+          "type": "icon_text",
+          "settings": {
+            "icon_name": "return",
+            "heading": "Easy Returns",
+            "text": "30 day returns"
+          }
+        },
+        "icon_text_KAkdNn": {
+          "type": "icon_text",
+          "settings": {
+            "icon_name": "headphones",
+            "heading": "Live Customer Support",
+            "text": "Real safe experts"
+          }
+        },
+        "icon_text_pM6LMB": {
+          "type": "icon_text",
+          "settings": {
+            "icon_name": "package",
+            "heading": "Showroom Pickup",
+            "text": "3 social locations"
+          }
+        }
+      },
+      "block_order": [
+        "icon_text_6r4TVL",
+        "icon_text_Wdf4ME",
+        "icon_text_KAkdNn",
+        "icon_text_pM6LMB"
+      ],
+      "name": "t:sections.text_with_icons.name",
+      "settings": {
+        "enable_carousel_on_mobile": false,
+        "columns_per_row": 4,
+        "columns_per_row_mobile": "2",
+        "icon_position": "left",
+        "icon_position_mobile": "top",
+        "background_color": "",
+        "text_color": "",
+        "heading_color": "",
+        "icon_color": "#095f41",
+        "enable_custom_spacing": true,
+        "top_spacing": 0,
+        "bottom_spacing": 80
+      }
+    },
+    "related_products_v2_CVCVwT": {
+      "type": "related-products-v2",
+      "blocks": {
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
+          },
+          "blocks": {
+            "heading_CideqE": {
+              "type": "heading",
+              "settings": {
+                "full_width": true,
+                "max_width": 500,
+                "heading_size": "h2",
+                "heading": "You may also like",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "",
+                "highlight_color": "",
+                "heading_seo_tag": "p"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_CideqE"
+          ]
+        }
+      },
+      "name": "Related Products V2",
+      "settings": {
+        "manual_products": "{{ product.metafields.custom.related_products.value }}",
+        "enable_carousel": true,
+        "max_products": 10,
+        "products_per_row": 4,
+        "products_per_row_mobile": "1",
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
+    "related_products_LQc4rq": {
+      "type": "related-products",
+      "blocks": {
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
+          },
+          "blocks": {
+            "heading_kyqPc6": {
+              "type": "heading",
+              "settings": {
+                "full_width": true,
+                "max_width": 500,
+                "heading_size": "h2",
+                "heading": "You may also like",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "",
+                "highlight_color": "",
+                "heading_seo_tag": "p"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_kyqPc6"
+          ]
+        }
+      },
+      "disabled": true,
+      "name": "Related products",
+      "settings": {
+        "enable_carousel": false,
+        "max_products": 4,
+        "products_per_row": 4,
+        "products_per_row_mobile": "2",
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": true,
+        "top_spacing": 0,
+        "bottom_spacing": 80
+      }
+    },
+    "text_with_buttons_LKmyaM": {
+      "type": "text-with-buttons",
+      "name": "Text with Buttons",
+      "settings": {
+        "heading": "Still not sure what you need?",
+        "text": "<p>Talk to a real expert at one of our showrooms or over the phone. We have helped thousands of customers find the right safe.</p>",
+        "btn1_label": "Find Your Safe",
+        "btn1_link": "",
+        "btn2_label": "Contact An Expert",
+        "btn2_link": "",
+        "bg_color": "#095f41",
+        "heading_color": "#ffffff",
+        "text_color": "#f0f0f0",
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    },
+    "image_with_text_MWfGHh": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_FTQPPx": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h2",
+            "heading": "Brand Overview",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_pDYhDF": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "medium",
+            "text_color": "primary",
+            "content": "<p>For more than 30 years, Fort Knox has been a leader in the safe and vault industry, earning a reputation for exceptional quality, innovative engineering, and dependable protection. Every Fort Knox safe is handcrafted in the USA using premium materials and precision manufacturing techniques, ensuring long-lasting security for firearms, valuables, important documents, and personal belongings.</p><p>Fort Knox is committed to delivering superior security, advanced fire protection, and outstanding customer service. Their safes are designed to exceed industry standards and incorporate exclusive features that enhance strength, durability, and performance. Backed by one of the most comprehensive lifetime warranties in the industry, Fort Knox products provide customers with confidence and peace of mind, making them a trusted choice for those seeking reliable protection for what matters most.</p>"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading_FTQPPx",
+        "paragraph_pDYhDF"
+      ],
+      "name": "t:sections.image_with_text.name",
+      "settings": {
+        "image": "shopify://shop_images/safes.png",
+        "full_width": false,
+        "gap": false,
+        "image_width": 100,
+        "image_position": "left",
+        "image_size": "",
+        "image_height": 480,
+        "image_size_mobile": "same",
+        "image_height_mobile": 480,
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": true,
+        "top_spacing": 0,
+        "bottom_spacing": 80
+      }
+    },
+    "image_with_text_overlay_J6ygxY": {
+      "type": "image-with-text-overlay",
+      "blocks": {
+        "heading_ewxLa8": {
+          "type": "heading",
+          "settings": {
+            "full_width": true,
+            "max_width": 500,
+            "heading_size": "h1",
+            "heading": "{{ closest.product.metafields.custom.promotion_banner_title.value }}",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
+          },
+          "blocks": {}
+        },
+        "paragraph_BXV3kb": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph_size": "md",
+            "paragraph_width": "medium",
+            "text_color": "primary",
+            "content": "{{ closest.product.metafields.custom.promotion_banner_content | metafield_tag }}"
+          },
+          "blocks": {}
+        },
+        "button_group_4HphQi": {
+          "type": "button-group",
+          "settings": {},
+          "blocks": {
+            "button_6xT3HG": {
+              "type": "button",
+              "settings": {
+                "size": "md",
+                "variant": "solid",
+                "label": "Shop Now",
+                "url": "{{ closest.product.metafields.custom.promotion_banner_link.value }}",
+                "style": "white",
+                "background_color": "",
+                "text_color": ""
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "button_6xT3HG"
+          ]
+        }
+      },
+      "block_order": [
+        "heading_ewxLa8",
+        "paragraph_BXV3kb",
+        "button_group_4HphQi"
+      ],
+      "name": "t:sections.image_with_text_overlay.name",
+      "settings": {
+        "image": "{{ product.metafields.custom.promotion_banner_image.value }}",
+        "full_width": false,
+        "image_size": "",
+        "image_height": 640,
+        "content_position": "middle-center",
+        "image_size_mobile": "same",
+        "image_height_mobile": 480,
+        "content_position_mobile": "",
+        "background_color": "",
+        "text_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 30,
+        "enable_custom_spacing": true,
+        "top_spacing": 0,
+        "bottom_spacing": 80
+      }
+    },
+    "multicolumn_Mrb3pi": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_jkiGnK": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/HP-locations-BANNER.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Type-C fireboard",
+            "content": "<p>Multi-layer fireboard construction tested for sustained heat protection.<br/><br/></p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_6Fhhz4": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/HP-locations-BANNER.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Thermal barrier",
+            "content": "<p>Expanding seal activates under heat to block smoke and flame intrusion.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_mHYJFw": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/HP-locations-BANNER.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Smoke & fire seal",
+            "content": "<p>Palusol door seal expands many times its size when exposed to fire.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_aP6pVL": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/HP-locations-BANNER.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Security plate",
+            "content": "<p>Hardened drill-resistant plate protects the lock from forced entry.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_efPEQg": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/HP-locations-BANNER.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Solid construction",
+            "content": "<p>Heavy-gauge steel body and door with robust boltwork.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_BHqFwW": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/HP-locations-BANNER.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Fire rating",
+            "content": "<p>Independently verified fire endurance at rated temperature.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
+          },
+          "blocks": {
+            "heading_TT6Ljz": {
+              "type": "heading",
+              "name": "t:blocks.heading.name",
+              "settings": {
+                "full_width": false,
+                "max_width": 500,
+                "heading_size": "h2",
+                "heading": "Key Features Across the Brand",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "",
+                "highlight_color": "",
+                "heading_seo_tag": "p"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_TT6Ljz"
+          ]
+        }
+      },
+      "block_order": [
+        "column_jkiGnK",
+        "column_6Fhhz4",
+        "column_mHYJFw",
+        "column_aP6pVL",
+        "column_efPEQg",
+        "column_BHqFwW"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "enable_carousel": false,
+        "columns": 3,
+        "columns_mobile": 1,
+        "column_gap": 24,
+        "column_alignment": "left",
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": true,
+        "top_spacing": 0,
+        "bottom_spacing": 80
+      }
+    },
+    "product_video_XbazBB": {
+      "type": "product-video",
+      "name": "Product Video",
+      "settings": {}
+    },
+    "video_WmL4ea": {
+      "type": "video",
+      "blocks": {
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
+          },
+          "blocks": {}
+        }
+      },
+      "name": "t:sections.video.name",
+      "settings": {
+        "video": "{{ product.metafields.custom.product_video.value }}",
+        "video_url": "",
+        "controls": true,
+        "autoplay": false,
+        "muted": false,
+        "loop": false,
+        "video_size": "",
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": true,
+        "top_spacing": 0,
+        "bottom_spacing": 80
+      }
+    },
+    "collapsible_content_B7H7eD": {
+      "type": "collapsible-content",
+      "blocks": {
+        "content_mXarDJ": {
+          "type": "content",
+          "settings": {
+            "open": false,
+            "title": "How many firearms can the FTK Maverick 6637 hold?",
+            "content": "<p>The FTK Maverick 6637 is designed to store up to 48 firearms and includes adjustable shelving and a configurable interior, allowing you to organize long guns, handguns, ammunition, and other valuables efficiently.</p>",
+            "content_from_page": ""
+          }
+        },
+        "content_x8TUQb": {
+          "type": "content",
+          "settings": {
+            "open": false,
+            "title": "What level of fire protection does the FTK Maverick 6637 provide?",
+            "content": "<p>The safe features a reinforced 1-1/8\" fire door, fireboard insulation, and a heat-activated door seal. It is rated for up to 90 minutes of fire protection at temperatures reaching 1600°F.</p>",
+            "content_from_page": ""
+          }
+        },
+        "content_jbAJcT": {
+          "type": "content",
+          "settings": {
+            "open": false,
+            "title": "What security features are included with the FTK Maverick 6637?",
+            "content": "<p>The Maverick 6637 includes UL Residential Security Container (RSC) certification, 11-gauge steel body construction, a reinforced steel door, nine 1.5-inch locking bolts, a drill-resistant hard plate, and a UL-rated S&G Group II mechanical lock for enhanced protection against unauthorized access.</p>",
+            "content_from_page": ""
+          }
+        },
+        "content_6zG6BA": {
+          "type": "content",
+          "settings": {
+            "open": false,
+            "title": "Does the FTK Maverick 6637 include power access inside the safe?",
+            "content": "<p>Yes. The safe comes with a factory-installed power outlet, allowing you to conveniently power accessories such as dehumidifiers, lighting systems, watch winders, and charging devices.</p>",
+            "content_from_page": ""
+          }
+        },
+        "content_jUexQd": {
+          "type": "content",
+          "settings": {
+            "open": false,
+            "title": "What warranty comes with the FTK Maverick 6637?",
+            "content": "<p>Fort Knox backs the Maverick 6637 with a lifetime factory warranty, demonstrating their commitment to long-term quality, craftsmanship, and customer support.</p>",
+            "content_from_page": ""
+          }
+        }
+      },
+      "block_order": [
+        "content_mXarDJ",
+        "content_x8TUQb",
+        "content_jbAJcT",
+        "content_6zG6BA",
+        "content_jUexQd"
+      ],
+      "name": "t:sections.collapsible_content.name",
+      "settings": {
+        "icon": "",
+        "heading_size": "h4",
+        "heading": "Frequently Asked Questions",
+        "description": "<p>Have questions about choosing the right gun safe? Our Frequently Asked Questions section covers everything from safe sizes and security features to installation and fire protection, helping you make a confident and informed decision.</p>",
+        "background_color": "",
+        "text_color": "",
+        "heading_color": "",
+        "icon_color": "",
+        "enable_custom_spacing": true,
+        "top_spacing": 0,
+        "bottom_spacing": 80,
+        "enable_structured_data": true
+      }
+    },
+    "1780495853db7fc4ac": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_HiX8mM": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_HiX8mM"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "text_with_icons_dFFE7Y",
+    "related_products_v2_CVCVwT",
+    "related_products_LQc4rq",
+    "text_with_buttons_LKmyaM",
+    "image_with_text_MWfGHh",
+    "image_with_text_overlay_J6ygxY",
+    "multicolumn_Mrb3pi",
+    "product_video_XbazBB",
+    "video_WmL4ea",
+    "collapsible_content_B7H7eD",
+    "1780495853db7fc4ac"
+  ]
+}
