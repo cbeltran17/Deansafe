@@ -413,7 +413,13 @@ body #MainContent .shopify-policy__container {
   text-align: right;
 }
 
+.announcement-bar {
 
+}
+
+sticky-header[mode=always] {
+    top: 48px;
+}
 
 
 
