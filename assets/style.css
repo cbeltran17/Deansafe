@@ -414,16 +414,13 @@ body #MainContent .shopify-policy__container {
 }
 
 .announcement-bar {
-
+    position: fixed;
+    width: 100%;
 }
 
 sticky-header[mode=always] {
     top: 48px;
 }
-
-
-
-
 
 @media (min-width: 48rem) {
     .text-with-icons--desktop-horizontal .text-with-icons__item {
