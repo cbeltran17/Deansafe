@@ -419,7 +419,7 @@ body #MainContent .shopify-policy__container {
 }
 
 sticky-header[mode=always] {
-    top: 48px;
+    top: clamp(2.5rem, 2.1rem + 1vw, 3rem);;
 }
 
 @media (min-width: 48rem) {
