@@ -285,6 +285,125 @@
         "bottom_spacing": 80
       }
     },
+    "collection_list_slider_iUqCy4": {
+      "type": "collection-list-slider",
+      "blocks": {
+        "collection_list_slider_item_HfwR49": {
+          "type": "_collection-list-slider-item",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/PB_AMSEC.jpg",
+            "title": "<blank></blank>"
+          },
+          "blocks": {}
+        },
+        "collection_list_slider_item_6kJkd4": {
+          "type": "_collection-list-slider-item",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/brand-warranty_ftk.jpg",
+            "title": "<blank></blank>"
+          },
+          "blocks": {}
+        },
+        "collection_list_slider_item_fDRMrh": {
+          "type": "_collection-list-slider-item",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/brand-warranty_liberty.jpg",
+            "title": "<blank></blank>"
+          },
+          "blocks": {}
+        },
+        "collection_list_slider_item_6VyKaC": {
+          "type": "_collection-list-slider-item",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/brand-warranty_stealth.jpg",
+            "title": "<blank></blank>"
+          },
+          "blocks": {}
+        },
+        "collection_list_slider_item_LG4jYw": {
+          "type": "_collection-list-slider-item",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/brand-warranty_browning.jpg",
+            "title": "<blank></blank>"
+          },
+          "blocks": {}
+        },
+        "collection_list_slider_item_n69ehL": {
+          "type": "_collection-list-slider-item",
+          "disabled": true,
+          "settings": {
+            "collection": "",
+            "title": ""
+          },
+          "blocks": {}
+        },
+        "collection_list_slider_item_F9xhde": {
+          "type": "_collection-list-slider-item",
+          "disabled": true,
+          "settings": {
+            "collection": "",
+            "title": ""
+          },
+          "blocks": {}
+        },
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
+          },
+          "blocks": {
+            "heading_VMwPQH": {
+              "type": "heading",
+              "name": "t:blocks.heading.name",
+              "settings": {
+                "full_width": true,
+                "max_width": 500,
+                "heading_size": "h1",
+                "heading": "Top Brands",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "",
+                "highlight_color": "",
+                "heading_seo_tag": "h2"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_VMwPQH"
+          ]
+        }
+      },
+      "block_order": [
+        "collection_list_slider_item_HfwR49",
+        "collection_list_slider_item_6kJkd4",
+        "collection_list_slider_item_fDRMrh",
+        "collection_list_slider_item_6VyKaC",
+        "collection_list_slider_item_LG4jYw",
+        "collection_list_slider_item_n69ehL",
+        "collection_list_slider_item_F9xhde"
+      ],
+      "name": "t:sections.collection_list_slider.name",
+      "settings": {
+        "columns": 5,
+        "image_shape": "square",
+        "image_size": "full",
+        "image_fit": "contain",
+        "text_alignment": "left",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": true,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
+    },
     "brands_diMQE9": {
       "type": "brands",
       "blocks": {
@@ -988,6 +1107,7 @@
     "slideshow_TLmBG7",
     "text_with_icons_Pb9XgQ",
     "multiple_featured_collections_zGjR6b",
+    "collection_list_slider_iUqCy4",
     "brands_diMQE9",
     "image_with_text_slider_aYpUQJ",
     "testimonials_eR6HaW",
