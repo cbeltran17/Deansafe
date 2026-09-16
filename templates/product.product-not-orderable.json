@@ -39,6 +39,19 @@
           "type": "customized_stock",
           "settings": {}
         },
+        "text_hTCmNU": {
+          "type": "text",
+          "settings": {
+            "show_under_gallery": false,
+            "heading": "Overview",
+            "text": "",
+            "content": "",
+            "icon": "",
+            "icon_size": 24,
+            "background_color": "",
+            "text_color": ""
+          }
+        },
         "specifications_wEeYpQ": {
           "type": "specifications",
           "settings": {
@@ -179,6 +192,7 @@
         "vendor_HWM4hy",
         "price",
         "customized_stock_RphCJD",
+        "text_hTCmNU",
         "specifications_wEeYpQ",
         "model_sizes_rim6en",
         "variant_picker",
