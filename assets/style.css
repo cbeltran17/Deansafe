@@ -450,6 +450,10 @@ sticky-header[mode=always] {
     margin-top: .5rem;
 }
 
+.page-warranty-information #MainContent table {
+    width: 100% !important;
+}
+
 @media (min-width: 48rem) {
     .text-with-icons--desktop-horizontal .text-with-icons__item {
         justify-content: center;
