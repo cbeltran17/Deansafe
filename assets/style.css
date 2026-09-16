@@ -422,7 +422,7 @@ sticky-header[mode=always] {
     top: clamp(2.5rem, 2.1rem + 1vw, 3rem);;
 }
 
-.page-warranty-information .section-main-page {
+.page-warranty-information #MainContent .section-main-page {
     --page-content-width: 1500px;
     max-width: 1500px;
 }
