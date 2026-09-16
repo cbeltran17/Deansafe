@@ -25,7 +25,7 @@
     {{ content_for_header }}
   </head>
 
-  <body class="{{ page.handle }}">
+  <body class="{% if page %}page-{{ page.handle }}{% endif %}">
     {% render 'pre-scripts' %}
 
     <a href="#MainContent" class="skip-to-content">
