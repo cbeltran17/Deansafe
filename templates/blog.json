@@ -47,7 +47,7 @@
         "posts_per_page": 12,
         "feature_first_post": true,
         "show_featured_post_excerpt": true,
-        "show_tags": true,
+        "show_tags": false,
         "show_date": true,
         "show_comments": true,
         "show_excerpt": false,
