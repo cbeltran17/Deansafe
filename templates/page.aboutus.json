@@ -54,7 +54,7 @@
         "background_color": "#f2d14a",
         "text_color": "",
         "enable_custom_spacing": true,
-        "top_spacing": 16,
+        "top_spacing": 64,
         "bottom_spacing": 16
       }
     },
