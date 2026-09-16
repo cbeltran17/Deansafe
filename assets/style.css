@@ -423,6 +423,7 @@ sticky-header[mode=always] {
 }
 
 .page-warranty-information .section-main-page {
+    --page-content-width: 1500px;
     max-width: 1500px;
 }
 
