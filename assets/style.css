@@ -429,6 +429,10 @@ sticky-header[mode=always] {
 	padding-right: max(3rem, calc((100vw - 1500px - 0px) / 2)) !important;
 }
 
+.page-warranty-information #MainContent .section-main-page .page {
+    padding: 0;
+}
+
 .page-warranty-information #MainContent .section-main-page .container {
     padding: 0;
 }
