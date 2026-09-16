@@ -67,6 +67,9 @@
         "back_to_blog_d8UrHG",
         "comments_CmAtYw"
       ],
+      "custom_css": [
+        ".article{margin-top: 2rem;}"
+      ],
       "settings": {
         "content_width": "extra-wide",
         "background_color": "",
