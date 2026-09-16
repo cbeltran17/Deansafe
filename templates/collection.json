@@ -37,9 +37,9 @@
         "text_alignment": "center",
         "background_color": "#f4f4f4",
         "text_color": "",
-        "enable_custom_spacing": false,
-        "top_spacing": 80,
-        "bottom_spacing": 80
+        "enable_custom_spacing": true,
+        "top_spacing": 88,
+        "bottom_spacing": 48
       }
     },
     "collection_links_grid_Kt3E9T": {
