@@ -207,7 +207,7 @@
         "background_color": "",
         "text_color": "",
         "enable_custom_spacing": true,
-        "top_spacing": 0,
+        "top_spacing": 24,
         "bottom_spacing": 80
       }
     }
