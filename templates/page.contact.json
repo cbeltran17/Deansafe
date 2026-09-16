@@ -132,11 +132,90 @@
         "top_spacing": 80,
         "bottom_spacing": 80
       }
+    },
+    "multicolumn_GJepeA": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_tbXN9E": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/DS-Simi-Valley-Showroom-Banner.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Ventura County",
+            "content": "<p><em>Simi Valley</em></p>",
+            "link_url": "shopify://pages/sivadesacoou",
+            "link_text": "View Location",
+            "link_style": "link"
+          },
+          "blocks": {}
+        },
+        "column_cdYkdg": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Showroom-NoHo_1-2.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "San Fernando Valley",
+            "content": "<p><em>North Hollywood</em></p>",
+            "link_url": "shopify://pages/desacoarca91",
+            "link_text": "View Location",
+            "link_style": "link"
+          },
+          "blocks": {}
+        },
+        "column_rarNqD": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Culver-city-banner-image-2.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "West Los Angeles",
+            "content": "<p><em>Culver City</em></p>",
+            "link_url": "shopify://pages/los-angeles-culver-city-store",
+            "link_text": "View Location",
+            "link_style": "link"
+          },
+          "blocks": {}
+        },
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "column_tbXN9E",
+        "column_cdYkdg",
+        "column_rarNqD"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "enable_carousel": false,
+        "columns": 3,
+        "columns_mobile": 1,
+        "column_gap": 16,
+        "column_alignment": "center",
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": true,
+        "top_spacing": 0,
+        "bottom_spacing": 80
+      }
     }
   },
   "order": [
     "main_contact",
     "rich_text_yemaww",
-    "form"
+    "form",
+    "multicolumn_GJepeA"
   ]
 }
