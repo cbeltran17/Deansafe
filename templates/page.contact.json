@@ -79,7 +79,7 @@
           "type": "button",
           "settings": {
             "size": "md",
-            "variant": "solid",
+            "variant": "outline",
             "label": "Call 800-827-7534",
             "url": "tel:8008277534",
             "style": "primary",
@@ -100,11 +100,11 @@
       "settings": {
         "full_width": true,
         "text_alignment": "center",
-        "background_color": "",
+        "background_color": "#E5E5E5",
         "text_color": "",
-        "enable_custom_spacing": false,
-        "top_spacing": 80,
-        "bottom_spacing": 80
+        "enable_custom_spacing": true,
+        "top_spacing": 88,
+        "bottom_spacing": 48
       }
     },
     "form": {
