@@ -422,6 +422,10 @@ sticky-header[mode=always] {
     top: clamp(2.5rem, 2.1rem + 1vw, 3rem);;
 }
 
+.page-warranty-information .section-main-page {
+    max-width: 1500px;
+}
+
 @media (min-width: 48rem) {
     .text-with-icons--desktop-horizontal .text-with-icons__item {
         justify-content: center;
