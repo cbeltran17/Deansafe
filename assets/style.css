@@ -425,8 +425,8 @@ sticky-header[mode=always] {
 .page-warranty-information #MainContent .section-main-page {
     --page-content-width: 100%;
     max-width: 100% !important;
-	padding-left: max(3rem, calc((100vw - 1500px - 0px) / 2));
-	padding-right: max(3rem, calc((100vw - 1500px - 0px) / 2));
+	padding-left: max(3rem, calc((100vw - 1500px - 0px) / 2)) !important;
+	padding-right: max(3rem, calc((100vw - 1500px - 0px) / 2)) !important;
 }
 
 @media (min-width: 48rem) {
