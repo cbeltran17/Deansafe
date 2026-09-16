@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main-blog-header": {
@@ -6,28 +15,52 @@
         "heading": {
           "type": "heading",
           "settings": {
+            "full_width": true,
+            "max_width": 500,
             "heading_size": "h0",
-            "heading": "{{ closest.blog.title }}"
+            "heading": "{{ closest.blog.title }}",
+            "highlight_type": "underline",
+            "highlight_layer": "default",
+            "heading_color": "",
+            "highlight_color": "",
+            "heading_seo_tag": "p"
           },
           "blocks": {}
         }
       },
-      "block_order": ["heading"],
+      "block_order": [
+        "heading"
+      ],
       "settings": {
-        "text_alignment": "center"
+        "full_width": true,
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": true,
+        "top_spacing": 80,
+        "bottom_spacing": 80
       }
     },
     "main": {
       "type": "main-blog",
       "settings": {
-        "show_tags": true,
-        "feature_first_post": true,
         "posts_per_page": 12,
+        "feature_first_post": true,
+        "show_featured_post_excerpt": true,
+        "show_tags": true,
+        "show_date": true,
+        "show_comments": true,
+        "show_excerpt": false,
+        "show_tags_selector": true,
+        "tags_selector_alignment": "center",
         "show_newsletter_card": true,
         "newsletter_heading": "Subscribe to our newsletter",
         "newsletter_content": "<p>Stay updated with our latest news and offers.</p>"
       }
     }
   },
-  "order": ["main-blog-header", "main"]
+  "order": [
+    "main-blog-header",
+    "main"
+  ]
 }
