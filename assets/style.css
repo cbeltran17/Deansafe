@@ -430,7 +430,7 @@ sticky-header[mode=always] {
 }
 
 .page-warranty-information #MainContent .section-main-page .container {
-    padding: none;
+    padding: 0;
 }
 
 @media (min-width: 48rem) {
