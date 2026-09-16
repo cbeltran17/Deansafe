@@ -438,6 +438,10 @@ sticky-header[mode=always] {
     padding: 0;
 }
 
+.page-warranty-information #MainContent .section-main-page .page__content prose > h2 {
+    margin: 0;
+}
+
 @media (min-width: 48rem) {
     .text-with-icons--desktop-horizontal .text-with-icons__item {
         justify-content: center;
