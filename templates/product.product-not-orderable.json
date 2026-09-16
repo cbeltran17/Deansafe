@@ -230,7 +230,7 @@
         "text_color": "",
         "heading_color": "",
         "enable_custom_spacing": true,
-        "top_spacing": 24,
+        "top_spacing": 64,
         "bottom_spacing": 80
       }
     },
