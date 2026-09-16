@@ -15,7 +15,7 @@
         "header_KEdkXA": {
           "type": "header",
           "settings": {
-            "show_tag": true,
+            "show_tag": false,
             "show_date": true,
             "show_author": true,
             "show_comment_count": true,
@@ -68,7 +68,7 @@
         "comments_CmAtYw"
       ],
       "custom_css": [
-        ".article{margin-top: 2rem;}"
+        ".article {margin-top: 2rem;}"
       ],
       "settings": {
         "content_width": "extra-wide",
