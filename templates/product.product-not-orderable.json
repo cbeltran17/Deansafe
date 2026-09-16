@@ -45,7 +45,7 @@
             "show_under_gallery": false,
             "heading": "Overview",
             "text": "",
-            "content": "",
+            "content": "{{ product.metafields.custom.overview | metafield_tag }}",
             "icon": "",
             "icon_size": 24,
             "background_color": "",
