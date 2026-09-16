@@ -44,7 +44,7 @@
     "main": {
       "type": "main-blog",
       "settings": {
-        "posts_per_page": 12,
+        "posts_per_page": 13,
         "feature_first_post": true,
         "show_featured_post_excerpt": true,
         "show_tags": false,
