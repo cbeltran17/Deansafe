@@ -422,7 +422,7 @@ sticky-header[mode=always] {
     top: clamp(2.5rem, 2.1rem + 1vw, 3rem);;
 }
 
-.page-warranty-information #MainContent .section-main-page {
+.page-warranty-information #MainContent .section-main-page, .page-cookie-policy {
     --page-content-width: 100%;
     max-width: 100% !important;
 	padding-left: max(3rem, calc((100vw - 1500px - 0px) / 2));
