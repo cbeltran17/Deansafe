@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main-cart": {
@@ -9,15 +18,23 @@
         },
         "subtotal_wKayVk": {
           "type": "subtotal",
-          "settings": {}
+          "settings": {
+            "show_total_discount": true,
+            "show_tax_and_shipping": true
+          }
         },
         "cart_note_GzgxMP": {
           "type": "cart_note",
-          "settings": {}
+          "settings": {
+            "heading": "Add a note to your order"
+          }
         },
         "checkout_button_hbBbQD": {
           "type": "checkout_button",
-          "settings": {}
+          "settings": {
+            "background_color": "",
+            "text_color": ""
+          }
         }
       },
       "block_order": [
@@ -30,11 +47,18 @@
         "show_vendor": true,
         "show_payment_icons": true,
         "show_item_count": true,
+        "show_discount_code_form": true,
+        "show_shipping_estimator": true,
         "heading_size": "h1",
         "heading_alignment": "left",
-        "heading_seo_tag": "h1"
+        "heading_seo_tag": "h1",
+        "enable_custom_spacing": true,
+        "top_spacing": 88,
+        "bottom_spacing": 80
       }
     }
   },
-  "order": ["main-cart"]
+  "order": [
+    "main-cart"
+  ]
 }
