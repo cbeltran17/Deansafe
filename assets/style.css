@@ -446,6 +446,10 @@ sticky-header[mode=always] {
     margin-top: 0;
 }
 
+.page-warranty-information .prose :where(h4):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    padding-top: .5rem;
+}
+
 @media (min-width: 48rem) {
     .text-with-icons--desktop-horizontal .text-with-icons__item {
         justify-content: center;
