@@ -432,11 +432,15 @@ sticky-header[mode=always] {
     margin-top: 6rem;
 }
 
-.page-warranty-information #MainContent .section-main-page .page, .page-cookie-policy #MainContent .section-main-page .page {
+.page-warranty-information #MainContent .section-main-page .page, 
+.page-cookie-policy #MainContent .section-main-page .page,
+.page-privacy-rights-request-form #MainContent .section-main-page .page {
     padding: 0;
 }
 
-.page-warranty-information #MainContent .section-main-page .container, .page-cookie-policy #MainContent .section-main-page .container {
+.page-warranty-information #MainContent .section-main-page .container, 
+.page-cookie-policy #MainContent .section-main-page .container,
+.page-privacy-rights-request-form #MainContent .section-main-page .container {
     padding: 0;
 }
 
