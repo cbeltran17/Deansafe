@@ -660,3 +660,66 @@ sticky-header[mode=always] {
     }
 }
 
+
+/* Warranty Information Tables */
+.page-warranty-information table {
+  width: 100% !important;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+/* Prevent table content from breaking the layout */
+.page-warranty-information table td,
+.page-warranty-information table th {
+  box-sizing: border-box;
+}
+
+/* Desktop */
+.page-warranty-information table {
+  table-layout: fixed;
+}
+
+.page-warranty-information table td:first-child,
+.page-warranty-information table th:first-child {
+  width: 25% !important;
+}
+
+.page-warranty-information table td:not(:first-child),
+.page-warranty-information table th:not(:first-child) {
+  width: 15% !important;
+}
+
+/* Mobile */
+@media screen and (max-width: 749px) {
+  .page-warranty-information table {
+    display: block;
+    width: 100% !important;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: normal;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .page-warranty-information table tbody {
+    display: table;
+    width: 700px;
+    min-width: 700px;
+  }
+
+  .page-warranty-information table td,
+  .page-warranty-information table th {
+    min-width: 120px;
+    padding: 10px;
+    vertical-align: middle;
+  }
+
+  .page-warranty-information table td:first-child,
+  .page-warranty-information table th:first-child {
+    min-width: 220px;
+  }
+
+  .page-warranty-information table img {
+    max-width: 160px;
+    height: auto;
+  }
+}
