@@ -182,7 +182,7 @@
             "heading_size": "h4",
             "heading": "",
             "content": "",
-            "link_url": "",
+            "link_url": "https://deansafe.com/collections/barska-safes",
             "link_text": "",
             "link_style": "button"
           },
@@ -224,8 +224,8 @@
             "media_type": "image",
             "video_autoplay": false,
             "heading_size": "h4",
-            "heading": "Highlight your store's features",
-            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
+            "heading": "",
+            "content": "",
             "link_url": "",
             "link_text": "",
             "link_style": "button"
@@ -239,8 +239,8 @@
             "media_type": "image",
             "video_autoplay": false,
             "heading_size": "h4",
-            "heading": "Highlight your store's features",
-            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
+            "heading": "",
+            "content": "",
             "link_url": "",
             "link_text": "",
             "link_style": "button"
@@ -254,8 +254,188 @@
             "media_type": "image",
             "video_autoplay": false,
             "heading_size": "h4",
-            "heading": "Highlight your store's features",
-            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_HMaTmV": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_QnbRzT": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_M7Cdrw": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_Ddy8rU": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_e4hxJi": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_HEGyCR": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_CYmAcc": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_EKAJrC": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_fiV7gq": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_rCY3Rc": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_rP8nHA": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_gCGhaz": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
             "link_url": "",
             "link_text": "",
             "link_style": "button"
@@ -298,7 +478,19 @@
         "column_pRnnmM",
         "column_NEMW3B",
         "column_eqArpB",
-        "column_LWybc6"
+        "column_LWybc6",
+        "column_HMaTmV",
+        "column_QnbRzT",
+        "column_M7Cdrw",
+        "column_Ddy8rU",
+        "column_e4hxJi",
+        "column_HEGyCR",
+        "column_CYmAcc",
+        "column_EKAJrC",
+        "column_fiV7gq",
+        "column_rCY3Rc",
+        "column_rP8nHA",
+        "column_gCGhaz"
       ],
       "name": "t:sections.multicolumn.name",
       "settings": {
