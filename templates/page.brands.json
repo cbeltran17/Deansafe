@@ -401,7 +401,7 @@
       "name": "t:sections.logo_list.name",
       "settings": {
         "opacity": 100,
-        "logo_spacing": 64,
+        "logo_spacing": 32,
         "text_alignment": "center",
         "background_color": "",
         "text_color": "",
