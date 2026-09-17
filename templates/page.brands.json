@@ -155,7 +155,8 @@
         "logo_6iniDt"
       ],
       "custom_css": [
-        ".logo-list__item {background-color: #f5f5f5;}"
+        ".logo-list__item {background-color: #f5f5f5; border-radius: 12px;}",
+        "img {mix-blend-mode: multiply;}"
       ],
       "name": "t:sections.logo_list.name",
       "settings": {
