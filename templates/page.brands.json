@@ -187,7 +187,7 @@
           "settings": {
             "image": "shopify://shop_images/Burg-Wachter.jpg",
             "logo_height": 200,
-            "url": ""
+            "url": "https://deansafe.com/collections/burg-wachter-safes"
           },
           "blocks": {}
         },
@@ -197,7 +197,7 @@
           "settings": {
             "image": "shopify://shop_images/Dri-Rod_e59a822f-aeb5-4198-9499-109ebee4ec3c.jpg",
             "logo_height": 200,
-            "url": ""
+            "url": "https://deansafe.com/collections/dri-rod"
           },
           "blocks": {}
         },
@@ -207,7 +207,7 @@
           "settings": {
             "image": "shopify://shop_images/eva-dry_7d27b8af-4576-4229-9109-1dc0bee15d44.jpg",
             "logo_height": 200,
-            "url": ""
+            "url": "https://deansafe.com/collections/eva-dry-dehumidifiers"
           },
           "blocks": {}
         },
@@ -216,8 +216,8 @@
           "name": "t:blocks._logo.name",
           "settings": {
             "image": "shopify://shop_images/Gardall.jpg",
-            "logo_height": 80,
-            "url": ""
+            "logo_height": 200,
+            "url": "https://deansafe.com/collections/gardall-safes"
           },
           "blocks": {}
         },
@@ -226,8 +226,8 @@
           "name": "t:blocks._logo.name",
           "settings": {
             "image": "shopify://shop_images/golden-rod.jpg",
-            "logo_height": 80,
-            "url": ""
+            "logo_height": 200,
+            "url": "https://deansafe.com/collections/golden-rod-dehumidifiers"
           },
           "blocks": {}
         },
@@ -236,8 +236,8 @@
           "name": "t:blocks._logo.name",
           "settings": {
             "image": "shopify://shop_images/Gun-Storage-Solutions_73f0e276-4de6-4f64-985e-48d43e4ad1b8.jpg",
-            "logo_height": 80,
-            "url": ""
+            "logo_height": 200,
+            "url": "https://deansafe.com/collections/gun-storage-solutions"
           },
           "blocks": {}
         },
@@ -246,8 +246,8 @@
           "name": "t:blocks._logo.name",
           "settings": {
             "image": "shopify://shop_images/Hollon_82726653-df5f-4af0-9649-5e75a107e82f.jpg",
-            "logo_height": 80,
-            "url": ""
+            "logo_height": 200,
+            "url": "https://deansafe.com/collections/hollon-safe"
           },
           "blocks": {}
         },
@@ -255,8 +255,8 @@
           "type": "_logo",
           "settings": {
             "image": "shopify://shop_images/Hornady.jpg",
-            "logo_height": 80,
-            "url": ""
+            "logo_height": 200,
+            "url": "https://deansafe.com/collections/hornady-safes"
           },
           "blocks": {}
         },
@@ -264,8 +264,8 @@
           "type": "_logo",
           "settings": {
             "image": "shopify://shop_images/Lockdown_32378a0c-4de0-46b8-a4d0-19c96b084140.jpg",
-            "logo_height": 80,
-            "url": ""
+            "logo_height": 200,
+            "url": "https://deansafe.com/collections/lockdown-gun-safe-accessories"
           },
           "blocks": {}
         },
@@ -274,8 +274,8 @@
           "name": "t:blocks._logo.name",
           "settings": {
             "image": "shopify://shop_images/Rhino-Metals.jpg",
-            "logo_height": 80,
-            "url": ""
+            "logo_height": 200,
+            "url": "https://deansafe.com/collections/rhino-safe-ironworks"
           },
           "blocks": {}
         },
@@ -284,8 +284,8 @@
           "name": "t:blocks._logo.name",
           "settings": {
             "image": "shopify://shop_images/Sackups.jpg",
-            "logo_height": 80,
-            "url": ""
+            "logo_height": 200,
+            "url": "https://deansafe.com/collections/sack-ups-pistol-socks-and-rifle-socks"
           },
           "blocks": {}
         },
@@ -294,8 +294,8 @@
           "name": "t:blocks._logo.name",
           "settings": {
             "image": "shopify://shop_images/Simtek.jpg",
-            "logo_height": 80,
-            "url": ""
+            "logo_height": 200,
+            "url": "https://deansafe.com/products/simtek-stealthalert"
           },
           "blocks": {}
         },
@@ -304,8 +304,8 @@
           "name": "t:blocks._logo.name",
           "settings": {
             "image": "shopify://shop_images/SnapSafe_0c850d58-baba-4d2d-a784-0e0b5e793271.jpg",
-            "logo_height": 80,
-            "url": ""
+            "logo_height": 200,
+            "url": "https://deansafe.com/collections/snapsafe-modular-safes"
           },
           "blocks": {}
         },
@@ -314,8 +314,8 @@
           "name": "t:blocks._logo.name",
           "settings": {
             "image": "shopify://shop_images/Sports-Afield.jpg",
-            "logo_height": 80,
-            "url": ""
+            "logo_height": 200,
+            "url": "https://deansafe.com/collections/sports-afield-gun-safes"
           },
           "blocks": {}
         },
@@ -324,8 +324,8 @@
           "name": "t:blocks._logo.name",
           "settings": {
             "image": "shopify://shop_images/V-line_cfbbee2b-f894-4830-acf2-c9d5c15220ed.jpg",
-            "logo_height": 80,
-            "url": ""
+            "logo_height": 200,
+            "url": "https://deansafe.com/collections/v-line-security-products"
           },
           "blocks": {}
         },
@@ -334,8 +334,8 @@
           "name": "t:blocks._logo.name",
           "settings": {
             "image": "shopify://shop_images/Vaultek_1cfd2852-8eb8-4ce6-83b9-acbc76163690.jpg",
-            "logo_height": 80,
-            "url": ""
+            "logo_height": 200,
+            "url": "https://deansafe.com/collections/vaultek-safes"
           },
           "blocks": {}
         },
@@ -344,8 +344,8 @@
           "name": "t:blocks._logo.name",
           "settings": {
             "image": "shopify://shop_images/winchester_adb69be4-6c00-494a-b69d-368e8ae65830.jpg",
-            "logo_height": 80,
-            "url": ""
+            "logo_height": 200,
+            "url": "https://deansafe.com/collections/winchester-safes"
           },
           "blocks": {}
         },
