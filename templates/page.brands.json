@@ -152,7 +152,7 @@
       ],
       "name": "t:sections.logo_list.name",
       "settings": {
-        "opacity": 20,
+        "opacity": 100,
         "logo_spacing": 64,
         "text_alignment": "center",
         "background_color": "",
