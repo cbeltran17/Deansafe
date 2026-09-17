@@ -169,11 +169,157 @@
         "top_spacing": 80,
         "bottom_spacing": 80
       }
+    },
+    "multicolumn_gq3e7D": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_E9wHcJ": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Barska_92471f41-ae53-420e-ad40-487ee8c3423e.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_cxyG39": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Burg-Wachter.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_pRnnmM": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Dri-Rod_e59a822f-aeb5-4198-9499-109ebee4ec3c.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_NEMW3B": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Highlight your store's features",
+            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_eqArpB": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Highlight your store's features",
+            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_LWybc6": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "Highlight your store's features",
+            "content": "<p>Use these columns to share details about your products, services, or values.</p>",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
+          },
+          "blocks": {
+            "heading_RMtVYg": {
+              "type": "heading",
+              "name": "t:blocks.heading.name",
+              "settings": {
+                "full_width": true,
+                "max_width": 500,
+                "heading_size": "h2",
+                "heading": "More Brands",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "",
+                "highlight_color": "",
+                "heading_seo_tag": "p"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_RMtVYg"
+          ]
+        }
+      },
+      "block_order": [
+        "column_E9wHcJ",
+        "column_cxyG39",
+        "column_pRnnmM",
+        "column_NEMW3B",
+        "column_eqArpB",
+        "column_LWybc6"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "enable_carousel": false,
+        "columns": 3,
+        "columns_mobile": 1,
+        "column_gap": 24,
+        "column_alignment": "center",
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": true,
+        "top_spacing": 40,
+        "bottom_spacing": 40
+      }
     }
   },
   "order": [
     "main",
     "rich_text_VNdf7r",
-    "logo_list_aY64nA"
+    "logo_list_aY64nA",
+    "multicolumn_gq3e7D"
   ]
 }
