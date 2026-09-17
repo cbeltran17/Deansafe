@@ -72,15 +72,6 @@
     "logo_list_aY64nA": {
       "type": "logo-list",
       "blocks": {
-        "logo_zd4wNF": {
-          "type": "_logo",
-          "name": "t:blocks._logo.name",
-          "settings": {
-            "logo_height": 80,
-            "url": ""
-          },
-          "blocks": {}
-        },
         "logo_Ub7CeG": {
           "type": "_logo",
           "settings": {
@@ -90,10 +81,21 @@
           },
           "blocks": {}
         },
+        "logo_zd4wNF": {
+          "type": "_logo",
+          "name": "t:blocks._logo.name",
+          "settings": {
+            "image": "shopify://shop_images/PB_fort-knox_400x_0fe11340-2b89-439f-bde7-3df4c607ab27.jpg",
+            "logo_height": 150,
+            "url": ""
+          },
+          "blocks": {}
+        },
         "logo_rjK3qt": {
           "type": "_logo",
           "settings": {
-            "logo_height": 80,
+            "image": "shopify://shop_images/PB_liberty.jpg",
+            "logo_height": 150,
             "url": ""
           },
           "blocks": {}
@@ -101,7 +103,8 @@
         "logo_EtP7RX": {
           "type": "_logo",
           "settings": {
-            "logo_height": 80,
+            "image": "shopify://shop_images/PB_Stealth.jpg",
+            "logo_height": 150,
             "url": ""
           },
           "blocks": {}
@@ -109,7 +112,8 @@
         "logo_6iniDt": {
           "type": "_logo",
           "settings": {
-            "logo_height": 80,
+            "image": "shopify://shop_images/PB-browning-safe.jpg",
+            "logo_height": 150,
             "url": ""
           },
           "blocks": {}
@@ -144,8 +148,8 @@
         }
       },
       "block_order": [
-        "logo_zd4wNF",
         "logo_Ub7CeG",
+        "logo_zd4wNF",
         "logo_rjK3qt",
         "logo_EtP7RX",
         "logo_6iniDt"
