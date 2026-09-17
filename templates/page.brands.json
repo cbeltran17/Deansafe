@@ -68,10 +68,104 @@
         "top_spacing": 88,
         "bottom_spacing": 64
       }
+    },
+    "logo_list_aY64nA": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_zd4wNF": {
+          "type": "_logo",
+          "name": "t:blocks._logo.name",
+          "settings": {
+            "logo_height": 80,
+            "url": ""
+          },
+          "blocks": {}
+        },
+        "logo_Ub7CeG": {
+          "type": "_logo",
+          "settings": {
+            "image": "shopify://shop_images/PB_AMSEC.jpg",
+            "logo_height": 150,
+            "url": ""
+          },
+          "blocks": {}
+        },
+        "logo_rjK3qt": {
+          "type": "_logo",
+          "settings": {
+            "logo_height": 80,
+            "url": ""
+          },
+          "blocks": {}
+        },
+        "logo_EtP7RX": {
+          "type": "_logo",
+          "settings": {
+            "logo_height": 80,
+            "url": ""
+          },
+          "blocks": {}
+        },
+        "logo_6iniDt": {
+          "type": "_logo",
+          "settings": {
+            "logo_height": 80,
+            "url": ""
+          },
+          "blocks": {}
+        },
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
+          },
+          "blocks": {
+            "heading_TTGYzR": {
+              "type": "heading",
+              "settings": {
+                "full_width": true,
+                "max_width": 500,
+                "heading_size": "h2",
+                "heading": "Our partners",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "",
+                "highlight_color": "",
+                "heading_seo_tag": "p"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_TTGYzR"
+          ]
+        }
+      },
+      "block_order": [
+        "logo_zd4wNF",
+        "logo_Ub7CeG",
+        "logo_rjK3qt",
+        "logo_EtP7RX",
+        "logo_6iniDt"
+      ],
+      "name": "t:sections.logo_list.name",
+      "settings": {
+        "opacity": 20,
+        "logo_spacing": 64,
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
+      }
     }
   },
   "order": [
     "main",
-    "rich_text_VNdf7r"
+    "rich_text_VNdf7r",
+    "logo_list_aY64nA"
   ]
 }
