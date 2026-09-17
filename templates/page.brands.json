@@ -77,7 +77,7 @@
           "settings": {
             "image": "shopify://shop_images/PB_AMSEC.jpg",
             "logo_height": 150,
-            "url": ""
+            "url": "https://deansafe.com/collections/american-security-amsec-safes"
           },
           "blocks": {}
         },
@@ -87,7 +87,7 @@
           "settings": {
             "image": "shopify://shop_images/PB_fort-knox_400x_0fe11340-2b89-439f-bde7-3df4c607ab27.jpg",
             "logo_height": 150,
-            "url": ""
+            "url": "https://deansafe.com/collections/fort-knox-safes-vaults"
           },
           "blocks": {}
         },
@@ -96,7 +96,7 @@
           "settings": {
             "image": "shopify://shop_images/PB_liberty.jpg",
             "logo_height": 150,
-            "url": ""
+            "url": "https://deansafe.com/collections/liberty-safe"
           },
           "blocks": {}
         },
@@ -105,7 +105,7 @@
           "settings": {
             "image": "shopify://shop_images/PB_Stealth.jpg",
             "logo_height": 150,
-            "url": ""
+            "url": "https://deansafe.com/collections/stealth-safe"
           },
           "blocks": {}
         },
@@ -114,7 +114,7 @@
           "settings": {
             "image": "shopify://shop_images/PB-browning-safe.jpg",
             "logo_height": 150,
-            "url": ""
+            "url": "https://deansafe.com/collections/browning-safes"
           },
           "blocks": {}
         },
