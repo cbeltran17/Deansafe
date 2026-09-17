@@ -169,11 +169,94 @@
         "top_spacing": 80,
         "bottom_spacing": 80
       }
+    },
+    "logo_list_kzrPqV": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_9cna44": {
+          "type": "_logo",
+          "settings": {
+            "logo_height": 80,
+            "url": ""
+          },
+          "blocks": {}
+        },
+        "logo_WMT7FC": {
+          "type": "_logo",
+          "settings": {
+            "logo_height": 80,
+            "url": ""
+          },
+          "blocks": {}
+        },
+        "logo_amhPiK": {
+          "type": "_logo",
+          "settings": {
+            "logo_height": 80,
+            "url": ""
+          },
+          "blocks": {}
+        },
+        "logo_kd6Jqr": {
+          "type": "_logo",
+          "settings": {
+            "logo_height": 80,
+            "url": ""
+          },
+          "blocks": {}
+        },
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
+          },
+          "blocks": {
+            "heading_3nM4zF": {
+              "type": "heading",
+              "settings": {
+                "full_width": true,
+                "max_width": 500,
+                "heading_size": "h3",
+                "heading": "Our partners",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "",
+                "highlight_color": "",
+                "heading_seo_tag": "p"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_3nM4zF"
+          ]
+        }
+      },
+      "block_order": [
+        "logo_9cna44",
+        "logo_WMT7FC",
+        "logo_amhPiK",
+        "logo_kd6Jqr"
+      ],
+      "name": "t:sections.logo_list.name",
+      "settings": {
+        "opacity": 40,
+        "logo_spacing": 64,
+        "text_alignment": "center",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": true,
+        "top_spacing": 32,
+        "bottom_spacing": 40
+      }
     }
   },
   "order": [
     "main",
     "rich_text_VNdf7r",
-    "logo_list_aY64nA"
+    "logo_list_aY64nA",
+    "logo_list_kzrPqV"
   ]
 }
