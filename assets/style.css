@@ -570,20 +570,25 @@ sticky-header[mode=always] {
 
 .boost-sd__product-list .boost-sd__product-price-wrapper .boost-sd__product-price-content .boost-sd__product-price--sale, 
 .boost-sd__product-list .boost-sd__product-price-wrapper .boost-sd__product-price-content .boost-sd__product-price--default {
-    font-size: 18px;
-    font-weight: 600;
-    color: #1e1e1e;
+    font-size: 22px;
+    font-weight: 700;
+    color: #000000;
+    line-height: 24px;
+    font-family: "Roboto";
 }
 
 
 .boost-sd__product-info-wrapper .boost-sd__product-info .boost-sd__product-title {
     color: #1e1e1e;
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
 }
 
 .boost-sd__filter-tree-vertical-option-list .boost-sd__filter-option .boost-sd__filter-option-heading {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
 }
 
 .boost-sd__product-item .boost-sd__product-info-wrapper .jdgm-prev-badge .jdgm-prev-badge__text {
