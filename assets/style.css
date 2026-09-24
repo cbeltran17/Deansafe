@@ -603,14 +603,6 @@ sticky-header[mode=always] {
     max-width: 100%;
 }
 
-.boost-sd__product-info-wrapper .boost-sd__product-info {
-    gap: 3px;
-}
-
-.boost-sd__product-info-wrapper .button--outline {
-    box-shadow: inset 0 0 0 1px rgb(103 100 98);
-}
-
 .boost-sd-container-search-page .boost-sd__search-form-wrapper, .boost-sd-container-search-page .boost-sd__search-result-toolbar-container {
 	display: none;
 }
