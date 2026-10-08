@@ -31,6 +31,7 @@
       "block_order": [
         "heading_qYi6Rq"
       ],
+      "disabled": true,
       "name": "t:sections.rich_text.name",
       "settings": {
         "full_width": true,
@@ -40,6 +41,29 @@
         "enable_custom_spacing": true,
         "top_spacing": 88,
         "bottom_spacing": 48
+      }
+    },
+    "main-banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "full_width": true,
+        "show_breadcrumbs": false,
+        "show_image": false,
+        "show_description": true,
+        "image_width": 100,
+        "image_size": "",
+        "image_height": 480,
+        "image_size_mobile": "same",
+        "image_height_mobile": 480,
+        "heading_size": "h2",
+        "description_size": "medium",
+        "text_alignment": "two-col",
+        "background_color": "#f5f3f3",
+        "text_color": "",
+        "heading_color": "",
+        "enable_custom_spacing": true,
+        "top_spacing": 40,
+        "bottom_spacing": 80
       }
     },
     "collection_subcollections_D36Bpr": {
@@ -179,29 +203,6 @@
         "product_card_text_color": ""
       }
     },
-    "main-banner": {
-      "type": "main-collection-banner",
-      "settings": {
-        "full_width": true,
-        "show_breadcrumbs": false,
-        "show_image": false,
-        "show_description": true,
-        "image_width": 100,
-        "image_size": "",
-        "image_height": 480,
-        "image_size_mobile": "same",
-        "image_height_mobile": 480,
-        "heading_size": "h1",
-        "description_size": "large",
-        "text_alignment": "center",
-        "background_color": "#f5f3f3",
-        "text_color": "",
-        "heading_color": "",
-        "enable_custom_spacing": false,
-        "top_spacing": 80,
-        "bottom_spacing": 80
-      }
-    },
     "text_with_icons_WfPJDW": {
       "type": "text-with-icons",
       "blocks": {
@@ -264,11 +265,11 @@
   },
   "order": [
     "rich_text_Myyc3F",
+    "main-banner",
     "collection_subcollections_D36Bpr",
     "collection_links_grid_Kt3E9T",
     "1783433673db21171b",
     "main-product-grid",
-    "main-banner",
     "text_with_icons_WfPJDW"
   ]
 }
