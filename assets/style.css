@@ -633,6 +633,10 @@ sticky-header[mode=always] {
     display: none;
 }
 
+.boost-sd__view-product {
+    height: 36px;
+}
+
 @media (min-width: 1024px) {
     .mega-menu-page.shop-by-brand .mega-menu-page__links,
     .mega-menu-page.gun-safes .mega-menu-page__links,
