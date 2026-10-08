@@ -53,7 +53,7 @@
           "drop-safes",
           "wall-safes"
         ],
-        "subcollections_alignment": "auto",
+        "subcollections_alignment": "center",
         "background_color": "",
         "padding_top": 36,
         "padding_bottom": 0
