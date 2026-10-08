@@ -42,6 +42,23 @@
         "bottom_spacing": 48
       }
     },
+    "collection_subcollections_D36Bpr": {
+      "type": "collection-subcollections",
+      "name": "Subcollections",
+      "settings": {
+        "subcollections": [
+          "high-security-safes",
+          "handgun-safes",
+          "home-safes",
+          "drop-safes",
+          "wall-safes"
+        ],
+        "subcollections_alignment": "auto",
+        "background_color": "",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
     "collection_links_grid_Kt3E9T": {
       "type": "collection-links-grid",
       "blocks": {
@@ -112,6 +129,7 @@
         "link_QqnYAR",
         "link_xq9e3X"
       ],
+      "disabled": true,
       "name": "Collection Links Grid",
       "settings": {
         "desktop_columns": 4,
@@ -246,6 +264,7 @@
   },
   "order": [
     "rich_text_Myyc3F",
+    "collection_subcollections_D36Bpr",
     "collection_links_grid_Kt3E9T",
     "1783433673db21171b",
     "main-product-grid",
