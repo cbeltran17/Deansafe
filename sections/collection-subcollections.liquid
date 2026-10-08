@@ -1,20 +1,14 @@
 {% liquid
   assign subcollections_list = section.settings.subcollections | default: collection.metafields.custom.subcollections.value
-  assign short_description = collection.metafields.custom.short_description
 %}
 
-{% if subcollections_list != blank or short_description != blank %}
+{% if subcollections_list != blank %}
   {% render 'section-meta', blend: true, blend_bg: section.settings.background_color %}
 
   <style>
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-    }
-    
-    .subcollections-description {
-      margin-bottom: 2rem;
-      text-align: {% if section.settings.subcollections_alignment == 'center' %}center{% else %}left{% endif %};
     }
 
     @media screen and (min-width: 750px) {
@@ -26,20 +20,10 @@
   </style>
 
   <div class="section-full-width section-{{ section.id }}-padding">
-    
-    {% if short_description != blank %}
-      <div class="subcollections-description rte">
-        {{ short_description | metafield_tag }}
-      </div>
-    {% endif %}
-
-    {% if subcollections_list != blank %}
-      {% render 'subcollections',
-        collections: subcollections_list,
-        alignment: section.settings.subcollections_alignment
-      %}
-    {% endif %}
-    
+    {% render 'subcollections',
+      collections: subcollections_list,
+      alignment: section.settings.subcollections_alignment
+    %}
   </div>
 {% endif %}
 
