@@ -60,8 +60,8 @@
     </h1>
   </split-text>
 
-  {% if collection.description != blank and section.settings.show_description %}
-    <div class="collection-banner-description prose {{ description_size }}">{{ collection.description }}</div>
+  {% if collection.metafields.custom.short_description != blank and section.settings.show_description %}
+    <div class="collection-banner-description prose {{ description_size }}">{{ collection.metafields.custom.short_description }}</div>
   {% endif %}
 {% endcapture %}
 
