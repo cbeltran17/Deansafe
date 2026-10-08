@@ -472,6 +472,13 @@ sticky-header[mode=always] {
     }
 }
 
+@media (max-width: 991px) {
+    .boost-product-listing-column .boost-sd__toolbar-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
 @media (max-width: 1024px) { 
     #judgeme_product_reviews {
         padding-left: max(2rem, calc((100vw - 1500px - 0px) / 2));
