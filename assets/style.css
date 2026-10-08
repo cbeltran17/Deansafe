@@ -633,7 +633,7 @@ sticky-header[mode=always] {
     display: none;
 }
 
-.boost-sd__view-product {
+.boost-sd__product-info-wrapper .boost-sd__view-product {
     height: 36px;
 }
 
