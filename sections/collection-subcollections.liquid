@@ -1,0 +1,67 @@
+{% liquid
+  assign subcollections_list = section.settings.subcollections | default: collection.metafields.custom.subcollections.value
+%}
+
+{% if subcollections_list != blank %}
+  {% render 'section-meta', blend: true, blend_bg: section.settings.background_color %}
+
+  <div class="section-full-width">
+    {% render 'subcollections',
+      collections: subcollections_list,
+      alignment: section.settings.subcollections_alignment
+    %}
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Subcollections",
+  "class": "section-subcollections",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Displays a list of subcollections. If no list is manually selected, it will attempt to use the 'custom.subcollections' metafield on the current collection."
+    },
+    {
+      "type": "collection_list",
+      "id": "subcollections",
+      "label": "Subcollections"
+    },
+    {
+      "type": "select",
+      "id": "subcollections_alignment",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "auto",
+          "label": "Auto"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ],
+      "default": "auto"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Subcollections",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}
