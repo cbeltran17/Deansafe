@@ -60,7 +60,7 @@
         "text_alignment": "two-col",
         "background_color": "#f5f3f3",
         "text_color": "",
-        "heading_color": "",
+        "heading_color": "#095F41",
         "enable_custom_spacing": true,
         "top_spacing": 48,
         "bottom_spacing": 0
