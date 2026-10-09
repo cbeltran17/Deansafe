@@ -482,7 +482,7 @@ sticky-header[mode=always] {
         font-weight: 400;
     }
 
-    .boost-sd__filter-tree-toggle-button {
+    .boost-sd__filter-tree-toggle-button .boost-sd__filter-tree-toggle-button-text {
         font-size: 14px;
     }
 }
