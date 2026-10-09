@@ -477,6 +477,10 @@ sticky-header[mode=always] {
         padding-left: 16px;
         padding-right: 16px;
     }
+
+    .boost-product-listing-column .boost-sd__sorting-value {
+        font-weight: 400;
+    }
 }
 
 @media (max-width: 1024px) { 
