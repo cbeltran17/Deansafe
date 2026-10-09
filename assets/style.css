@@ -485,6 +485,10 @@ sticky-header[mode=always] {
     .boost-sd__filter-tree-toggle-button .boost-sd__filter-tree-toggle-button-text {
         font-size: 14px;
     }
+
+    .boost-sd__sorting-button {
+        white-space: nowrap;
+    }
 }
 
 @media (max-width: 1024px) { 
