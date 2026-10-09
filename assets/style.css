@@ -473,7 +473,7 @@ sticky-header[mode=always] {
 }
 
 @media (max-width: 991px) {
-    .boost-product-listing-column {
+    .boost-product-listing-column .boost-sd__product-list {
         padding-left: 16px;
         padding-right: 16px;
     }
