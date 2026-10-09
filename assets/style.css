@@ -486,8 +486,12 @@ sticky-header[mode=always] {
         font-size: 14px;
     }
 
-    .boost-sd__sorting-button {
+    .boost-sd__toolbar-item .boost-sd__sorting-button {
         white-space: nowrap;
+    }
+
+    .boost-sd__toolbar-item .boost-sd__sorting-button .boost-sd__sorting-value {
+        white-space: normal;
     }
 }
 
