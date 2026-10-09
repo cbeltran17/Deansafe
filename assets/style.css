@@ -460,6 +460,10 @@ sticky-header[mode=always] {
     width: 100% !important;
 }
 
+.boost-sd__in-collection-search {
+    display: none !important;
+}
+
 @media (min-width: 48rem) {
     .text-with-icons--desktop-horizontal .text-with-icons__item {
         justify-content: center;
