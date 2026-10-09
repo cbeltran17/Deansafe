@@ -481,6 +481,10 @@ sticky-header[mode=always] {
     .boost-product-listing-column .boost-sd__sorting-value {
         font-weight: 400;
     }
+
+    .boost-sd__filter-tree-toggle-button {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 1024px) { 
