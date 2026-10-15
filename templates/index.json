@@ -293,7 +293,7 @@
           "settings": {
             "collection": "",
             "image": "shopify://shop_images/PB_AMSEC.jpg",
-            "title": "<blank></blank>"
+            "title": ""
           },
           "blocks": {}
         },
@@ -450,6 +450,7 @@
         "brand_maKX7b",
         "brand_YUx7jX"
       ],
+      "disabled": true,
       "name": "Brands",
       "settings": {
         "title": "Top Brands",
@@ -458,6 +459,154 @@
         "link_url": "shopify://pages/brands",
         "padding_top": 0,
         "padding_bottom": 80
+      }
+    },
+    "multicolumn_XfLDVa": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_UFmqHt": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/American-Security-Safes-logo.png",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_AcmY7M": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/fort-knox_6d7a6c18-eab7-4fe5-a698-c425541f8b05.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_zn7tyM": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/PB_liberty.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_bdxVYX": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Hollon_82726653-df5f-4af0-9649-5e75a107e82f.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_VJDGpW": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/PB-browning-safe.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_NBJFcY": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/stealth-safes_mega-menu.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "section-header": {
+          "type": "_section-header",
+          "static": true,
+          "settings": {
+            "enable_custom_spacing": false,
+            "bottom_spacing": 32
+          },
+          "blocks": {
+            "heading_JiqHfY": {
+              "type": "heading",
+              "name": "t:blocks.heading.name",
+              "settings": {
+                "full_width": true,
+                "max_width": 500,
+                "heading_size": "h1",
+                "heading": "&nbsp;Top Brands&nbsp;",
+                "highlight_type": "underline",
+                "highlight_layer": "default",
+                "heading_color": "",
+                "highlight_color": "",
+                "heading_seo_tag": "h2"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_JiqHfY"
+          ]
+        }
+      },
+      "block_order": [
+        "column_UFmqHt",
+        "column_AcmY7M",
+        "column_zn7tyM",
+        "column_bdxVYX",
+        "column_VJDGpW",
+        "column_NBJFcY"
+      ],
+      "name": "t:sections.multicolumn.name",
+      "settings": {
+        "enable_carousel": false,
+        "columns": 3,
+        "columns_mobile": 2,
+        "column_gap": 24,
+        "column_alignment": "center",
+        "text_alignment": "left",
+        "background_color": "",
+        "text_color": "",
+        "enable_custom_spacing": false,
+        "top_spacing": 80,
+        "bottom_spacing": 80
       }
     },
     "image_with_text_slider_aYpUQJ": {
@@ -1109,6 +1258,7 @@
     "multiple_featured_collections_zGjR6b",
     "collection_list_slider_iUqCy4",
     "brands_diMQE9",
+    "multicolumn_XfLDVa",
     "image_with_text_slider_aYpUQJ",
     "testimonials_eR6HaW",
     "image_with_text_j73R7X",
