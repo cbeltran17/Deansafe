@@ -302,7 +302,7 @@
           "settings": {
             "collection": "",
             "image": "shopify://shop_images/brand-warranty_ftk.jpg",
-            "title": "<blank></blank>"
+            "title": ""
           },
           "blocks": {}
         },
@@ -389,6 +389,9 @@
         "collection_list_slider_item_LG4jYw",
         "collection_list_slider_item_n69ehL",
         "collection_list_slider_item_F9xhde"
+      ],
+      "custom_css": [
+        ".collection-list-slider-item span{display: none;}"
       ],
       "name": "t:sections.collection_list_slider.name",
       "settings": {
