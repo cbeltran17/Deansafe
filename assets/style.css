@@ -664,7 +664,7 @@ sticky-header[mode=always] {
     height: 36px;
 }
 
-.boost-sd__product-item .boost-sd__product-info-wrapper .boost-sd__view-product {
+/* .boost-sd__product-item .boost-sd__product-info-wrapper .boost-sd__view-product {
     box-shadow: inset 0 0 0 1px #676462;
     color: #13131d;
     text-align: center;
@@ -673,7 +673,7 @@ sticky-header[mode=always] {
     outline: 2px solid transparent;
     outline-offset: 2px;
     background-color: #fff;
-}
+} */
 
 @media (min-width: 1024px) {
     .mega-menu-page.shop-by-brand .mega-menu-page__links,
