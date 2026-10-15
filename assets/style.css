@@ -672,9 +672,7 @@ sticky-header[mode=always] {
     overflow: hidden;
     outline: 2px solid transparent;
     outline-offset: 2px;
-    --tw-ring-color: rgb(var(--text-color) / 34%);
-    overflow-wrap: anywhere;
-
+    background-color: #fff;
 }
 
 @media (min-width: 1024px) {
