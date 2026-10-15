@@ -509,21 +509,6 @@
           },
           "blocks": {}
         },
-        "column_bdxVYX": {
-          "type": "_column",
-          "settings": {
-            "media_type": "image",
-            "image": "shopify://shop_images/Hollon_82726653-df5f-4af0-9649-5e75a107e82f.jpg",
-            "video_autoplay": false,
-            "heading_size": "h4",
-            "heading": "",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "button"
-          },
-          "blocks": {}
-        },
         "column_VJDGpW": {
           "type": "_column",
           "name": "t:blocks._column.name",
@@ -546,6 +531,21 @@
           "settings": {
             "media_type": "image",
             "image": "shopify://shop_images/stealth-safes_mega-menu.jpg",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_bdxVYX": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Hollon_82726653-df5f-4af0-9649-5e75a107e82f.jpg",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "",
@@ -590,10 +590,11 @@
         "column_UFmqHt",
         "column_AcmY7M",
         "column_zn7tyM",
-        "column_bdxVYX",
         "column_VJDGpW",
-        "column_NBJFcY"
+        "column_NBJFcY",
+        "column_bdxVYX"
       ],
+      "disabled": true,
       "name": "t:sections.multicolumn.name",
       "settings": {
         "enable_carousel": false,
