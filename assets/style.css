@@ -666,6 +666,14 @@ sticky-header[mode=always] {
 
 .boost-sd__product-item .boost-sd__product-info-wrapper .boost-sd__view-product {
     box-shadow: inset 0 0 0 1px #676462;
+    color: #13131d;
+    text-align: center;
+    line-height: 1;
+    overflow: hidden;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    --tw-ring-color: rgb(var(--text-color) / 34%);
+    overflow-wrap: anywhere;
 
 }
 
