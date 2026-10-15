@@ -664,6 +664,11 @@ sticky-header[mode=always] {
     height: 36px;
 }
 
+.boost-sd__product-info-wrapper .boost-sd__view-product {
+    box-shadow: inset 0 0 0 1px #676462;
+    
+}
+
 @media (min-width: 1024px) {
     .mega-menu-page.shop-by-brand .mega-menu-page__links,
     .mega-menu-page.gun-safes .mega-menu-page__links,
