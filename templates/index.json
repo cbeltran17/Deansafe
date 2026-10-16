@@ -498,22 +498,6 @@
           },
           "blocks": {}
         },
-        "column_VJDGpW": {
-          "type": "_column",
-          "name": "t:blocks._column.name",
-          "settings": {
-            "media_type": "image",
-            "image": "shopify://shop_images/hollon_acf9c7a3-e77a-4d62-babe-22a6b8eae24a.png",
-            "video_autoplay": false,
-            "heading_size": "h4",
-            "heading": "",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "button"
-          },
-          "blocks": {}
-        },
         "column_NBJFcY": {
           "type": "_column",
           "name": "t:blocks._column.name",
@@ -560,6 +544,22 @@
           },
           "blocks": {}
         },
+        "column_VJDGpW": {
+          "type": "_column",
+          "name": "t:blocks._column.name",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/hollon_acf9c7a3-e77a-4d62-babe-22a6b8eae24a.png",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "shopify://collections/hollon-safe",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
         "section-header": {
           "type": "_section-header",
           "static": true,
@@ -593,10 +593,10 @@
       "block_order": [
         "column_UFmqHt",
         "column_AcmY7M",
-        "column_VJDGpW",
         "column_NBJFcY",
         "column_bdxVYX",
-        "column_zn7tyM"
+        "column_zn7tyM",
+        "column_VJDGpW"
       ],
       "custom_css": [
         ".block-image {background: #f5f5f5; border-radius: 12px;}",
