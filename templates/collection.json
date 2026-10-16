@@ -72,7 +72,7 @@
       "settings": {
         "subcollections": [
           "high-security-safes",
-          "handgun-safes",
+          "handgun-safes-and-pistol-safes",
           "home-safes",
           "drop-safes",
           "wall-safes"
@@ -97,7 +97,7 @@
           "type": "link",
           "settings": {
             "title": "Handgun Safes",
-            "link": "shopify://collections/handgun-safes"
+            "link": "shopify://collections/handgun-safes-and-pistol-safes"
           }
         },
         "link_fERyit": {
