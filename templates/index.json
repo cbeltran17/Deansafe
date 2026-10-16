@@ -472,7 +472,7 @@
           "type": "_column",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/american-security.png",
+            "image": "shopify://shop_images/American-Security_9b4bb4f3-dbf7-45d3-b27a-449931527634.png",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "",
@@ -487,22 +487,7 @@
           "type": "_column",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/american-security.png",
-            "video_autoplay": false,
-            "heading_size": "h4",
-            "heading": "",
-            "content": "",
-            "link_url": "",
-            "link_text": "",
-            "link_style": "button"
-          },
-          "blocks": {}
-        },
-        "column_zn7tyM": {
-          "type": "_column",
-          "settings": {
-            "media_type": "image",
-            "image": "shopify://shop_images/american-security.png",
+            "image": "shopify://shop_images/fort-knox_17f2d80c-f062-47e4-84b9-d538d03ba140.png",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "",
@@ -518,7 +503,7 @@
           "name": "t:blocks._column.name",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/american-security.png",
+            "image": "shopify://shop_images/hollon_acf9c7a3-e77a-4d62-babe-22a6b8eae24a.png",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "",
@@ -534,7 +519,7 @@
           "name": "t:blocks._column.name",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/american-security.png",
+            "image": "shopify://shop_images/Browning.png",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "",
@@ -549,7 +534,22 @@
           "type": "_column",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/american-security.png",
+            "image": "shopify://shop_images/Stealth-Safes.png",
+            "video_autoplay": false,
+            "heading_size": "h4",
+            "heading": "",
+            "content": "",
+            "link_url": "",
+            "link_text": "",
+            "link_style": "button"
+          },
+          "blocks": {}
+        },
+        "column_zn7tyM": {
+          "type": "_column",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/liberty_3eaec777-4cce-4d54-86ed-4f87d24f71fa.png",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "",
@@ -593,10 +593,10 @@
       "block_order": [
         "column_UFmqHt",
         "column_AcmY7M",
-        "column_zn7tyM",
         "column_VJDGpW",
         "column_NBJFcY",
-        "column_bdxVYX"
+        "column_bdxVYX",
+        "column_zn7tyM"
       ],
       "custom_css": [
         ".block-image {background: #f5f5f5; border-radius: 12px;}",
