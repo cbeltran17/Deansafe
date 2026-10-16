@@ -601,7 +601,7 @@
       "custom_css": [
         ".block-image {background: #f5f5f5; border-radius: 12px;}",
         ".carousel--multicolumn img {mix-blend-mode: multiply; background: #999;}",
-        ".carousel--multicolumn {--carousel-row-gap: 2rem;}"
+        ".carousel--multicolumn {--carousel-row-gap: 2rem !important;}"
       ],
       "name": "t:sections.multicolumn.name",
       "settings": {
