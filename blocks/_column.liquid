@@ -11,11 +11,11 @@
           href="{{ block.settings.link_url }}"
         >
       {% endif %}
-      {% render 'image' with block.settings.image,
-        width: 1600,
-        widths: '400, 800, 1200, 1600',
-        placeholder: true
-      %}
+        {% render 'image' with block.settings.image,
+          width: 1600,
+          widths: '400, 800, 1200, 1600',
+          placeholder: true
+        %}
       {% if block.settings.link_url != blank %}
         </a>
       {% endif %}
