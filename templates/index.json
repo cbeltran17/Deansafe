@@ -391,7 +391,7 @@
         "collection_list_slider_item_F9xhde"
       ],
       "custom_css": [
-        ".collection-list-slider-item span{display: none;}"
+        ".collection-list-slider-item span {display: none;}"
       ],
       "name": "t:sections.collection_list_slider.name",
       "settings": {
@@ -597,7 +597,6 @@
         "column_NBJFcY",
         "column_bdxVYX"
       ],
-      "disabled": true,
       "name": "t:sections.multicolumn.name",
       "settings": {
         "enable_carousel": false,
