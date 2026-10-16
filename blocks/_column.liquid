@@ -5,11 +5,20 @@
 >
   {% if block.settings.media_type == 'image' and block.settings.image != blank %}
     <div class="block-image">
+      {% if block.settings.link_url != blank %}
+        <a
+          class=""
+          href="{{ block.settings.link_url }}"
+        >
+      {% endif %}
       {% render 'image' with block.settings.image,
         width: 1600,
         widths: '400, 800, 1200, 1600',
         placeholder: true
       %}
+      {% if block.settings.link_url != blank %}
+        </a>
+      {% endif %}
     </div>
   {% elsif block.settings.media_type == 'video' and block.settings.video != blank %}
     <div class="block-video w-full">
