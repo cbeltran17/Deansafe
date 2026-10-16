@@ -390,6 +390,7 @@
         "collection_list_slider_item_n69ehL",
         "collection_list_slider_item_F9xhde"
       ],
+      "disabled": true,
       "custom_css": [
         ".collection-list-slider-item span {display: none;}"
       ],
@@ -471,7 +472,7 @@
           "type": "_column",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/American-Security-Safes-logo.png",
+            "image": "shopify://shop_images/american-security.png",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "",
@@ -486,7 +487,7 @@
           "type": "_column",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/fort-knox_6d7a6c18-eab7-4fe5-a698-c425541f8b05.jpg",
+            "image": "shopify://shop_images/american-security.png",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "",
@@ -501,7 +502,7 @@
           "type": "_column",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/PB_liberty.jpg",
+            "image": "shopify://shop_images/american-security.png",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "",
@@ -517,7 +518,7 @@
           "name": "t:blocks._column.name",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/PB-browning-safe.jpg",
+            "image": "shopify://shop_images/american-security.png",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "",
@@ -533,7 +534,7 @@
           "name": "t:blocks._column.name",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/stealth-safes_mega-menu.jpg",
+            "image": "shopify://shop_images/american-security.png",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "",
@@ -548,7 +549,7 @@
           "type": "_column",
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/Hollon_82726653-df5f-4af0-9649-5e75a107e82f.jpg",
+            "image": "shopify://shop_images/american-security.png",
             "video_autoplay": false,
             "heading_size": "h4",
             "heading": "",
