@@ -175,7 +175,7 @@
         "collection_4FCt4K": {
           "type": "_featured_collection_tab",
           "settings": {
-            "collection": "gun-safe-and-rifle-safes",
+            "collection": "gun-safes-and-rifle-safes",
             "products": [],
             "label": "RIFLE SAFES",
             "show_link": true,
@@ -1004,7 +1004,7 @@
         "collection_list_item_CegiqQ": {
           "type": "_collection_list_item",
           "settings": {
-            "collection": "gun-safe-and-rifle-safes",
+            "collection": "gun-safes-and-rifle-safes",
             "image": "shopify://shop_images/rifle-safes.png",
             "style": "overlay",
             "title": "Rifle Safes",
