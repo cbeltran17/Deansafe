@@ -686,7 +686,7 @@ sticky-header[mode=always] {
     background-color: #095f41;
     color: #fff;
     width: 100%;
-    margin-top: auto;
+    /* margin-top: auto; */
 }
 
 .boost-sd__product-info-wrapper .boost-sd__view-product:hover {
