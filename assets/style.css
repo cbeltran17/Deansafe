@@ -432,6 +432,11 @@ sticky-header[mode=always] {
     margin-top: 6rem;
 }
 
+.page-cookie-policy #MainContent .section-main-page {
+    padding-left: max(2rem, calc((100vw - 1500px - 0px) / 2));
+	padding-right: max(2rem, calc((100vw - 1500px - 0px) / 2));
+}
+
 .page-brand-warranty-information #MainContent .section-main-page .page, 
 .page-cookie-policy #MainContent .section-main-page .page,
 .page-privacy-rights-request-form #MainContent .section-main-page .page {
