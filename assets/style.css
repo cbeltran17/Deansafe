@@ -522,14 +522,13 @@ sticky-header[mode=always] {
         padding-right: max(2rem, calc((100vw - 1500px - 0px) / 2));
     }
 
+}
+
+@media (max-width: 1023px) {  
     .page-cookie-policy #MainContent .section-main-page {
         padding-left: max(1rem, calc((100vw - 1500px - 0px) / 2));
         padding-right: max(1rem, calc((100vw - 1500px - 0px) / 2));
     }
-}
-
-@media (max-width: 1023px) {  
-
 }
 
 @media (max-width: 768px) { 
