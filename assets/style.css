@@ -555,7 +555,7 @@ sticky-header[mode=always] {
 }
 
 @media (max-width: 767px) {  
-    .page-cookie-policy #MainContent .section-main-page,
+    .page-cookie-policy #MainContent .section-main-page
         padding-left: 0;
         padding-right: 0;
     }
