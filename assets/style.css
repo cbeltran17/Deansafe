@@ -422,7 +422,7 @@ sticky-header[mode=always] {
     top: clamp(2.5rem, 2.1rem + 1vw, 3rem);;
 }
 
-page-brand-warranty-information #MainContent .section-main-page, 
+.page-brand-warranty-information #MainContent .section-main-page, 
 .page-cookie-policy #MainContent .section-main-page,
 .page-privacy-rights-request-form #MainContent .section-main-page {
     --page-content-width: 100%;
@@ -432,31 +432,31 @@ page-brand-warranty-information #MainContent .section-main-page,
     margin-top: 6rem;
 }
 
-page-brand-warranty-information #MainContent .section-main-page .page, 
+.page-brand-warranty-information #MainContent .section-main-page .page, 
 .page-cookie-policy #MainContent .section-main-page .page,
 .page-privacy-rights-request-form #MainContent .section-main-page .page {
     padding: 0;
 }
 
-page-brand-warranty-information #MainContent .section-main-page .container, 
+.page-brand-warranty-information #MainContent .section-main-page .container, 
 .page-cookie-policy #MainContent .section-main-page .container,
 .page-privacy-rights-request-form #MainContent .section-main-page .container {
     padding: 0;
 }
 
-page-brand-warranty-information #MainContent .section-main-page .page__content.prose > h2 {
+.page-brand-warranty-information #MainContent .section-main-page .page__content.prose > h2 {
     margin-bottom: 0;
 }
 
-page-brand-warranty-information .prose :where(img):not(:where([class~=not-prose],[class~=not-prose] *)) {
+.page-brand-warranty-information .prose :where(img):not(:where([class~=not-prose],[class~=not-prose] *)) {
     margin-top: 0;
 }
 
-page-brand-warranty-information .prose :where(h4):not(:where([class~=not-prose],[class~=not-prose] *)) {
+.page-brand-warranty-information .prose :where(h4):not(:where([class~=not-prose],[class~=not-prose] *)) {
     margin-top: .5rem;
 }
 
-page-brand-warranty-information #MainContent table {
+.page-brand-warranty-information #MainContent table {
     width: 100% !important;
 }
 
@@ -510,7 +510,7 @@ page-brand-warranty-information #MainContent table {
         padding-right: max(2rem, calc((100vw - 1500px - 0px) / 2));
     }
 
-    page-brand-warranty-information #MainContent .section-main-page, 
+    .page-brand-warranty-information #MainContent .section-main-page, 
     .page-cookie-policy #MainContent .section-main-page,
     .page-privacy-rights-request-form #MainContent .section-main-page {
         padding-left: max(2rem, calc((100vw - 1500px - 0px) / 2));
@@ -533,7 +533,7 @@ page-brand-warranty-information #MainContent table {
         width: 2.25rem;
     }
 
-    page-brand-warranty-information #MainContent .section-main-page, 
+    .page-brand-warranty-information #MainContent .section-main-page, 
     .page-cookie-policy #MainContent .section-main-page,
     .page-privacy-rights-request-form #MainContent .section-main-page {
         padding-left: max(1.25rem, calc((100vw - 1500px - 0px) / 2));
@@ -707,36 +707,36 @@ page-brand-warranty-information #MainContent table {
 
 
 /* Warranty Information Tables */
-page-brand-warranty-information table {
+.page-brand-warranty-information table {
   width: 100% !important;
   max-width: 100%;
   border-collapse: collapse;
 }
 
 /* Prevent table content from breaking the layout */
-page-brand-warranty-information table td,
-page-brand-warranty-information table th {
+.page-brand-warranty-information table td,
+.page-brand-warranty-information table th {
   box-sizing: border-box;
 }
 
 /* Desktop */
-page-brand-warranty-information table {
+.page-brand-warranty-information table {
   table-layout: fixed;
 }
 
-page-brand-warranty-information table td:first-child,
-page-brand-warranty-information table th:first-child {
+.page-brand-warranty-information table td:first-child,
+.page-brand-warranty-information table th:first-child {
   width: 25% !important;
 }
 
-page-brand-warranty-information table td:not(:first-child),
-page-brand-warranty-information table th:not(:first-child) {
+.page-brand-warranty-information table td:not(:first-child),
+.page-brand-warranty-information table th:not(:first-child) {
   width: 15% !important;
 }
 
 /* Mobile */
 @media screen and (max-width: 749px) {
-  page-brand-warranty-information table {
+  .page-brand-warranty-information table {
     display: block;
     width: 100% !important;
     max-width: 100%;
@@ -745,25 +745,25 @@ page-brand-warranty-information table th:not(:first-child) {
     -webkit-overflow-scrolling: touch;
   }
 
-  page-brand-warranty-information table tbody {
+  .page-brand-warranty-information table tbody {
     display: table;
     width: 700px;
     min-width: 700px;
   }
 
-  page-brand-warranty-information table td,
-  page-brand-warranty-information table th {
+  .page-brand-warranty-information table td,
+  .page-brand-warranty-information table th {
     min-width: 120px;
     padding: 10px;
     vertical-align: middle;
   }
 
-  page-brand-warranty-information table td:first-child,
-  page-brand-warranty-information table th:first-child {
+  .page-brand-warranty-information table td:first-child,
+  .page-brand-warranty-information table th:first-child {
     min-width: 220px;
   }
 
-  page-brand-warranty-information table img {
+  .page-brand-warranty-information table img {
     max-width: 160px;
     height: auto;
   }
