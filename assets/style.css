@@ -482,6 +482,10 @@ sticky-header[mode=always] {
 }
 
 @media (max-width: 991px) {
+    .page-brand-warranty-information table h2 {
+        font-size: 18px !important;
+    }
+
     .boost-product-listing-column .boost-sd__product-list {
         padding-left: 16px;
         padding-right: 16px;
