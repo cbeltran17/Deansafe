@@ -706,6 +706,10 @@ sticky-header[mode=always] {
     background-color: #fff;
 } */
 
+.page-brand-warranty-information table h2 {
+    font-size: 22px !important;
+}
+
 @media (min-width: 1024px) {
     .mega-menu-page.shop-by-brand .mega-menu-page__links,
     .mega-menu-page.gun-safes .mega-menu-page__links,
