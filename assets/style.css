@@ -469,6 +469,10 @@ sticky-header[mode=always] {
     display: none !important;
 }
 
+.page-brand-warranty-information table h2 {
+    font-size: 22px !important;
+}
+
 @media (min-width: 48rem) {
     .text-with-icons--desktop-horizontal .text-with-icons__item {
         justify-content: center;
@@ -709,10 +713,6 @@ sticky-header[mode=always] {
     outline-offset: 2px;
     background-color: #fff;
 } */
-
-.page-brand-warranty-information table h2 {
-    font-size: 22px !important;
-}
 
 @media (min-width: 1024px) {
     .mega-menu-page.shop-by-brand .mega-menu-page__links,
